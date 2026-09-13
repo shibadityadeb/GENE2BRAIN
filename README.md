@@ -26,11 +26,17 @@ microarray data and build a documented healthy-brain region × gene reference.
   associations, provisional loci, mapped candidate genes, and summary-statistics
   metadata
 - `reports/stage_03_*.md`: exact API audit, methods, and GWAS QC findings
+- `src/stage_04_parkinson_l2g.py`: current Open Targets Platform credible-set
+  and Locus-to-Gene retrieval, thresholding, comparison, and AHBA symbol coverage
+- `data/genes/parkinson_*.csv`: full L2G evidence plus broad, stringent, and
+  continuous-weight gene sets
+- `reports/stage_04_*.md`: Open Targets release/query details, methods, caveats,
+  and Stage 4 quality control
 
-Work currently stops at the Stage 3 Parkinson GWAS evidence layer. Catalog gene
-mappings are labeled candidate/mapped genes, never causal genes. No rigorous
-locus-to-gene prioritization, AHBA disease integration, enrichment, permutation,
-or vulnerability mapping has been performed.
+Work currently stops at the Stage 4 Parkinson genetic evidence layer. L2G scores
+are explicitly treated as prioritisation evidence, never proof of causality. No
+AHBA disease scoring, enrichment, permutation, pathway analysis, or vulnerability
+mapping has been performed.
 
 ## Reproduce from a clean environment
 
@@ -45,6 +51,7 @@ jupyter nbconvert --to notebook --execute --inplace \
   --ExecutePreprocessor.timeout=-1 notebooks/01_download_ahba.ipynb
 python src/stage_02_preprocess.py
 python src/stage_03_parkinson_gwas.py
+python src/stage_04_parkinson_l2g.py
 python -m unittest discover -s tests -v
 ```
 
@@ -65,8 +72,11 @@ space. Downloads can be resumed.
 
 The CI suite intentionally does not redownload the approximately 4 GB AHBA
 archive. It validates the notebook, source code, atlas definition, committed
-regional matrix, metadata, and QC outputs. A clean end-to-end data rebuild is
-performed with the two commands above before scientific releases.
+regional matrix, metadata, and Stage 2–4 scientific artifacts. Stage 4 makes
+targeted calls to the current Open Targets GraphQL API when explicitly rebuilt;
+CI validates the release-stamped committed results without relying on network
+availability. A clean end-to-end data rebuild is performed with the commands
+above before scientific releases.
 
 ## Data source
 

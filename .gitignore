@@ -30,3 +30,4 @@ results/figures/*.png
 !results/figures/ahba_*.png
 !results/figures/stage_02_*.png
 !results/figures/stage_03_*.png
+!results/figures/stage_04_*.png

@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.ipynb_checkpoints/
+
+# Operating-system and editor files
+.DS_Store
+.idea/
+.vscode/
+
+# Large, reproducibly downloaded AHBA files
+data/ahba/*
+!data/ahba/.gitkeep
+
+# Generated outputs (keep directories in version control)
+results/figures/*.png
+!results/figures/.gitkeep
+

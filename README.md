@@ -20,10 +20,17 @@ microarray data and build a documented healthy-brain region × gene reference.
   matrices (kept local because they total about 151 MB)
 - `reports/stage_02_methods.md` and `stage_02_qc.md`: exact methods and QC
 - `.github/workflows/ci.yml`: reproducibility and artifact-integrity checks
+- `src/stage_03_parkinson_gwas.py`: ontology-backed Parkinson GWAS Catalog
+  retrieval, study ranking, association QC, and provisional locus grouping
+- `data/gwas/parkinson_*.csv`: Stage 3 candidate studies, selected-study
+  associations, provisional loci, mapped candidate genes, and summary-statistics
+  metadata
+- `reports/stage_03_*.md`: exact API audit, methods, and GWAS QC findings
 
-No GWAS, locus-to-gene, enrichment, permutation, or disease-map analysis has
-been performed. Stage 2 performs healthy-brain regional aggregation but does
-not introduce disease genetics.
+Work currently stops at the Stage 3 Parkinson GWAS evidence layer. Catalog gene
+mappings are labeled candidate/mapped genes, never causal genes. No rigorous
+locus-to-gene prioritization, AHBA disease integration, enrichment, permutation,
+or vulnerability mapping has been performed.
 
 ## Reproduce from a clean environment
 
@@ -37,6 +44,7 @@ python -m pip install -r requirements.txt
 jupyter nbconvert --to notebook --execute --inplace \
   --ExecutePreprocessor.timeout=-1 notebooks/01_download_ahba.ipynb
 python src/stage_02_preprocess.py
+python src/stage_03_parkinson_gwas.py
 python -m unittest discover -s tests -v
 ```
 

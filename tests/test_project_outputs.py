@@ -100,5 +100,76 @@ class ScientificArtifactTests(unittest.TestCase):
         self.assertTrue(coverage["represented_in_main_matrix"].all())
 
 
+class ParkinsonGwasArtifactTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.gwas = ROOT / "data" / "gwas"
+        cls.candidates = pd.read_csv(cls.gwas / "parkinson_candidate_studies.csv")
+        cls.selection = pd.read_csv(cls.gwas / "parkinson_study_selection.csv")
+        cls.associations = pd.read_csv(cls.gwas / "parkinson_gwas_associations_raw.csv")
+        cls.loci = pd.read_csv(cls.gwas / "parkinson_initial_loci.csv")
+        cls.mapped = pd.read_csv(cls.gwas / "parkinson_gwas_mapped_genes.csv")
+
+    def test_required_stage_03_outputs_exist(self) -> None:
+        required = [
+            self.gwas / "parkinson_candidate_studies.csv",
+            self.gwas / "parkinson_study_selection.csv",
+            self.gwas / "parkinson_gwas_associations_raw.csv",
+            self.gwas / "parkinson_initial_loci.csv",
+            self.gwas / "parkinson_gwas_mapped_genes.csv",
+            self.gwas / "parkinson_summary_statistics_metadata.csv",
+            ROOT / "reports" / "stage_03_gwas_api.md",
+            ROOT / "reports" / "stage_03_gwas_qc.md",
+            ROOT / "reports" / "stage_03_methods.md",
+            FIGURES / "stage_03_parkinson_gwas_manhattan.png",
+            FIGURES / "stage_03_parkinson_locus_overview.png",
+            FIGURES / "stage_03_gwas_to_gene_concept.png",
+        ]
+        missing = [str(path.relative_to(ROOT)) for path in required if not path.is_file()]
+        self.assertEqual(missing, [], f"Missing Stage 3 files: {missing}")
+
+    def test_ontology_candidate_set_and_primary_selection(self) -> None:
+        self.assertEqual(len(self.candidates), 113)
+        self.assertTrue(self.candidates["study_accession"].is_unique)
+        self.assertEqual(set(self.candidates["ontology_id"]), {"MONDO_0005180"})
+        selected = self.selection.loc[self.selection["primary_selected"]]
+        self.assertEqual(len(selected), 1)
+        self.assertEqual(selected.iloc[0]["study_accession"], "GCST90308590")
+        self.assertEqual(int(selected.iloc[0]["study_rank"]), 1)
+
+    def test_significant_associations_are_valid(self) -> None:
+        self.assertEqual(len(self.associations), 109)
+        self.assertTrue(self.associations["variant"].is_unique)
+        self.assertTrue(self.associations["rsid"].str.fullmatch(r"rs\d+").all())
+        self.assertTrue(self.associations["chromosome"].between(1, 22).all())
+        self.assertTrue(self.associations["position"].gt(0).all())
+        self.assertTrue(self.associations["p_value"].between(0, 5e-8).all())
+        self.assertEqual(set(self.associations["study_accession"]), {"GCST90308590"})
+
+    def test_provisional_loci_cover_every_association(self) -> None:
+        self.assertEqual(len(self.loci), 78)
+        self.assertEqual(int(self.loci["number_of_associations"].sum()), 109)
+        self.assertFalse(self.associations["locus_id"].isna().any())
+        self.assertEqual(set(self.associations["locus_id"]), set(self.loci["locus_id"]))
+
+    def test_mapped_genes_remain_candidate_annotations(self) -> None:
+        self.assertEqual(self.mapped["gene"].nunique(), 763)
+        self.assertTrue(set(self.mapped["locus_id"]).issubset(set(self.loci["locus_id"])))
+        self.assertTrue(self.mapped["mapping_source"].str.contains("not causal").all())
+
+    def test_open_companion_summary_statistics_are_documented(self) -> None:
+        metadata = pd.read_csv(
+            self.gwas / "parkinson_summary_statistics_metadata.csv"
+        )
+        primary = metadata.loc[metadata["study_accession"] == "GCST90308590"].iloc[0]
+        self.assertTrue(bool(primary["download_available"]))
+        self.assertEqual(primary["source_accession"], "GCST90275127")
+        self.assertEqual(primary["genome_build"], "GRCh37")
+        self.assertEqual(int(primary["sample_size"]), 611_485)
+        validation = metadata.loc[metadata["study_accession"] == "GCST90480008"].iloc[0]
+        self.assertEqual(validation["genome_build"], "GRCh38")
+        self.assertEqual(validation["file_size"], "827 MB")
+
+
 if __name__ == "__main__":
     unittest.main()

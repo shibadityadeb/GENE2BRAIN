@@ -13,7 +13,19 @@ __pycache__/
 data/ahba/*
 !data/ahba/.gitkeep
 
-# Generated outputs (keep directories in version control)
+# Reproducible donor-level matrices (about 151 MB total)
+data/intermediate/donor_*_expression.csv
+
+# Retain only the atlas files required by the pipeline and its documentation
+data/atlases/aal_3v2/*
+!data/atlases/aal_3v2/AAL3/
+data/atlases/aal_3v2/AAL3/*
+!data/atlases/aal_3v2/AAL3/AAL3v1.nii.gz
+!data/atlases/aal_3v2/AAL3/AAL3v1.xml
+!data/atlases/aal_3v2/AAL3/AAL3_UserGuide_April2024.pdf
+
+# Keep publication/QC figures, but ignore any other ad-hoc PNG outputs
 results/figures/*.png
 !results/figures/.gitkeep
-
+!results/figures/ahba_*.png
+!results/figures/stage_02_*.png

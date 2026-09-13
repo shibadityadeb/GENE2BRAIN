@@ -32,3 +32,4 @@ results/figures/*.png
 !results/figures/stage_03_*.png
 !results/figures/stage_04_*.png
 !results/figures/stage_05_*.png
+!results/figures/stage_06_*.png

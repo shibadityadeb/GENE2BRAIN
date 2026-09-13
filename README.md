@@ -41,11 +41,21 @@ microarray data and build a documented healthy-brain region × gene reference.
   using one shared display scale
 - `reports/stage_05_methods.md`: exact score definitions, matching audit,
   donor analysis, interpretation boundaries, and limitations
+- `src/stage_06_parkinson_enrichment.py`: 10,000-set matched permutation tests
+  for broad, stringent, and L2G-weighted regional profiles
+- `data/results/parkinson_regional_enrichment.csv`: primary weighted gene-set
+  null statistics, empirical p-values, BH-FDR values, and effect sizes
+- `data/results/stage_06_permutation_parameters.json`: exact matching,
+  sampling, weighting, batching, seed, and multiplicity parameters
+- `reports/stage_06_gene_set_bias_assessment.md`, `stage_06_interpretation.md`,
+  and `stage_06_performance.md`: matching QC, interpretation boundaries, and
+  runtime/memory details
 
-Work currently stops at the Stage 5 observed Parkinson-associated spatial
-expression layer. These regional profiles are descriptive raw-scale signals, not
-results from a null model. No random-set analysis, empirical inference, spatial
-permutation, pathway analysis, or cross-disease comparison has been performed.
+Work currently stops at the Stage 6 Parkinson gene-set permutation layer. The
+primary weighted analysis compares observed regional expression with matched random
+genes and applies BH-FDR across AAL3 regions. This gene-set null does not remove
+spatial autocorrelation. No spatially informed null, pathway analysis, prediction,
+or cross-disease comparison has been performed.
 
 ## Reproduce from a clean environment
 
@@ -62,6 +72,7 @@ python src/stage_02_preprocess.py
 python src/stage_03_parkinson_gwas.py
 python src/stage_04_parkinson_l2g.py
 python src/stage_05_parkinson_spatial_signal.py
+python src/stage_06_parkinson_enrichment.py
 python -m unittest discover -s tests -v
 ```
 

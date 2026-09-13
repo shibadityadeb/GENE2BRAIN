@@ -1,0 +1,52 @@
+{
+  "background": "all AHBA genes excluding all represented broad Parkinson genes",
+  "background_gene_count": 15509,
+  "batch_size": 250,
+  "empirical_test": "one-sided greater-or-equal with +1 numerator and denominator correction",
+  "fdr_threshold": 0.05,
+  "gene_set_versions": [
+    "broad",
+    "stringent",
+    "weighted"
+  ],
+  "genes_per_set": {
+    "broad": 123,
+    "stringent": 34,
+    "weighted": 123
+  },
+  "matching_method": "Euclidean nearest neighbors after unit-variance standardization",
+  "matching_variables": [
+    "mean_expression",
+    "log10_expression_variance",
+    "log1p_probe_count"
+  ],
+  "multiple_testing": "Benjamini-Hochberg across 138 regions separately for each gene-set version",
+  "n_permutations_per_gene_set": 10000,
+  "neighbor_pool_size": 200,
+  "primary_gene_set_version": "weighted",
+  "random_seed": 20260913,
+  "sampling_algorithm": "random disease-gene order; random unused candidate from nearest-neighbor pool; without replacement within permutation",
+  "standardization_parameters": {
+    "log10_expression_variance": {
+      "mean": -1.783190171268142,
+      "population_sd": 0.13759479289393609
+    },
+    "log1p_probe_count": {
+      "mean": 1.1705206980018872,
+      "population_sd": 0.2601822044237809
+    },
+    "mean_expression": {
+      "mean": 0.5050776929387305,
+      "population_sd": 0.022635207634811565
+    }
+  },
+  "uniqueness_verified": {
+    "broad_and_weighted": true,
+    "stringent": true
+  },
+  "variables_inspected_but_not_matched": {
+    "gene_length": "not available in existing project metadata",
+    "measurable_region_count": "constant at 138 after Stage 2 complete-case QC"
+  },
+  "weighted_null": "reuse broad matched replacements and carry the corresponding fixed Parkinson L2G weight to each replacement"
+}

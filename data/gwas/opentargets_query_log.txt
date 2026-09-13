@@ -1,0 +1,122 @@
+GENE2BRAIN Stage 4 Open Targets query log
+Access date: 2026-09-13
+Endpoint: https://api.platform.opentargets.org/api/v4/graphql
+API version: 26.6.3
+Data release: 26.06
+Data prefix: platform2606
+Study: GCST90308590
+Credible-set detail responses: 67
+
+STUDY QUERY
+query Stage4Study($id: String!) {
+  meta { name product apiVersion { x y z suffix }
+    dataVersion { year month iteration } dataPrefix downloads }
+  study(studyId: $id) {
+    id traitFromSource traitFromSourceMappedIds projectId studyType
+    publicationTitle publicationFirstAuthor publicationDate pubmedId publicationJournal
+    nSamples nCases nControls initialSampleSize hasSumstats summarystatsLocation
+    discoverySamples { ancestry sampleSize }
+    replicationSamples { ancestry sampleSize }
+    ldPopulationStructure { ldPopulation relativeSampleSize }
+    qualityControls analysisFlags cohorts diseases { id name }
+    credibleSets(page: {index: 0, size: 500}) { count rows {
+      studyLocusId studyId chromosome position region locusStart locusEnd
+      finemappingMethod confidence credibleSetlog10BF credibleSetIndex
+      purityMeanR2 purityMinR2 pValueMantissa pValueExponent sampleSize
+      qualityControls studyType
+      variant { id rsIds chromosome position referenceAllele alternateAllele }
+    } }
+  }
+}
+Variables: {"id":"GCST90308590"}
+
+CREDIBLE-SET DETAIL QUERY TEMPLATE
+query Stage4CredibleSet($id: String!) {
+  credibleSet(studyLocusId: $id) {
+    studyLocusId studyId chromosome position region locusStart locusEnd
+    finemappingMethod confidence credibleSetlog10BF credibleSetIndex
+    purityMeanR2 purityMinR2 pValueMantissa pValueExponent sampleSize
+    qualityControls studyType
+    variant { id rsIds chromosome position referenceAllele alternateAllele }
+    locus(page: {index: 0, size: 3000}) { count rows {
+      is95CredibleSet is99CredibleSet posteriorProbability logBF beta
+      standardError r2Overall pValueMantissa pValueExponent
+      variant { id rsIds chromosome position referenceAllele alternateAllele }
+    } }
+    l2GPredictions(page: {index: 0, size: 3000}) { count rows {
+      score shapBaseValue target { id approvedSymbol approvedName }
+      features { name value shapValue }
+    } }
+  }
+}
+Credible-set IDs: 98ab9e7e0641b4973c5ce38fe0902af3;32b726309ce69671e5eadf6258ed8a7e;b7521a623d84c257ed1519ccfb493ec4;65fe3ec96504bae9043f65f6bcd412c7;8bae19697cbddf937ba849a52978d268;b66309d22dd2384d5567a0af77a089a3;40d678df691f623cbc9d6dba734fcb27;fc4abf134a9277d1a61486c08d7dfbfe;440112da51393d8f0d80dd493b5e915d;d8eff9af6b3bf50e76800c339580e801;5c969b44e1c4ad2bb3d0a194d0103bd8;68d83f61b8246a33a33777add244e241;1b2b435b10f0de149a177f702c0afad0;f4e65b87c2592c59a5c29bad1fc3aaf9;756f75b6491487d11ae26f7277a0989d;6b4412018b3b46e39eaf2a795e0c86ff;c54fb958fa227c40069441cd9d03aa2a;4a2c27b955e21a147ccc9b58ee7fa86d;43cca9beb1307ea30018f9b3e6cb0394;1e924521aa2b80f1e6f0db4da634f37c;63c3328883271922c3819609f21e52f1;14648e8c292380917802dc831f614f56;d204fd6006cfd62423c05e28743e170b;27fbf89e6668fc09644f795c52ea42f7;9840f5d6f7096f80fa7acf2b9bd26d23;6a25b7b9810bfcdb7a432396e5937024;4b65b08c63cc0ebe8ffe639e66d33902;68edb235c2263b6189e993240b99f029;1dbafcbc9c4d6dcfbff2f84b031d9bfb;9120864c91ae901e3ae7b15b16c15603;1cd39541c9ad8cbe5d0e944a08f8f2eb;3f5a3b8f2b1da9113670d0bb3a3bd2b6;0887f1ea47022100566362acd320b7f9;1d050957d0bcfbfc986f88f4ae76cd6d;ffbb9cad4773b611b2c63babbd5259d8;4fe27e0d56a20ce70103e1d88a7441d6;73c7501597a8395fc0fb977252fc6ecf;3e13e700e702859efc1893b1447cbe74;205d43eb159b23bbe66b421d895af3c5;5dd6ec393088e0e55eb1cf0664f32415;97a2c12e26b0765502779cb2b646396c;f9b779f48569ccfa8fe2520d08d8f71e;2c3245c431e1080e62236340d5909691;60085c9852da11c93c1d7802e713e01a;317cf131406ec8091068e88c2420bdd3;798ef74d91d0316096bbaf61adbe5394;e5ba17ca78d559dbcdc1b5be492db7ab;15f41db91da3493ebfb88ff76d4c2b41;8fad4497a32405d1f2e842bc35884fd6;65adee85a21ebb38313f15aae4c5fff9;96331731b4895b8745ce0bfa50d10d9b;261b0ccae8c1e19c2c796c1da6d1fbbf;09c07031cb2613c59c833fc30a9bf279;c4324116aa13f50cded13161dc92c6bd;fff01aee854c10480f3e04fbb440d230;df2fab084418fef0861a6ed0373038ee;82ba89503d872be3b3b7bcb399e7fc59;02880e99c75d978283e8e2b3d0d72fba;8845c511b6072aea0ddbd13b5db2a697;b17c8074f1d156852f73e7a2b4e7412b;2f9e25d1a8195d90781eb14bac1b9e04;2223af89455373212794d1f533caaf40;8a461a2c971ef86ed5a5d9b2c23e1354;37d08e12e028cbde84b497ef185122bd;bcc8a3c1bfc87078f7b70f2459b33b33;ead755c3c3641615dcc26a99ad313c0f;99953a2192622c8188ffde74b66139c5
+
+RESPONSE METADATA (one JSON object per request)
+{"elapsed_seconds":0.635,"http_status":200,"query_name":"Stage4Study","response_bytes":466417,"timestamp_utc":"2026-09-13T14:57:11.010892+00:00","variables":{"id":"GCST90308590"}}
+{"elapsed_seconds":0.664,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":7941,"timestamp_utc":"2026-09-13T14:57:11.751908+00:00","variables":{"id":"f9b779f48569ccfa8fe2520d08d8f71e"}}
+{"elapsed_seconds":0.664,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":24791,"timestamp_utc":"2026-09-13T14:57:11.750044+00:00","variables":{"id":"fff01aee854c10480f3e04fbb440d230"}}
+{"elapsed_seconds":0.664,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":27970,"timestamp_utc":"2026-09-13T14:57:11.750374+00:00","variables":{"id":"ffbb9cad4773b611b2c63babbd5259d8"}}
+{"elapsed_seconds":0.664,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":25540,"timestamp_utc":"2026-09-13T14:57:11.751478+00:00","variables":{"id":"fc4abf134a9277d1a61486c08d7dfbfe"}}
+{"elapsed_seconds":0.557,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":25107,"timestamp_utc":"2026-09-13T14:57:12.418283+00:00","variables":{"id":"f4e65b87c2592c59a5c29bad1fc3aaf9"}}
+{"elapsed_seconds":0.563,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":18848,"timestamp_utc":"2026-09-13T14:57:12.418374+00:00","variables":{"id":"ead755c3c3641615dcc26a99ad313c0f"}}
+{"elapsed_seconds":0.58,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":11682,"timestamp_utc":"2026-09-13T14:57:12.419604+00:00","variables":{"id":"e5ba17ca78d559dbcdc1b5be492db7ab"}}
+{"elapsed_seconds":0.581,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":12219,"timestamp_utc":"2026-09-13T14:57:12.419785+00:00","variables":{"id":"df2fab084418fef0861a6ed0373038ee"}}
+{"elapsed_seconds":0.562,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":11417,"timestamp_utc":"2026-09-13T14:57:12.978765+00:00","variables":{"id":"d8eff9af6b3bf50e76800c339580e801"}}
+{"elapsed_seconds":0.545,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":6607,"timestamp_utc":"2026-09-13T14:57:13.000874+00:00","variables":{"id":"c54fb958fa227c40069441cd9d03aa2a"}}
+{"elapsed_seconds":0.557,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":8998,"timestamp_utc":"2026-09-13T14:57:12.985291+00:00","variables":{"id":"d204fd6006cfd62423c05e28743e170b"}}
+{"elapsed_seconds":0.556,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":23868,"timestamp_utc":"2026-09-13T14:57:13.002678+00:00","variables":{"id":"c4324116aa13f50cded13161dc92c6bd"}}
+{"elapsed_seconds":0.608,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":8733,"timestamp_utc":"2026-09-13T14:57:13.549881+00:00","variables":{"id":"b7521a623d84c257ed1519ccfb493ec4"}}
+{"elapsed_seconds":0.599,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":5749,"timestamp_utc":"2026-09-13T14:57:13.561434+00:00","variables":{"id":"b17c8074f1d156852f73e7a2b4e7412b"}}
+{"elapsed_seconds":0.606,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":6453,"timestamp_utc":"2026-09-13T14:57:13.551296+00:00","variables":{"id":"b66309d22dd2384d5567a0af77a089a3"}}
+{"elapsed_seconds":0.61,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":55575,"timestamp_utc":"2026-09-13T14:57:13.545574+00:00","variables":{"id":"bcc8a3c1bfc87078f7b70f2459b33b33"}}
+{"elapsed_seconds":0.606,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":23493,"timestamp_utc":"2026-09-13T14:57:14.163297+00:00","variables":{"id":"99953a2192622c8188ffde74b66139c5"}}
+{"elapsed_seconds":0.605,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":6660,"timestamp_utc":"2026-09-13T14:57:14.169179+00:00","variables":{"id":"97a2c12e26b0765502779cb2b646396c"}}
+{"elapsed_seconds":0.608,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":25265,"timestamp_utc":"2026-09-13T14:57:14.164840+00:00","variables":{"id":"9840f5d6f7096f80fa7acf2b9bd26d23"}}
+{"elapsed_seconds":0.607,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":68186,"timestamp_utc":"2026-09-13T14:57:14.164556+00:00","variables":{"id":"98ab9e7e0641b4973c5ce38fe0902af3"}}
+{"elapsed_seconds":0.603,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":19192,"timestamp_utc":"2026-09-13T14:57:14.780825+00:00","variables":{"id":"8fad4497a32405d1f2e842bc35884fd6"}}
+{"elapsed_seconds":0.611,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":15289,"timestamp_utc":"2026-09-13T14:57:14.777460+00:00","variables":{"id":"9120864c91ae901e3ae7b15b16c15603"}}
+{"elapsed_seconds":0.61,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":22371,"timestamp_utc":"2026-09-13T14:57:14.777150+00:00","variables":{"id":"96331731b4895b8745ce0bfa50d10d9b"}}
+{"elapsed_seconds":0.601,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":9395,"timestamp_utc":"2026-09-13T14:57:14.785961+00:00","variables":{"id":"8bae19697cbddf937ba849a52978d268"}}
+{"elapsed_seconds":0.543,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":4649,"timestamp_utc":"2026-09-13T14:57:15.395924+00:00","variables":{"id":"798ef74d91d0316096bbaf61adbe5394"}}
+{"elapsed_seconds":0.558,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":3891,"timestamp_utc":"2026-09-13T14:57:15.393085+00:00","variables":{"id":"8a461a2c971ef86ed5a5d9b2c23e1354"}}
+{"elapsed_seconds":0.562,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":3911,"timestamp_utc":"2026-09-13T14:57:15.395766+00:00","variables":{"id":"82ba89503d872be3b3b7bcb399e7fc59"}}
+{"elapsed_seconds":0.623,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":45730,"timestamp_utc":"2026-09-13T14:57:15.395017+00:00","variables":{"id":"8845c511b6072aea0ddbd13b5db2a697"}}
+{"elapsed_seconds":0.533,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":38557,"timestamp_utc":"2026-09-13T14:57:15.943005+00:00","variables":{"id":"756f75b6491487d11ae26f7277a0989d"}}
+{"elapsed_seconds":0.552,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":10361,"timestamp_utc":"2026-09-13T14:57:15.960965+00:00","variables":{"id":"6b4412018b3b46e39eaf2a795e0c86ff"}}
+{"elapsed_seconds":0.559,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":7872,"timestamp_utc":"2026-09-13T14:57:15.955342+00:00","variables":{"id":"73c7501597a8395fc0fb977252fc6ecf"}}
+{"elapsed_seconds":0.543,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":30687,"timestamp_utc":"2026-09-13T14:57:16.024825+00:00","variables":{"id":"6a25b7b9810bfcdb7a432396e5937024"}}
+{"elapsed_seconds":0.648,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":16766,"timestamp_utc":"2026-09-13T14:57:16.480217+00:00","variables":{"id":"68edb235c2263b6189e993240b99f029"}}
+{"elapsed_seconds":0.556,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":9748,"timestamp_utc":"2026-09-13T14:57:16.571348+00:00","variables":{"id":"65adee85a21ebb38313f15aae4c5fff9"}}
+{"elapsed_seconds":0.609,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":62521,"timestamp_utc":"2026-09-13T14:57:16.517749+00:00","variables":{"id":"65fe3ec96504bae9043f65f6bcd412c7"}}
+{"elapsed_seconds":0.608,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":65864,"timestamp_utc":"2026-09-13T14:57:16.517376+00:00","variables":{"id":"68d83f61b8246a33a33777add244e241"}}
+{"elapsed_seconds":0.556,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":5736,"timestamp_utc":"2026-09-13T14:57:17.137735+00:00","variables":{"id":"5dd6ec393088e0e55eb1cf0664f32415"}}
+{"elapsed_seconds":0.556,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":11385,"timestamp_utc":"2026-09-13T14:57:17.140606+00:00","variables":{"id":"5c969b44e1c4ad2bb3d0a194d0103bd8"}}
+{"elapsed_seconds":0.571,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":10191,"timestamp_utc":"2026-09-13T14:57:17.134292+00:00","variables":{"id":"60085c9852da11c93c1d7802e713e01a"}}
+{"elapsed_seconds":0.577,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":6772,"timestamp_utc":"2026-09-13T14:57:17.132434+00:00","variables":{"id":"63c3328883271922c3819609f21e52f1"}}
+{"elapsed_seconds":0.645,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":7816,"timestamp_utc":"2026-09-13T14:57:17.710974+00:00","variables":{"id":"4a2c27b955e21a147ccc9b58ee7fa86d"}}
+{"elapsed_seconds":0.656,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":6077,"timestamp_utc":"2026-09-13T14:57:17.700742+00:00","variables":{"id":"4b65b08c63cc0ebe8ffe639e66d33902"}}
+{"elapsed_seconds":0.64,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":3883,"timestamp_utc":"2026-09-13T14:57:17.715076+00:00","variables":{"id":"440112da51393d8f0d80dd493b5e915d"}}
+{"elapsed_seconds":0.656,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":43233,"timestamp_utc":"2026-09-13T14:57:17.699231+00:00","variables":{"id":"4fe27e0d56a20ce70103e1d88a7441d6"}}
+{"elapsed_seconds":0.544,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":12757,"timestamp_utc":"2026-09-13T14:57:18.364192+00:00","variables":{"id":"3e13e700e702859efc1893b1447cbe74"}}
+{"elapsed_seconds":0.56,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":31202,"timestamp_utc":"2026-09-13T14:57:18.364027+00:00","variables":{"id":"3f5a3b8f2b1da9113670d0bb3a3bd2b6"}}
+{"elapsed_seconds":0.573,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":11202,"timestamp_utc":"2026-09-13T14:57:18.361054+00:00","variables":{"id":"40d678df691f623cbc9d6dba734fcb27"}}
+{"elapsed_seconds":0.604,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":75909,"timestamp_utc":"2026-09-13T14:57:18.360795+00:00","variables":{"id":"43cca9beb1307ea30018f9b3e6cb0394"}}
+{"elapsed_seconds":0.553,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":7209,"timestamp_utc":"2026-09-13T14:57:18.930339+00:00","variables":{"id":"32b726309ce69671e5eadf6258ed8a7e"}}
+{"elapsed_seconds":0.547,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":4311,"timestamp_utc":"2026-09-13T14:57:18.939122+00:00","variables":{"id":"317cf131406ec8091068e88c2420bdd3"}}
+{"elapsed_seconds":0.571,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":21814,"timestamp_utc":"2026-09-13T14:57:18.914747+00:00","variables":{"id":"37d08e12e028cbde84b497ef185122bd"}}
+{"elapsed_seconds":0.577,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":48256,"timestamp_utc":"2026-09-13T14:57:19.019333+00:00","variables":{"id":"2f9e25d1a8195d90781eb14bac1b9e04"}}
+{"elapsed_seconds":0.607,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":11800,"timestamp_utc":"2026-09-13T14:57:19.490715+00:00","variables":{"id":"261b0ccae8c1e19c2c796c1da6d1fbbf"}}
+{"elapsed_seconds":0.609,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":18698,"timestamp_utc":"2026-09-13T14:57:19.485808+00:00","variables":{"id":"2c3245c431e1080e62236340d5909691"}}
+{"elapsed_seconds":0.607,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":23340,"timestamp_utc":"2026-09-13T14:57:19.489448+00:00","variables":{"id":"27fbf89e6668fc09644f795c52ea42f7"}}
+{"elapsed_seconds":0.56,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":4612,"timestamp_utc":"2026-09-13T14:57:19.605060+00:00","variables":{"id":"2223af89455373212794d1f533caaf40"}}
+{"elapsed_seconds":0.607,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":10226,"timestamp_utc":"2026-09-13T14:57:20.101781+00:00","variables":{"id":"1e924521aa2b80f1e6f0db4da634f37c"}}
+{"elapsed_seconds":0.545,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":10004,"timestamp_utc":"2026-09-13T14:57:20.167960+00:00","variables":{"id":"1d050957d0bcfbfc986f88f4ae76cd6d"}}
+{"elapsed_seconds":0.61,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":19072,"timestamp_utc":"2026-09-13T14:57:20.101535+00:00","variables":{"id":"205d43eb159b23bbe66b421d895af3c5"}}
+{"elapsed_seconds":0.608,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":6005,"timestamp_utc":"2026-09-13T14:57:20.103818+00:00","variables":{"id":"1dbafcbc9c4d6dcfbff2f84b031d9bfb"}}
+{"elapsed_seconds":0.606,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":4968,"timestamp_utc":"2026-09-13T14:57:20.720684+00:00","variables":{"id":"14648e8c292380917802dc831f614f56"}}
+{"elapsed_seconds":0.607,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":17115,"timestamp_utc":"2026-09-13T14:57:20.716481+00:00","variables":{"id":"1cd39541c9ad8cbe5d0e944a08f8f2eb"}}
+{"elapsed_seconds":0.604,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":27049,"timestamp_utc":"2026-09-13T14:57:20.719911+00:00","variables":{"id":"15f41db91da3493ebfb88ff76d4c2b41"}}
+{"elapsed_seconds":0.606,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":36816,"timestamp_utc":"2026-09-13T14:57:20.719034+00:00","variables":{"id":"1b2b435b10f0de149a177f702c0afad0"}}
+{"elapsed_seconds":0.608,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":22099,"timestamp_utc":"2026-09-13T14:57:21.329777+00:00","variables":{"id":"09c07031cb2613c59c833fc30a9bf279"}}
+{"elapsed_seconds":0.607,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":18153,"timestamp_utc":"2026-09-13T14:57:21.332621+00:00","variables":{"id":"02880e99c75d978283e8e2b3d0d72fba"}}
+{"elapsed_seconds":0.608,"http_status":200,"query_name":"Stage4CredibleSet","response_bytes":35664,"timestamp_utc":"2026-09-13T14:57:21.332450+00:00","variables":{"id":"0887f1ea47022100566362acd320b7f9"}}

@@ -171,5 +171,81 @@ class ParkinsonGwasArtifactTests(unittest.TestCase):
         self.assertEqual(validation["file_size"], "827 MB")
 
 
+class ParkinsonLocusToGeneArtifactTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.gwas = ROOT / "data" / "gwas"
+        cls.gene_dir = ROOT / "data" / "genes"
+        cls.result_data = ROOT / "data" / "results"
+        cls.credible = pd.read_csv(cls.gwas / "parkinson_credible_sets.csv")
+        cls.l2g = pd.read_csv(cls.gene_dir / "parkinson_l2g_predictions.csv")
+        cls.broad = pd.read_csv(cls.gene_dir / "parkinson_genes_broad.csv")
+        cls.stringent = pd.read_csv(cls.gene_dir / "parkinson_genes_stringent.csv")
+        cls.weighted = pd.read_csv(cls.gene_dir / "parkinson_genes_weighted.csv")
+
+    def test_required_stage_04_outputs_exist(self) -> None:
+        required = [
+            self.gwas / "parkinson_opentargets_study_match.csv",
+            self.gwas / "parkinson_credible_sets.csv",
+            self.gwas / "opentargets_query_log.txt",
+            self.gene_dir / "parkinson_l2g_predictions.csv",
+            self.gene_dir / "parkinson_genes_broad.csv",
+            self.gene_dir / "parkinson_genes_stringent.csv",
+            self.gene_dir / "parkinson_genes_weighted.csv",
+            self.gene_dir / "parkinson_gene_locus_evidence.csv",
+            self.result_data / "parkinson_gwas_vs_l2g_gene_comparison.csv",
+            self.result_data / "parkinson_gene_ahba_coverage.csv",
+            ROOT / "results" / "tables" / "parkinson_top_prioritized_genes.csv",
+            ROOT / "reports" / "stage_04_opentargets_method.md",
+            ROOT / "reports" / "stage_04_methods.md",
+            FIGURES / "stage_04_parkinson_gwas_to_gene.png",
+            FIGURES / "stage_04_parkinson_l2g_distribution.png",
+            FIGURES / "stage_04_parkinson_gene_mapping_comparison.png",
+        ]
+        missing = [str(path.relative_to(ROOT)) for path in required if not path.is_file()]
+        self.assertEqual(missing, [], f"Missing Stage 4 files: {missing}")
+
+    def test_study_and_credible_sets_are_release_consistent(self) -> None:
+        match = pd.read_csv(self.gwas / "parkinson_opentargets_study_match.csv")
+        self.assertEqual(len(match), 1)
+        self.assertEqual(match.iloc[0]["opentargets_study"], "GCST90308590")
+        self.assertEqual(match.iloc[0]["match_status"], "matched")
+        self.assertEqual(len(self.credible), 67)
+        self.assertTrue(self.credible["credible_set_id"].is_unique)
+        self.assertEqual(set(self.credible["fine_mapping_method"]), {"PICS"})
+        self.assertTrue(self.credible["stage_03_locus_id"].notna().all())
+        self.assertTrue(self.credible["lead_posterior_inclusion_probability"].between(0, 1).all())
+
+    def test_l2g_scores_and_gene_sets_preserve_evidence(self) -> None:
+        self.assertEqual(len(self.l2g), 149)
+        self.assertFalse(self.l2g.duplicated(["credible_set_id", "gene"]).any())
+        self.assertTrue(self.l2g["l2g_score"].between(0, 1).all())
+        self.assertTrue(self.l2g["l2g_score"].gt(0.05).all())
+        self.assertEqual(set(self.stringent["gene"]) - set(self.broad["gene"]), set())
+        self.assertEqual(set(self.weighted["gene"]), set(self.broad["gene"]))
+        self.assertTrue(np.allclose(self.weighted["gene_weight"], self.weighted["max_l2g_score"]))
+
+    def test_master_and_top_tables_have_required_semantics(self) -> None:
+        master = pd.read_csv(self.gene_dir / "parkinson_gene_locus_evidence.csv")
+        required = {
+            "disease", "gene", "ensembl_id", "locus_id", "credible_set_id",
+            "lead_variant", "chromosome", "position", "p_value_if_available",
+            "l2g_score", "fine_mapping_method", "credible_set_confidence",
+            "study", "evidence_source",
+        }
+        self.assertTrue(required.issubset(master.columns))
+        self.assertEqual(len(master), len(self.l2g))
+        top = pd.read_csv(ROOT / "results" / "tables" / "parkinson_top_prioritized_genes.csv")
+        self.assertEqual(top["rank"].tolist(), list(range(1, len(top) + 1)))
+        self.assertTrue(top["l2g_score"].is_monotonic_decreasing)
+        self.assertTrue(top["evidence"].str.contains("not proof of causality").all())
+
+    def test_ahba_check_is_coverage_only(self) -> None:
+        coverage = pd.read_csv(self.result_data / "parkinson_gene_ahba_coverage.csv")
+        self.assertEqual(set(coverage["gene_set"]), {"broad", "stringent", "weighted"})
+        self.assertTrue(coverage["coverage_only_no_expression_scoring"].all())
+        self.assertTrue(coverage["coverage_percentage"].between(0, 100).all())
+
+
 if __name__ == "__main__":
     unittest.main()

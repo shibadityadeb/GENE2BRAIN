@@ -1,0 +1,26 @@
+rank,region,region_id,score,number_of_genes,interpretation
+1,Thal MGN L,141,0.5650683616066453,123,observed Parkinson-associated gene expression
+2,Thal PuI L,143,0.5621284235664139,123,observed Parkinson-associated gene expression
+3,Cerebellum 4 5 R,102,0.5486448756494278,123,observed Parkinson-associated gene expression
+4,Thal IL L,131,0.5479696702290494,123,observed Parkinson-associated gene expression
+5,Frontal Med Orb R,22,0.543780751689348,123,observed Parkinson-associated gene expression
+6,Cerebellum 4 5 L,101,0.5428256547085529,123,observed Parkinson-associated gene expression
+7,Thal LGN R,140,0.5426463132109661,123,observed Parkinson-associated gene expression
+8,OFCant R,28,0.5404525935041014,123,observed Parkinson-associated gene expression
+9,Thal PuI R,144,0.5395538171419695,123,observed Parkinson-associated gene expression
+10,Red N R,166,0.5391685492813293,123,observed Parkinson-associated gene expression
+11,Cerebellum 10 L,111,0.535895689268353,123,observed Parkinson-associated gene expression
+12,ACC pre R,154,0.5341722630339706,123,observed Parkinson-associated gene expression
+13,Frontal Sup Medial R,20,0.5335963587687055,123,observed Parkinson-associated gene expression
+14,Thal LGN L,139,0.5335024543312892,123,observed Parkinson-associated gene expression
+15,SN pc L,161,0.5333927649823768,123,observed Parkinson-associated gene expression
+16,Cerebellum Crus1 R,96,0.5331709850548261,123,observed Parkinson-associated gene expression
+17,Rectus R,24,0.531819725477195,123,observed Parkinson-associated gene expression
+18,Thal PuM L,145,0.5317578706636388,123,observed Parkinson-associated gene expression
+19,Rolandic Oper R,14,0.5313721259066518,123,observed Parkinson-associated gene expression
+20,Thal PuA L,147,0.531359877078257,123,observed Parkinson-associated gene expression
+21,Thal VPL R,130,0.5306508287258311,123,observed Parkinson-associated gene expression
+22,Occipital Mid R,56,0.529069431315593,123,observed Parkinson-associated gene expression
+23,Thal VL R,128,0.5281701056429762,123,observed Parkinson-associated gene expression
+24,Heschl L,83,0.5263266544141402,123,observed Parkinson-associated gene expression
+25,Vermis 8,118,0.5259947618711901,123,observed Parkinson-associated gene expression

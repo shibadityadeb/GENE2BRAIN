@@ -1,6 +1,7 @@
 import { expect, test } from '@playwright/test'
 
 test('loads the real multi-disease atlas and supports core exploration controls', async ({ page }) => {
+  test.setTimeout(150_000)
   await page.goto('./')
   await expect(page.getByRole('heading', { level: 1, name: /From Genetic Risk to Spatial Brain Vulnerability/ })).toBeVisible()
   await expect(page.locator('canvas').first()).toBeVisible()

@@ -1,4 +1,4 @@
-export type Metric = 'z_score' | 'observed_score' | 'fdr_p'
+export type Metric = 'z_score' | 'observed_score' | 'fdr_p' | 'spatial_robustness'
 export type Hemisphere = 'whole' | 'L' | 'R'
 export type ViewPreset = 'reset' | 'anterior' | 'posterior' | 'superior' | 'inferior'
 
@@ -18,6 +18,12 @@ export interface RegionRecord {
   fdr_p: number
   effect_size: number
   number_of_genes: number
+  spatial_null_p: number
+  spatial_null_fdr: number
+  spatial_robustness: number
+  spatial_robustness_label: 'robust' | 'not_robust'
+  robustness_rank: number
+  spatial_isolate: boolean
 }
 
 export interface EnrichmentData {
@@ -61,6 +67,16 @@ export interface ProjectMetadata {
     null_draws_available: boolean
     null_summary_available: boolean
     null_summary_note: string
+    spatial_sensitivity: {
+      method: string
+      neighbor_definition: string
+      permutations: number
+      global_statistic: string
+      global_p: number
+      robust_rule: string
+      robust_regions: number
+      isolated_regions: number
+    }
   }
   metrics: Record<string, { label: string; domain?: number[]; threshold?: number; scale: string }>
   atlas: Record<string, unknown>

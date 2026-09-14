@@ -89,6 +89,7 @@ export default function App() {
             observedDomain={observedDomain}
             threshold={metadata.analysis.fdr_threshold}
             significant={metadata.analysis.significant_regions}
+            spatialRobustRegions={metadata.analysis.spatial_sensitivity.robust_regions}
             validationMode={validationMode}
           />
           {validationMode && (

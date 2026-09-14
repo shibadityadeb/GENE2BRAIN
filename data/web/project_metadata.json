@@ -44,7 +44,17 @@
     "significant_regions": 0,
     "null_draws_available": false,
     "null_summary_available": true,
-    "null_summary_note": "Per-region random mean and standard deviation are retained; individual permutation draws were not exported by Stage 6."
+    "null_summary_note": "Per-region random mean and standard deviation are retained; individual permutation draws were not exported by Stage 6.",
+    "spatial_sensitivity": {
+      "method": "Moran spectral randomization, singleton procedure",
+      "neighbor_definition": "26-connectivity: voxel face, edge, or corner contact",
+      "permutations": 10000,
+      "global_statistic": "maximum standardized positive regional Stage 6 Z-score",
+      "global_p": 0.5301469853014699,
+      "robust_rule": "positive Stage 6 Z AND Stage 6 FDR < 0.05 AND Stage 7 spatial-null FDR < 0.05",
+      "robust_regions": 0,
+      "isolated_regions": 4
+    }
   },
   "metrics": {
     "z_score": {
@@ -67,6 +77,14 @@
       "label": "FDR significance",
       "threshold": 0.05,
       "scale": "binary significance status"
+    },
+    "spatial_robustness": {
+      "label": "Spatial robustness",
+      "domain": [
+        0,
+        1
+      ],
+      "scale": "sequential spatial-null percentile"
     }
   },
   "atlas": {

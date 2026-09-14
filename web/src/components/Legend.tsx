@@ -1,12 +1,13 @@
 import type { Metric } from '../types'
 import { formatValue } from '../format'
 
-export function Legend({ metric, zDomain, observedDomain, threshold, significant, validationMode }: {
+export function Legend({ metric, zDomain, observedDomain, threshold, significant, spatialRobustRegions, validationMode }: {
   metric: Metric
   zDomain: [number, number]
   observedDomain: [number, number]
   threshold: number
   significant: number
+  spatialRobustRegions: number
   validationMode: boolean
 }) {
   if (validationMode) return (
@@ -19,6 +20,14 @@ export function Legend({ metric, zDomain, observedDomain, threshold, significant
       <strong>FDR significance</strong>
       <div className="binary-legend"><i className="sig" /> q &lt; {threshold} <i className="nonsig" /> not significant</div>
       <span>{significant} of 138 regions meet the predefined threshold.</span>
+    </div>
+  )
+  if (metric === 'spatial_robustness') return (
+    <div className="legend" aria-label="Spatial robustness legend">
+      <strong>Spatial robustness</strong>
+      <div className="gradient-key spatial" />
+      <div className="legend-values"><span>0</span><span>Spatial-null percentile</span><span>1</span></div>
+      <span>{spatialRobustRegions} regions meet the joint Stage 6 + Stage 7 rule. A high percentile alone is not a robust call.</span>
     </div>
   )
   const observed = metric === 'observed_score'

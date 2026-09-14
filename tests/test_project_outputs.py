@@ -15,6 +15,7 @@ from pathlib import Path
 import nibabel as nib
 import numpy as np
 import pandas as pd
+from statsmodels.stats.multitest import multipletests
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -344,6 +345,99 @@ class ParkinsonSpatialSignalArtifactTests(unittest.TestCase):
         self.assertEqual(correlations.shape, (3, 3))
         self.assertTrue(np.allclose(correlations, correlations.T))
         self.assertTrue(np.allclose(np.diag(correlations), 1.0))
+
+
+class ParkinsonEnrichmentArtifactTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.result_data = ROOT / "data" / "results"
+        cls.brain_maps = ROOT / "results" / "brain_maps"
+        cls.primary = pd.read_csv(cls.result_data / "parkinson_regional_enrichment.csv")
+        cls.all_methods = pd.read_csv(
+            cls.result_data / "parkinson_regional_enrichment_all_methods.csv"
+        )
+
+    def test_required_stage_06_outputs_exist(self) -> None:
+        required = [
+            self.result_data / "parkinson_regional_enrichment.csv",
+            self.result_data / "parkinson_regional_enrichment_all_methods.csv",
+            self.result_data / "parkinson_null_model_method_comparison.csv",
+            self.result_data / "stage_06_gene_matching_balance.csv",
+            self.result_data / "stage_06_permutation_parameters.json",
+            ROOT / "results" / "tables" / "parkinson_top_enriched_regions.csv",
+            ROOT / "reports" / "stage_06_gene_set_bias_assessment.md",
+            ROOT / "reports" / "stage_06_interpretation.md",
+            ROOT / "reports" / "stage_06_performance.md",
+            self.brain_maps / "stage_06_parkinson_zscore_map.png",
+            self.brain_maps / "stage_06_parkinson_fdr_map.png",
+            FIGURES / "stage_06_gene_matching_expression.png",
+            FIGURES / "stage_06_gene_matching_coverage.png",
+            FIGURES / "stage_06_parkinson_null_distributions.png",
+            FIGURES / "stage_06_observed_vs_random.png",
+            FIGURES / "stage_06_parkinson_enrichment_ranking.png",
+            FIGURES / "stage_06_method_robustness_heatmap.png",
+            FIGURES / "stage_06_donor_robustness.png",
+        ]
+        missing = [str(path.relative_to(ROOT)) for path in required if not path.is_file()]
+        self.assertEqual(missing, [], f"Missing Stage 6 files: {missing}")
+
+    def test_primary_empirical_statistics_are_reproducible(self) -> None:
+        self.assertEqual(len(self.primary), 138)
+        self.assertEqual(set(self.primary["gene_set_version"]), {"weighted"})
+        self.assertEqual(set(self.primary["n_permutations"]), {10_000})
+        expected_p = (self.primary["number_random_equal_or_greater"] + 1) / 10_001
+        self.assertTrue(np.allclose(self.primary["empirical_p"], expected_p))
+        self.assertTrue(
+            np.allclose(
+                self.primary["effect_size"],
+                self.primary["observed_score"] - self.primary["random_mean"],
+            )
+        )
+        expected_z = self.primary["effect_size"] / self.primary["random_std"]
+        self.assertTrue(np.allclose(self.primary["z_score"], expected_z))
+        expected_fdr = multipletests(self.primary["empirical_p"], method="fdr_bh")[1]
+        self.assertTrue(np.allclose(self.primary["fdr_p"], expected_fdr))
+
+    def test_all_gene_set_versions_have_complete_region_tests(self) -> None:
+        self.assertEqual(len(self.all_methods), 3 * 138)
+        self.assertEqual(
+            self.all_methods.groupby("gene_set_version")["region_id"].nunique().to_dict(),
+            {"broad": 138, "stringent": 138, "weighted": 138},
+        )
+        self.assertTrue(self.all_methods["empirical_p"].between(1 / 10_001, 1).all())
+        self.assertTrue(self.all_methods["fdr_p"].between(0, 1).all())
+        self.assertEqual(int((self.primary["fdr_p"] < 0.05).sum()), 0)
+
+    def test_matching_parameters_and_balance_are_valid(self) -> None:
+        with (self.result_data / "stage_06_permutation_parameters.json").open() as stream:
+            parameters = json.load(stream)
+        self.assertEqual(parameters["random_seed"], 20260913)
+        self.assertEqual(parameters["n_permutations_per_gene_set"], 10_000)
+        self.assertEqual(parameters["genes_per_set"], {"broad": 123, "stringent": 34, "weighted": 123})
+        self.assertTrue(all(parameters["uniqueness_verified"].values()))
+        balance = pd.read_csv(self.result_data / "stage_06_gene_matching_balance.csv")
+        self.assertEqual(set(balance["gene_set_version"]), {"broad", "stringent", "weighted"})
+        matched = balance.loc[balance["used_for_matching"]]
+        self.assertTrue(matched["standardized_mean_difference_after"].abs().lt(0.1).all())
+
+    def test_primary_and_comparison_tables_are_well_formed(self) -> None:
+        ordered = self.primary.sort_values(
+            ["fdr_p", "z_score"], ascending=[True, False]
+        ).reset_index(drop=True)
+        pd.testing.assert_frame_equal(self.primary, ordered)
+        top = pd.read_csv(ROOT / "results" / "tables" / "parkinson_top_enriched_regions.csv")
+        pd.testing.assert_frame_equal(top, self.primary.head(25))
+        comparison = pd.read_csv(
+            self.result_data / "parkinson_null_model_method_comparison.csv"
+        )
+        self.assertEqual(len(comparison), 3)
+        self.assertTrue(comparison["pearson_r"].between(-1, 1).all())
+        self.assertTrue(comparison["spearman_rho"].between(-1, 1).all())
+
+    def test_interpretation_records_spatial_null_limitation(self) -> None:
+        text = (ROOT / "reports" / "stage_06_interpretation.md").read_text()
+        self.assertIn("gene-set permutation significance", text)
+        self.assertIn("do not remove spatial autocorrelation", text)
 
 
 if __name__ == "__main__":

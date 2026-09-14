@@ -9,6 +9,12 @@ __pycache__/
 .idea/
 .vscode/
 
+# Web build and dependencies
+web/node_modules/
+web/dist/
+web/test-results/
+web/playwright-report/
+
 # Large, reproducibly downloaded AHBA files
 data/ahba/*
 !data/ahba/.gitkeep
@@ -33,3 +39,4 @@ results/figures/*.png
 !results/figures/stage_04_*.png
 !results/figures/stage_05_*.png
 !results/figures/stage_06_*.png
+!results/figures/web_atlas_region_validation.png

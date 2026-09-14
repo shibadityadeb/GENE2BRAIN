@@ -40,3 +40,42 @@ jobs:
 
       - name: Validate notebook and generated artifacts
         run: python -m unittest discover -s tests -v
+
+      - name: Validate web research data and atlas mapping
+        run: python scripts/validate_web_data.py
+
+  web:
+    name: Build and test interactive brain
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: Install web dependencies
+        working-directory: web
+        run: npm ci
+
+      - name: Run web unit tests
+        working-directory: web
+        run: npm test
+
+      - name: Build production application
+        working-directory: web
+        run: npm run build
+
+      - name: Install browser for interaction tests
+        working-directory: web
+        run: npx playwright install --with-deps chromium
+
+      - name: Test desktop, mobile, and WebGL interactions
+        working-directory: web
+        run: npm run test:e2e

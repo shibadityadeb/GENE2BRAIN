@@ -28,6 +28,45 @@ export interface RegionRecord {
   validation_region: string | null
   validation_mapping_confidence: 'high' | 'medium' | null
   agreement_status: 'high_prediction_high_validation' | 'high_prediction_low_validation' | 'low_prediction_high_validation' | 'low_prediction_low_validation' | 'not_measured'
+  biology: RegionBiology | null
+}
+
+export interface BiologicalGene {
+  gene: string
+  expression: number
+  l2g_score: number
+  weighted_contribution: number
+  regional_rank: number
+}
+
+export interface BiologicalPathway {
+  id: string
+  name: string
+  fdr: number
+  genes: string[]
+}
+
+export interface BiologicalCellType {
+  name: string
+  fdr: number
+  genes: string[]
+}
+
+export interface RegionBiology {
+  region_id: number
+  selected_for_regional_interpretation: boolean
+  selection_rule: string
+  robustness_rank: number | null
+  top_genes: BiologicalGene[]
+  pathways: BiologicalPathway[]
+  cell_types: BiologicalCellType[]
+}
+
+export interface BiologicalInterpretationData {
+  schema_version: string
+  generated_on: string
+  evidence_note: string
+  regions: RegionBiology[]
 }
 
 export interface EnrichmentData {
@@ -95,6 +134,20 @@ export interface ProjectMetadata {
       interpretation: 'SUPPORTED' | 'PARTIALLY SUPPORTED' | 'NOT SUPPORTED'
       independence_note: string
       substantia_nigra: string
+    }
+    biological_interpretation: {
+      status: string
+      primary_gene_set: string
+      genes_analyzed: number
+      genes_represented_in_ahba: number
+      background: string
+      go_significant_terms: number
+      reactome_significant_pathways: number
+      ranked_significant_pathways: number
+      cell_types_significant: number
+      supported_region_pathway_rows: number
+      region_rule: string
+      interpretation_note: string
     }
   }
   metrics: Record<string, { label: string; domain?: number[]; threshold?: number; scale: string }>

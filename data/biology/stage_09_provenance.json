@@ -1,0 +1,61 @@
+{
+  "stage": 9,
+  "access_date": "2026-09-14",
+  "analysis_boundary": "post-hoc interpretation; Stages 3-8 frozen",
+  "sources": {
+    "gprofiler": {
+      "url": "https://biit.cs.ut.ee/gprofiler/api/gost/profile/",
+      "version": "e114_eg62_p19_27110d83",
+      "cached_responses": [
+        "gprofiler_region_11_reactome.json.gz",
+        "gprofiler_region_128_reactome.json.gz",
+        "gprofiler_region_141_reactome.json.gz",
+        "gprofiler_region_146_reactome.json.gz",
+        "gprofiler_region_20_reactome.json.gz",
+        "gprofiler_region_28_reactome.json.gz",
+        "gprofiler_region_37_reactome.json.gz",
+        "gprofiler_region_41_reactome.json.gz",
+        "gprofiler_region_45_reactome.json.gz",
+        "gprofiler_region_4_reactome.json.gz",
+        "gprofiler_stringent_ora_ensembl.json.gz",
+        "gprofiler_weighted_ora_ensembl.json.gz"
+      ]
+    },
+    "gene_ontology": {
+      "via": "g:Profiler",
+      "url": "https://geneontology.org/"
+    },
+    "reactome": {
+      "release": "97",
+      "version_url": "https://reactome.org/ContentService/data/database/version"
+    },
+    "wikipathways": {
+      "release": "2026-09-10",
+      "via": "g:Profiler",
+      "url": "https://data.wikipathways.org/current/gmt/"
+    },
+    "human_protein_atlas": {
+      "version": "25.1",
+      "url": "https://www.proteinatlas.org/download/tsv/rna_single_nuclei_cluster_type.tsv.zip",
+      "class_url": "https://www.proteinatlas.org/download/tsv/rna_single_nuclei_cluster_type_cluster_types.tsv.zip",
+      "expression_sha256": "a287c1abab593c9d6802349a82f118efc0d4aea411be7d897b8feb0b31b02f2a",
+      "classes_sha256": "05d247bcb8f230aa4b09c23eb5fdc964444a175f06e73efac2a7c17ec6ac564c"
+    }
+  },
+  "frozen_inputs": {
+    "parkinson_genes_broad.csv": "4160be614486f13938fd836fbcd1c8054b6019e6adf7f3fcc9191b4d50cd0203",
+    "parkinson_genes_stringent.csv": "f6c44eb1a38ee54a6dfdda7519d1a7c5fc0186a6c36d8953a36a9864ef11a64e",
+    "parkinson_genes_weighted.csv": "4878cd9508f2687ebfd3258532e809b663ea0205531cfe1af6b5ea8845589a4b",
+    "parkinson_regional_enrichment.csv": "c0568ee3eb8703ff1c552528f1afe8544c10cdd764799e1d6dc48f1447a192a7",
+    "parkinson_spatial_robustness.csv": "61ede7c9527f29bbc9b70337468b09964c2957d92c95a38b39a3eb5c0491aad9",
+    "brain_region_gene_expression.csv": "fc74fb84cc3f8e7ada2050d2a5ed5d99be63ec6ecb84053b975fe1c29a81dff2"
+  },
+  "packages": {
+    "python": "3.12.7",
+    "pandas": "2.2.3",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "requests": "2.32.3",
+    "matplotlib": "3.9.4"
+  }
+}

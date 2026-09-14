@@ -33,6 +33,12 @@ GLOBAL_SPATIAL = ROOT / "data" / "results" / "parkinson_global_spatial_test.csv"
 VALIDATION_AAL3 = ROOT / "data" / "validation" / "processed" / "parkinson_validation_aal3_scores.csv"
 VALIDATION_RESULTS = ROOT / "data" / "results" / "parkinson_independent_validation.csv"
 VALIDATION_REGIONAL = ROOT / "data" / "validation" / "processed" / "parkinson_validation_regional_scores.csv"
+BIOLOGY_JSON = ROOT / "data" / "web" / "parkinson_biological_interpretation.json"
+STAGE9_GO = ROOT / "data" / "results" / "stage_09_go_enrichment.csv"
+STAGE9_REACTOME = ROOT / "data" / "results" / "stage_09_reactome_enrichment.csv"
+STAGE9_RANKED = ROOT / "data" / "results" / "stage_09_ranked_pathway_analysis.csv"
+STAGE9_CELLS = ROOT / "data" / "results" / "stage_09_cell_type_enrichment.csv"
+STAGE9_EVIDENCE = ROOT / "data" / "results" / "stage_09_biological_evidence_summary.csv"
 ATLAS = ROOT / "data" / "atlases" / "aal_3v2" / "AAL3" / "AAL3v1.nii.gz"
 ATLAS_XML = ROOT / "data" / "atlases" / "aal_3v2" / "AAL3" / "AAL3v1.xml"
 AHBA_SUMMARY = ROOT / "data" / "processed" / "ahba_metadata_summary.csv"
@@ -343,6 +349,34 @@ def build() -> None:
             {"name": "ENIGMA Toolbox summary statistics", "url": "https://enigma-toolbox.readthedocs.io/en/latest/pages/04.loadsumstats/"},
         ],
     }
+    stage9_files = [STAGE9_GO, STAGE9_REACTOME, STAGE9_RANKED, STAGE9_CELLS, STAGE9_EVIDENCE]
+    if all(path.is_file() for path in stage9_files):
+        go_rows = read_csv(STAGE9_GO)
+        reactome_rows = read_csv(STAGE9_REACTOME)
+        ranked_rows = read_csv(STAGE9_RANKED)
+        cell_rows = read_csv(STAGE9_CELLS)
+        evidence_rows = read_csv(STAGE9_EVIDENCE)
+        metadata_payload["analysis"]["biological_interpretation"] = {
+            "status": "post-hoc interpretation of frozen discovery outputs",
+            "primary_gene_set": "Stage 4 L2G-weighted",
+            "genes_analyzed": 149,
+            "genes_represented_in_ahba": parameters["genes_per_set"]["weighted"],
+            "background": f"{gene_count:,} genes retained in the Stage 2 AHBA matrix",
+            "go_significant_terms": sum(float(row["fdr"]) < 0.05 for row in go_rows),
+            "reactome_significant_pathways": sum(float(row["fdr"]) < 0.05 for row in reactome_rows),
+            "ranked_significant_pathways": sum(float(row["fdr"]) < 0.05 for row in ranked_rows),
+            "cell_types_significant": sum(float(row["fdr"]) < 0.05 for row in cell_rows),
+            "supported_region_pathway_rows": len(evidence_rows),
+            "region_rule": "top 10 by frozen Stage 7 robustness rank",
+            "interpretation_note": "Enrichment and cell-type associations do not establish causality, pathology, pathway activation, or clinical utility",
+        }
+        metadata_payload["sources"].extend([
+            {"name": "g:Profiler functional enrichment", "url": "https://biit.cs.ut.ee/gprofiler/"},
+            {"name": "Gene Ontology", "url": "https://geneontology.org/"},
+            {"name": "Reactome release 97", "url": "https://reactome.org/"},
+            {"name": "WikiPathways September 2026", "url": "https://data.wikipathways.org/current/gmt/"},
+            {"name": "Human Protein Atlas v25.1 single-nucleus brain", "url": "https://www.proteinatlas.org/humanproteome/single+cell/single+nuclei+brain/data"},
+        ])
     geometry = {
         "schema_version": "1.0.0",
         "atlas": "AAL3v1",
@@ -360,6 +394,10 @@ def build() -> None:
     shutil.copy2(SPATIAL_RESULTS, PUBLIC_DATA / "parkinson_spatial_robustness.csv")
     shutil.copy2(VALIDATION_REGIONAL, PUBLIC_DATA / "parkinson_independent_validation_regional_scores.csv")
     shutil.copy2(VALIDATION_RESULTS, PUBLIC_DATA / "parkinson_independent_validation_statistics.csv")
+    if all(path.is_file() for path in stage9_files) and BIOLOGY_JSON.is_file():
+        shutil.copy2(BIOLOGY_JSON, PUBLIC_DATA / BIOLOGY_JSON.name)
+        for path in (STAGE9_GO, STAGE9_REACTOME, STAGE9_CELLS, STAGE9_EVIDENCE):
+            shutil.copy2(path, PUBLIC_DATA / path.name)
     print(f"Prepared {len(records)} research records and {len(meshes)} atlas meshes")
     print(f"Geometry: {(PUBLIC_DATA / 'aal3_regions.json').stat().st_size / 1024 / 1024:.2f} MiB")
 

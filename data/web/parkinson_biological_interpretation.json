@@ -1,0 +1,6247 @@
+{
+  "schema_version": "1.0.0",
+  "generated_on": "2026-09-14",
+  "evidence_note": "Genes and enrichment statistics are evidence; pathway and cell-type labels are biological interpretation and do not establish causality.",
+  "regions": [
+    {
+      "region_id": 1,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "STK39",
+          "expression": 0.7871128798239221,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.014150493727776723,
+          "regional_rank": 1
+        },
+        {
+          "gene": "RIT2",
+          "expression": 0.7113281833436279,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.012824636056977489,
+          "regional_rank": 2
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.6214852592428435,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.011292795537363417,
+          "regional_rank": 3
+        },
+        {
+          "gene": "RNF141",
+          "expression": 0.6849962100515659,
+          "l2g_score": 0.7541582584381104,
+          "weighted_contribution": 0.011028419696974856,
+          "regional_rank": 4
+        },
+        {
+          "gene": "CTSB",
+          "expression": 0.5810680592943437,
+          "l2g_score": 0.8426995277404785,
+          "weighted_contribution": 0.010453515784615617,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 2,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "STK39",
+          "expression": 0.6968490935116403,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.012527756792836655,
+          "regional_rank": 1
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.627073354810934,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.011416992732133752,
+          "regional_rank": 2
+        },
+        {
+          "gene": "RIT2",
+          "expression": 0.6180021922147223,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.011142048611532859,
+          "regional_rank": 3
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.5696644680990901,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.010351177710926517,
+          "regional_rank": 4
+        },
+        {
+          "gene": "SV2C",
+          "expression": 0.8296860988469411,
+          "l2g_score": 0.5758057832717896,
+          "weighted_contribution": 0.010198879523937904,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 3,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "RIT2",
+          "expression": 0.6791304163505069,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.012244137978589578,
+          "regional_rank": 1
+        },
+        {
+          "gene": "CCSER1",
+          "expression": 0.5945009269424636,
+          "l2g_score": 0.8328624963760376,
+          "weighted_contribution": 0.010570328099541343,
+          "regional_rank": 2
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.575261679952905,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.010473668461128578,
+          "regional_rank": 3
+        },
+        {
+          "gene": "CLCN3",
+          "expression": 0.5954019007831265,
+          "l2g_score": 0.8020431399345398,
+          "weighted_contribution": 0.01019460893144889,
+          "regional_rank": 4
+        },
+        {
+          "gene": "STK39",
+          "expression": 0.553917666846235,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.009958175849143491,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 4,
+      "selected_for_regional_interpretation": true,
+      "selection_rule": "top 10 by frozen Stage 7 robustness rank",
+      "robustness_rank": 5,
+      "top_genes": [
+        {
+          "gene": "RIT2",
+          "expression": 0.6328157215251806,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.01140912381897508,
+          "regional_rank": 1
+        },
+        {
+          "gene": "CLCN3",
+          "expression": 0.6650415801777012,
+          "l2g_score": 0.8020431399345398,
+          "weighted_contribution": 0.011386995614469852,
+          "regional_rank": 2
+        },
+        {
+          "gene": "STK39",
+          "expression": 0.6067731693439671,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.010908397190636415,
+          "regional_rank": 3
+        },
+        {
+          "gene": "FCGR2A",
+          "expression": 0.5805035032469208,
+          "l2g_score": 0.8712173104286194,
+          "weighted_contribution": 0.010796772896562784,
+          "regional_rank": 4
+        },
+        {
+          "gene": "HIP1R",
+          "expression": 0.5627637596225048,
+          "l2g_score": 0.8798125386238098,
+          "weighted_contribution": 0.01057009510215996,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 5,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "RIT2",
+          "expression": 0.6663033581819349,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.012012877139295448,
+          "regional_rank": 1
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.6130021178605441,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.011160800679382334,
+          "regional_rank": 2
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.5611488042585782,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.010775215977085957,
+          "regional_rank": 3
+        },
+        {
+          "gene": "CCSER1",
+          "expression": 0.5944797074124073,
+          "l2g_score": 0.8328624963760376,
+          "weighted_contribution": 0.01056995081266987,
+          "regional_rank": 4
+        },
+        {
+          "gene": "CTSB",
+          "expression": 0.5849259128671561,
+          "l2g_score": 0.8426995277404785,
+          "weighted_contribution": 0.010522919243596147,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 6,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "RIT2",
+          "expression": 0.6986538495848869,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.012596128707589934,
+          "regional_rank": 1
+        },
+        {
+          "gene": "STK39",
+          "expression": 0.6263225092867786,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.011259849719662254,
+          "regional_rank": 2
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.547065971359437,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.010504796500280779,
+          "regional_rank": 3
+        },
+        {
+          "gene": "GPNMB",
+          "expression": 0.5473444004027608,
+          "l2g_score": 0.8844435214996338,
+          "weighted_contribution": 0.010334593765027239,
+          "regional_rank": 4
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.5664673307619261,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.01029308362467667,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 7,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "STK39",
+          "expression": 0.7860746592137403,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.014131828889976442,
+          "regional_rank": 1
+        },
+        {
+          "gene": "RIT2",
+          "expression": 0.7751123215792092,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.013974609273607526,
+          "regional_rank": 2
+        },
+        {
+          "gene": "TMEM175",
+          "expression": 0.6961101146094464,
+          "l2g_score": 0.7957037091255188,
+          "weighted_contribution": 0.011824749578366123,
+          "regional_rank": 3
+        },
+        {
+          "gene": "DYRK1A",
+          "expression": 0.6960775032185014,
+          "l2g_score": 0.7525694370269775,
+          "weighted_contribution": 0.011183218241955043,
+          "regional_rank": 4
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.5948539968068242,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.010808887999543089,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 8,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "STK39",
+          "expression": 0.7251642138736689,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.013036798054077049,
+          "regional_rank": 1
+        },
+        {
+          "gene": "GPNMB",
+          "expression": 0.6424231229977233,
+          "l2g_score": 0.8844435214996338,
+          "weighted_contribution": 0.012129807113320587,
+          "regional_rank": 2
+        },
+        {
+          "gene": "RIT2",
+          "expression": 0.6524836607885481,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.01176371986753566,
+          "regional_rank": 3
+        },
+        {
+          "gene": "TMEM175",
+          "expression": 0.6221995852191908,
+          "l2g_score": 0.7957037091255188,
+          "weighted_contribution": 0.010569239159968331,
+          "regional_rank": 4
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.5592301179085326,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.010181785181539166,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 9,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "RIT2",
+          "expression": 0.7625946416144137,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.01374892625754647,
+          "regional_rank": 1
+        },
+        {
+          "gene": "STK39",
+          "expression": 0.6905188231938492,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.012413952975464142,
+          "regional_rank": 2
+        },
+        {
+          "gene": "CTSB",
+          "expression": 0.6586445981739083,
+          "l2g_score": 0.8426995277404785,
+          "weighted_contribution": 0.011849131256369824,
+          "regional_rank": 3
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.6088844569576125,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.011691839096899723,
+          "regional_rank": 4
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.6017791174907431,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.010956465871226777,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 10,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "RIT2",
+          "expression": 0.7748415454860292,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.013969727413266157,
+          "regional_rank": 1
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.7138941120598521,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.012997720005752498,
+          "regional_rank": 2
+        },
+        {
+          "gene": "CCSER1",
+          "expression": 0.7182153954926696,
+          "l2g_score": 0.8328624963760376,
+          "weighted_contribution": 0.012769992496974025,
+          "regional_rank": 3
+        },
+        {
+          "gene": "CTSB",
+          "expression": 0.6621186934496974,
+          "l2g_score": 0.8426995277404785,
+          "weighted_contribution": 0.011911630836620066,
+          "regional_rank": 4
+        },
+        {
+          "gene": "STK39",
+          "expression": 0.6438912721529992,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.011575695991672014,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 11,
+      "selected_for_regional_interpretation": true,
+      "selection_rule": "top 10 by frozen Stage 7 robustness rank",
+      "robustness_rank": 10,
+      "top_genes": [
+        {
+          "gene": "RIT2",
+          "expression": 0.7283079469345747,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.013130766607525653,
+          "regional_rank": 1
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.5663184141638963,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.010874483164014539,
+          "regional_rank": 2
+        },
+        {
+          "gene": "FAM47E",
+          "expression": 0.7207527556272932,
+          "l2g_score": 0.6943575739860535,
+          "weighted_contribution": 0.010683956571741902,
+          "regional_rank": 3
+        },
+        {
+          "gene": "STK39",
+          "expression": 0.5917511987329284,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.010638336432695442,
+          "regional_rank": 4
+        },
+        {
+          "gene": "GPNMB",
+          "expression": 0.5577270072798126,
+          "l2g_score": 0.8844435214996338,
+          "weighted_contribution": 0.010530631258454326,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 12,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "RIT2",
+          "expression": 0.7327714799645059,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.013211240273517758,
+          "regional_rank": 1
+        },
+        {
+          "gene": "FCGR2A",
+          "expression": 0.6795268697558471,
+          "l2g_score": 0.8712173104286194,
+          "weighted_contribution": 0.012638506484163916,
+          "regional_rank": 2
+        },
+        {
+          "gene": "FAM47E",
+          "expression": 0.8201029435998055,
+          "l2g_score": 0.6943575739860535,
+          "weighted_contribution": 0.01215665728000198,
+          "regional_rank": 3
+        },
+        {
+          "gene": "STK39",
+          "expression": 0.6002376098303539,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.010790902741904253,
+          "regional_rank": 4
+        },
+        {
+          "gene": "ITPKB",
+          "expression": 0.5542534323227875,
+          "l2g_score": 0.9014809131622314,
+          "weighted_contribution": 0.010666637906555676,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 13,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "RIT2",
+          "expression": 0.7233838151133588,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.013041988741018473,
+          "regional_rank": 1
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.6237773148996797,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.011356982426444784,
+          "regional_rank": 2
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.571060981028313,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.010965550242589857,
+          "regional_rank": 3
+        },
+        {
+          "gene": "CTSB",
+          "expression": 0.5832765346967353,
+          "l2g_score": 0.8426995277404785,
+          "weighted_contribution": 0.010493246642489431,
+          "regional_rank": 4
+        },
+        {
+          "gene": "FCGR2A",
+          "expression": 0.5320738076434985,
+          "l2g_score": 0.8712173104286194,
+          "weighted_contribution": 0.009896029969164112,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 14,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "RIT2",
+          "expression": 0.660643857325367,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.011910841200822626,
+          "regional_rank": 1
+        },
+        {
+          "gene": "ITPKB",
+          "expression": 0.5279087480653889,
+          "l2g_score": 0.9014809131622314,
+          "weighted_contribution": 0.010159633003476333,
+          "regional_rank": 2
+        },
+        {
+          "gene": "SPPL2B",
+          "expression": 0.6804186504327427,
+          "l2g_score": 0.6948310136795044,
+          "weighted_contribution": 0.010092947856011183,
+          "regional_rank": 3
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.5516126946356601,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.01004309635753357,
+          "regional_rank": 4
+        },
+        {
+          "gene": "ASXL3",
+          "expression": 0.6482870031712339,
+          "l2g_score": 0.7160765528678894,
+          "weighted_contribution": 0.00991035915770181,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 15,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "RIT2",
+          "expression": 0.8156441050847919,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.01470536251011776,
+          "regional_rank": 1
+        },
+        {
+          "gene": "STK39",
+          "expression": 0.7296985696421959,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.013118315425354727,
+          "regional_rank": 2
+        },
+        {
+          "gene": "TMEM175",
+          "expression": 0.6823527422388168,
+          "l2g_score": 0.7957037091255188,
+          "weighted_contribution": 0.01159105453540543,
+          "regional_rank": 3
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.5993309233605065,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.010890236696804423,
+          "regional_rank": 4
+        },
+        {
+          "gene": "RNF141",
+          "expression": 0.6182499196705754,
+          "l2g_score": 0.7541582584381104,
+          "weighted_contribution": 0.009953806300964527,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 16,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "STK39",
+          "expression": 0.8064783172180385,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.014498640108563172,
+          "regional_rank": 1
+        },
+        {
+          "gene": "RIT2",
+          "expression": 0.7003254994894277,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.012626267119285708,
+          "regional_rank": 2
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.6220186836794661,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.011324963397561415,
+          "regional_rank": 3
+        },
+        {
+          "gene": "CCSER1",
+          "expression": 0.5984380573212463,
+          "l2g_score": 0.8328624963760376,
+          "weighted_contribution": 0.010640330950652848,
+          "regional_rank": 4
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.5589440599382951,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.01015638085028266,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 17,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "FCGR2A",
+          "expression": 0.7088215101164391,
+          "l2g_score": 0.8712173104286194,
+          "weighted_contribution": 0.013183356906755182,
+          "regional_rank": 1
+        },
+        {
+          "gene": "HIP1R",
+          "expression": 0.677374194579242,
+          "l2g_score": 0.8798125386238098,
+          "weighted_contribution": 0.01272276249852047,
+          "regional_rank": 2
+        },
+        {
+          "gene": "GPNMB",
+          "expression": 0.6345692587849711,
+          "l2g_score": 0.8844435214996338,
+          "weighted_contribution": 0.011981515660873547,
+          "regional_rank": 3
+        },
+        {
+          "gene": "TOX3",
+          "expression": 0.7552686105387374,
+          "l2g_score": 0.7276461720466614,
+          "weighted_contribution": 0.011732331076958091,
+          "regional_rank": 4
+        },
+        {
+          "gene": "FYN",
+          "expression": 0.6754394251658278,
+          "l2g_score": 0.7615038752555847,
+          "weighted_contribution": 0.010980475565894455,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 18,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "ITPKB",
+          "expression": 0.6282633607310704,
+          "l2g_score": 0.9014809131622314,
+          "weighted_contribution": 0.012090963065017677,
+          "regional_rank": 1
+        },
+        {
+          "gene": "FCGR2A",
+          "expression": 0.6477744512274252,
+          "l2g_score": 0.8712173104286194,
+          "weighted_contribution": 0.012047943895220915,
+          "regional_rank": 2
+        },
+        {
+          "gene": "HIP1R",
+          "expression": 0.630893851653842,
+          "l2g_score": 0.8798125386238098,
+          "weighted_contribution": 0.011849746714007188,
+          "regional_rank": 3
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.6513615822753183,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.011835667958545215,
+          "regional_rank": 4
+        },
+        {
+          "gene": "FYN",
+          "expression": 0.6956053378621561,
+          "l2g_score": 0.7615038752555847,
+          "weighted_contribution": 0.011308308534145647,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 19,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "RIT2",
+          "expression": 0.7251051007571813,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.013073022042452363,
+          "regional_rank": 1
+        },
+        {
+          "gene": "STK39",
+          "expression": 0.6061471697574953,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.010897143146332194,
+          "regional_rank": 2
+        },
+        {
+          "gene": "CNTN1",
+          "expression": 0.6534649274527787,
+          "l2g_score": 0.7606772780418396,
+          "weighted_contribution": 0.01061170949912075,
+          "regional_rank": 3
+        },
+        {
+          "gene": "GPNMB",
+          "expression": 0.5485138942507527,
+          "l2g_score": 0.8844435214996338,
+          "weighted_contribution": 0.010356675371819602,
+          "regional_rank": 4
+        },
+        {
+          "gene": "CTSB",
+          "expression": 0.561847613010641,
+          "l2g_score": 0.8426995277404785,
+          "weighted_contribution": 0.010107736601953188,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 20,
+      "selected_for_regional_interpretation": true,
+      "selection_rule": "top 10 by frozen Stage 7 robustness rank",
+      "robustness_rank": 2,
+      "top_genes": [
+        {
+          "gene": "CCSER1",
+          "expression": 0.6714946745502606,
+          "l2g_score": 0.8328624963760376,
+          "weighted_contribution": 0.011939290092608941,
+          "regional_rank": 1
+        },
+        {
+          "gene": "ASXL3",
+          "expression": 0.7382114565038123,
+          "l2g_score": 0.7160765528678894,
+          "weighted_contribution": 0.01128503368491959,
+          "regional_rank": 2
+        },
+        {
+          "gene": "CLCN3",
+          "expression": 0.6516879752237306,
+          "l2g_score": 0.8020431399345398,
+          "weighted_contribution": 0.011158352104679687,
+          "regional_rank": 3
+        },
+        {
+          "gene": "IRS2",
+          "expression": 0.698246566082906,
+          "l2g_score": 0.7469207048416138,
+          "weighted_contribution": 0.011133864519232158,
+          "regional_rank": 4
+        },
+        {
+          "gene": "RIT2",
+          "expression": 0.588160190529089,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.010604022957845136,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [
+        {
+          "id": "R-HSA-2029481",
+          "name": "FCGR activation",
+          "fdr": 0.01856343115139869,
+          "genes": [
+            "FYN",
+            "FCGR2A"
+          ]
+        }
+      ],
+      "cell_types": []
+    },
+    {
+      "region_id": 21,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "GPNMB",
+          "expression": 0.6877630875364961,
+          "l2g_score": 0.8844435214996338,
+          "weighted_contribution": 0.012985886237331287,
+          "regional_rank": 1
+        },
+        {
+          "gene": "ASXL3",
+          "expression": 0.7901047067508933,
+          "l2g_score": 0.7160765528678894,
+          "weighted_contribution": 0.01207832546046554,
+          "regional_rank": 2
+        },
+        {
+          "gene": "RIT2",
+          "expression": 0.6550157705065662,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.011809371630463531,
+          "regional_rank": 3
+        },
+        {
+          "gene": "CNTN1",
+          "expression": 0.7258286520074138,
+          "l2g_score": 0.7606772780418396,
+          "weighted_contribution": 0.011786834270149368,
+          "regional_rank": 4
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.5917078230220748,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.011362012250597691,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 22,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "GPNMB",
+          "expression": 0.7212855067083659,
+          "l2g_score": 0.8844435214996338,
+          "weighted_contribution": 0.01361883431153705,
+          "regional_rank": 1
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.678982335283574,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.012362088626006155,
+          "regional_rank": 2
+        },
+        {
+          "gene": "RIT2",
+          "expression": 0.6623620873523244,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.01194181941210946,
+          "regional_rank": 3
+        },
+        {
+          "gene": "CCSER1",
+          "expression": 0.669015847678111,
+          "l2g_score": 0.8328624963760376,
+          "weighted_contribution": 0.011895216127114323,
+          "regional_rank": 4
+        },
+        {
+          "gene": "FAM47E",
+          "expression": 0.7843707508937494,
+          "l2g_score": 0.6943575739860535,
+          "weighted_contribution": 0.011626987164828632,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 23,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "ASXL3",
+          "expression": 0.7723399293947252,
+          "l2g_score": 0.7160765528678894,
+          "weighted_contribution": 0.011806755425750942,
+          "regional_rank": 1
+        },
+        {
+          "gene": "CNTN1",
+          "expression": 0.7193426285795507,
+          "l2g_score": 0.7606772780418396,
+          "weighted_contribution": 0.01168150681716843,
+          "regional_rank": 2
+        },
+        {
+          "gene": "RIT2",
+          "expression": 0.6476076961235263,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.011675810413475159,
+          "regional_rank": 3
+        },
+        {
+          "gene": "FCGR2A",
+          "expression": 0.5967636836580094,
+          "l2g_score": 0.8712173104286194,
+          "weighted_contribution": 0.01109919566261625,
+          "regional_rank": 4
+        },
+        {
+          "gene": "ITPKB",
+          "expression": 0.5577867738149398,
+          "l2g_score": 0.9014809131622314,
+          "weighted_contribution": 0.010734637258655401,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 24,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "RIT2",
+          "expression": 0.7098238218195363,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.012797513711066903,
+          "regional_rank": 1
+        },
+        {
+          "gene": "GPNMB",
+          "expression": 0.6485233472635042,
+          "l2g_score": 0.8844435214996338,
+          "weighted_contribution": 0.012244987499958353,
+          "regional_rank": 2
+        },
+        {
+          "gene": "ASXL3",
+          "expression": 0.7649057012124859,
+          "l2g_score": 0.7160765528678894,
+          "weighted_contribution": 0.011693108428378023,
+          "regional_rank": 3
+        },
+        {
+          "gene": "TOX3",
+          "expression": 0.7266748800132916,
+          "l2g_score": 0.7276461720466614,
+          "weighted_contribution": 0.011288156503079586,
+          "regional_rank": 4
+        },
+        {
+          "gene": "FAM47E",
+          "expression": 0.7487977914489768,
+          "l2g_score": 0.6943575739860535,
+          "weighted_contribution": 0.011099677416972712,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 25,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "RIT2",
+          "expression": 0.6670507229867919,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.012026351484679927,
+          "regional_rank": 1
+        },
+        {
+          "gene": "CTSB",
+          "expression": 0.6609541341256341,
+          "l2g_score": 0.8426995277404785,
+          "weighted_contribution": 0.01189068021116149,
+          "regional_rank": 2
+        },
+        {
+          "gene": "CNTN1",
+          "expression": 0.7169088629762076,
+          "l2g_score": 0.7606772780418396,
+          "weighted_contribution": 0.011641984552871399,
+          "regional_rank": 3
+        },
+        {
+          "gene": "FAM47E",
+          "expression": 0.7700057660551921,
+          "l2g_score": 0.6943575739860535,
+          "weighted_contribution": 0.01141405024163185,
+          "regional_rank": 4
+        },
+        {
+          "gene": "GPNMB",
+          "expression": 0.6015057379423303,
+          "l2g_score": 0.8844435214996338,
+          "weighted_contribution": 0.0113572322004074,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 26,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "RIT2",
+          "expression": 0.756501925762799,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.013639079824879833,
+          "regional_rank": 1
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.7020612453874359,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.012782281490046444,
+          "regional_rank": 2
+        },
+        {
+          "gene": "GPNMB",
+          "expression": 0.6676252763083819,
+          "l2g_score": 0.8844435214996338,
+          "weighted_contribution": 0.012605657448644997,
+          "regional_rank": 3
+        },
+        {
+          "gene": "CTSB",
+          "expression": 0.6758227340482628,
+          "l2g_score": 0.8426995277404785,
+          "weighted_contribution": 0.01215816891837952,
+          "regional_rank": 4
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.6309530302374347,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.012115601281888103,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 27,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "RIT2",
+          "expression": 0.6389103797765202,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.011519005271440076,
+          "regional_rank": 1
+        },
+        {
+          "gene": "CTSB",
+          "expression": 0.6306859469962792,
+          "l2g_score": 0.8426995277404785,
+          "weighted_contribution": 0.011346150242825832,
+          "regional_rank": 2
+        },
+        {
+          "gene": "CNTN1",
+          "expression": 0.6977003719664694,
+          "l2g_score": 0.7606772780418396,
+          "weighted_contribution": 0.011330055147101501,
+          "regional_rank": 3
+        },
+        {
+          "gene": "GPNMB",
+          "expression": 0.5927628584088904,
+          "l2g_score": 0.8844435214996338,
+          "weighted_contribution": 0.011192154950602367,
+          "regional_rank": 4
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.574444962870032,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.010458798664911225,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 28,
+      "selected_for_regional_interpretation": true,
+      "selection_rule": "top 10 by frozen Stage 7 robustness rank",
+      "robustness_rank": 1,
+      "top_genes": [
+        {
+          "gene": "GPNMB",
+          "expression": 0.691134323040947,
+          "l2g_score": 0.8844435214996338,
+          "weighted_contribution": 0.013049539669062934,
+          "regional_rank": 1
+        },
+        {
+          "gene": "CCSER1",
+          "expression": 0.7197561252725014,
+          "l2g_score": 0.8328624963760376,
+          "weighted_contribution": 0.012797386935817572,
+          "regional_rank": 2
+        },
+        {
+          "gene": "RIT2",
+          "expression": 0.6982053582007935,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.012588042793225273,
+          "regional_rank": 3
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.6866150039724128,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.012501055020094978,
+          "regional_rank": 4
+        },
+        {
+          "gene": "FCGR2A",
+          "expression": 0.6472099658370678,
+          "l2g_score": 0.8712173104286194,
+          "weighted_contribution": 0.012037445042881479,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 29,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "RIT2",
+          "expression": 0.773083510635108,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.013938031555198833,
+          "regional_rank": 1
+        },
+        {
+          "gene": "CTSB",
+          "expression": 0.7106951549320576,
+          "l2g_score": 0.8426995277404785,
+          "weighted_contribution": 0.012785529855408496,
+          "regional_rank": 2
+        },
+        {
+          "gene": "FAM47E",
+          "expression": 0.7952587803044824,
+          "l2g_score": 0.6943575739860535,
+          "weighted_contribution": 0.011788384027300388,
+          "regional_rank": 3
+        },
+        {
+          "gene": "SLC2A13",
+          "expression": 0.7802444266088249,
+          "l2g_score": 0.700274646282196,
+          "weighted_contribution": 0.011664381176976612,
+          "regional_rank": 4
+        },
+        {
+          "gene": "CNTN1",
+          "expression": 0.7098513191557595,
+          "l2g_score": 0.7606772780418396,
+          "weighted_contribution": 0.011527376099297855,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 30,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "TOX3",
+          "expression": 0.8054064985652988,
+          "l2g_score": 0.7276461720466614,
+          "weighted_contribution": 0.012511172264873313,
+          "regional_rank": 1
+        },
+        {
+          "gene": "CNTN1",
+          "expression": 0.703196085300422,
+          "l2g_score": 0.7606772780418396,
+          "weighted_contribution": 0.011419300814221966,
+          "regional_rank": 2
+        },
+        {
+          "gene": "DYRK1A",
+          "expression": 0.7016284505218218,
+          "l2g_score": 0.7525694370269775,
+          "weighted_contribution": 0.011272400056990857,
+          "regional_rank": 3
+        },
+        {
+          "gene": "RIT2",
+          "expression": 0.6110438770374444,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.011016596166644672,
+          "regional_rank": 4
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.568737350537846,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.010920931738200803,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 31,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "RIT2",
+          "expression": 0.6949500683404307,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.012529352713601427,
+          "regional_rank": 1
+        },
+        {
+          "gene": "CTSB",
+          "expression": 0.6855048113733628,
+          "l2g_score": 0.8426995277404785,
+          "weighted_contribution": 0.012332351179006124,
+          "regional_rank": 2
+        },
+        {
+          "gene": "GPNMB",
+          "expression": 0.5790333430209228,
+          "l2g_score": 0.8844435214996338,
+          "weighted_contribution": 0.01093292335159281,
+          "regional_rank": 3
+        },
+        {
+          "gene": "FAM47E",
+          "expression": 0.7178329518307063,
+          "l2g_score": 0.6943575739860535,
+          "weighted_contribution": 0.010640675353991174,
+          "regional_rank": 4
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.5428226403104338,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.01042331578042841,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 32,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "RIT2",
+          "expression": 0.7480247467648754,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.013486243570132842,
+          "regional_rank": 1
+        },
+        {
+          "gene": "TMEM175",
+          "expression": 0.7644841110372051,
+          "l2g_score": 0.7957037091255188,
+          "weighted_contribution": 0.012986211491448598,
+          "regional_rank": 2
+        },
+        {
+          "gene": "FCGR2A",
+          "expression": 0.6462113601204651,
+          "l2g_score": 0.8712173104286194,
+          "weighted_contribution": 0.012018871995388975,
+          "regional_rank": 3
+        },
+        {
+          "gene": "STK39",
+          "expression": 0.641589181814685,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.011534309659764477,
+          "regional_rank": 4
+        },
+        {
+          "gene": "FAM47E",
+          "expression": 0.7713336278094716,
+          "l2g_score": 0.6943575739860535,
+          "weighted_contribution": 0.011433733575764441,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 33,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "RIT2",
+          "expression": 0.6948114480487422,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.012526853508828376,
+          "regional_rank": 1
+        },
+        {
+          "gene": "CNTN1",
+          "expression": 0.7204283373578434,
+          "l2g_score": 0.7606772780418396,
+          "weighted_contribution": 0.011699137795774731,
+          "regional_rank": 2
+        },
+        {
+          "gene": "GPNMB",
+          "expression": 0.609231172023457,
+          "l2g_score": 0.8844435214996338,
+          "weighted_contribution": 0.01150309872033195,
+          "regional_rank": 3
+        },
+        {
+          "gene": "TOX3",
+          "expression": 0.7287433009795392,
+          "l2g_score": 0.7276461720466614,
+          "weighted_contribution": 0.011320287322822286,
+          "regional_rank": 4
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.5856461406263355,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.01124561542946414,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 34,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "GPNMB",
+          "expression": 0.7522833229995654,
+          "l2g_score": 0.8844435214996338,
+          "weighted_contribution": 0.014204114509410202,
+          "regional_rank": 1
+        },
+        {
+          "gene": "RIT2",
+          "expression": 0.6749104157209405,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.01216805499256193,
+          "regional_rank": 2
+        },
+        {
+          "gene": "TOX3",
+          "expression": 0.7390545675019161,
+          "l2g_score": 0.7276461720466614,
+          "weighted_contribution": 0.011480462379716264,
+          "regional_rank": 3
+        },
+        {
+          "gene": "CTSB",
+          "expression": 0.6128864478626159,
+          "l2g_score": 0.8426995277404785,
+          "weighted_contribution": 0.01102593414735164,
+          "regional_rank": 4
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.5525973595923312,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.01061101057827618,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 37,
+      "selected_for_regional_interpretation": true,
+      "selection_rule": "top 10 by frozen Stage 7 robustness rank",
+      "robustness_rank": 6,
+      "top_genes": [
+        {
+          "gene": "STK39",
+          "expression": 0.6374536996495255,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.011459963125818146,
+          "regional_rank": 1
+        },
+        {
+          "gene": "RIT2",
+          "expression": 0.6239629284417529,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.011249515564949466,
+          "regional_rank": 2
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.5671302525589518,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.010305129349333425,
+          "regional_rank": 3
+        },
+        {
+          "gene": "TMEM175",
+          "expression": 0.6025872682786466,
+          "l2g_score": 0.7957037091255188,
+          "weighted_contribution": 0.01023608678708032,
+          "regional_rank": 4
+        },
+        {
+          "gene": "CCSER1",
+          "expression": 0.5676134659866345,
+          "l2g_score": 0.8328624963760376,
+          "weighted_contribution": 0.010092264447852155,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 38,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "RIT2",
+          "expression": 0.5881469258555363,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.010603783807176415,
+          "regional_rank": 1
+        },
+        {
+          "gene": "ITPKB",
+          "expression": 0.5499041881065027,
+          "l2g_score": 0.9014809131622314,
+          "weighted_contribution": 0.010582936461482308,
+          "regional_rank": 2
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.5500290548126996,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.00999438934911568,
+          "regional_rank": 3
+        },
+        {
+          "gene": "FCGR2A",
+          "expression": 0.5189659076573722,
+          "l2g_score": 0.8712173104286194,
+          "weighted_contribution": 0.009652236402872976,
+          "regional_rank": 4
+        },
+        {
+          "gene": "TMEM175",
+          "expression": 0.5666984342824557,
+          "l2g_score": 0.7957037091255188,
+          "weighted_contribution": 0.009626446924423522,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 39,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.6492122732835353,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.01182007136617203,
+          "regional_rank": 1
+        },
+        {
+          "gene": "CCSER1",
+          "expression": 0.653814322973729,
+          "l2g_score": 0.8328624963760376,
+          "weighted_contribution": 0.011624930419462009,
+          "regional_rank": 2
+        },
+        {
+          "gene": "CLCN3",
+          "expression": 0.6768369923298952,
+          "l2g_score": 0.8020431399345398,
+          "weighted_contribution": 0.011588959387038791,
+          "regional_rank": 3
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.6051725982298743,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.01099638376773559,
+          "regional_rank": 4
+        },
+        {
+          "gene": "PKP2",
+          "expression": 0.6664531409227885,
+          "l2g_score": 0.7130399346351624,
+          "weighted_contribution": 0.010144860937110929,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 41,
+      "selected_for_regional_interpretation": true,
+      "selection_rule": "top 10 by frozen Stage 7 robustness rank",
+      "robustness_rank": 9,
+      "top_genes": [
+        {
+          "gene": "SH3GL2",
+          "expression": 0.7078921831670177,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.013592991919841388,
+          "regional_rank": 1
+        },
+        {
+          "gene": "CCSER1",
+          "expression": 0.6792865959810211,
+          "l2g_score": 0.8328624963760376,
+          "weighted_contribution": 0.012077831787527036,
+          "regional_rank": 2
+        },
+        {
+          "gene": "CNTN1",
+          "expression": 0.6698651480040937,
+          "l2g_score": 0.7606772780418396,
+          "weighted_contribution": 0.010878035003215446,
+          "regional_rank": 3
+        },
+        {
+          "gene": "PKP2",
+          "expression": 0.7082381375960235,
+          "l2g_score": 0.7130399346351624,
+          "weighted_contribution": 0.010780919130070548,
+          "regional_rank": 4
+        },
+        {
+          "gene": "FYN",
+          "expression": 0.6589353395522631,
+          "l2g_score": 0.7615038752555847,
+          "weighted_contribution": 0.010712172144351235,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [
+        {
+          "id": "R-HSA-2029481",
+          "name": "FCGR activation",
+          "fdr": 0.01856343115139869,
+          "genes": [
+            "FYN",
+            "FCGR2A"
+          ]
+        }
+      ],
+      "cell_types": []
+    },
+    {
+      "region_id": 42,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "SH3GL2",
+          "expression": 0.6937948825351123,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.013322294632687063,
+          "regional_rank": 1
+        },
+        {
+          "gene": "CTSB",
+          "expression": 0.6767365098651554,
+          "l2g_score": 0.8426995277404785,
+          "weighted_contribution": 0.012174607904781712,
+          "regional_rank": 2
+        },
+        {
+          "gene": "TMEM175",
+          "expression": 0.7133482287764108,
+          "l2g_score": 0.7957037091255188,
+          "weighted_contribution": 0.012117571617508599,
+          "regional_rank": 3
+        },
+        {
+          "gene": "CCSER1",
+          "expression": 0.6457113507155857,
+          "l2g_score": 0.8328624963760376,
+          "weighted_contribution": 0.011480858187664892,
+          "regional_rank": 4
+        },
+        {
+          "gene": "DYRK1A",
+          "expression": 0.6861663423119835,
+          "l2g_score": 0.7525694370269775,
+          "weighted_contribution": 0.011023985002931759,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 43,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "FCGR2A",
+          "expression": 0.8409278706042178,
+          "l2g_score": 0.8712173104286194,
+          "weighted_contribution": 0.01564040042914596,
+          "regional_rank": 1
+        },
+        {
+          "gene": "HIP1R",
+          "expression": 0.7522939182208218,
+          "l2g_score": 0.8798125386238098,
+          "weighted_contribution": 0.014129940182545903,
+          "regional_rank": 2
+        },
+        {
+          "gene": "FYN",
+          "expression": 0.8389743465950872,
+          "l2g_score": 0.7615038752555847,
+          "weighted_contribution": 0.013639028120009267,
+          "regional_rank": 3
+        },
+        {
+          "gene": "ITPKB",
+          "expression": 0.6934473432535562,
+          "l2g_score": 0.9014809131622314,
+          "weighted_contribution": 0.013345432407608384,
+          "regional_rank": 4
+        },
+        {
+          "gene": "MAP4K4",
+          "expression": 0.748976538142708,
+          "l2g_score": 0.7526438236236572,
+          "weighted_contribution": 0.012034286348025341,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 44,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "GPNMB",
+          "expression": 0.7186158846474762,
+          "l2g_score": 0.8844435214996338,
+          "weighted_contribution": 0.013568428279274458,
+          "regional_rank": 1
+        },
+        {
+          "gene": "FCGR2A",
+          "expression": 0.7209712060410582,
+          "l2g_score": 0.8712173104286194,
+          "weighted_contribution": 0.013409328855118445,
+          "regional_rank": 2
+        },
+        {
+          "gene": "FYN",
+          "expression": 0.8111559158054522,
+          "l2g_score": 0.7615038752555847,
+          "weighted_contribution": 0.013186789787175617,
+          "regional_rank": 3
+        },
+        {
+          "gene": "TOX3",
+          "expression": 0.7037064876888236,
+          "l2g_score": 0.7276461720466614,
+          "weighted_contribution": 0.01093136584701895,
+          "regional_rank": 4
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.5945089277058462,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.010802617867233992,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 45,
+      "selected_for_regional_interpretation": true,
+      "selection_rule": "top 10 by frozen Stage 7 robustness rank",
+      "robustness_rank": 7,
+      "top_genes": [
+        {
+          "gene": "GPNMB",
+          "expression": 0.6903653132130457,
+          "l2g_score": 0.8844435214996338,
+          "weighted_contribution": 0.013035019735787239,
+          "regional_rank": 1
+        },
+        {
+          "gene": "FCGR2A",
+          "expression": 0.5902724728720143,
+          "l2g_score": 0.8712173104286194,
+          "weighted_contribution": 0.01097846576471192,
+          "regional_rank": 2
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.5700910919144392,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.01094692636850066,
+          "regional_rank": 3
+        },
+        {
+          "gene": "FYN",
+          "expression": 0.6541243612009408,
+          "l2g_score": 0.7615038752555847,
+          "weighted_contribution": 0.010633961089049314,
+          "regional_rank": 4
+        },
+        {
+          "gene": "ASXL3",
+          "expression": 0.6930872465252657,
+          "l2g_score": 0.7160765528678894,
+          "weighted_contribution": 0.010595220183480584,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [
+        {
+          "id": "R-HSA-2029481",
+          "name": "FCGR activation",
+          "fdr": 0.01856343115139869,
+          "genes": [
+            "FCGR2A",
+            "FYN"
+          ]
+        }
+      ],
+      "cell_types": []
+    },
+    {
+      "region_id": 46,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "SH3GL2",
+          "expression": 0.8512213394614284,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.01634520773704577,
+          "regional_rank": 1
+        },
+        {
+          "gene": "ASXL3",
+          "expression": 0.8394670235182192,
+          "l2g_score": 0.7160765528678894,
+          "weighted_contribution": 0.012832926872536782,
+          "regional_rank": 2
+        },
+        {
+          "gene": "DYRK1A",
+          "expression": 0.7609244840239984,
+          "l2g_score": 0.7525694370269775,
+          "weighted_contribution": 0.01222505328952747,
+          "regional_rank": 3
+        },
+        {
+          "gene": "CNTN1",
+          "expression": 0.7319737965246009,
+          "l2g_score": 0.7606772780418396,
+          "weighted_contribution": 0.011886626142225343,
+          "regional_rank": 4
+        },
+        {
+          "gene": "GPNMB",
+          "expression": 0.5576686093249761,
+          "l2g_score": 0.8844435214996338,
+          "weighted_contribution": 0.010529528627022453,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 47,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "CCSER1",
+          "expression": 0.7152402604597102,
+          "l2g_score": 0.8328624963760376,
+          "weighted_contribution": 0.01271709408754587,
+          "regional_rank": 1
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.6189510253074108,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.011269111186540608,
+          "regional_rank": 2
+        },
+        {
+          "gene": "CLCN3",
+          "expression": 0.6123163740085846,
+          "l2g_score": 0.8020431399345398,
+          "weighted_contribution": 0.010484222450633502,
+          "regional_rank": 3
+        },
+        {
+          "gene": "CTSB",
+          "expression": 0.5221423367991599,
+          "l2g_score": 0.8426995277404785,
+          "weighted_contribution": 0.009393431754233121,
+          "regional_rank": 4
+        },
+        {
+          "gene": "SPPL2B",
+          "expression": 0.6171695881495042,
+          "l2g_score": 0.6948310136795044,
+          "weighted_contribution": 0.009154746812932293,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 48,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "CLCN3",
+          "expression": 0.7061795150357734,
+          "l2g_score": 0.8020431399345398,
+          "weighted_contribution": 0.012091368841316879,
+          "regional_rank": 1
+        },
+        {
+          "gene": "CCSER1",
+          "expression": 0.6767500232418239,
+          "l2g_score": 0.8328624963760376,
+          "weighted_contribution": 0.012032731090645763,
+          "regional_rank": 2
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.6597455805705355,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.012011849077373411,
+          "regional_rank": 3
+        },
+        {
+          "gene": "ALG10",
+          "expression": 0.7131446202829314,
+          "l2g_score": 0.7019623517990112,
+          "weighted_contribution": 0.010686956856873576,
+          "regional_rank": 4
+        },
+        {
+          "gene": "SLC50A1",
+          "expression": 0.7937438081956376,
+          "l2g_score": 0.6150293350219727,
+          "weighted_contribution": 0.010421705743467659,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 49,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "CCSER1",
+          "expression": 0.7499359909829681,
+          "l2g_score": 0.8328624963760376,
+          "weighted_contribution": 0.013333990106817514,
+          "regional_rank": 1
+        },
+        {
+          "gene": "CLCN3",
+          "expression": 0.7370866971816784,
+          "l2g_score": 0.8020431399345398,
+          "weighted_contribution": 0.012620568756090633,
+          "regional_rank": 2
+        },
+        {
+          "gene": "IRS2",
+          "expression": 0.6764115748194047,
+          "l2g_score": 0.7469207048416138,
+          "weighted_contribution": 0.010785695482225284,
+          "regional_rank": 3
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.5557140057701244,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.0106708566216697,
+          "regional_rank": 4
+        },
+        {
+          "gene": "SV2C",
+          "expression": 0.8306677645500755,
+          "l2g_score": 0.5758057832717896,
+          "weighted_contribution": 0.010210946605998172,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 51,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "CCSER1",
+          "expression": 0.6926139568323335,
+          "l2g_score": 0.8328624963760376,
+          "weighted_contribution": 0.012314794541519493,
+          "regional_rank": 1
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.5889716368152444,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.010723282763274122,
+          "regional_rank": 2
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.5446414415320104,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.009896492875613913,
+          "regional_rank": 3
+        },
+        {
+          "gene": "HIP1R",
+          "expression": 0.5168936948041021,
+          "l2g_score": 0.8798125386238098,
+          "weighted_contribution": 0.009708541849693969,
+          "regional_rank": 4
+        },
+        {
+          "gene": "TMEM175",
+          "expression": 0.5685612966152274,
+          "l2g_score": 0.7957037091255188,
+          "weighted_contribution": 0.009658091171679366,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 52,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.679493871992003,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.01237140206730859,
+          "regional_rank": 1
+        },
+        {
+          "gene": "CCSER1",
+          "expression": 0.6463966453316399,
+          "l2g_score": 0.8328624963760376,
+          "weighted_contribution": 0.011493042843076272,
+          "regional_rank": 2
+        },
+        {
+          "gene": "HIP1R",
+          "expression": 0.5854834993985223,
+          "l2g_score": 0.8798125386238098,
+          "weighted_contribution": 0.010996828000330092,
+          "regional_rank": 3
+        },
+        {
+          "gene": "MAP4K4",
+          "expression": 0.5921608846278024,
+          "l2g_score": 0.7526438236236572,
+          "weighted_contribution": 0.009514628679000298,
+          "regional_rank": 4
+        },
+        {
+          "gene": "FBRSL1",
+          "expression": 0.6433653528682425,
+          "l2g_score": 0.6778879165649414,
+          "weighted_contribution": 0.00931061111004061,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 53,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "CCSER1",
+          "expression": 0.7048476581878916,
+          "l2g_score": 0.8328624963760376,
+          "weighted_contribution": 0.012532311842737374,
+          "regional_rank": 1
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.6540325772665898,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.01190783362734768,
+          "regional_rank": 2
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.6157484982526932,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.011823642866004878,
+          "regional_rank": 3
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.6072012515074139,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.011033245730813148,
+          "regional_rank": 4
+        },
+        {
+          "gene": "CTSB",
+          "expression": 0.562556700093491,
+          "l2g_score": 0.8426995277404785,
+          "weighted_contribution": 0.010120493202311226,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 55,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "CCSER1",
+          "expression": 0.7048761776059563,
+          "l2g_score": 0.8328624963760376,
+          "weighted_contribution": 0.012532818922865408,
+          "regional_rank": 1
+        },
+        {
+          "gene": "CLCN3",
+          "expression": 0.5994153306292498,
+          "l2g_score": 0.8020431399345398,
+          "weighted_contribution": 0.010263327804702765,
+          "regional_rank": 2
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.5492744893848707,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.01000052514612793,
+          "regional_rank": 3
+        },
+        {
+          "gene": "IRS2",
+          "expression": 0.605543649430542,
+          "l2g_score": 0.7469207048416138,
+          "weighted_contribution": 0.009655673626958522,
+          "regional_rank": 4
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.5268355898616465,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.009572948850568147,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 56,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "CCSER1",
+          "expression": 0.7109849984808082,
+          "l2g_score": 0.8328624963760376,
+          "weighted_contribution": 0.012641434802205762,
+          "regional_rank": 1
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.657462043498256,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.011970273198000203,
+          "regional_rank": 2
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.5397658787307598,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.010364619644997871,
+          "regional_rank": 3
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.5586952811513135,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.01015186037625108,
+          "regional_rank": 4
+        },
+        {
+          "gene": "STK39",
+          "expression": 0.5440214993005434,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.009780265335449876,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 57,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "CCSER1",
+          "expression": 0.6508017583636267,
+          "l2g_score": 0.8328624963760376,
+          "weighted_contribution": 0.011571366505754386,
+          "regional_rank": 1
+        },
+        {
+          "gene": "CLCN3",
+          "expression": 0.5862705902949634,
+          "l2g_score": 0.8020431399345398,
+          "weighted_contribution": 0.01003826052319554,
+          "regional_rank": 2
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.542390051589441,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.009875181634603755,
+          "regional_rank": 3
+        },
+        {
+          "gene": "SPPL2B",
+          "expression": 0.6626986370930328,
+          "l2g_score": 0.6948310136795044,
+          "weighted_contribution": 0.009830099137017708,
+          "regional_rank": 4
+        },
+        {
+          "gene": "ALG10",
+          "expression": 0.6477778199703145,
+          "l2g_score": 0.7019623517990112,
+          "weighted_contribution": 0.009707390924600741,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 58,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "MAP4K4",
+          "expression": 0.789240316697781,
+          "l2g_score": 0.7526438236236572,
+          "weighted_contribution": 0.012681230298748809,
+          "regional_rank": 1
+        },
+        {
+          "gene": "RNF141",
+          "expression": 0.739496186716617,
+          "l2g_score": 0.7541582584381104,
+          "weighted_contribution": 0.011905867786931841,
+          "regional_rank": 2
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.6477880425751178,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.011794140697100965,
+          "regional_rank": 3
+        },
+        {
+          "gene": "HIP1R",
+          "expression": 0.5931262668016523,
+          "l2g_score": 0.8798125386238098,
+          "weighted_contribution": 0.01114037807247575,
+          "regional_rank": 4
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.5987240325523557,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.010879209092033392,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 59,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "SH3GL2",
+          "expression": 0.5813068226489819,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.01116229156234655,
+          "regional_rank": 1
+        },
+        {
+          "gene": "TOX3",
+          "expression": 0.7106746938492227,
+          "l2g_score": 0.7276461720466614,
+          "weighted_contribution": 0.011039609855237411,
+          "regional_rank": 2
+        },
+        {
+          "gene": "FYN",
+          "expression": 0.6620860850303288,
+          "l2g_score": 0.7615038752555847,
+          "weighted_contribution": 0.010763393145742674,
+          "regional_rank": 3
+        },
+        {
+          "gene": "FCGR2A",
+          "expression": 0.5388122219398387,
+          "l2g_score": 0.8712173104286194,
+          "weighted_contribution": 0.010021357600149295,
+          "regional_rank": 4
+        },
+        {
+          "gene": "GPNMB",
+          "expression": 0.527733418893312,
+          "l2g_score": 0.8844435214996338,
+          "weighted_contribution": 0.00996431222549842,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 60,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "SH3GL2",
+          "expression": 0.5742861920950082,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.011027480956068333,
+          "regional_rank": 1
+        },
+        {
+          "gene": "FYN",
+          "expression": 0.6681712263836158,
+          "l2g_score": 0.7615038752555847,
+          "weighted_contribution": 0.010862317998890501,
+          "regional_rank": 2
+        },
+        {
+          "gene": "TOX3",
+          "expression": 0.6901620464832952,
+          "l2g_score": 0.7276461720466614,
+          "weighted_contribution": 0.010720966703908392,
+          "regional_rank": 3
+        },
+        {
+          "gene": "TMEM175",
+          "expression": 0.6153939034404252,
+          "l2g_score": 0.7957037091255188,
+          "weighted_contribution": 0.010453631756692625,
+          "regional_rank": 4
+        },
+        {
+          "gene": "ITPKB",
+          "expression": 0.5070795624816598,
+          "l2g_score": 0.9014809131622314,
+          "weighted_contribution": 0.009758774176894098,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 61,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "STK39",
+          "expression": 0.6865414224449381,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.012342448384708478,
+          "regional_rank": 1
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.6608609728172966,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.012008278126726547,
+          "regional_rank": 2
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.6381550470632185,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.011618754773102981,
+          "regional_rank": 3
+        },
+        {
+          "gene": "CTSB",
+          "expression": 0.6327626438220221,
+          "l2g_score": 0.8426995277404785,
+          "weighted_contribution": 0.011383510381110027,
+          "regional_rank": 4
+        },
+        {
+          "gene": "RIT2",
+          "expression": 0.5824299435429038,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.010500711527431986,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 62,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "STK39",
+          "expression": 0.6638656214455474,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.011934789219118442,
+          "regional_rank": 1
+        },
+        {
+          "gene": "ITPKB",
+          "expression": 0.5784155310966208,
+          "l2g_score": 0.9014809131622314,
+          "weighted_contribution": 0.011131638831498649,
+          "regional_rank": 2
+        },
+        {
+          "gene": "TMEM175",
+          "expression": 0.6368938778112199,
+          "l2g_score": 0.7957037091255188,
+          "weighted_contribution": 0.01081884956855932,
+          "regional_rank": 3
+        },
+        {
+          "gene": "HIP1R",
+          "expression": 0.5750707203959541,
+          "l2g_score": 0.8798125386238098,
+          "weighted_contribution": 0.010801250260198514,
+          "regional_rank": 4
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.5817840662308627,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.01057139877274842,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 63,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "CCSER1",
+          "expression": 0.7106014542038736,
+          "l2g_score": 0.8328624963760376,
+          "weighted_contribution": 0.012634615319402343,
+          "regional_rank": 1
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.5832772483990412,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.010619606230595834,
+          "regional_rank": 2
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.5482253942469889,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.009961615651454387,
+          "regional_rank": 3
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.5053786070805392,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.009704313009606537,
+          "regional_rank": 4
+        },
+        {
+          "gene": "SV2C",
+          "expression": 0.7700560360333156,
+          "l2g_score": 0.5758057832717896,
+          "weighted_contribution": 0.009465879624956581,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 64,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "STK39",
+          "expression": 0.725418327920756,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.01304136644486523,
+          "regional_rank": 1
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.6357045857721431,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.012206840961497238,
+          "regional_rank": 2
+        },
+        {
+          "gene": "SV2C",
+          "expression": 0.8081862784941253,
+          "l2g_score": 0.5758057832717896,
+          "weighted_contribution": 0.009934593937052196,
+          "regional_rank": 3
+        },
+        {
+          "gene": "FCGR2A",
+          "expression": 0.5205546971511995,
+          "l2g_score": 0.8712173104286194,
+          "weighted_contribution": 0.009681786266481642,
+          "regional_rank": 4
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.524431310554031,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.009548210612303872,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 65,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.5998321518024086,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.010921017876278673,
+          "regional_rank": 1
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.5858966061242148,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.010646126324953691,
+          "regional_rank": 2
+        },
+        {
+          "gene": "CTSB",
+          "expression": 0.5864968919870511,
+          "l2g_score": 0.8426995277404785,
+          "weighted_contribution": 0.010551181432103061,
+          "regional_rank": 3
+        },
+        {
+          "gene": "CCSER1",
+          "expression": 0.5731245674909228,
+          "l2g_score": 0.8328624963760376,
+          "weighted_contribution": 0.010190252774615252,
+          "regional_rank": 4
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.5229562112789994,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.010041839313076775,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 66,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "CLCN3",
+          "expression": 0.6745571703067145,
+          "l2g_score": 0.8020431399345398,
+          "weighted_contribution": 0.011549923747533674,
+          "regional_rank": 1
+        },
+        {
+          "gene": "HIP1R",
+          "expression": 0.594141520855236,
+          "l2g_score": 0.8798125386238098,
+          "weighted_contribution": 0.011159447054292261,
+          "regional_rank": 2
+        },
+        {
+          "gene": "STK39",
+          "expression": 0.5796929393445494,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.010421556440629587,
+          "regional_rank": 3
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.5387782552513273,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.010345655234463331,
+          "regional_rank": 4
+        },
+        {
+          "gene": "ITPKB",
+          "expression": 0.5274219067444189,
+          "l2g_score": 0.9014809131622314,
+          "weighted_contribution": 0.010150263715374728,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 67,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "SH3GL2",
+          "expression": 0.5510269558305136,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.010580855582709237,
+          "regional_rank": 1
+        },
+        {
+          "gene": "GPNMB",
+          "expression": 0.5399311520220649,
+          "l2g_score": 0.8844435214996338,
+          "weighted_contribution": 0.010194621728339986,
+          "regional_rank": 2
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.5565918412842377,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.010113639491699505,
+          "regional_rank": 3
+        },
+        {
+          "gene": "RIT2",
+          "expression": 0.5514390861341538,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.009941972992016887,
+          "regional_rank": 4
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.5321039516441372,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.009687904775498583,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 68,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "TMEM163",
+          "expression": 0.6765716107159282,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.01229375074077848,
+          "regional_rank": 1
+        },
+        {
+          "gene": "TMEM175",
+          "expression": 0.6713143115462537,
+          "l2g_score": 0.7957037091255188,
+          "weighted_contribution": 0.011403545869839002,
+          "regional_rank": 2
+        },
+        {
+          "gene": "DYRK1A",
+          "expression": 0.678269368681014,
+          "l2g_score": 0.7525694370269775,
+          "weighted_contribution": 0.010897111803959296,
+          "regional_rank": 3
+        },
+        {
+          "gene": "ITPKB",
+          "expression": 0.5617199120866044,
+          "l2g_score": 0.9014809131622314,
+          "weighted_contribution": 0.010810330721850463,
+          "regional_rank": 4
+        },
+        {
+          "gene": "RIT2",
+          "expression": 0.5729706280138482,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.010330168194763767,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 69,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "GPNMB",
+          "expression": 0.6158339945639051,
+          "l2g_score": 0.8844435214996338,
+          "weighted_contribution": 0.01162776883408096,
+          "regional_rank": 1
+        },
+        {
+          "gene": "DYRK1A",
+          "expression": 0.709609788121886,
+          "l2g_score": 0.7525694370269775,
+          "weighted_contribution": 0.011400628651984284,
+          "regional_rank": 2
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.5695932245004949,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.010937366285912065,
+          "regional_rank": 3
+        },
+        {
+          "gene": "CCSER1",
+          "expression": 0.6007053737856796,
+          "l2g_score": 0.8328624963760376,
+          "weighted_contribution": 0.010680644224944632,
+          "regional_rank": 4
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.5643649690119005,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.010275274336002466,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 70,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "DYRK1A",
+          "expression": 0.6355441595959892,
+          "l2g_score": 0.7525694370269775,
+          "weighted_contribution": 0.010210686319122147,
+          "regional_rank": 1
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.5222437339428441,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.010028158276749884,
+          "regional_rank": 2
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.5431297580346612,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.009869024593142388,
+          "regional_rank": 3
+        },
+        {
+          "gene": "FAM47E",
+          "expression": 0.6638561009148258,
+          "l2g_score": 0.6943575739860535,
+          "weighted_contribution": 0.009840558633573302,
+          "regional_rank": 4
+        },
+        {
+          "gene": "CTSB",
+          "expression": 0.54479476771184,
+          "l2g_score": 0.8426995277404785,
+          "weighted_contribution": 0.009800952939261233,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 71,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.6439489369242657,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.011724242907667881,
+          "regional_rank": 1
+        },
+        {
+          "gene": "CCSER1",
+          "expression": 0.6140482143437598,
+          "l2g_score": 0.8328624963760376,
+          "weighted_contribution": 0.01091788221076938,
+          "regional_rank": 2
+        },
+        {
+          "gene": "CTSB",
+          "expression": 0.5709698968647917,
+          "l2g_score": 0.8426995277404785,
+          "weighted_contribution": 0.010271848080351975,
+          "regional_rank": 3
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.512413297020904,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.009839393585140181,
+          "regional_rank": 4
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.5107251003591021,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.009280210670131298,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 72,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "HIP1R",
+          "expression": 0.5961573721471278,
+          "l2g_score": 0.8798125386238098,
+          "weighted_contribution": 0.011197309726688583,
+          "regional_rank": 1
+        },
+        {
+          "gene": "ITPKB",
+          "expression": 0.5463134546938393,
+          "l2g_score": 0.9014809131622314,
+          "weighted_contribution": 0.010513832598703619,
+          "regional_rank": 2
+        },
+        {
+          "gene": "CLCN3",
+          "expression": 0.5940687137874807,
+          "l2g_score": 0.8020431399345398,
+          "weighted_contribution": 0.01017178179563487,
+          "regional_rank": 3
+        },
+        {
+          "gene": "CCSER1",
+          "expression": 0.5551302820153619,
+          "l2g_score": 0.8328624963760376,
+          "weighted_contribution": 0.009870311303082612,
+          "regional_rank": 4
+        },
+        {
+          "gene": "STK39",
+          "expression": 0.5334302578360364,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.009589858978554277,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 73,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "STK39",
+          "expression": 0.8525725452687095,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.01532730916180448,
+          "regional_rank": 1
+        },
+        {
+          "gene": "RIT2",
+          "expression": 0.7459172507775603,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.013448247227991848,
+          "regional_rank": 2
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.6947018640760176,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.012623189357690365,
+          "regional_rank": 3
+        },
+        {
+          "gene": "SV2C",
+          "expression": 0.9175585710360168,
+          "l2g_score": 0.5758057832717896,
+          "weighted_contribution": 0.01127904798592909,
+          "regional_rank": 4
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.5935323704958831,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.010806319082526994,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 74,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "STK39",
+          "expression": 0.8629798226789622,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.01551440826473106,
+          "regional_rank": 1
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.8278180654574505,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.01504199820722355,
+          "regional_rank": 2
+        },
+        {
+          "gene": "RIT2",
+          "expression": 0.7432682968686877,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.01340048886468152,
+          "regional_rank": 3
+        },
+        {
+          "gene": "DYRK1A",
+          "expression": 0.78118444826423,
+          "l2g_score": 0.7525694370269775,
+          "weighted_contribution": 0.012550550954119558,
+          "regional_rank": 4
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.6829320460763946,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.012434000180004902,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 75,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "GPNMB",
+          "expression": 0.6810826163467402,
+          "l2g_score": 0.8844435214996338,
+          "weighted_contribution": 0.01285975001331165,
+          "regional_rank": 1
+        },
+        {
+          "gene": "CTSB",
+          "expression": 0.5924231698583524,
+          "l2g_score": 0.8426995277404785,
+          "weighted_contribution": 0.010657796205158906,
+          "regional_rank": 2
+        },
+        {
+          "gene": "RIT2",
+          "expression": 0.5701049338831155,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.010278502191450763,
+          "regional_rank": 3
+        },
+        {
+          "gene": "MCCC1",
+          "expression": 0.7242758040966493,
+          "l2g_score": 0.6534242630004883,
+          "weighted_contribution": 0.010103267670058244,
+          "regional_rank": 4
+        },
+        {
+          "gene": "FBRSL1",
+          "expression": 0.6692780898035381,
+          "l2g_score": 0.6778879165649414,
+          "weighted_contribution": 0.009685613300204761,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 76,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "GPNMB",
+          "expression": 0.5790412393538403,
+          "l2g_score": 0.8844435214996338,
+          "weighted_contribution": 0.010933072444911159,
+          "regional_rank": 1
+        },
+        {
+          "gene": "RIT2",
+          "expression": 0.5627143492608564,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.010145256299824141,
+          "regional_rank": 2
+        },
+        {
+          "gene": "MCCC1",
+          "expression": 0.7207948759646563,
+          "l2g_score": 0.6534242630004883,
+          "weighted_contribution": 0.010054710547952494,
+          "regional_rank": 3
+        },
+        {
+          "gene": "DLG2",
+          "expression": 0.7570773466131218,
+          "l2g_score": 0.607625424861908,
+          "weighted_contribution": 0.009820617915092159,
+          "regional_rank": 4
+        },
+        {
+          "gene": "SV2C",
+          "expression": 0.7828722663169814,
+          "l2g_score": 0.5758057832717896,
+          "weighted_contribution": 0.009623422566553177,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 77,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "GPNMB",
+          "expression": 0.6020587943489589,
+          "l2g_score": 0.8844435214996338,
+          "weighted_contribution": 0.011367674644483645,
+          "regional_rank": 1
+        },
+        {
+          "gene": "CTSB",
+          "expression": 0.5484353623385809,
+          "l2g_score": 0.8426995277404785,
+          "weighted_contribution": 0.009866447871889675,
+          "regional_rank": 2
+        },
+        {
+          "gene": "MAP4K4",
+          "expression": 0.6071661305262069,
+          "l2g_score": 0.7526438236236572,
+          "weighted_contribution": 0.0097557275875345,
+          "regional_rank": 3
+        },
+        {
+          "gene": "ALG10",
+          "expression": 0.631826591386926,
+          "l2g_score": 0.7019623517990112,
+          "weighted_contribution": 0.009468350922283724,
+          "regional_rank": 4
+        },
+        {
+          "gene": "ITPKB",
+          "expression": 0.4908249107348643,
+          "l2g_score": 0.9014809131622314,
+          "weighted_contribution": 0.009445952506573336,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 78,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "SH3GL2",
+          "expression": 0.6732278342215245,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.0129273648281357,
+          "regional_rank": 1
+        },
+        {
+          "gene": "FBRSL1",
+          "expression": 0.7397576085558485,
+          "l2g_score": 0.6778879165649414,
+          "weighted_contribution": 0.010705574022988608,
+          "regional_rank": 2
+        },
+        {
+          "gene": "STK39",
+          "expression": 0.5838482321040392,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.010496259123862761,
+          "regional_rank": 3
+        },
+        {
+          "gene": "CTSB",
+          "expression": 0.5749898817340618,
+          "l2g_score": 0.8426995277404785,
+          "weighted_contribution": 0.010344168309648115,
+          "regional_rank": 4
+        },
+        {
+          "gene": "DLG2",
+          "expression": 0.7953806410452287,
+          "l2g_score": 0.607625424861908,
+          "weighted_contribution": 0.010317478666757501,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 79,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "ITPKB",
+          "expression": 0.6254213375028673,
+          "l2g_score": 0.9014809131622314,
+          "weighted_contribution": 0.012036268171076798,
+          "regional_rank": 1
+        },
+        {
+          "gene": "HIP1R",
+          "expression": 0.6125779843892266,
+          "l2g_score": 0.8798125386238098,
+          "weighted_contribution": 0.011505729432234482,
+          "regional_rank": 2
+        },
+        {
+          "gene": "FCGR2A",
+          "expression": 0.5853094515048259,
+          "l2g_score": 0.8712173104286194,
+          "weighted_contribution": 0.010886158630848632,
+          "regional_rank": 3
+        },
+        {
+          "gene": "ALG10",
+          "expression": 0.7234706846215393,
+          "l2g_score": 0.7019623517990112,
+          "weighted_contribution": 0.010841699949577862,
+          "regional_rank": 4
+        },
+        {
+          "gene": "GALC",
+          "expression": 0.6686242305776561,
+          "l2g_score": 0.730959951877594,
+          "weighted_contribution": 0.010433699389320367,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 80,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "ITPKB",
+          "expression": 0.8358771038275461,
+          "l2g_score": 0.9014809131622314,
+          "weighted_contribution": 0.016086501013702983,
+          "regional_rank": 1
+        },
+        {
+          "gene": "HIP1R",
+          "expression": 0.8557471845148309,
+          "l2g_score": 0.8798125386238098,
+          "weighted_contribution": 0.016073048360105646,
+          "regional_rank": 2
+        },
+        {
+          "gene": "STK39",
+          "expression": 0.8371587726739567,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.015050204698119145,
+          "regional_rank": 3
+        },
+        {
+          "gene": "GALC",
+          "expression": 0.9031812535993649,
+          "l2g_score": 0.730959951877594,
+          "weighted_contribution": 0.014093897982105542,
+          "regional_rank": 4
+        },
+        {
+          "gene": "MAP4K4",
+          "expression": 0.8478092573856413,
+          "l2g_score": 0.7526438236236572,
+          "weighted_contribution": 0.013622295028341077,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 83,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.6938233296216002,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.012632295489676785,
+          "regional_rank": 1
+        },
+        {
+          "gene": "FCGR2A",
+          "expression": 0.6417662051389013,
+          "l2g_score": 0.8712173104286194,
+          "weighted_contribution": 0.011936196647940546,
+          "regional_rank": 2
+        },
+        {
+          "gene": "HIP1R",
+          "expression": 0.6350245271370719,
+          "l2g_score": 0.8798125386238098,
+          "weighted_contribution": 0.011927331014608187,
+          "regional_rank": 3
+        },
+        {
+          "gene": "RIT2",
+          "expression": 0.6125778791119527,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.01104425290621563,
+          "regional_rank": 4
+        },
+        {
+          "gene": "ITPKB",
+          "expression": 0.558861401800088,
+          "l2g_score": 0.9014809131622314,
+          "weighted_contribution": 0.010755318533562059,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 84,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "CCSER1",
+          "expression": 0.7156061731829408,
+          "l2g_score": 0.8328624963760376,
+          "weighted_contribution": 0.012723600078310656,
+          "regional_rank": 1
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.6706415315101851,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.012210229365314643,
+          "regional_rank": 2
+        },
+        {
+          "gene": "SPPL2B",
+          "expression": 0.7917568034485731,
+          "l2g_score": 0.6948310136795044,
+          "weighted_contribution": 0.011744475444296253,
+          "regional_rank": 3
+        },
+        {
+          "gene": "ITPKB",
+          "expression": 0.5901553999989824,
+          "l2g_score": 0.9014809131622314,
+          "weighted_contribution": 0.011357573256707576,
+          "regional_rank": 4
+        },
+        {
+          "gene": "RNF141",
+          "expression": 0.7022672447880942,
+          "l2g_score": 0.7541582584381104,
+          "weighted_contribution": 0.011306482869997563,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 85,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.6675406036792682,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.012153771424251072,
+          "regional_rank": 1
+        },
+        {
+          "gene": "RIT2",
+          "expression": 0.5982233993027469,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.010785453966920173,
+          "regional_rank": 2
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.5251614555908395,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.010084184558334338,
+          "regional_rank": 3
+        },
+        {
+          "gene": "TOX3",
+          "expression": 0.6354188033216588,
+          "l2g_score": 0.7276461720466614,
+          "weighted_contribution": 0.00987058599956453,
+          "regional_rank": 4
+        },
+        {
+          "gene": "CTSB",
+          "expression": 0.5147900142120161,
+          "l2g_score": 0.8426995277404785,
+          "weighted_contribution": 0.009261162187890703,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 86,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "GPNMB",
+          "expression": 0.57034484031798,
+          "l2g_score": 0.8844435214996338,
+          "weighted_contribution": 0.010768872809018185,
+          "regional_rank": 1
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.5413509006172217,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.01039505533874866,
+          "regional_rank": 2
+        },
+        {
+          "gene": "FCGR2A",
+          "expression": 0.5256821158460356,
+          "l2g_score": 0.8712173104286194,
+          "weighted_contribution": 0.009777151022911351,
+          "regional_rank": 3
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.5366789404736562,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.009771200635250046,
+          "regional_rank": 4
+        },
+        {
+          "gene": "FBRSL1",
+          "expression": 0.6320377794889878,
+          "l2g_score": 0.6778879165649414,
+          "weighted_contribution": 0.009146681501328392,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 87,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "GPNMB",
+          "expression": 0.7328632165440228,
+          "l2g_score": 0.8844435214996338,
+          "weighted_contribution": 0.01383743694598956,
+          "regional_rank": 1
+        },
+        {
+          "gene": "TOX3",
+          "expression": 0.8386261113476811,
+          "l2g_score": 0.7276461720466614,
+          "weighted_contribution": 0.013027205223178375,
+          "regional_rank": 2
+        },
+        {
+          "gene": "CNTN1",
+          "expression": 0.7473558741065297,
+          "l2g_score": 0.7606772780418396,
+          "weighted_contribution": 0.012136417878453086,
+          "regional_rank": 3
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.5684657915024544,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.010915717243872972,
+          "regional_rank": 4
+        },
+        {
+          "gene": "FCGR2A",
+          "expression": 0.5739855232672864,
+          "l2g_score": 0.8712173104286194,
+          "weighted_contribution": 0.010675545118968266,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 88,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "FCGR2A",
+          "expression": 0.7375718585591551,
+          "l2g_score": 0.8712173104286194,
+          "weighted_contribution": 0.01371808405499259,
+          "regional_rank": 1
+        },
+        {
+          "gene": "FYN",
+          "expression": 0.7880298832329434,
+          "l2g_score": 0.7615038752555847,
+          "weighted_contribution": 0.012810834777537014,
+          "regional_rank": 2
+        },
+        {
+          "gene": "ITPKB",
+          "expression": 0.6183572588218156,
+          "l2g_score": 0.9014809131622314,
+          "weighted_contribution": 0.011900319586837241,
+          "regional_rank": 3
+        },
+        {
+          "gene": "FAM47E",
+          "expression": 0.7748823123577168,
+          "l2g_score": 0.6943575739860535,
+          "weighted_contribution": 0.011486336900974437,
+          "regional_rank": 4
+        },
+        {
+          "gene": "GPNMB",
+          "expression": 0.6048834730179632,
+          "l2g_score": 0.8844435214996338,
+          "weighted_contribution": 0.01142100835272916,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 89,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "SH3GL2",
+          "expression": 0.5596087945605387,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.010745644610316128,
+          "regional_rank": 1
+        },
+        {
+          "gene": "GPNMB",
+          "expression": 0.5455358414541094,
+          "l2g_score": 0.8844435214996338,
+          "weighted_contribution": 0.010300445755071053,
+          "regional_rank": 2
+        },
+        {
+          "gene": "HIP1R",
+          "expression": 0.5189012124670768,
+          "l2g_score": 0.8798125386238098,
+          "weighted_contribution": 0.009746247995930431,
+          "regional_rank": 3
+        },
+        {
+          "gene": "GALC",
+          "expression": 0.589816415153179,
+          "l2g_score": 0.730959951877594,
+          "weighted_contribution": 0.009203924849205881,
+          "regional_rank": 4
+        },
+        {
+          "gene": "CNTN1",
+          "expression": 0.5653418928513126,
+          "l2g_score": 0.7606772780418396,
+          "weighted_contribution": 0.00918066706044404,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 90,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "SH3GL2",
+          "expression": 0.6051289539397178,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.011619725682751261,
+          "regional_rank": 1
+        },
+        {
+          "gene": "GPNMB",
+          "expression": 0.5571184342933695,
+          "l2g_score": 0.8844435214996338,
+          "weighted_contribution": 0.010519140587157368,
+          "regional_rank": 2
+        },
+        {
+          "gene": "CNTN1",
+          "expression": 0.6059041211992904,
+          "l2g_score": 0.7606772780418396,
+          "weighted_contribution": 0.009839362830917268,
+          "regional_rank": 3
+        },
+        {
+          "gene": "RIT2",
+          "expression": 0.541379677931839,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.00976061050397817,
+          "regional_rank": 4
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.5348971336199088,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.009719432397882647,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 91,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "GPNMB",
+          "expression": 0.8408526713784545,
+          "l2g_score": 0.8844435214996338,
+          "weighted_contribution": 0.015876422173205527,
+          "regional_rank": 1
+        },
+        {
+          "gene": "FCGR2A",
+          "expression": 0.7226869245990951,
+          "l2g_score": 0.8712173104286194,
+          "weighted_contribution": 0.013441239469820909,
+          "regional_rank": 2
+        },
+        {
+          "gene": "TOX3",
+          "expression": 0.8643784537328134,
+          "l2g_score": 0.7276461720466614,
+          "weighted_contribution": 0.013427241717021325,
+          "regional_rank": 3
+        },
+        {
+          "gene": "FYN",
+          "expression": 0.8199389405952684,
+          "l2g_score": 0.7615038752555847,
+          "weighted_contribution": 0.013329573559496198,
+          "regional_rank": 4
+        },
+        {
+          "gene": "CNTN1",
+          "expression": 0.7284134687700946,
+          "l2g_score": 0.7606772780418396,
+          "weighted_contribution": 0.011828809475614406,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 93,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "SH3GL2",
+          "expression": 0.6229374940348226,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.011961686432386797,
+          "regional_rank": 1
+        },
+        {
+          "gene": "GPNMB",
+          "expression": 0.5894800197802975,
+          "l2g_score": 0.8844435214996338,
+          "weighted_contribution": 0.011130170570022822,
+          "regional_rank": 2
+        },
+        {
+          "gene": "CNTN1",
+          "expression": 0.6844148539488898,
+          "l2g_score": 0.7606772780418396,
+          "weighted_contribution": 0.011114309738549216,
+          "regional_rank": 3
+        },
+        {
+          "gene": "FYN",
+          "expression": 0.634478412240338,
+          "l2g_score": 0.7615038752555847,
+          "weighted_contribution": 0.010314581061036074,
+          "regional_rank": 4
+        },
+        {
+          "gene": "ASXL3",
+          "expression": 0.6400460649108145,
+          "l2g_score": 0.7160765528678894,
+          "weighted_contribution": 0.009784379988664497,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 94,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "GPNMB",
+          "expression": 0.5993573151951845,
+          "l2g_score": 0.8844435214996338,
+          "weighted_contribution": 0.011316667107732738,
+          "regional_rank": 1
+        },
+        {
+          "gene": "CNTN1",
+          "expression": 0.687991560665722,
+          "l2g_score": 0.7606772780418396,
+          "weighted_contribution": 0.011172392385448914,
+          "regional_rank": 2
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.5647128698624169,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.010843653397510663,
+          "regional_rank": 3
+        },
+        {
+          "gene": "FCGR2A",
+          "expression": 0.551121578015378,
+          "l2g_score": 0.8712173104286194,
+          "weighted_contribution": 0.010250299064424994,
+          "regional_rank": 4
+        },
+        {
+          "gene": "TOX3",
+          "expression": 0.6567126565655466,
+          "l2g_score": 0.7276461720466614,
+          "weighted_contribution": 0.010201364391087047,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 95,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "CCSER1",
+          "expression": 0.701220313082166,
+          "l2g_score": 0.8328624963760376,
+          "weighted_contribution": 0.012467817026732659,
+          "regional_rank": 1
+        },
+        {
+          "gene": "CNTN1",
+          "expression": 0.6820733559352717,
+          "l2g_score": 0.7606772780418396,
+          "weighted_contribution": 0.011076285820708454,
+          "regional_rank": 2
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.5641829735096614,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.010833478293147831,
+          "regional_rank": 3
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.5885039149708208,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.010693502839954789,
+          "regional_rank": 4
+        },
+        {
+          "gene": "RIT2",
+          "expression": 0.5847178086400255,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.010541959769671073,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 96,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "CCSER1",
+          "expression": 0.8856485229818801,
+          "l2g_score": 0.8328624963760376,
+          "weighted_contribution": 0.015746982123206476,
+          "regional_rank": 1
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.7551852629000579,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.014501116724666302,
+          "regional_rank": 2
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.7554005731745665,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.013726124787030891,
+          "regional_rank": 3
+        },
+        {
+          "gene": "RIT2",
+          "expression": 0.7443076353790916,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.013419227245147873,
+          "regional_rank": 4
+        },
+        {
+          "gene": "ALG10",
+          "expression": 0.7565757846405067,
+          "l2g_score": 0.7019623517990112,
+          "weighted_contribution": 0.011337802374784163,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 97,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "RIT2",
+          "expression": 0.7231940399920435,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.013038567258613406,
+          "regional_rank": 1
+        },
+        {
+          "gene": "FYN",
+          "expression": 0.66852779289081,
+          "l2g_score": 0.7615038752555847,
+          "weighted_contribution": 0.010868114625018596,
+          "regional_rank": 2
+        },
+        {
+          "gene": "CCSER1",
+          "expression": 0.6074118115250047,
+          "l2g_score": 0.8328624963760376,
+          "weighted_contribution": 0.010799885834286432,
+          "regional_rank": 3
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.5694738454257661,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.010347713971694381,
+          "regional_rank": 4
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.5074545748399723,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.009744175878064244,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 98,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "TMEM163",
+          "expression": 0.670086153887777,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.012175905728628176,
+          "regional_rank": 1
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.6280037638423516,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.012058969276010498,
+          "regional_rank": 2
+        },
+        {
+          "gene": "CCSER1",
+          "expression": 0.6699361239024715,
+          "l2g_score": 0.8328624963760376,
+          "weighted_contribution": 0.011911578795686982,
+          "regional_rank": 3
+        },
+        {
+          "gene": "PKP2",
+          "expression": 0.7695720855613847,
+          "l2g_score": 0.7130399346351624,
+          "weighted_contribution": 0.0117145547221709,
+          "regional_rank": 4
+        },
+        {
+          "gene": "SPPL2B",
+          "expression": 0.7344887552365764,
+          "l2g_score": 0.6948310136795044,
+          "weighted_contribution": 0.010894993402539153,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 101,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "CCSER1",
+          "expression": 0.7803636538811692,
+          "l2g_score": 0.8328624963760376,
+          "weighted_contribution": 0.013874999154171539,
+          "regional_rank": 1
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.625958216128638,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.01201969053525684,
+          "regional_rank": 2
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.6417057200267556,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.011660214596637951,
+          "regional_rank": 3
+        },
+        {
+          "gene": "CNTN1",
+          "expression": 0.7056413618248533,
+          "l2g_score": 0.7606772780418396,
+          "weighted_contribution": 0.0114590100059967,
+          "regional_rank": 4
+        },
+        {
+          "gene": "GPNMB",
+          "expression": 0.5769000067767578,
+          "l2g_score": 0.8844435214996338,
+          "weighted_contribution": 0.010892643112256422,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 102,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "CCSER1",
+          "expression": 0.9054988048352404,
+          "l2g_score": 0.8328624963760376,
+          "weighted_contribution": 0.016099923527583288,
+          "regional_rank": 1
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.6616111044262512,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.012704299624144209,
+          "regional_rank": 2
+        },
+        {
+          "gene": "CNTN1",
+          "expression": 0.779372496334974,
+          "l2g_score": 0.7606772780418396,
+          "weighted_contribution": 0.012656340340941931,
+          "regional_rank": 3
+        },
+        {
+          "gene": "SEC23IP",
+          "expression": 0.845546530575765,
+          "l2g_score": 0.6697301864624023,
+          "weighted_contribution": 0.012089268171598397,
+          "regional_rank": 4
+        },
+        {
+          "gene": "CLCN3",
+          "expression": 0.6841277112243621,
+          "l2g_score": 0.8020431399345398,
+          "weighted_contribution": 0.011713792760698593,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 103,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "CCSER1",
+          "expression": 0.7620937641981508,
+          "l2g_score": 0.8328624963760376,
+          "weighted_contribution": 0.01355015739272106,
+          "regional_rank": 1
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.6068276560235872,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.011026457255383051,
+          "regional_rank": 2
+        },
+        {
+          "gene": "RIT2",
+          "expression": 0.601888546194842,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.010851533416725654,
+          "regional_rank": 3
+        },
+        {
+          "gene": "FYN",
+          "expression": 0.644865092391417,
+          "l2g_score": 0.7615038752555847,
+          "weighted_contribution": 0.010483435118647062,
+          "regional_rank": 4
+        },
+        {
+          "gene": "DYRK1A",
+          "expression": 0.6477104464972169,
+          "l2g_score": 0.7525694370269775,
+          "weighted_contribution": 0.010406150532491443,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 104,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "SH3GL2",
+          "expression": 0.6839671177611423,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.013133581251837143,
+          "regional_rank": 1
+        },
+        {
+          "gene": "CCSER1",
+          "expression": 0.7354388358293704,
+          "l2g_score": 0.8328624963760376,
+          "weighted_contribution": 0.013076228210176575,
+          "regional_rank": 2
+        },
+        {
+          "gene": "RIT2",
+          "expression": 0.6990725953087447,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.012603678333254487,
+          "regional_rank": 3
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.6603315422962457,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.011998658026271142,
+          "regional_rank": 4
+        },
+        {
+          "gene": "FBRSL1",
+          "expression": 0.7965623544592146,
+          "l2g_score": 0.6778879165649414,
+          "weighted_contribution": 0.011527637094854444,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 105,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "FYN",
+          "expression": 0.6731314975777214,
+          "l2g_score": 0.7615038752555847,
+          "weighted_contribution": 0.0109429560762928,
+          "regional_rank": 1
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.5691759015310235,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.01092935282300503,
+          "regional_rank": 2
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.592600356851967,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.010767937880700303,
+          "regional_rank": 3
+        },
+        {
+          "gene": "RIT2",
+          "expression": 0.5956240111899883,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.010738589232332734,
+          "regional_rank": 4
+        },
+        {
+          "gene": "SPPL2B",
+          "expression": 0.6916605908299731,
+          "l2g_score": 0.6948310136795044,
+          "weighted_contribution": 0.010259704481740751,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 106,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "CCSER1",
+          "expression": 0.7719938950388698,
+          "l2g_score": 0.8328624963760376,
+          "weighted_contribution": 0.013726183411306088,
+          "regional_rank": 1
+        },
+        {
+          "gene": "MCCC1",
+          "expression": 0.9064191674995512,
+          "l2g_score": 0.6534242630004883,
+          "weighted_contribution": 0.012644072076853865,
+          "regional_rank": 2
+        },
+        {
+          "gene": "RIT2",
+          "expression": 0.6665698747759771,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.012017682204526618,
+          "regional_rank": 3
+        },
+        {
+          "gene": "CNTN1",
+          "expression": 0.7395052691187868,
+          "l2g_score": 0.7606772780418396,
+          "weighted_contribution": 0.012008930792272329,
+          "regional_rank": 4
+        },
+        {
+          "gene": "PKP2",
+          "expression": 0.7832169877552041,
+          "l2g_score": 0.7130399346351624,
+          "weighted_contribution": 0.011922259700596106,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 107,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "SH3GL2",
+          "expression": 0.6101159002738489,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.011715485351859702,
+          "regional_rank": 1
+        },
+        {
+          "gene": "RIT2",
+          "expression": 0.6436540606524649,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.011604529762426041,
+          "regional_rank": 2
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.5830800568609734,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.0105949477740908,
+          "regional_rank": 3
+        },
+        {
+          "gene": "SPPL2B",
+          "expression": 0.646369116470387,
+          "l2g_score": 0.6948310136795044,
+          "weighted_contribution": 0.0095878762055134,
+          "regional_rank": 4
+        },
+        {
+          "gene": "CAMK2D",
+          "expression": 0.6714187108819999,
+          "l2g_score": 0.6061360836029053,
+          "weighted_contribution": 0.008688127864241373,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 108,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "RIT2",
+          "expression": 0.623347986786587,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.011238428695191673,
+          "regional_rank": 1
+        },
+        {
+          "gene": "FCGR2A",
+          "expression": 0.5672704209902155,
+          "l2g_score": 0.8712173104286194,
+          "weighted_contribution": 0.010550651067757197,
+          "regional_rank": 2
+        },
+        {
+          "gene": "CTSB",
+          "expression": 0.5543616603811357,
+          "l2g_score": 0.8426995277404785,
+          "weighted_contribution": 0.009973063007829889,
+          "regional_rank": 3
+        },
+        {
+          "gene": "CCSER1",
+          "expression": 0.5413287253574766,
+          "l2g_score": 0.8328624963760376,
+          "weighted_contribution": 0.009624917266594634,
+          "regional_rank": 4
+        },
+        {
+          "gene": "CNTN1",
+          "expression": 0.5706872783620167,
+          "l2g_score": 0.7606772780418396,
+          "weighted_contribution": 0.009267471532753688,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 109,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "ITPKB",
+          "expression": 0.5395024308318839,
+          "l2g_score": 0.9014809131622314,
+          "weighted_contribution": 0.010382754068429262,
+          "regional_rank": 1
+        },
+        {
+          "gene": "RIT2",
+          "expression": 0.5634854319397362,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.01015915825810167,
+          "regional_rank": 2
+        },
+        {
+          "gene": "MAP4K4",
+          "expression": 0.5993684639315178,
+          "l2g_score": 0.7526438236236572,
+          "weighted_contribution": 0.009630437477807405,
+          "regional_rank": 3
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.5236922715083897,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.009515832690620256,
+          "regional_rank": 4
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.4938217296628111,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.009482397094876468,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 110,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "RIT2",
+          "expression": 0.6238490090788911,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.011247461696703055,
+          "regional_rank": 1
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.576226690275442,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.011064742528825215,
+          "regional_rank": 2
+        },
+        {
+          "gene": "CCSER1",
+          "expression": 0.6019298468132809,
+          "l2g_score": 0.8328624963760376,
+          "weighted_contribution": 0.010702415564675506,
+          "regional_rank": 3
+        },
+        {
+          "gene": "SPPL2B",
+          "expression": 0.7098817111555087,
+          "l2g_score": 0.6948310136795044,
+          "weighted_contribution": 0.010529986340133043,
+          "regional_rank": 4
+        },
+        {
+          "gene": "SEC23IP",
+          "expression": 0.7328422444137537,
+          "l2g_score": 0.6697301864624023,
+          "weighted_contribution": 0.010477869756216887,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 111,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "SH3GL2",
+          "expression": 0.845684588721111,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.016238890687832706,
+          "regional_rank": 1
+        },
+        {
+          "gene": "RIT2",
+          "expression": 0.814875583814473,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.014691506731836126,
+          "regional_rank": 2
+        },
+        {
+          "gene": "FCGR2A",
+          "expression": 0.6914206831058046,
+          "l2g_score": 0.8712173104286194,
+          "weighted_contribution": 0.012859719277704934,
+          "regional_rank": 3
+        },
+        {
+          "gene": "STK39",
+          "expression": 0.6804763140830201,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.012233411574317567,
+          "regional_rank": 4
+        },
+        {
+          "gene": "CTSB",
+          "expression": 0.670897488786931,
+          "l2g_score": 0.8426995277404785,
+          "weighted_contribution": 0.012069562896659862,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 118,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.986457840127968,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.01796023049758356,
+          "regional_rank": 1
+        },
+        {
+          "gene": "ITPKB",
+          "expression": 0.9275314306662764,
+          "l2g_score": 0.9014809131622314,
+          "weighted_contribution": 0.01785039359414348,
+          "regional_rank": 2
+        },
+        {
+          "gene": "FCGR2A",
+          "expression": 0.9342470501308914,
+          "l2g_score": 0.8712173104286194,
+          "weighted_contribution": 0.01737604195862438,
+          "regional_rank": 3
+        },
+        {
+          "gene": "HIP1R",
+          "expression": 0.915277580708011,
+          "l2g_score": 0.8798125386238098,
+          "weighted_contribution": 0.017191176417344554,
+          "regional_rank": 4
+        },
+        {
+          "gene": "STK39",
+          "expression": 0.9448578624554091,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.01698638860960669,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 119,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "HIP1R",
+          "expression": 0.9835069318081484,
+          "l2g_score": 0.8798125386238098,
+          "weighted_contribution": 0.018472692359968294,
+          "regional_rank": 1
+        },
+        {
+          "gene": "FCGR2A",
+          "expression": 0.966247024023244,
+          "l2g_score": 0.8712173104286194,
+          "weighted_contribution": 0.017971208824765945,
+          "regional_rank": 2
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.9840876787370312,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.017917077467452868,
+          "regional_rank": 3
+        },
+        {
+          "gene": "STK39",
+          "expression": 0.9660514502659894,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.017367400963831905,
+          "regional_rank": 4
+        },
+        {
+          "gene": "ITPKB",
+          "expression": 0.8745518582869745,
+          "l2g_score": 0.9014809131622314,
+          "weighted_contribution": 0.01683079879858963,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 121,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "SH3GL2",
+          "expression": 0.6641488376176761,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.012753029342575942,
+          "regional_rank": 1
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.6925065941796621,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.01260832196432219,
+          "regional_rank": 2
+        },
+        {
+          "gene": "SLC2A13",
+          "expression": 0.79098756518165,
+          "l2g_score": 0.700274646282196,
+          "weighted_contribution": 0.011824987339708408,
+          "regional_rank": 3
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.6507350564986343,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.01182428357349383,
+          "regional_rank": 4
+        },
+        {
+          "gene": "DYRK1A",
+          "expression": 0.7208230241586651,
+          "l2g_score": 0.7525694370269775,
+          "weighted_contribution": 0.011580781099402903,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 122,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "HIP1R",
+          "expression": 0.9110045208230148,
+          "l2g_score": 0.8798125386238098,
+          "weighted_contribution": 0.017110917785566396,
+          "regional_rank": 1
+        },
+        {
+          "gene": "TMEM175",
+          "expression": 0.8859312771178479,
+          "l2g_score": 0.7957037091255188,
+          "weighted_contribution": 0.01504922177641128,
+          "regional_rank": 2
+        },
+        {
+          "gene": "CLCN3",
+          "expression": 0.7530871891686224,
+          "l2g_score": 0.8020431399345398,
+          "weighted_contribution": 0.01289453287730544,
+          "regional_rank": 3
+        },
+        {
+          "gene": "ASXL3",
+          "expression": 0.8242856459961572,
+          "l2g_score": 0.7160765528678894,
+          "weighted_contribution": 0.012600849254111108,
+          "regional_rank": 4
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.6494082490424584,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.011823639455611861,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 125,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "HIP1R",
+          "expression": 0.7218361467140648,
+          "l2g_score": 0.8798125386238098,
+          "weighted_contribution": 0.013557867912572026,
+          "regional_rank": 1
+        },
+        {
+          "gene": "FCGR2A",
+          "expression": 0.726911003885814,
+          "l2g_score": 0.8712173104286194,
+          "weighted_contribution": 0.013519803034899653,
+          "regional_rank": 2
+        },
+        {
+          "gene": "GALC",
+          "expression": 0.8226846820092663,
+          "l2g_score": 0.730959951877594,
+          "weighted_contribution": 0.012837770861022318,
+          "regional_rank": 3
+        },
+        {
+          "gene": "ITPKB",
+          "expression": 0.6287950427192504,
+          "l2g_score": 0.9014809131622314,
+          "weighted_contribution": 0.012101195314235489,
+          "regional_rank": 4
+        },
+        {
+          "gene": "STK39",
+          "expression": 0.6501290133591231,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.011687836346728197,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 127,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "STK39",
+          "expression": 0.7804691223873452,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.014031054127250581,
+          "regional_rank": 1
+        },
+        {
+          "gene": "HIP1R",
+          "expression": 0.7293921053687624,
+          "l2g_score": 0.8798125386238098,
+          "weighted_contribution": 0.013699787501746915,
+          "regional_rank": 2
+        },
+        {
+          "gene": "ITPKB",
+          "expression": 0.64508775221536,
+          "l2g_score": 0.9014809131622314,
+          "weighted_contribution": 0.012414749408043048,
+          "regional_rank": 3
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.6759092138190623,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.012306136949609582,
+          "regional_rank": 4
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.6293517604424076,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.011435735033224235,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 128,
+      "selected_for_regional_interpretation": true,
+      "selection_rule": "top 10 by frozen Stage 7 robustness rank",
+      "robustness_rank": 8,
+      "top_genes": [
+        {
+          "gene": "ITPKB",
+          "expression": 0.6213510697959328,
+          "l2g_score": 0.9014809131622314,
+          "weighted_contribution": 0.01195793564432876,
+          "regional_rank": 1
+        },
+        {
+          "gene": "RIT2",
+          "expression": 0.6440488916129287,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.011611648225451325,
+          "regional_rank": 2
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.6067414975056187,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.011046814880843048,
+          "regional_rank": 3
+        },
+        {
+          "gene": "SLC2A13",
+          "expression": 0.7132189097879287,
+          "l2g_score": 0.700274646282196,
+          "weighted_contribution": 0.010662373152157036,
+          "regional_rank": 4
+        },
+        {
+          "gene": "STK39",
+          "expression": 0.5916301860830024,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.010636160901348349,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 129,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "STK39",
+          "expression": 0.8275133627817467,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.014876802234914522,
+          "regional_rank": 1
+        },
+        {
+          "gene": "HIP1R",
+          "expression": 0.7416153795305727,
+          "l2g_score": 0.8798125386238098,
+          "weighted_contribution": 0.013929370818264623,
+          "regional_rank": 2
+        },
+        {
+          "gene": "ITPKB",
+          "expression": 0.6933735962990003,
+          "l2g_score": 0.9014809131622314,
+          "weighted_contribution": 0.013344013143396229,
+          "regional_rank": 3
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.6856564857835349,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.012483603480953537,
+          "regional_rank": 4
+        },
+        {
+          "gene": "GALC",
+          "expression": 0.7777332316152995,
+          "l2g_score": 0.730959951877594,
+          "weighted_contribution": 0.012136315695212077,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 130,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "STK39",
+          "expression": 0.8309113696818202,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.014937890646194475,
+          "regional_rank": 1
+        },
+        {
+          "gene": "ITPKB",
+          "expression": 0.7539435963850013,
+          "l2g_score": 0.9014809131622314,
+          "weighted_contribution": 0.014509686139249061,
+          "regional_rank": 2
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.744378322542957,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.014293601150338195,
+          "regional_rank": 3
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.7410723392120532,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.013492548273431828,
+          "regional_rank": 4
+        },
+        {
+          "gene": "HIP1R",
+          "expression": 0.6689708841571115,
+          "l2g_score": 0.8798125386238098,
+          "weighted_contribution": 0.012564927547679867,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 131,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "ITPKB",
+          "expression": 0.701505129689931,
+          "l2g_score": 0.9014809131622314,
+          "weighted_contribution": 0.013500504952463839,
+          "regional_rank": 1
+        },
+        {
+          "gene": "STK39",
+          "expression": 0.6686217132796191,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.01202029289894873,
+          "regional_rank": 2
+        },
+        {
+          "gene": "MAP4K4",
+          "expression": 0.7394860116450959,
+          "l2g_score": 0.7526438236236572,
+          "weighted_contribution": 0.011881795972627191,
+          "regional_rank": 3
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.6046020418062356,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.011609607881561753,
+          "regional_rank": 4
+        },
+        {
+          "gene": "HIP1R",
+          "expression": 0.6051170690391655,
+          "l2g_score": 0.8798125386238098,
+          "weighted_contribution": 0.011365594991359662,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 135,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "HIP1R",
+          "expression": 0.6166632757460855,
+          "l2g_score": 0.8798125386238098,
+          "weighted_contribution": 0.011582461306708765,
+          "regional_rank": 1
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.6172418830116797,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.011237993192100506,
+          "regional_rank": 2
+        },
+        {
+          "gene": "ASXL3",
+          "expression": 0.6992431022083937,
+          "l2g_score": 0.7160765528678894,
+          "weighted_contribution": 0.010689324708859547,
+          "regional_rank": 3
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.5748842685526575,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.010446024915089955,
+          "regional_rank": 4
+        },
+        {
+          "gene": "TOX3",
+          "expression": 0.6589961028731364,
+          "l2g_score": 0.7276461720466614,
+          "weighted_contribution": 0.010236835411202646,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 136,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "TMEM163",
+          "expression": 0.8024867219058598,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.014581711049707806,
+          "regional_rank": 1
+        },
+        {
+          "gene": "TMEM175",
+          "expression": 0.7617612525343661,
+          "l2g_score": 0.7957037091255188,
+          "weighted_contribution": 0.012939958579362322,
+          "regional_rank": 2
+        },
+        {
+          "gene": "FCGR2A",
+          "expression": 0.6888210564349777,
+          "l2g_score": 0.8712173104286194,
+          "weighted_contribution": 0.012811368873919642,
+          "regional_rank": 3
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.6285481957632393,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.011443844851274742,
+          "regional_rank": 4
+        },
+        {
+          "gene": "RIT2",
+          "expression": 0.6195486064037753,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.011169929130866044,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 137,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.910079887727563,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.01656963317629633,
+          "regional_rank": 1
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.8449433113201924,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.015353175177519888,
+          "regional_rank": 2
+        },
+        {
+          "gene": "SLC2A13",
+          "expression": 0.8880181999704752,
+          "l2g_score": 0.700274646282196,
+          "weighted_contribution": 0.01327556137961538,
+          "regional_rank": 3
+        },
+        {
+          "gene": "STK39",
+          "expression": 0.7171503071269824,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.01289272629504378,
+          "regional_rank": 4
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.6685951314335695,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.012838407366729686,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 139,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "TMEM163",
+          "expression": 0.8255254616463776,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.01500034008951024,
+          "regional_rank": 1
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.823694261247749,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.014996828237106682,
+          "regional_rank": 2
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.7197062022898355,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.013819845486381514,
+          "regional_rank": 3
+        },
+        {
+          "gene": "STK39",
+          "expression": 0.7136669280698561,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.012830103087162389,
+          "regional_rank": 4
+        },
+        {
+          "gene": "RIT2",
+          "expression": 0.6599722488324777,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.011898732676662098,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 140,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "STK39",
+          "expression": 0.7554810165056101,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.013581824995556518,
+          "regional_rank": 1
+        },
+        {
+          "gene": "CTSB",
+          "expression": 0.7483848895665245,
+          "l2g_score": 0.8426995277404785,
+          "weighted_contribution": 0.01346357475844075,
+          "regional_rank": 2
+        },
+        {
+          "gene": "FCGR2A",
+          "expression": 0.6973604868115544,
+          "l2g_score": 0.8712173104286194,
+          "weighted_contribution": 0.012970193566494651,
+          "regional_rank": 3
+        },
+        {
+          "gene": "ITPKB",
+          "expression": 0.6711859068954609,
+          "l2g_score": 0.9014809131622314,
+          "weighted_contribution": 0.012917009835795879,
+          "regional_rank": 4
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.6891873841096787,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.012547889804424645,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 141,
+      "selected_for_regional_interpretation": true,
+      "selection_rule": "top 10 by frozen Stage 7 robustness rank",
+      "robustness_rank": 3,
+      "top_genes": [
+        {
+          "gene": "STK39",
+          "expression": 0.8797958832890667,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.015816722667517137,
+          "regional_rank": 1
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.8118764503331326,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.014781663838417492,
+          "regional_rank": 2
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.7115388459924532,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.013663015377508012,
+          "regional_rank": 3
+        },
+        {
+          "gene": "ITPKB",
+          "expression": 0.6819889377540465,
+          "l2g_score": 0.9014809131622314,
+          "weighted_contribution": 0.013124914761127529,
+          "regional_rank": 4
+        },
+        {
+          "gene": "CLCN3",
+          "expression": 0.7427615459605073,
+          "l2g_score": 0.8020431399345398,
+          "weighted_contribution": 0.012717734828233128,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 143,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "TMEM163",
+          "expression": 0.965493344818792,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.017543648499414165,
+          "regional_rank": 1
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.923958594961574,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.016822319880980006,
+          "regional_rank": 2
+        },
+        {
+          "gene": "STK39",
+          "expression": 0.8611438382165568,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.015481401453020172,
+          "regional_rank": 3
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.7456967633987714,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.014318917937733268,
+          "regional_rank": 4
+        },
+        {
+          "gene": "HIP1R",
+          "expression": 0.7258583954924092,
+          "l2g_score": 0.8798125386238098,
+          "weighted_contribution": 0.013633415691519565,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 144,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.9072390074082342,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.016517909865602608,
+          "regional_rank": 1
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.8688326483020206,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.015787260128122947,
+          "regional_rank": 2
+        },
+        {
+          "gene": "ITPKB",
+          "expression": 0.7407043289830768,
+          "l2g_score": 0.9014809131622314,
+          "weighted_contribution": 0.014254895707131085,
+          "regional_rank": 3
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.7081931618587433,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.013598771332330966,
+          "regional_rank": 4
+        },
+        {
+          "gene": "STK39",
+          "expression": 0.7443570266328838,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.01338184103778279,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 145,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.852222803191301,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.01551624140229548,
+          "regional_rank": 1
+        },
+        {
+          "gene": "HIP1R",
+          "expression": 0.7454980248767438,
+          "l2g_score": 0.8798125386238098,
+          "weighted_contribution": 0.014002296499521207,
+          "regional_rank": 2
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.7613721118253107,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.01383463156820294,
+          "regional_rank": 3
+        },
+        {
+          "gene": "ITPKB",
+          "expression": 0.7087846738829386,
+          "l2g_score": 0.9014809131622314,
+          "weighted_contribution": 0.013640600182377295,
+          "regional_rank": 4
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.5790622284026529,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.011119190717077752,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 146,
+      "selected_for_regional_interpretation": true,
+      "selection_rule": "top 10 by frozen Stage 7 robustness rank",
+      "robustness_rank": 4,
+      "top_genes": [
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.8691908178912351,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.015825174478500407,
+          "regional_rank": 1
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.8163395652461862,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.014833426315881651,
+          "regional_rank": 2
+        },
+        {
+          "gene": "HIP1R",
+          "expression": 0.7223561569286454,
+          "l2g_score": 0.8798125386238098,
+          "weighted_contribution": 0.013567634990370173,
+          "regional_rank": 3
+        },
+        {
+          "gene": "TMEM175",
+          "expression": 0.7639873035307319,
+          "l2g_score": 0.7957037091255188,
+          "weighted_contribution": 0.012977772274391688,
+          "regional_rank": 4
+        },
+        {
+          "gene": "TOX3",
+          "expression": 0.7557305114476887,
+          "l2g_score": 0.7276461720466614,
+          "weighted_contribution": 0.011739506238632952,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 147,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.8605362522979796,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.015667602622321374,
+          "regional_rank": 1
+        },
+        {
+          "gene": "TMEM163",
+          "expression": 0.7738091031238281,
+          "l2g_score": 0.8511537313461304,
+          "weighted_contribution": 0.014060619872423113,
+          "regional_rank": 2
+        },
+        {
+          "gene": "ITPKB",
+          "expression": 0.7194300773712251,
+          "l2g_score": 0.9014809131622314,
+          "weighted_contribution": 0.013845471560264597,
+          "regional_rank": 3
+        },
+        {
+          "gene": "HIP1R",
+          "expression": 0.7235949637052647,
+          "l2g_score": 0.8798125386238098,
+          "weighted_contribution": 0.013590902845163896,
+          "regional_rank": 4
+        },
+        {
+          "gene": "SH3GL2",
+          "expression": 0.6581425293539941,
+          "l2g_score": 0.8994671702384949,
+          "weighted_contribution": 0.012637695819141566,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 148,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "HIP1R",
+          "expression": 0.8734430862691991,
+          "l2g_score": 0.8798125386238098,
+          "weighted_contribution": 0.016405421156441394,
+          "regional_rank": 1
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.7405789609721499,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.013483565439548116,
+          "regional_rank": 2
+        },
+        {
+          "gene": "STK39",
+          "expression": 0.7434777196110554,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.013366033103728964,
+          "regional_rank": 3
+        },
+        {
+          "gene": "ALG10",
+          "expression": 0.8101751730385776,
+          "l2g_score": 0.7019623517990112,
+          "weighted_contribution": 0.012141025641248315,
+          "regional_rank": 4
+        },
+        {
+          "gene": "GALC",
+          "expression": 0.7728704430004798,
+          "l2g_score": 0.730959951877594,
+          "weighted_contribution": 0.01206043320056033,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 153,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "RIT2",
+          "expression": 0.7987690511314552,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.014401119784381619,
+          "regional_rank": 1
+        },
+        {
+          "gene": "CNTN1",
+          "expression": 0.7542600039957413,
+          "l2g_score": 0.7606772780418396,
+          "weighted_contribution": 0.01224853502147115,
+          "regional_rank": 2
+        },
+        {
+          "gene": "TOX3",
+          "expression": 0.7775191165049637,
+          "l2g_score": 0.7276461720466614,
+          "weighted_contribution": 0.012077970097278809,
+          "regional_rank": 3
+        },
+        {
+          "gene": "FAM47E",
+          "expression": 0.8081104197510851,
+          "l2g_score": 0.6943575739860535,
+          "weighted_contribution": 0.011978888131032447,
+          "regional_rank": 4
+        },
+        {
+          "gene": "SLC18B1",
+          "expression": 0.7905354829298116,
+          "l2g_score": 0.702358067035675,
+          "weighted_contribution": 0.011853389848881414,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 154,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "RIT2",
+          "expression": 0.8438841238583372,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.015214505788134028,
+          "regional_rank": 1
+        },
+        {
+          "gene": "GPNMB",
+          "expression": 0.6557413051052989,
+          "l2g_score": 0.8844435214996338,
+          "weighted_contribution": 0.01238127219027975,
+          "regional_rank": 2
+        },
+        {
+          "gene": "SLC2A13",
+          "expression": 0.8011420710258079,
+          "l2g_score": 0.700274646282196,
+          "weighted_contribution": 0.011976793649104166,
+          "regional_rank": 3
+        },
+        {
+          "gene": "CNTN1",
+          "expression": 0.7117127644755301,
+          "l2g_score": 0.7606772780418396,
+          "weighted_contribution": 0.01155760437345926,
+          "regional_rank": 4
+        },
+        {
+          "gene": "FAM47E",
+          "expression": 0.7517979611159816,
+          "l2g_score": 0.6943575739860535,
+          "weighted_contribution": 0.011144149924611256,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 155,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "FCGR2A",
+          "expression": 0.7515170749733965,
+          "l2g_score": 0.8712173104286194,
+          "weighted_contribution": 0.01397745085256718,
+          "regional_rank": 1
+        },
+        {
+          "gene": "HIP1R",
+          "expression": 0.7308990738239887,
+          "l2g_score": 0.8798125386238098,
+          "weighted_contribution": 0.013728092096019976,
+          "regional_rank": 2
+        },
+        {
+          "gene": "ITPKB",
+          "expression": 0.6733849586966363,
+          "l2g_score": 0.9014809131622314,
+          "weighted_contribution": 0.012959330709123798,
+          "regional_rank": 3
+        },
+        {
+          "gene": "SLC18B1",
+          "expression": 0.773727393108793,
+          "l2g_score": 0.702358067035675,
+          "weighted_contribution": 0.011601367206551472,
+          "regional_rank": 4
+        },
+        {
+          "gene": "TOX3",
+          "expression": 0.6782206329407646,
+          "l2g_score": 0.7276461720466614,
+          "weighted_contribution": 0.010535468968065901,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 156,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "RIT2",
+          "expression": 0.7128829204639404,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.012852666631611208,
+          "regional_rank": 1
+        },
+        {
+          "gene": "FAM47E",
+          "expression": 0.7580373831835592,
+          "l2g_score": 0.6943575739860535,
+          "weighted_contribution": 0.011236638942353199,
+          "regional_rank": 2
+        },
+        {
+          "gene": "TOX3",
+          "expression": 0.6825269072014877,
+          "l2g_score": 0.7276461720466614,
+          "weighted_contribution": 0.010602362566753853,
+          "regional_rank": 3
+        },
+        {
+          "gene": "GPNMB",
+          "expression": 0.5583848786147385,
+          "l2g_score": 0.8844435214996338,
+          "weighted_contribution": 0.010543052748454247,
+          "regional_rank": 4
+        },
+        {
+          "gene": "CNTN1",
+          "expression": 0.6378108669310081,
+          "l2g_score": 0.7606772780418396,
+          "weighted_contribution": 0.01035750099341531,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 157,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "RIT2",
+          "expression": 0.8008320275357466,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.014438313476686638,
+          "regional_rank": 1
+        },
+        {
+          "gene": "FCGR2A",
+          "expression": 0.6253514479392059,
+          "l2g_score": 0.8712173104286194,
+          "weighted_contribution": 0.011630898911327327,
+          "regional_rank": 2
+        },
+        {
+          "gene": "CTSB",
+          "expression": 0.609419149999293,
+          "l2g_score": 0.8426995277404785,
+          "weighted_contribution": 0.010963556853737831,
+          "regional_rank": 3
+        },
+        {
+          "gene": "TMEM175",
+          "expression": 0.6283543851916227,
+          "l2g_score": 0.7957037091255188,
+          "weighted_contribution": 0.010673790102199323,
+          "regional_rank": 4
+        },
+        {
+          "gene": "ALG10",
+          "expression": 0.6958341157303617,
+          "l2g_score": 0.7019623517990112,
+          "weighted_contribution": 0.010427547180263199,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 158,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "RIT2",
+          "expression": 0.7125272948779973,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.012846255007807927,
+          "regional_rank": 1
+        },
+        {
+          "gene": "ALG10",
+          "expression": 0.8393243817149767,
+          "l2g_score": 0.7019623517990112,
+          "weighted_contribution": 0.012577846345880557,
+          "regional_rank": 2
+        },
+        {
+          "gene": "FBRSL1",
+          "expression": 0.7762789201897552,
+          "l2g_score": 0.6778879165649414,
+          "weighted_contribution": 0.011234100665488028,
+          "regional_rank": 3
+        },
+        {
+          "gene": "GALC",
+          "expression": 0.7175965954139463,
+          "l2g_score": 0.730959951877594,
+          "weighted_contribution": 0.011197899832137898,
+          "regional_rank": 4
+        },
+        {
+          "gene": "MCCC1",
+          "expression": 0.774909874313044,
+          "l2g_score": 0.6534242630004883,
+          "weighted_contribution": 0.01080958639798926,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 161,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.8076069352137096,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.014703929674281491,
+          "regional_rank": 1
+        },
+        {
+          "gene": "CLCN3",
+          "expression": 0.8100291996731758,
+          "l2g_score": 0.8020431399345398,
+          "weighted_contribution": 0.013869507139397733,
+          "regional_rank": 2
+        },
+        {
+          "gene": "STK39",
+          "expression": 0.765409636724669,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.0137603189342743,
+          "regional_rank": 3
+        },
+        {
+          "gene": "RNF141",
+          "expression": 0.8546378480575602,
+          "l2g_score": 0.7541582584381104,
+          "weighted_contribution": 0.013759645292911436,
+          "regional_rank": 4
+        },
+        {
+          "gene": "ITPKB",
+          "expression": 0.7137070382831825,
+          "l2g_score": 0.9014809131622314,
+          "weighted_contribution": 0.01373533135703413,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 163,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "GPNMB",
+          "expression": 0.6292891286871465,
+          "l2g_score": 0.8844435214996338,
+          "weighted_contribution": 0.011881819748122165,
+          "regional_rank": 1
+        },
+        {
+          "gene": "CTSB",
+          "expression": 0.6568795635917855,
+          "l2g_score": 0.8426995277404785,
+          "weighted_contribution": 0.011817377976234238,
+          "regional_rank": 2
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.633794040774494,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.01153935484848305,
+          "regional_rank": 3
+        },
+        {
+          "gene": "FCGR2A",
+          "expression": 0.6083845725177934,
+          "l2g_score": 0.8712173104286194,
+          "weighted_contribution": 0.011315332339093665,
+          "regional_rank": 4
+        },
+        {
+          "gene": "RIT2",
+          "expression": 0.6263497897541596,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.011292548623904348,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 164,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.8463071284140449,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.01540853595536581,
+          "regional_rank": 1
+        },
+        {
+          "gene": "TMEM175",
+          "expression": 0.7890841952560851,
+          "l2g_score": 0.7957037091255188,
+          "weighted_contribution": 0.013404090544474822,
+          "regional_rank": 2
+        },
+        {
+          "gene": "ASXL3",
+          "expression": 0.8367498718678175,
+          "l2g_score": 0.7160765528678894,
+          "weighted_contribution": 0.012791389793111,
+          "regional_rank": 3
+        },
+        {
+          "gene": "HIP1R",
+          "expression": 0.6349564456873349,
+          "l2g_score": 0.8798125386238098,
+          "weighted_contribution": 0.011926052276618918,
+          "regional_rank": 4
+        },
+        {
+          "gene": "RIT2",
+          "expression": 0.65617593586086,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.01183028841512514,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 165,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.7429762780237406,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.013527212887082994,
+          "regional_rank": 1
+        },
+        {
+          "gene": "ITPKB",
+          "expression": 0.6842999091436062,
+          "l2g_score": 0.9014809131622314,
+          "weighted_contribution": 0.01316938953311322,
+          "regional_rank": 2
+        },
+        {
+          "gene": "HIP1R",
+          "expression": 0.6299455963436663,
+          "l2g_score": 0.8798125386238098,
+          "weighted_contribution": 0.01183193613427759,
+          "regional_rank": 3
+        },
+        {
+          "gene": "CLCN3",
+          "expression": 0.6792992299707654,
+          "l2g_score": 0.8020431399345398,
+          "weighted_contribution": 0.011631118388902826,
+          "regional_rank": 4
+        },
+        {
+          "gene": "RIT2",
+          "expression": 0.6377189110397967,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.011497524113685409,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 166,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "FAM47E",
+          "expression": 0.8957988539991328,
+          "l2g_score": 0.6943575739860535,
+          "weighted_contribution": 0.013278722805316572,
+          "regional_rank": 1
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.6670428190442861,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.012144708364058584,
+          "regional_rank": 2
+        },
+        {
+          "gene": "ITPKB",
+          "expression": 0.6195575824608153,
+          "l2g_score": 0.9014809131622314,
+          "weighted_contribution": 0.011923419881542196,
+          "regional_rank": 3
+        },
+        {
+          "gene": "RIT2",
+          "expression": 0.642498700531039,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.011583699611984953,
+          "regional_rank": 4
+        },
+        {
+          "gene": "ALG10",
+          "expression": 0.7683250765705586,
+          "l2g_score": 0.7019623517990112,
+          "weighted_contribution": 0.011513873500309113,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 167,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "ITPKB",
+          "expression": 0.730742174923557,
+          "l2g_score": 0.9014809131622314,
+          "weighted_contribution": 0.014063173502224044,
+          "regional_rank": 1
+        },
+        {
+          "gene": "STK39",
+          "expression": 0.7551862410052642,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.013576525604610609,
+          "regional_rank": 2
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.7338832820478971,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.013361658621105886,
+          "regional_rank": 3
+        },
+        {
+          "gene": "RNF141",
+          "expression": 0.7196991342021252,
+          "l2g_score": 0.7541582584381104,
+          "weighted_contribution": 0.011587135798799482,
+          "regional_rank": 4
+        },
+        {
+          "gene": "TMEM175",
+          "expression": 0.6695657049007662,
+          "l2g_score": 0.7957037091255188,
+          "weighted_contribution": 0.011373842471971329,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 168,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "RIT2",
+          "expression": 0.686944726095274,
+          "l2g_score": 0.8445248007774353,
+          "weighted_contribution": 0.012385023270160712,
+          "regional_rank": 1
+        },
+        {
+          "gene": "ITPKB",
+          "expression": 0.6362953888918772,
+          "l2g_score": 0.9014809131622314,
+          "weighted_contribution": 0.012245539890437657,
+          "regional_rank": 2
+        },
+        {
+          "gene": "TMEM175",
+          "expression": 0.69746217803819,
+          "l2g_score": 0.7957037091255188,
+          "weighted_contribution": 0.011847716938160818,
+          "regional_rank": 3
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.6362316916862527,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.011583736646130023,
+          "regional_rank": 4
+        },
+        {
+          "gene": "RNF141",
+          "expression": 0.6616221649712329,
+          "l2g_score": 0.7541582584381104,
+          "weighted_contribution": 0.010652098229236347,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 169,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "HIP1R",
+          "expression": 0.7451988666229838,
+          "l2g_score": 0.8798125386238098,
+          "weighted_contribution": 0.013996677567706978,
+          "regional_rank": 1
+        },
+        {
+          "gene": "TMEM175",
+          "expression": 0.8096313109170884,
+          "l2g_score": 0.7957037091255188,
+          "weighted_contribution": 0.013753122245278944,
+          "regional_rank": 2
+        },
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.7419637912422301,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.01350877875312211,
+          "regional_rank": 3
+        },
+        {
+          "gene": "CLCN3",
+          "expression": 0.7587664524848282,
+          "l2g_score": 0.8020431399345398,
+          "weighted_contribution": 0.012991774536177019,
+          "regional_rank": 4
+        },
+        {
+          "gene": "ITPKB",
+          "expression": 0.657480729936539,
+          "l2g_score": 0.9014809131622314,
+          "weighted_contribution": 0.012653252948529637,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    },
+    {
+      "region_id": 170,
+      "selected_for_regional_interpretation": false,
+      "selection_rule": "not in pre-specified Stage 9 regional set",
+      "robustness_rank": null,
+      "top_genes": [
+        {
+          "gene": "SIPA1L2",
+          "expression": 0.7324383099747666,
+          "l2g_score": 0.8528462648391724,
+          "weighted_contribution": 0.013335350318368258,
+          "regional_rank": 1
+        },
+        {
+          "gene": "CLCN3",
+          "expression": 0.7367276487274342,
+          "l2g_score": 0.8020431399345398,
+          "weighted_contribution": 0.012614421045487685,
+          "regional_rank": 2
+        },
+        {
+          "gene": "TMEM175",
+          "expression": 0.7192338186169877,
+          "l2g_score": 0.7957037091255188,
+          "weighted_contribution": 0.012217549515437642,
+          "regional_rank": 3
+        },
+        {
+          "gene": "STK39",
+          "expression": 0.6626937542949388,
+          "l2g_score": 0.8421160578727722,
+          "weighted_contribution": 0.01191372172144494,
+          "regional_rank": 4
+        },
+        {
+          "gene": "ITPKB",
+          "expression": 0.6171634009016514,
+          "l2g_score": 0.9014809131622314,
+          "weighted_contribution": 0.011877343725248263,
+          "regional_rank": 5
+        }
+      ],
+      "pathways": [],
+      "cell_types": []
+    }
+  ]
+}

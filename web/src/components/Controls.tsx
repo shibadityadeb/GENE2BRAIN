@@ -28,6 +28,7 @@ export function Controls({
             <option value="z_score">Z-score</option>
             <option value="observed_score">Observed expression</option>
             <option value="fdr_p">FDR significance</option>
+            <option value="spatial_robustness">Spatial robustness</option>
           </select>
         </label>
         <label className="search-control">Search brain region

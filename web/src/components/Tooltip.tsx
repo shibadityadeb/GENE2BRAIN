@@ -10,6 +10,8 @@ export function Tooltip({ region, point }: { region: RegionRecord; point: { x: n
       <span>Observed <b>{formatValue(region.observed_score, 4)}</b></span>
       <span>Null mean <b>{formatValue(region.random_mean, 4)}</b></span>
       <span>Effect size <b>{formatValue(region.effect_size, 4)}</b></span>
+      <span>Spatial percentile <b>{formatValue(region.spatial_robustness, 4)}</b></span>
+      <span>Spatial result <b>{region.spatial_robustness_label === 'robust' ? 'Robust' : 'Not robust'}</b></span>
       <span>Genes <b>{region.number_of_genes}</b></span>
     </div>
   )

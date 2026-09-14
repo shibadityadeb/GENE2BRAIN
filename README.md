@@ -50,12 +50,18 @@ microarray data and build a documented healthy-brain region × gene reference.
 - `reports/stage_06_gene_set_bias_assessment.md`, `stage_06_interpretation.md`,
   and `stage_06_performance.md`: matching QC, interpretation boundaries, and
   runtime/memory details
+- `src/stage_07_spatial_robustness.py`: AAL3 volumetric adjacency, Moran's I,
+  spatially constrained surrogate maps, regional robustness, and sensitivity plots
+- `data/results/parkinson_spatial_*.csv`: Stage 7 autocorrelation, global spatial,
+  regional robustness, and gene-set sensitivity results
+- `reports/stage_07_*.md`: spatial representation, pre-specified robustness rule,
+  results, limitations, and interpretation boundaries
 
-Work currently stops at the Stage 6 Parkinson gene-set permutation layer. The
-primary weighted analysis compares observed regional expression with matched random
-genes and applies BH-FDR across AAL3 regions. This gene-set null does not remove
-spatial autocorrelation. No spatially informed null, pathway analysis, prediction,
-or cross-disease comparison has been performed.
+Work currently stops at the Stage 7 Parkinson spatial-sensitivity layer. Stage 6
+compares observed regional expression with matched random genes; Stage 7 separately
+tests the anatomical arrangement with a 26-neighbor AAL3 graph and Moran spectral
+randomization. Stage 7 does not replace Stage 6. No pathway analysis, prediction, or
+cross-disease comparison has been performed.
 
 ## Reproduce from a clean environment
 
@@ -73,6 +79,9 @@ python src/stage_03_parkinson_gwas.py
 python src/stage_04_parkinson_l2g.py
 python src/stage_05_parkinson_spatial_signal.py
 python src/stage_06_parkinson_enrichment.py
+python src/stage_07_spatial_robustness.py
+python scripts/prepare_web_data.py
+python scripts/validate_web_data.py
 python -m unittest discover -s tests -v
 ```
 
@@ -105,7 +114,7 @@ releases.
 ## Interactive web visualization
 
 The public React + TypeScript/WebGL application is in [`web/`](web/). It displays
-validated Stage 6 Parkinson values on parcel surfaces extracted directly from the
+validated Stage 6 Parkinson values and Stage 7 spatial sensitivity on parcel surfaces extracted directly from the
 same AAL3v1 NIfTI used by Stage 2. The frontend does not recompute scientific
 statistics. See [`web/README.md`](web/README.md) for setup, provenance, region-ID
 mapping, validation mode, and extension guidance.

@@ -1,7 +1,7 @@
 # GENE2BRAIN interactive brain
 
 This React + TypeScript application visualizes the validated Stage 6 Parkinson
-regional-enrichment results on the same AAL3v1 parcels used by the scientific
+regional-enrichment results and Stage 7 spatial sensitivity on the same AAL3v1 parcels used by the scientific
 pipeline. The browser displays authoritative values; it does not calculate scores,
 permutations, p-values, FDR values, or Z-scores.
 
@@ -37,13 +37,18 @@ python scripts/prepare_web_data.py
 `data/results/parkinson_regional_enrichment.csv`, joined to
 `data/processed/region_metadata.csv`. Its `regions` array contains the exact stored
 Stage 6 observed score, null mean and standard deviation, Z-score, empirical p-value,
-FDR q-value, effect size, and gene-set size. The deployed copy is under
+FDR q-value, effect size, and gene-set size, plus the separately identified Stage 7
+spatial-null p-value, FDR, percentile, rank, and joint robustness call. The deployed copy is under
 `web/public/data/`. `project_metadata.json` supplies counts, data sources, scale
 domains, and the pipeline-defined FDR threshold (q < 0.05).
 
 Stage 6 retained per-region null mean and standard deviation but not the 10,000
 individual scores. The detail panel therefore shows a clearly labeled observed vs.
 null mean ± 1 SD summary. It does not synthesize a histogram or assume normality.
+
+Stage 7 uses a binary 26-neighbor AAL3 voxel-contact graph and 10,000 singleton
+Moran spectral randomizations. The frontend reads those pipeline outputs; it never
+generates surrogates or changes the pre-specified joint robustness rule.
 
 ## Atlas and region-ID mapping
 

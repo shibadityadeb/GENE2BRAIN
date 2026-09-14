@@ -1,0 +1,4 @@
+gene_set_version,global_statistic,observed_statistic,spatial_null_mean,spatial_null_std,spatial_null_p,number_of_spatial_permutations,question
+broad,maximum standardized regional Stage 6 Z-score,2.449178467154273,2.6327805501103976,0.3799734848085626,0.6497350264973503,10000,Is the strongest positive regional enrichment peak more extreme than spatially autocorrelated surrogate maps?
+stringent,maximum standardized regional Stage 6 Z-score,2.1712271579293154,2.6215956525404627,0.3830415861074776,0.9022097790220978,10000,Is the strongest positive regional enrichment peak more extreme than spatially autocorrelated surrogate maps?
+weighted,maximum standardized regional Stage 6 Z-score,2.5524155932053056,2.6251342763384766,0.3719125849472812,0.5301469853014699,10000,Is the strongest positive regional enrichment peak more extreme than spatially autocorrelated surrogate maps?

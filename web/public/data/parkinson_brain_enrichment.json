@@ -4,6 +4,7 @@
   "disease_name": "Parkinson disease",
   "gene_set_version": "weighted",
   "source_file": "data/results/parkinson_regional_enrichment.csv",
+  "spatial_source_file": "data/results/parkinson_spatial_robustness.csv",
   "generated_on": "2026-09-14",
   "regions": [
     {
@@ -25,7 +26,13 @@
       "empirical_p": 0.0012998700129987,
       "fdr_p": 0.1793820617938206,
       "effect_size": 0.041549453176557116,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.0093990600939906,
+      "spatial_null_fdr": 0.7623737626237376,
+      "spatial_robustness": 0.9906009399060094,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 1,
+      "spatial_isolate": false
     },
     {
       "region_id": 20,
@@ -46,7 +53,13 @@
       "empirical_p": 0.0038996100389961006,
       "fdr_p": 0.26907309269073093,
       "effect_size": 0.033310556114887535,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.011398860113988602,
+      "spatial_null_fdr": 0.7623737626237376,
+      "spatial_robustness": 0.9886011398860114,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 2,
+      "spatial_isolate": false
     },
     {
       "region_id": 141,
@@ -67,7 +80,13 @@
       "empirical_p": 0.008999100089991,
       "fdr_p": 0.32426757324267574,
       "effect_size": 0.03675806404891857,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.019698030196980302,
+      "spatial_null_fdr": 0.7623737626237376,
+      "spatial_robustness": 0.9803019698030196,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 3,
+      "spatial_isolate": false
     },
     {
       "region_id": 146,
@@ -88,7 +107,13 @@
       "empirical_p": 0.0093990600939906,
       "fdr_p": 0.32426757324267574,
       "effect_size": 0.0309067939070774,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.022097790220977902,
+      "spatial_null_fdr": 0.7623737626237376,
+      "spatial_robustness": 0.9779022097790221,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 4,
+      "spatial_isolate": false
     },
     {
       "region_id": 4,
@@ -109,7 +134,13 @@
       "empirical_p": 0.0183981601839816,
       "fdr_p": 0.5077892210778922,
       "effect_size": 0.01538559640619197,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.0491950804919508,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.9508049195080492,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 5,
+      "spatial_isolate": false
     },
     {
       "region_id": 128,
@@ -130,7 +161,13 @@
       "empirical_p": 0.03469653034696531,
       "fdr_p": 0.6684664866846648,
       "effect_size": 0.017644236392011958,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.08029197080291971,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.9197080291970803,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 8,
+      "spatial_isolate": false
     },
     {
       "region_id": 94,
@@ -151,7 +188,13 @@
       "empirical_p": 0.0403959604039596,
       "fdr_p": 0.6684664866846648,
       "effect_size": 0.013587994811994186,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.096990300969903,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.903009699030097,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 11,
+      "spatial_isolate": false
     },
     {
       "region_id": 41,
@@ -172,7 +215,13 @@
       "empirical_p": 0.038896110388961104,
       "fdr_p": 0.6684664866846648,
       "effect_size": 0.019795777778068124,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.08549145085491451,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.9145085491450855,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 9,
+      "spatial_isolate": false
     },
     {
       "region_id": 37,
@@ -193,7 +242,13 @@
       "empirical_p": 0.0435956404359564,
       "fdr_p": 0.6684664866846648,
       "effect_size": 0.012485540211067958,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.049295070492950704,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.9507049295070493,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 6,
+      "spatial_isolate": false
     },
     {
       "region_id": 111,
@@ -214,7 +269,13 @@
       "empirical_p": 0.056394360563943605,
       "fdr_p": 0.7155570157269987,
       "effect_size": 0.027192948054881816,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.13358664133586642,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.8664133586641336,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 17,
+      "spatial_isolate": false
     },
     {
       "region_id": 45,
@@ -235,7 +296,13 @@
       "empirical_p": 0.06179382061793821,
       "fdr_p": 0.7155570157269987,
       "effect_size": 0.017927291628822117,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.07889211078892111,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.9211078892110789,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 7,
+      "spatial_isolate": false
     },
     {
       "region_id": 3,
@@ -256,7 +323,13 @@
       "empirical_p": 0.07129287071292871,
       "fdr_p": 0.7155570157269987,
       "effect_size": 0.010119132613305881,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.1511848815118488,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.8488151184881512,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 19,
+      "spatial_isolate": false
     },
     {
       "region_id": 67,
@@ -277,7 +350,13 @@
       "empirical_p": 0.0846915308469153,
       "fdr_p": 0.7155570157269987,
       "effect_size": 0.010972408211920248,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.1264873512648735,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.8735126487351265,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 15,
+      "spatial_isolate": false
     },
     {
       "region_id": 11,
@@ -298,7 +377,13 @@
       "empirical_p": 0.08749125087491251,
       "fdr_p": 0.7155570157269987,
       "effect_size": 0.010560299396807693,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.09659034096590341,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.9034096590340965,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 10,
+      "spatial_isolate": false
     },
     {
       "region_id": 23,
@@ -319,7 +404,13 @@
       "empirical_p": 0.0903909609039096,
       "fdr_p": 0.7155570157269987,
       "effect_size": 0.015778693978769742,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.20377962203779623,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.7962203779622038,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 29,
+      "spatial_isolate": false
     },
     {
       "region_id": 145,
@@ -340,7 +431,13 @@
       "empirical_p": 0.08759124087591241,
       "fdr_p": 0.7155570157269987,
       "effect_size": 0.014460623187621646,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.09869013098690131,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.9013098690130987,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 12,
+      "spatial_isolate": false
     },
     {
       "region_id": 139,
@@ -361,7 +458,13 @@
       "empirical_p": 0.0917908209179082,
       "fdr_p": 0.7155570157269987,
       "effect_size": 0.016964224888880053,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.126987301269873,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.873012698730127,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 16,
+      "spatial_isolate": false
     },
     {
       "region_id": 118,
@@ -382,7 +485,13 @@
       "empirical_p": 0.09669033096690331,
       "fdr_p": 0.7155570157269987,
       "effect_size": 0.05471269204193974,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.31366863313668636,
+      "spatial_null_fdr": 0.8657254274572543,
+      "spatial_robustness": 0.6863313668633136,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 50,
+      "spatial_isolate": false
     },
     {
       "region_id": 38,
@@ -403,7 +512,13 @@
       "empirical_p": 0.10078992100789921,
       "fdr_p": 0.7155570157269987,
       "effect_size": 0.009566237944882428,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.125987401259874,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.8740125987401259,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 14,
+      "spatial_isolate": false
     },
     {
       "region_id": 136,
@@ -424,7 +539,13 @@
       "empirical_p": 0.10578942105789421,
       "fdr_p": 0.7155570157269987,
       "effect_size": 0.015944749627041288,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.17318268173182683,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.8268173182681732,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 23,
+      "spatial_isolate": false
     },
     {
       "region_id": 46,
@@ -445,7 +566,13 @@
       "empirical_p": 0.10888911108889111,
       "fdr_p": 0.7155570157269987,
       "effect_size": 0.02268383544305791,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.19218078192180782,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.8078192180781922,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 27,
+      "spatial_isolate": false
     },
     {
       "region_id": 137,
@@ -466,7 +593,13 @@
       "empirical_p": 0.11728827117288271,
       "fdr_p": 0.7181031896810319,
       "effect_size": 0.021365436524452552,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.12138786121387861,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.8786121387861214,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 13,
+      "spatial_isolate": false
     },
     {
       "region_id": 22,
@@ -487,7 +620,13 @@
       "empirical_p": 0.12088791120887911,
       "fdr_p": 0.7181031896810319,
       "effect_size": 0.016598304367739236,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.1426857314268573,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.8573142685731427,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 18,
+      "spatial_isolate": false
     },
     {
       "region_id": 102,
@@ -508,7 +647,13 @@
       "empirical_p": 0.12488751124887511,
       "fdr_p": 0.7181031896810319,
       "effect_size": 0.022358691201852632,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.18498150184981502,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.815018498150185,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 26,
+      "spatial_isolate": false
     },
     {
       "region_id": 101,
@@ -529,7 +674,13 @@
       "empirical_p": 0.1346865313468653,
       "fdr_p": 0.7187547911875478,
       "effect_size": 0.010484370541694599,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.19968003199680032,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.8003199680031997,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 28,
+      "spatial_isolate": false
     },
     {
       "region_id": 86,
@@ -550,7 +701,13 @@
       "empirical_p": 0.13998600139986,
       "fdr_p": 0.7187547911875478,
       "effect_size": 0.00778220441295846,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.16728327167283272,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.8327167283271673,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 22,
+      "spatial_isolate": false
     },
     {
       "region_id": 161,
@@ -571,7 +728,13 @@
       "empirical_p": 0.14908509149085092,
       "fdr_p": 0.7187547911875478,
       "effect_size": 0.02004055211841438,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.17698230176982302,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.823017698230177,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 24,
+      "spatial_isolate": false
     },
     {
       "region_id": 24,
@@ -592,7 +755,13 @@
       "empirical_p": 0.15428457154284572,
       "fdr_p": 0.7187547911875478,
       "effect_size": 0.011244646692410876,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.16548345165483452,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.8345165483451655,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 21,
+      "spatial_isolate": false
     },
     {
       "region_id": 13,
@@ -613,7 +782,13 @@
       "empirical_p": 0.15208479152084792,
       "fdr_p": 0.7187547911875478,
       "effect_size": 0.007241869081481833,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.22447755224477553,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.7755224477552245,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 31,
+      "spatial_isolate": false
     },
     {
       "region_id": 153,
@@ -634,7 +809,13 @@
       "empirical_p": 0.1673832616738326,
       "fdr_p": 0.7187547911875478,
       "effect_size": 0.020379158294951627,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.21027897210278973,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.7897210278972102,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 30,
+      "spatial_isolate": false
     },
     {
       "region_id": 56,
@@ -655,7 +836,13 @@
       "empirical_p": 0.17128287171282872,
       "fdr_p": 0.7187547911875478,
       "effect_size": 0.012314295840621048,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.2521747825217478,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.7478252174782523,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 39,
+      "spatial_isolate": false
     },
     {
       "region_id": 15,
@@ -676,7 +863,13 @@
       "empirical_p": 0.1705829417058294,
       "fdr_p": 0.7187547911875478,
       "effect_size": 0.01152556753986006,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.18018198180181982,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.8198180181981802,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 25,
+      "spatial_isolate": false
     },
     {
       "region_id": 19,
@@ -697,7 +890,13 @@
       "empirical_p": 0.17698230176982302,
       "fdr_p": 0.7187547911875478,
       "effect_size": 0.007218699925815253,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.2390760923907609,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.7609239076092391,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 36,
+      "spatial_isolate": false
     },
     {
       "region_id": 69,
@@ -718,7 +917,13 @@
       "empirical_p": 0.17998200179982002,
       "fdr_p": 0.7187547911875478,
       "effect_size": 0.008869199882089673,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.23897610238976102,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.761023897610239,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 35,
+      "spatial_isolate": false
     },
     {
       "region_id": 154,
@@ -739,7 +944,13 @@
       "empirical_p": 0.1964803519648035,
       "fdr_p": 0.7187547911875478,
       "effect_size": 0.0116068061974538,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.2755724427557244,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.7244275572442755,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 44,
+      "spatial_isolate": false
     },
     {
       "region_id": 135,
@@ -760,7 +971,13 @@
       "empirical_p": 0.1954804519548045,
       "fdr_p": 0.7187547911875478,
       "effect_size": 0.010731272204304365,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.24637536246375363,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.7536246375362463,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 37,
+      "spatial_isolate": false
     },
     {
       "region_id": 26,
@@ -781,7 +998,13 @@
       "empirical_p": 0.20677932206779323,
       "fdr_p": 0.7187547911875478,
       "effect_size": 0.009865470855735414,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.22657734226577342,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.7734226577342266,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 32,
+      "spatial_isolate": false
     },
     {
       "region_id": 143,
@@ -802,7 +1025,13 @@
       "empirical_p": 0.21107889211078892,
       "fdr_p": 0.7187547911875478,
       "effect_size": 0.014712226654877592,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.25537446255374463,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.7446255374462554,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 40,
+      "spatial_isolate": false
     },
     {
       "region_id": 21,
@@ -823,7 +1052,13 @@
       "empirical_p": 0.20787921207879212,
       "fdr_p": 0.7187547911875478,
       "effect_size": 0.010648686654109896,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.25837416258374163,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.7416258374162583,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 41,
+      "spatial_isolate": false
     },
     {
       "region_id": 119,
@@ -844,7 +1079,13 @@
       "empirical_p": 0.21687831216878312,
       "fdr_p": 0.7187547911875478,
       "effect_size": 0.033635295821065225,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.22877712228777122,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.7712228777122287,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 33,
+      "spatial_isolate": false
     },
     {
       "region_id": 42,
@@ -865,7 +1106,13 @@
       "empirical_p": 0.21937806219378062,
       "fdr_p": 0.7187547911875478,
       "effect_size": 0.009326616672486965,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.28947105289471053,
+      "spatial_null_fdr": 0.8657254274572543,
+      "spatial_robustness": 0.7105289471052895,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 46,
+      "spatial_isolate": false
     },
     {
       "region_id": 59,
@@ -886,7 +1133,13 @@
       "empirical_p": 0.22137786221377861,
       "fdr_p": 0.7187547911875478,
       "effect_size": 0.006223190013915969,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.2766723327667233,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.7233276672332767,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 45,
+      "spatial_isolate": false
     },
     {
       "region_id": 83,
@@ -907,7 +1160,13 @@
       "empirical_p": 0.22517748225177484,
       "fdr_p": 0.7187547911875478,
       "effect_size": 0.010219434460635668,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.24807519248075194,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.7519248075192481,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 38,
+      "spatial_isolate": false
     },
     {
       "region_id": 89,
@@ -928,7 +1187,13 @@
       "empirical_p": 0.2338766123387661,
       "fdr_p": 0.7187547911875478,
       "effect_size": 0.003857395826520227,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.3117688231176882,
+      "spatial_null_fdr": 0.8657254274572543,
+      "spatial_robustness": 0.6882311768823117,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 49,
+      "spatial_isolate": false
     },
     {
       "region_id": 140,
@@ -949,7 +1214,13 @@
       "empirical_p": 0.2343765623437656,
       "fdr_p": 0.7187547911875478,
       "effect_size": 0.009623659420232689,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.27007299270072993,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.7299270072992701,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 43,
+      "spatial_isolate": false
     },
     {
       "region_id": 166,
@@ -970,7 +1241,13 @@
       "empirical_p": 0.24117588241175883,
       "fdr_p": 0.7235276472352765,
       "effect_size": 0.011191989123578105,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.23067693230676933,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.7693230676932307,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 34,
+      "spatial_isolate": false
     },
     {
       "region_id": 167,
@@ -991,7 +1268,13 @@
       "empirical_p": 0.25007499250074994,
       "fdr_p": 0.7342627439383721,
       "effect_size": 0.010524487506594404,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.2632736726327367,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.7367263273672633,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 42,
+      "spatial_isolate": true
     },
     {
       "region_id": 93,
@@ -1012,7 +1295,13 @@
       "empirical_p": 0.2696730326967303,
       "fdr_p": 0.7592000799920008,
       "effect_size": 0.005042890062284255,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.3090690930906909,
+      "spatial_null_fdr": 0.8657254274572543,
+      "spatial_robustness": 0.690930906909309,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 48,
+      "spatial_isolate": false
     },
     {
       "region_id": 7,
@@ -1033,7 +1322,13 @@
       "empirical_p": 0.27507249275072493,
       "fdr_p": 0.7592000799920008,
       "effect_size": 0.0077475432630968455,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.29657034296570345,
+      "spatial_null_fdr": 0.8657254274572543,
+      "spatial_robustness": 0.7034296570342966,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 47,
+      "spatial_isolate": false
     },
     {
       "region_id": 164,
@@ -1054,7 +1349,13 @@
       "empirical_p": 0.274972502749725,
       "fdr_p": 0.7592000799920008,
       "effect_size": 0.009545681549665286,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.1591840815918408,
+      "spatial_null_fdr": 0.8484618204846182,
+      "spatial_robustness": 0.8408159184081592,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 20,
+      "spatial_isolate": true
     },
     {
       "region_id": 27,
@@ -1075,7 +1376,13 @@
       "empirical_p": 0.3066693330666933,
       "fdr_p": 0.8298111365334054,
       "effect_size": 0.004757264643081238,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.3608639136086391,
+      "spatial_null_fdr": 0.9362466738400786,
+      "spatial_robustness": 0.6391360863913609,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 51,
+      "spatial_isolate": false
     },
     {
       "region_id": 91,
@@ -1096,7 +1403,13 @@
       "empirical_p": 0.3280671932806719,
       "fdr_p": 0.8672223686722237,
       "effect_size": 0.008031171245057811,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.3651634836516348,
+      "spatial_null_fdr": 0.9362466738400786,
+      "spatial_robustness": 0.6348365163483651,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 53,
+      "spatial_isolate": false
     },
     {
       "region_id": 103,
@@ -1117,7 +1430,13 @@
       "empirical_p": 0.3404659534046595,
       "fdr_p": 0.8672223686722237,
       "effect_size": 0.0048026022035306815,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.38786121387861217,
+      "spatial_null_fdr": 0.9362466738400786,
+      "spatial_robustness": 0.6121387861213878,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 54,
+      "spatial_isolate": false
     },
     {
       "region_id": 155,
@@ -1138,7 +1457,13 @@
       "empirical_p": 0.36176382361763826,
       "fdr_p": 0.8672223686722237,
       "effect_size": 0.006515570993268993,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.39186081391860816,
+      "spatial_null_fdr": 0.9362466738400786,
+      "spatial_robustness": 0.6081391860813918,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 55,
+      "spatial_isolate": false
     },
     {
       "region_id": 90,
@@ -1159,7 +1484,13 @@
       "empirical_p": 0.36476352364763526,
       "fdr_p": 0.8672223686722237,
       "effect_size": 0.002267350694753034,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.41205879412058793,
+      "spatial_null_fdr": 0.9362466738400786,
+      "spatial_robustness": 0.587941205879412,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 58,
+      "spatial_isolate": false
     },
     {
       "region_id": 121,
@@ -1180,7 +1511,13 @@
       "empirical_p": 0.36776322367763226,
       "fdr_p": 0.8672223686722237,
       "effect_size": 0.004034994731885844,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.394960503949605,
+      "spatial_null_fdr": 0.9362466738400786,
+      "spatial_robustness": 0.605039496050395,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 56,
+      "spatial_isolate": false
     },
     {
       "region_id": 95,
@@ -1201,7 +1538,13 @@
       "empirical_p": 0.3738626137386261,
       "fdr_p": 0.8672223686722237,
       "effect_size": 0.0039545576907698,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.44065593440655937,
+      "spatial_null_fdr": 0.9362466738400786,
+      "spatial_robustness": 0.5593440655934406,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 63,
+      "spatial_isolate": false
     },
     {
       "region_id": 9,
@@ -1222,7 +1565,13 @@
       "empirical_p": 0.37876212378762125,
       "fdr_p": 0.8672223686722237,
       "effect_size": 0.0027477575401940735,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.40905909409059094,
+      "spatial_null_fdr": 0.9362466738400786,
+      "spatial_robustness": 0.5909409059094091,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 57,
+      "spatial_isolate": false
     },
     {
       "region_id": 5,
@@ -1243,7 +1592,13 @@
       "empirical_p": 0.40555944405559446,
       "fdr_p": 0.8672223686722237,
       "effect_size": 0.0018688135612090484,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.4263573642635736,
+      "spatial_null_fdr": 0.9362466738400786,
+      "spatial_robustness": 0.5736426357364264,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 59,
+      "spatial_isolate": false
     },
     {
       "region_id": 29,
@@ -1264,7 +1619,13 @@
       "empirical_p": 0.40345965403459655,
       "fdr_p": 0.8672223686722237,
       "effect_size": 0.0032284992910618926,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.4313568643135686,
+      "spatial_null_fdr": 0.9362466738400786,
+      "spatial_robustness": 0.5686431356864314,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 61,
+      "spatial_isolate": false
     },
     {
       "region_id": 85,
@@ -1285,7 +1646,13 @@
       "empirical_p": 0.40375962403759624,
       "fdr_p": 0.8672223686722237,
       "effect_size": 0.0013706784862547172,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.43975602439756023,
+      "spatial_null_fdr": 0.9362466738400786,
+      "spatial_robustness": 0.5602439756024398,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 62,
+      "spatial_isolate": false
     },
     {
       "region_id": 44,
@@ -1306,7 +1673,13 @@
       "empirical_p": 0.405959404059594,
       "fdr_p": 0.8672223686722237,
       "effect_size": 0.0038796548556911947,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.45455454454554545,
+      "spatial_null_fdr": 0.9362466738400786,
+      "spatial_robustness": 0.5454454554544546,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 67,
+      "spatial_isolate": false
     },
     {
       "region_id": 170,
@@ -1327,7 +1700,13 @@
       "empirical_p": 0.41005899410058994,
       "fdr_p": 0.8672223686722237,
       "effect_size": 0.004177114576030261,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.36166383361663834,
+      "spatial_null_fdr": 0.9362466738400786,
+      "spatial_robustness": 0.6383361663833617,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 52,
+      "spatial_isolate": true
     },
     {
       "region_id": 72,
@@ -1348,7 +1727,13 @@
       "empirical_p": 0.4082591740825917,
       "fdr_p": 0.8672223686722237,
       "effect_size": 0.0019145932975138669,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.44275572442755723,
+      "spatial_null_fdr": 0.9362466738400786,
+      "spatial_robustness": 0.5572442755724427,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 64,
+      "spatial_isolate": false
     },
     {
       "region_id": 84,
@@ -1369,7 +1754,13 @@
       "empirical_p": 0.4126587341265873,
       "fdr_p": 0.8672223686722237,
       "effect_size": 0.004090570794502257,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.42715728427157285,
+      "spatial_null_fdr": 0.9362466738400786,
+      "spatial_robustness": 0.5728427157284272,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 60,
+      "spatial_isolate": false
     },
     {
       "region_id": 169,
@@ -1390,7 +1781,13 @@
       "empirical_p": 0.41475852414758524,
       "fdr_p": 0.8672223686722237,
       "effect_size": 0.0036484352248791208,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.44835516448355167,
+      "spatial_null_fdr": 0.9362466738400786,
+      "spatial_robustness": 0.5516448355164483,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 65,
+      "spatial_isolate": false
     },
     {
       "region_id": 58,
@@ -1411,7 +1808,13 @@
       "empirical_p": 0.42495750424957507,
       "fdr_p": 0.8752856057677815,
       "effect_size": 0.002949542566690111,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.45115488451154884,
+      "spatial_null_fdr": 0.9362466738400786,
+      "spatial_robustness": 0.5488451154884512,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 66,
+      "spatial_isolate": false
     },
     {
       "region_id": 25,
@@ -1432,7 +1835,13 @@
       "empirical_p": 0.45185481451854814,
       "fdr_p": 0.9120693564446373,
       "effect_size": 0.0014095638947549949,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.4754524547545245,
+      "spatial_null_fdr": 0.9383061693830617,
+      "spatial_robustness": 0.5245475452454755,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 69,
+      "spatial_isolate": false
     },
     {
       "region_id": 43,
@@ -1453,7 +1862,13 @@
       "empirical_p": 0.45725427457254275,
       "fdr_p": 0.9120693564446373,
       "effect_size": 0.0019751556684199922,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.47115288471152883,
+      "spatial_null_fdr": 0.9383061693830617,
+      "spatial_robustness": 0.5288471152884712,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 68,
+      "spatial_isolate": false
     },
     {
       "region_id": 87,
@@ -1474,7 +1889,13 @@
       "empirical_p": 0.46455354464553544,
       "fdr_p": 0.9120693564446373,
       "effect_size": 0.001206013234643366,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.49185081491850813,
+      "spatial_null_fdr": 0.9383061693830617,
+      "spatial_robustness": 0.5081491850814919,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 71,
+      "spatial_isolate": false
     },
     {
       "region_id": 88,
@@ -1495,7 +1916,13 @@
       "empirical_p": 0.46925307469253075,
       "fdr_p": 0.9120693564446373,
       "effect_size": 0.0014527113592460728,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.48575142485751427,
+      "spatial_null_fdr": 0.9383061693830617,
+      "spatial_robustness": 0.5142485751424857,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 70,
+      "spatial_isolate": false
     },
     {
       "region_id": 30,
@@ -1516,7 +1943,13 @@
       "empirical_p": 0.49845015498450157,
       "fdr_p": 0.9346840315968402,
       "effect_size": 8.425095472697208e-05,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.5228477152284772,
+      "spatial_null_fdr": 0.9383061693830617,
+      "spatial_robustness": 0.4771522847715228,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 74,
+      "spatial_isolate": false
     },
     {
       "region_id": 32,
@@ -1537,7 +1970,13 @@
       "empirical_p": 0.5051494850514948,
       "fdr_p": 0.9346840315968402,
       "effect_size": -9.243320289942236e-05,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.5193480651934806,
+      "spatial_null_fdr": 0.9383061693830617,
+      "spatial_robustness": 0.48065193480651935,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 73,
+      "spatial_isolate": false
     },
     {
       "region_id": 33,
@@ -1558,7 +1997,13 @@
       "empirical_p": 0.5037496250374962,
       "fdr_p": 0.9346840315968402,
       "effect_size": -0.00013687298327946795,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.5172482751724827,
+      "spatial_null_fdr": 0.9383061693830617,
+      "spatial_robustness": 0.48275172482751727,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 72,
+      "spatial_isolate": false
     },
     {
       "region_id": 1,
@@ -1579,7 +2024,13 @@
       "empirical_p": 0.5108489151084892,
       "fdr_p": 0.9346840315968402,
       "effect_size": -0.0003278535059351162,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.5293470652934706,
+      "spatial_null_fdr": 0.9383061693830617,
+      "spatial_robustness": 0.47065293470652936,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 76,
+      "spatial_isolate": false
     },
     {
       "region_id": 48,
@@ -1600,7 +2051,13 @@
       "empirical_p": 0.5178482151784821,
       "fdr_p": 0.9346840315968402,
       "effect_size": -0.0010118846916589708,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.5285471452854714,
+      "spatial_null_fdr": 0.9383061693830617,
+      "spatial_robustness": 0.4714528547145286,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 75,
+      "spatial_isolate": false
     },
     {
       "region_id": 148,
@@ -1621,7 +2078,13 @@
       "empirical_p": 0.5246475352464753,
       "fdr_p": 0.9346840315968402,
       "effect_size": -0.001084699440347503,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.535946405359464,
+      "spatial_null_fdr": 0.9383061693830617,
+      "spatial_robustness": 0.46405359464053597,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 77,
+      "spatial_isolate": false
     },
     {
       "region_id": 70,
@@ -1642,7 +2105,13 @@
       "empirical_p": 0.5323467653234677,
       "fdr_p": 0.9346840315968402,
       "effect_size": -0.0008130307313886087,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.5518448155184481,
+      "spatial_null_fdr": 0.9383061693830617,
+      "spatial_robustness": 0.4481551844815519,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 80,
+      "spatial_isolate": false
     },
     {
       "region_id": 17,
@@ -1663,7 +2132,13 @@
       "empirical_p": 0.5404459554044595,
       "fdr_p": 0.9346840315968402,
       "effect_size": -0.001885525079337258,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.5417458254174583,
+      "spatial_null_fdr": 0.9383061693830617,
+      "spatial_robustness": 0.4582541745825417,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 78,
+      "spatial_isolate": false
     },
     {
       "region_id": 130,
@@ -1684,7 +2159,13 @@
       "empirical_p": 0.5418458154184581,
       "fdr_p": 0.9346840315968402,
       "effect_size": -0.0019015368246353415,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.5418458154184581,
+      "spatial_null_fdr": 0.9383061693830617,
+      "spatial_robustness": 0.4581541845815419,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 79,
+      "spatial_isolate": false
     },
     {
       "region_id": 131,
@@ -1705,7 +2186,13 @@
       "empirical_p": 0.5606439356064393,
       "fdr_p": 0.9472346882958763,
       "effect_size": -0.0019706588997747687,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.5698430156984302,
+      "spatial_null_fdr": 0.9383061693830617,
+      "spatial_robustness": 0.4301569843015698,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 81,
+      "spatial_isolate": false
     },
     {
       "region_id": 122,
@@ -1726,7 +2213,13 @@
       "empirical_p": 0.569043095690431,
       "fdr_p": 0.9472346882958763,
       "effect_size": -0.002963552672764491,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.5801419858014198,
+      "spatial_null_fdr": 0.9383061693830617,
+      "spatial_robustness": 0.41985801419858015,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 82,
+      "spatial_isolate": false
     },
     {
       "region_id": 63,
@@ -1747,7 +2240,13 @@
       "empirical_p": 0.5834416558344165,
       "fdr_p": 0.9472346882958763,
       "effect_size": -0.001977871421172339,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.6011398860113989,
+      "spatial_null_fdr": 0.9383061693830617,
+      "spatial_robustness": 0.3988601139886011,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 85,
+      "spatial_isolate": false
     },
     {
       "region_id": 16,
@@ -1768,7 +2267,13 @@
       "empirical_p": 0.5828417158284172,
       "fdr_p": 0.9472346882958763,
       "effect_size": -0.002633168680675091,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.601039896010399,
+      "spatial_null_fdr": 0.9383061693830617,
+      "spatial_robustness": 0.398960103989601,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 84,
+      "spatial_isolate": false
     },
     {
       "region_id": 165,
@@ -1789,7 +2294,13 @@
       "empirical_p": 0.5823417658234177,
       "fdr_p": 0.9472346882958763,
       "effect_size": -0.002989328329258134,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.5832416758324167,
+      "spatial_null_fdr": 0.9383061693830617,
+      "spatial_robustness": 0.4167583241675833,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 83,
+      "spatial_isolate": false
     },
     {
       "region_id": 65,
@@ -1810,7 +2321,13 @@
       "empirical_p": 0.6159384061593841,
       "fdr_p": 0.955220606971561,
       "effect_size": -0.002344162738456501,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.6153384661533846,
+      "spatial_null_fdr": 0.9383061693830617,
+      "spatial_robustness": 0.3846615338466154,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 89,
+      "spatial_isolate": false
     },
     {
       "region_id": 34,
@@ -1831,7 +2348,13 @@
       "empirical_p": 0.6165383461653835,
       "fdr_p": 0.955220606971561,
       "effect_size": -0.003169804326363379,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.6255374462553744,
+      "spatial_null_fdr": 0.9383061693830617,
+      "spatial_robustness": 0.37446255374462556,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 91,
+      "spatial_isolate": false
     },
     {
       "region_id": 157,
@@ -1852,7 +2375,13 @@
       "empirical_p": 0.619038096190381,
       "fdr_p": 0.955220606971561,
       "effect_size": -0.004196213617152167,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.6036396360363964,
+      "spatial_null_fdr": 0.9383061693830617,
+      "spatial_robustness": 0.39636036396360363,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 87,
+      "spatial_isolate": false
     },
     {
       "region_id": 66,
@@ -1873,7 +2402,13 @@
       "empirical_p": 0.6159384061593841,
       "fdr_p": 0.955220606971561,
       "effect_size": -0.0038744410835789833,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.6062393760623938,
+      "spatial_null_fdr": 0.9383061693830617,
+      "spatial_robustness": 0.39376062393760625,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 88,
+      "spatial_isolate": false
     },
     {
       "region_id": 144,
@@ -1894,7 +2429,13 @@
       "empirical_p": 0.6265373462653735,
       "fdr_p": 0.955220606971561,
       "effect_size": -0.005200311844604899,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.623037696230377,
+      "spatial_null_fdr": 0.9383061693830617,
+      "spatial_robustness": 0.37696230376962303,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 90,
+      "spatial_isolate": false
     },
     {
       "region_id": 104,
@@ -1915,7 +2456,13 @@
       "empirical_p": 0.6425357464253575,
       "fdr_p": 0.955220606971561,
       "effect_size": -0.006494432365751257,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.6023397660233977,
+      "spatial_null_fdr": 0.9383061693830617,
+      "spatial_robustness": 0.39766023397660233,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 86,
+      "spatial_isolate": false
     },
     {
       "region_id": 73,
@@ -1936,7 +2483,13 @@
       "empirical_p": 0.6422357764223577,
       "fdr_p": 0.955220606971561,
       "effect_size": -0.005121812888291832,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.6255374462553744,
+      "spatial_null_fdr": 0.9383061693830617,
+      "spatial_robustness": 0.37446255374462556,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 91,
+      "spatial_isolate": false
     },
     {
       "region_id": 55,
@@ -1957,7 +2510,13 @@
       "empirical_p": 0.6437356264373563,
       "fdr_p": 0.955220606971561,
       "effect_size": -0.004118418573928806,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.6521347865213478,
+      "spatial_null_fdr": 0.9461114494611146,
+      "spatial_robustness": 0.3478652134786522,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 93,
+      "spatial_isolate": false
     },
     {
       "region_id": 127,
@@ -1978,7 +2537,13 @@
       "empirical_p": 0.6561343865613438,
       "fdr_p": 0.957013913993216,
       "effect_size": -0.004427597812862616,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.678032196780322,
+      "spatial_null_fdr": 0.9461114494611146,
+      "spatial_robustness": 0.321967803219678,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 98,
+      "spatial_isolate": false
     },
     {
       "region_id": 147,
@@ -1999,7 +2564,13 @@
       "empirical_p": 0.6687331266873313,
       "fdr_p": 0.957013913993216,
       "effect_size": -0.005676855669198622,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.6871312868713129,
+      "spatial_null_fdr": 0.9482411758824117,
+      "spatial_robustness": 0.31286871312868714,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 100,
+      "spatial_isolate": false
     },
     {
       "region_id": 31,
@@ -2020,7 +2591,13 @@
       "empirical_p": 0.6867313268673133,
       "fdr_p": 0.957013913993216,
       "effect_size": -0.005262377900892512,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.6622337766223377,
+      "spatial_null_fdr": 0.9461114494611146,
+      "spatial_robustness": 0.33776622337766227,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 94,
+      "spatial_isolate": false
     },
     {
       "region_id": 61,
@@ -2041,7 +2618,13 @@
       "empirical_p": 0.6963303669633036,
       "fdr_p": 0.957013913993216,
       "effect_size": -0.005927456840099654,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.6787321267873213,
+      "spatial_null_fdr": 0.9461114494611146,
+      "spatial_robustness": 0.3212678732126787,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 99,
+      "spatial_isolate": false
     },
     {
       "region_id": 8,
@@ -2062,7 +2645,13 @@
       "empirical_p": 0.6942305769423057,
       "fdr_p": 0.957013913993216,
       "effect_size": -0.00642847144600156,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.7252274772522748,
+      "spatial_null_fdr": 0.9708147829284868,
+      "spatial_robustness": 0.27477252274772523,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 102,
+      "spatial_isolate": false
     },
     {
       "region_id": 60,
@@ -2083,7 +2672,13 @@
       "empirical_p": 0.7016298370162983,
       "fdr_p": 0.957013913993216,
       "effect_size": -0.004981684553733046,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.6714328567143286,
+      "spatial_null_fdr": 0.9461114494611146,
+      "spatial_robustness": 0.3285671432856714,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 96,
+      "spatial_isolate": false
     },
     {
       "region_id": 163,
@@ -2104,7 +2699,13 @@
       "empirical_p": 0.7044295570442956,
       "fdr_p": 0.957013913993216,
       "effect_size": -0.007171523936617463,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.7479252074792521,
+      "spatial_null_fdr": 0.9708147829284868,
+      "spatial_robustness": 0.25207479252074794,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 105,
+      "spatial_isolate": false
     },
     {
       "region_id": 74,
@@ -2125,7 +2726,13 @@
       "empirical_p": 0.7161283871612839,
       "fdr_p": 0.957013913993216,
       "effect_size": -0.011728481191774387,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.6725327467253275,
+      "spatial_null_fdr": 0.9461114494611146,
+      "spatial_robustness": 0.3274672532746725,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 97,
+      "spatial_isolate": false
     },
     {
       "region_id": 96,
@@ -2146,7 +2753,13 @@
       "empirical_p": 0.7207279272072793,
       "fdr_p": 0.957013913993216,
       "effect_size": -0.010845267204246722,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.6684331566843316,
+      "spatial_null_fdr": 0.9461114494611146,
+      "spatial_robustness": 0.33156684331566844,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 95,
+      "spatial_isolate": false
     },
     {
       "region_id": 168,
@@ -2167,7 +2780,13 @@
       "empirical_p": 0.718928107189281,
       "fdr_p": 0.957013913993216,
       "effect_size": -0.009757762561337868,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.7945205479452054,
+      "spatial_null_fdr": 0.9708147829284868,
+      "spatial_robustness": 0.20547945205479456,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 109,
+      "spatial_isolate": true
     },
     {
       "region_id": 129,
@@ -2188,7 +2807,13 @@
       "empirical_p": 0.7212278772122788,
       "fdr_p": 0.957013913993216,
       "effect_size": -0.008462292894207302,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.7196280371962803,
+      "spatial_null_fdr": 0.9708147829284868,
+      "spatial_robustness": 0.2803719628037197,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 101,
+      "spatial_isolate": false
     },
     {
       "region_id": 2,
@@ -2209,7 +2834,13 @@
       "empirical_p": 0.7596240375962404,
       "fdr_p": 0.9983630208407731,
       "effect_size": -0.008153371286960642,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.7433256674332567,
+      "spatial_null_fdr": 0.9708147829284868,
+      "spatial_robustness": 0.2566743325667433,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 104,
+      "spatial_isolate": false
     },
     {
       "region_id": 10,
@@ -2230,7 +2861,13 @@
       "empirical_p": 0.7832216778322167,
       "fdr_p": 1.0,
       "effect_size": -0.01094076257635479,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.7335266473352665,
+      "spatial_null_fdr": 0.9708147829284868,
+      "spatial_robustness": 0.2664733526647335,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 103,
+      "spatial_isolate": false
     },
     {
       "region_id": 6,
@@ -2251,7 +2888,13 @@
       "empirical_p": 0.7833216678332167,
       "fdr_p": 1.0,
       "effect_size": -0.006860765174038219,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.7703229677032297,
+      "spatial_null_fdr": 0.9708147829284868,
+      "spatial_robustness": 0.22967703229677028,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 106,
+      "spatial_isolate": false
     },
     {
       "region_id": 57,
@@ -2272,7 +2915,13 @@
       "empirical_p": 0.8025197480251974,
       "fdr_p": 1.0,
       "effect_size": -0.010534850843918142,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.7735226477352265,
+      "spatial_null_fdr": 0.9708147829284868,
+      "spatial_robustness": 0.2264773522647735,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 107,
+      "spatial_isolate": false
     },
     {
       "region_id": 14,
@@ -2293,7 +2942,13 @@
       "empirical_p": 0.8176182381761824,
       "fdr_p": 1.0,
       "effect_size": -0.008381678037451601,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.7863213678632137,
+      "spatial_null_fdr": 0.9708147829284868,
+      "spatial_robustness": 0.21367863213678628,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 108,
+      "spatial_isolate": false
     },
     {
       "region_id": 125,
@@ -2314,7 +2969,13 @@
       "empirical_p": 0.8237176282371763,
       "fdr_p": 1.0,
       "effect_size": -0.009910671585769526,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.8301169883011699,
+      "spatial_null_fdr": 0.9708147829284868,
+      "spatial_robustness": 0.16988301169883013,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 117,
+      "spatial_isolate": false
     },
     {
       "region_id": 12,
@@ -2335,7 +2996,13 @@
       "empirical_p": 0.8285171482851715,
       "fdr_p": 1.0,
       "effect_size": -0.011215767325320924,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.8065193480651934,
+      "spatial_null_fdr": 0.9708147829284868,
+      "spatial_robustness": 0.19348065193480657,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 112,
+      "spatial_isolate": false
     },
     {
       "region_id": 53,
@@ -2356,7 +3023,13 @@
       "empirical_p": 0.8395160483951605,
       "fdr_p": 1.0,
       "effect_size": -0.013991861597006494,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.8492150784921508,
+      "spatial_null_fdr": 0.9759696161531387,
+      "spatial_robustness": 0.15078492150784917,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 119,
+      "spatial_isolate": false
     },
     {
       "region_id": 156,
@@ -2377,7 +3050,13 @@
       "empirical_p": 0.8377162283771623,
       "fdr_p": 1.0,
       "effect_size": -0.01381272617222462,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.8218178182181782,
+      "spatial_null_fdr": 0.9708147829284868,
+      "spatial_robustness": 0.17818218178182177,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 116,
+      "spatial_isolate": false
     },
     {
       "region_id": 47,
@@ -2398,7 +3077,13 @@
       "empirical_p": 0.8431156884311569,
       "fdr_p": 1.0,
       "effect_size": -0.018265790162498297,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.8301169883011699,
+      "spatial_null_fdr": 0.9708147829284868,
+      "spatial_robustness": 0.16988301169883013,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 117,
+      "spatial_isolate": false
     },
     {
       "region_id": 110,
@@ -2419,7 +3104,13 @@
       "empirical_p": 0.8505149485051495,
       "fdr_p": 1.0,
       "effect_size": -0.0140051326873335,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.8594140585941406,
+      "spatial_null_fdr": 0.9759696161531387,
+      "spatial_robustness": 0.14058594140585945,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 121,
+      "spatial_isolate": false
     },
     {
       "region_id": 49,
@@ -2440,7 +3131,13 @@
       "empirical_p": 0.8557144285571443,
       "fdr_p": 1.0,
       "effect_size": -0.018135465044411936,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.7975202479752025,
+      "spatial_null_fdr": 0.9708147829284868,
+      "spatial_robustness": 0.2024797520247975,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 111,
+      "spatial_isolate": false
     },
     {
       "region_id": 109,
@@ -2461,7 +3158,13 @@
       "empirical_p": 0.8756124387561244,
       "fdr_p": 1.0,
       "effect_size": -0.013676297884940292,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.8198180181981802,
+      "spatial_null_fdr": 0.9708147829284868,
+      "spatial_robustness": 0.18018198180181977,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 115,
+      "spatial_isolate": false
     },
     {
       "region_id": 78,
@@ -2482,7 +3185,13 @@
       "empirical_p": 0.8791120887911209,
       "fdr_p": 1.0,
       "effect_size": -0.01599423447702608,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.8132186781321867,
+      "spatial_null_fdr": 0.9708147829284868,
+      "spatial_robustness": 0.18678132186781327,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 114,
+      "spatial_isolate": false
     },
     {
       "region_id": 62,
@@ -2503,7 +3212,13 @@
       "empirical_p": 0.8878112188781122,
       "fdr_p": 1.0,
       "effect_size": -0.014316943157909934,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.7957204279572043,
+      "spatial_null_fdr": 0.9708147829284868,
+      "spatial_robustness": 0.20427957204279568,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 110,
+      "spatial_isolate": false
     },
     {
       "region_id": 39,
@@ -2524,7 +3239,13 @@
       "empirical_p": 0.8939106089391061,
       "fdr_p": 1.0,
       "effect_size": -0.013190337353892467,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.8628137186281372,
+      "spatial_null_fdr": 0.9759696161531387,
+      "spatial_robustness": 0.13718628137186284,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 122,
+      "spatial_isolate": false
     },
     {
       "region_id": 158,
@@ -2545,7 +3266,13 @@
       "empirical_p": 0.9134086591340866,
       "fdr_p": 1.0,
       "effect_size": -0.029383502681856466,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.8071192880711929,
+      "spatial_null_fdr": 0.9708147829284868,
+      "spatial_robustness": 0.19288071192880707,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 113,
+      "spatial_isolate": false
     },
     {
       "region_id": 18,
@@ -2566,7 +3293,13 @@
       "empirical_p": 0.914008599140086,
       "fdr_p": 1.0,
       "effect_size": -0.031216405363975352,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.9312068793120688,
+      "spatial_null_fdr": 0.9828380798283808,
+      "spatial_robustness": 0.0687931206879312,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 127,
+      "spatial_isolate": false
     },
     {
       "region_id": 97,
@@ -2587,7 +3320,13 @@
       "empirical_p": 0.9224077592240776,
       "fdr_p": 1.0,
       "effect_size": -0.018412763951837385,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.8522147785221478,
+      "spatial_null_fdr": 0.9759696161531387,
+      "spatial_robustness": 0.14778522147785222,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 120,
+      "spatial_isolate": false
     },
     {
       "region_id": 106,
@@ -2608,7 +3347,13 @@
       "empirical_p": 0.9305069493050695,
       "fdr_p": 1.0,
       "effect_size": -0.032905100319848724,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.8996100389961004,
+      "spatial_null_fdr": 0.9828380798283808,
+      "spatial_robustness": 0.10038996100389963,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 123,
+      "spatial_isolate": false
     },
     {
       "region_id": 108,
@@ -2629,7 +3374,13 @@
       "empirical_p": 0.9403059694030597,
       "fdr_p": 1.0,
       "effect_size": -0.012937664633187573,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.9397060293970603,
+      "spatial_null_fdr": 0.9828380798283808,
+      "spatial_robustness": 0.06029397060293973,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 131,
+      "spatial_isolate": false
     },
     {
       "region_id": 51,
@@ -2650,7 +3401,13 @@
       "empirical_p": 0.9424057594240576,
       "fdr_p": 1.0,
       "effect_size": -0.02524818511875776,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.9294070592940706,
+      "spatial_null_fdr": 0.9828380798283808,
+      "spatial_robustness": 0.07059294070592936,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 125,
+      "spatial_isolate": false
     },
     {
       "region_id": 71,
@@ -2671,7 +3428,13 @@
       "empirical_p": 0.9519048095190481,
       "fdr_p": 1.0,
       "effect_size": -0.012941837507955856,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.9114088591140886,
+      "spatial_null_fdr": 0.9828380798283808,
+      "spatial_robustness": 0.08859114088591136,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 124,
+      "spatial_isolate": false
     },
     {
       "region_id": 52,
@@ -2692,7 +3455,13 @@
       "empirical_p": 0.9558044195580442,
       "fdr_p": 1.0,
       "effect_size": -0.02610895321151363,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.9312068793120688,
+      "spatial_null_fdr": 0.9828380798283808,
+      "spatial_robustness": 0.0687931206879312,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 127,
+      "spatial_isolate": false
     },
     {
       "region_id": 98,
@@ -2713,7 +3482,13 @@
       "empirical_p": 0.9615038496150385,
       "fdr_p": 1.0,
       "effect_size": -0.02753027394805929,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.954004599540046,
+      "spatial_null_fdr": 0.9880834138808341,
+      "spatial_robustness": 0.04599540045995398,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 133,
+      "spatial_isolate": false
     },
     {
       "region_id": 68,
@@ -2734,7 +3509,13 @@
       "empirical_p": 0.9701029897010299,
       "fdr_p": 1.0,
       "effect_size": -0.022746980827857866,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.9377062293770623,
+      "spatial_null_fdr": 0.9828380798283808,
+      "spatial_robustness": 0.06229377062293773,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 130,
+      "spatial_isolate": false
     },
     {
       "region_id": 79,
@@ -2755,7 +3536,13 @@
       "empirical_p": 0.9709029097090291,
       "fdr_p": 1.0,
       "effect_size": -0.019887989765494885,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.9339066093390661,
+      "spatial_null_fdr": 0.9828380798283808,
+      "spatial_robustness": 0.06609339066093389,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 129,
+      "spatial_isolate": false
     },
     {
       "region_id": 64,
@@ -2776,7 +3563,13 @@
       "empirical_p": 0.9783021697830216,
       "fdr_p": 1.0,
       "effect_size": -0.029868247582257035,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.9401059894010599,
+      "spatial_null_fdr": 0.9828380798283808,
+      "spatial_robustness": 0.05989401059894006,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 132,
+      "spatial_isolate": false
     },
     {
       "region_id": 105,
@@ -2797,7 +3590,13 @@
       "empirical_p": 0.9797020297970203,
       "fdr_p": 1.0,
       "effect_size": -0.029370675931638,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.9666033396660334,
+      "spatial_null_fdr": 0.9880834138808341,
+      "spatial_robustness": 0.0333966603339666,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 135,
+      "spatial_isolate": false
     },
     {
       "region_id": 80,
@@ -2818,7 +3617,13 @@
       "empirical_p": 0.9815018498150185,
       "fdr_p": 1.0,
       "effect_size": -0.04478301571647625,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.9296070392960704,
+      "spatial_null_fdr": 0.9828380798283808,
+      "spatial_robustness": 0.07039296070392964,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 126,
+      "spatial_isolate": false
     },
     {
       "region_id": 107,
@@ -2839,7 +3644,13 @@
       "empirical_p": 0.9817018298170183,
       "fdr_p": 1.0,
       "effect_size": -0.019484724921546015,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.9601039896010399,
+      "spatial_null_fdr": 0.9880834138808341,
+      "spatial_robustness": 0.03989601039896007,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 134,
+      "spatial_isolate": false
     },
     {
       "region_id": 77,
@@ -2860,7 +3671,13 @@
       "empirical_p": 0.9963003699630038,
       "fdr_p": 1.0,
       "effect_size": -0.033456591452353246,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.9894010598940106,
+      "spatial_null_fdr": 0.9984001599840016,
+      "spatial_robustness": 0.010598940105989385,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 136,
+      "spatial_isolate": false
     },
     {
       "region_id": 75,
@@ -2881,7 +3698,13 @@
       "empirical_p": 1.0,
       "fdr_p": 1.0,
       "effect_size": -0.06324359121994089,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.9983001699830018,
+      "spatial_null_fdr": 0.9984001599840016,
+      "spatial_robustness": 0.0016998300169982494,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 137,
+      "spatial_isolate": false
     },
     {
       "region_id": 76,
@@ -2902,7 +3725,13 @@
       "empirical_p": 1.0,
       "fdr_p": 1.0,
       "effect_size": -0.06773904511369638,
-      "number_of_genes": 123
+      "number_of_genes": 123,
+      "spatial_null_p": 0.9984001599840016,
+      "spatial_null_fdr": 0.9984001599840016,
+      "spatial_robustness": 0.0015998400159984438,
+      "spatial_robustness_label": "not_robust",
+      "robustness_rank": 138,
+      "spatial_isolate": false
     }
   ]
 }

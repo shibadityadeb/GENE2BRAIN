@@ -598,5 +598,78 @@ class ParkinsonIndependentValidationArtifactTests(unittest.TestCase):
         self.assertIn("not estimable", interpretation)
 
 
+class ParkinsonBiologicalInterpretationArtifactTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.result_data = ROOT / "data" / "results"
+        cls.mapping = pd.read_csv(cls.result_data / "stage_09_gene_id_mapping.csv")
+        cls.go = pd.read_csv(cls.result_data / "stage_09_go_enrichment.csv")
+        cls.reactome = pd.read_csv(cls.result_data / "stage_09_reactome_enrichment.csv")
+        cls.ranked = pd.read_csv(cls.result_data / "stage_09_ranked_pathway_analysis.csv")
+        cls.cells = pd.read_csv(cls.result_data / "stage_09_cell_type_enrichment.csv")
+        cls.regional = pd.read_csv(cls.result_data / "stage_09_regional_gene_drivers.csv")
+
+    def test_required_stage_09_outputs_exist(self) -> None:
+        required = [
+            ROOT / "src" / "stage_09_biological_interpretation.py",
+            ROOT / "reports" / "stage_09_region_selection.md",
+            ROOT / "reports" / "stage_09_methods.md",
+            ROOT / "reports" / "stage_09_interpretation.md",
+            self.result_data / "stage_09_gene_id_mapping.csv",
+            self.result_data / "stage_09_go_enrichment.csv",
+            self.result_data / "stage_09_reactome_enrichment.csv",
+            self.result_data / "stage_09_ranked_pathway_analysis.csv",
+            self.result_data / "stage_09_cell_type_enrichment.csv",
+            self.result_data / "stage_09_regional_gene_drivers.csv",
+            self.result_data / "stage_09_driver_genes.csv",
+            self.result_data / "stage_09_pathway_sensitivity.csv",
+            self.result_data / "stage_09_biological_evidence_summary.csv",
+            FIGURES / "stage_09_parkinson_pathway_enrichment.png",
+            FIGURES / "stage_09_parkinson_cell_type_enrichment.png",
+            FIGURES / "stage_09_regional_gene_drivers.png",
+            FIGURES / "stage_09_genetic_region_biology.png",
+            FIGURES / "stage_09_parkinson_biological_summary.png",
+            FIGURES / "stage_09_pathway_sensitivity.png",
+        ]
+        missing = [str(path.relative_to(ROOT)) for path in required if not path.is_file()]
+        self.assertEqual(missing, [], f"Missing Stage 9 files: {missing}")
+
+    def test_gene_mapping_preserves_every_frozen_gene(self) -> None:
+        self.assertEqual(len(self.mapping), 149)
+        self.assertTrue(self.mapping["original_id"].is_unique)
+        self.assertTrue(self.mapping["ensembl_id"].str.match(r"ENSG\d+").all())
+        represented = self.mapping["mapping_status"].eq("mapped_and_represented_in_ahba")
+        self.assertEqual(int(represented.sum()), 123)
+
+    def test_enrichment_probabilities_and_hypothesis_families(self) -> None:
+        self.assertEqual(set(self.go["ontology"]), {"GO:BP", "GO:MF", "GO:CC"})
+        for frame in (self.go, self.reactome, self.ranked, self.cells):
+            self.assertTrue(frame["p_value"].between(0, 1).all())
+            self.assertTrue(frame["fdr"].between(0, 1).all())
+        self.assertTrue(self.go["effect_size"].gt(0).all())
+        self.assertTrue(self.reactome["effect_size"].gt(0).all())
+        self.assertTrue(self.ranked["rank_effect_auc"].between(0, 1).all())
+
+    def test_cell_types_and_region_rule_are_fixed(self) -> None:
+        self.assertEqual(len(self.cells), 34)
+        self.assertTrue(self.cells["cell_type"].is_unique)
+        self.assertEqual(self.regional["region_id"].nunique(), 10)
+        self.assertEqual(len(self.regional), 10 * 123)
+        top_counts = self.regional.loc[self.regional["top_driver"]].groupby("region_id").size()
+        self.assertTrue((top_counts == 20).all())
+        selection = (ROOT / "reports" / "stage_09_region_selection.md").read_text()
+        self.assertIn("top 10 AAL3 parcels", selection)
+        self.assertIn("No anatomical name", selection)
+
+    def test_supported_evidence_is_never_fabricated(self) -> None:
+        evidence = pd.read_csv(self.result_data / "stage_09_biological_evidence_summary.csv")
+        regional_paths = pd.read_csv(self.result_data / "stage_09_region_pathway_enrichment.csv")
+        self.assertTrue(evidence["pathway_fdr"].lt(0.05).all())
+        supported = regional_paths.loc[regional_paths["regional_fdr"] < 0.05]
+        self.assertEqual(len(evidence), len(supported))
+        self.assertEqual(int((self.reactome["fdr"] < 0.05).sum()), 0)
+        self.assertEqual(int((self.cells["fdr"] < 0.05).sum()), 0)
+
+
 if __name__ == "__main__":
     unittest.main()

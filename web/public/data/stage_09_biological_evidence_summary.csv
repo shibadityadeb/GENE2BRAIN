@@ -1,0 +1,4 @@
+region,region_enrichment,fdr,gene_set,pathway,pathway_fdr,driver_genes,cell_type,cell_type_fdr,validation_status
+Frontal Sup Medial R,2.633686530481111,0.2690730926907309,weighted,FCGR activation,0.01856343115139869,FYN;FCGR2A,,,measured; Stage 8 validation not supported
+Amygdala L,1.5387176061019034,0.7155570157269987,weighted,FCGR activation,0.01856343115139869,FCGR2A;FYN,,,measured; Stage 8 validation not supported
+Hippocampus L,1.741246693186499,0.6684664866846648,weighted,FCGR activation,0.01856343115139869,FYN;FCGR2A,,,measured; Stage 8 validation not supported

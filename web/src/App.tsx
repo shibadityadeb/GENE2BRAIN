@@ -32,6 +32,7 @@ export default function App() {
   const { enrichment, metadata, geometry } = loaded
   const zDomain = metadata.metrics.z_score.domain as [number, number]
   const observedDomain = metadata.metrics.observed_score.domain as [number, number]
+  const validationDomain = metadata.metrics.validation_score.domain as [number, number]
   const selectRegion = (region: RegionRecord) => {
     setHemisphere('whole')
     setSelected(region)
@@ -77,6 +78,7 @@ export default function App() {
             validationMode={validationMode}
             zDomain={zDomain}
             observedDomain={observedDomain}
+            validationDomain={validationDomain}
             fdrThreshold={metadata.analysis.fdr_threshold}
             onHover={(region, point) => { setHovered(region); if (point) setTooltipPoint(point) }}
             onSelect={selectRegion}
@@ -87,9 +89,11 @@ export default function App() {
             metric={metric}
             zDomain={zDomain}
             observedDomain={observedDomain}
+            validationDomain={validationDomain}
             threshold={metadata.analysis.fdr_threshold}
             significant={metadata.analysis.significant_regions}
             spatialRobustRegions={metadata.analysis.spatial_sensitivity.robust_regions}
+            mappedValidationRegions={metadata.analysis.independent_validation.mapped_aal3_regions}
             validationMode={validationMode}
           />
           {validationMode && (

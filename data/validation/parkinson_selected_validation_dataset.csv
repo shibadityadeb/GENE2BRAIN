@@ -1,0 +1,20 @@
+field,value
+selection_status,selected_before correlation testing
+candidate_id,enigma_pd_2021
+dataset,ENIGMA-Parkinson's 2021 PD-versus-control structural MRI summary statistics
+citation,"Laansma et al. An International Multicenter Analysis of Brain Structure Across Clinical Stages of Parkinson's Disease. Movement Disorders. 2021"
+doi,10.1002/mds.28706
+pmid,34288137
+source_url,https://github.com/MICA-MNI/ENIGMA/tree/master/enigmatoolbox/datasets/summary_statistics
+official_documentation,https://enigma-toolbox.readthedocs.io/en/latest/pages/04.loadsumstats/
+sample_size,"2357 PD and 1182 controls across 19 sites; region-specific n varies after QC"
+primary_phenotype,"Cohen's d for PD versus control cortical thickness and subcortical volume adjusted for age sex age-by-sex and intracranial volume where appropriate"
+validation_orientation,"validation_score = -d_icv; positive means thinner cortex or smaller subcortical volume in PD"
+coverage,"68 Desikan-Killiany cortical and 16 aseg subcortical bilateral measures released; lateral ventricles excluded a priori because they are not tissue parcels"
+mapping_plan,"Explicit anatomical Desikan-Killiany/aseg-to-AAL3 crosswalk; aggregate discovery AAL3 values within each validation parcel; no fuzzy matching"
+selection_basis,"Direct quantitative case-control phenotype; largest candidate cohort; official machine-readable summary statistics; bilateral cortical and subcortical coverage; standardized effects; clear atlas definitions"
+not_selected_on,GENE2BRAIN correlation or statistical significance
+independence_from_ahba,No AHBA expression data used to construct ENIGMA effect sizes
+independence_from_stage6_stage7,No GENE2BRAIN permutation or spatial outputs used to construct or select ENIGMA effects
+participant_independence_caveat,"Exact participant-disjointness from the upstream GWAS cannot be guaranteed: PPMI is one ENIGMA imaging site and has contributed genetics to PD consortia. Validation is measurement- and analysis-independent but not claimed to be strictly participant-disjoint. This limits the strength of the validation claim"
+access_date,2026-09-14

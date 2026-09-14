@@ -48,6 +48,14 @@ export function RegionPanel({ region, threshold, onClose }: { region: RegionReco
         <div><span>Robustness rank</span><strong>{region.robustness_rank}</strong></div>
         <div><span>Graph status</span><strong>{region.spatial_isolate ? 'Isolated parcel' : 'Connected parcel'}</strong></div>
       </div>
+      <h3 className="panel-section-title">Stage 8 · Independent validation data</h3>
+      <div className="stat-grid">
+        <div><span>Validation score</span><strong>{formatValue(region.validation_score)}</strong></div>
+        <div><span>Agreement</span><strong>{region.agreement_status === 'not_measured' ? 'Not measured' : region.agreement_status.replaceAll('_', ' ')}</strong></div>
+        <div><span>ENIGMA parcel</span><strong>{region.validation_region ?? 'N/A'}</strong></div>
+        <div><span>Mapping confidence</span><strong>{region.validation_mapping_confidence ?? 'N/A'}</strong></div>
+      </div>
+      <p className="caution">The ENIGMA-PD score is external to the discovery model. Higher values mean thinner cortex or smaller subcortical volume in PD; N/A means the phenotype did not measure this AAL3 parcel.</p>
       <p className="interpretation">The observed Parkinson-associated gene-expression score is {formatValue(Math.abs(region.z_score))} standard deviations {direction} the matched gene-set expectation. It {region.fdr_p < threshold ? 'meets' : 'does not meet'} the project’s FDR threshold.</p>
       <p className="caution">This does not indicate where Parkinson disease occurs or establish a causal brain region.</p>
       <button className="outline-button" onClick={() => setShowNull((visible) => !visible)} aria-expanded={showNull}>

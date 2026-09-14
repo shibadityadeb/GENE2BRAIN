@@ -1,0 +1,415 @@
+region_id,region_name,method,raw_scale_score,gene_standardized_score,raw_scale_label,standardized_scale_label,raw_vs_gene_standardized_pearson_r,primary_or_sensitivity
+1,Precentral L,broad,0.5042957816048337,-0.016351600626798232,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+2,Precentral R,broad,0.497018847359345,-0.0872087292720663,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+3,Frontal Sup 2 L,broad,0.5065649562401109,-0.01398343108819908,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+4,Frontal Sup 2 R,broad,0.5174625332932841,0.07573246275651883,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+5,Frontal Mid 2 L,broad,0.5103570919720323,0.013548498527838087,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+6,Frontal Mid 2 R,broad,0.4996808082781447,-0.062228347942754836,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+7,Frontal Inf Oper L,broad,0.4820091013515451,-0.18681517089591645,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+8,Frontal Inf Oper R,broad,0.4729661721619267,-0.2741564888143447,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+9,Frontal Inf Tri L,broad,0.514906003305034,0.0501631806064829,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+10,Frontal Inf Tri R,broad,0.5057231418635977,-0.012755726296465705,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+11,Frontal Inf Orb 2 L,broad,0.5242031159035322,0.12529165257410724,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+12,Frontal Inf Orb 2 R,broad,0.5048554024370565,-0.038369457616826516,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+13,Rolandic Oper L,broad,0.5189882076508016,0.08639398448580507,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+14,Rolandic Oper R,broad,0.5313721259066518,0.1812376608833833,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+15,Supp Motor Area L,broad,0.48657411251906535,-0.1483414759182095,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+16,Supp Motor Area R,broad,0.504012119392847,-0.013541984100609967,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+17,Olfactory L,broad,0.47187580900349135,-0.2691138317804396,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+18,Olfactory R,broad,0.45727745999319735,-0.36397532651686043,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+19,Frontal Sup Medial L,broad,0.5153995333132768,0.054162749696124855,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+20,Frontal Sup Medial R,broad,0.5335963587687055,0.1826621144367302,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+21,Frontal Med Orb L,broad,0.5051689057628398,-0.043583560543909335,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+22,Frontal Med Orb R,broad,0.543780751689348,0.278970630046887,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+23,Rectus L,broad,0.5097585726320571,0.014887993874394288,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+24,Rectus R,broad,0.531819725477195,0.17971867967915964,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+25,OFCmed L,broad,0.5052916582819736,-0.036454706807750946,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+26,OFCmed R,broad,0.5203555995252576,0.09000926839097656,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+27,OFCant L,broad,0.5198115466836435,0.08918618302739809,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+28,OFCant R,broad,0.5404525935041014,0.25567866433691444,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+29,OFCpost L,broad,0.47964987098938683,-0.2246711617791559,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+30,OFCpost R,broad,0.5197932578819882,0.10326258251455046,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+31,OFClat L,broad,0.4792987911673351,-0.22421592145874739,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+32,OFClat R,broad,0.5071095269141773,-0.0031545605822278283,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+33,Insula L,broad,0.505021357055009,-0.030059575583975998,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+34,Insula R,broad,0.4972142986538041,-0.09385841558910613,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+37,Cingulate Mid L,broad,0.5086396789077758,0.008300555773469467,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+38,Cingulate Mid R,broad,0.4984536452038181,-0.06805736668225679,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+39,Cingulate Post L,broad,0.4994080545111457,-0.08199982348248393,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+41,Hippocampus L,broad,0.5097231358371487,0.034812819200527895,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+42,Hippocampus R,broad,0.5026697152122017,0.003464440109684701,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+43,ParaHippocampal L,broad,0.5007842942885306,-0.018268765344700184,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+44,ParaHippocampal R,broad,0.5181086711361422,0.08619505040920647,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+45,Amygdala L,broad,0.5209476604218192,0.09810995344450266,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+46,Amygdala R,broad,0.47441999934980617,-0.264271541641335,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+47,Calcarine L,broad,0.505425367874815,0.006459130231421751,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+48,Calcarine R,broad,0.5028492952068573,-0.01907791890232998,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+49,Cuneus L,broad,0.5090544848845593,0.028880027076385893,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+51,Lingual L,broad,0.5002711716352971,-0.028805390604437528,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+52,Lingual R,broad,0.49985166235788253,-0.04775486241050878,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+53,Occipital Sup L,broad,0.5166906879973484,0.07910328424405874,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+55,Occipital Mid L,broad,0.5165196946113555,0.07618932941725022,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+56,Occipital Mid R,broad,0.529069431315593,0.17562443949408302,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+57,Occipital Inf L,broad,0.5170820459890269,0.07992561103383491,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+58,Occipital Inf R,broad,0.5140213529792832,0.04477658338459964,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+59,Fusiform L,broad,0.5016732614883413,-0.029464376218602678,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+60,Fusiform R,broad,0.4987424499427161,-0.04802240882638481,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+61,Postcentral L,broad,0.5089652223530561,0.019230958901304097,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+62,Postcentral R,broad,0.501021395732898,-0.024378629070044344,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+63,Parietal Sup L,broad,0.512344726312697,0.04127567395990938,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+64,Parietal Sup R,broad,0.4531712880857386,-0.430040077875476,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+65,Parietal Inf L,broad,0.5124358399291297,0.041515852522010704,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+66,Parietal Inf R,broad,0.5049385781089162,-0.021880178424343255,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+67,SupraMarginal L,broad,0.4846570253585736,-0.17347098239135517,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+68,SupraMarginal R,broad,0.4704579037115745,-0.2730271830242902,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+69,Angular L,broad,0.51210617017441,0.030855356469146424,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+70,Angular R,broad,0.488399428329531,-0.14057060605213434,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+71,Precuneus L,broad,0.49323973243889413,-0.1199239954346659,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+72,Precuneus R,broad,0.49305406088451015,-0.1024471427280601,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+73,Paracentral Lobule L,broad,0.5058161830124009,0.006220735364247524,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+74,Paracentral Lobule R,broad,0.5227685755982862,0.1316624260527497,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+75,Caudate L,broad,0.46640037885617186,-0.3321323359260107,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+76,Caudate R,broad,0.4731063416828029,-0.2743397641506087,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+77,Putamen L,broad,0.481153492980649,-0.20212883595114606,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+78,Putamen R,broad,0.5003074909550069,-0.06971082015557804,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+79,Pallidum L,broad,0.5043601019139669,-0.0289149069033651,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+80,Pallidum R,broad,0.501580419098126,-0.031650575185774237,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+83,Heschl L,broad,0.5263266544141402,0.14645552460193656,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+84,Heschl R,broad,0.5236351830845313,0.13612547073822776,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+85,Temporal Sup L,broad,0.5034994312984176,-0.03678518071791231,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+86,Temporal Sup R,broad,0.5035134323157381,-0.04229412168295855,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+87,Temporal Pole Sup L,broad,0.4933081401824229,-0.11685852872497889,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+88,Temporal Pole Sup R,broad,0.5248109631251153,0.1321969162409545,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+89,Temporal Mid L,broad,0.49428186422111375,-0.10381992051592774,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+90,Temporal Mid R,broad,0.505773261224906,-0.01268792667927345,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+91,Temporal Pole Mid L,broad,0.5120800126440723,0.04505863048611534,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+93,Temporal Inf L,broad,0.49879400319362505,-0.0704020203904727,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+94,Temporal Inf R,broad,0.5071036863378642,0.0027622618719496043,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+95,Cerebellum Crus1 L,broad,0.49466949640571617,-0.1074279155096051,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+96,Cerebellum Crus1 R,broad,0.5331709850548261,0.18268965420918348,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+97,Cerebellum Crus2 L,broad,0.490045929762947,-0.1308549278751091,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+98,Cerebellum Crus2 R,broad,0.5211412367810447,0.09665039197604583,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+101,Cerebellum 4 5 L,broad,0.5428256547085529,0.2688191949291098,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+102,Cerebellum 4 5 R,broad,0.5486448756494278,0.2975985139502268,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+103,Cerebellum 6 L,broad,0.5177890320631001,0.09167083262626283,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+104,Cerebellum 6 R,broad,0.4999076693772667,-0.08471588046857455,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+105,Cerebellum 7b L,broad,0.486873104909992,-0.15419120180269125,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+106,Cerebellum 7b R,broad,0.4959918701310775,-0.10416412561104828,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+107,Cerebellum 8 L,broad,0.496371293707437,-0.08756509445055585,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+108,Cerebellum 8 R,broad,0.4981490916733599,-0.08283979129691763,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+109,Cerebellum 9 L,broad,0.48304854311991263,-0.18045067069264328,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+110,Cerebellum 9 R,broad,0.48767565266477314,-0.14294179602619483,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+111,Cerebellum 10 L,broad,0.535895689268353,0.17836878731623118,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+118,Vermis 8,broad,0.5259947618711901,0.2020222781387459,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+119,Vermis 9,broad,0.49251267218345757,-0.06740285706713381,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+121,Thal AV L,broad,0.5220227960566357,0.08393537649016498,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+122,Thal AV R,broad,0.503147948314071,-0.05716967907498648,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+125,Thal VA L,broad,0.5228920380739639,0.10879611828534996,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+127,Thal VL L,broad,0.5099115152451582,0.002536289999696273,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+128,Thal VL R,broad,0.5281701056429762,0.17004775447127124,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+129,Thal VPL L,broad,0.5143902068362305,0.04140752974647369,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+130,Thal VPL R,broad,0.5306508287258311,0.14905069321222567,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+131,Thal IL L,broad,0.5479696702290494,0.3106347186737891,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+135,Thal MDm L,broad,0.44916020340461427,-0.48665822114873614,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+136,Thal MDm R,broad,0.5138013877603812,0.03984625344758474,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+137,Thal MDl L,broad,0.4961268226477405,-0.10783243852172779,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+139,Thal LGN L,broad,0.5335024543312892,0.18455252735455088,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+140,Thal LGN R,broad,0.5426463132109661,0.2826469139294604,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+141,Thal MGN L,broad,0.5650683616066453,0.43537881160571007,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+143,Thal PuI L,broad,0.5621284235664139,0.393936882330516,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+144,Thal PuI R,broad,0.5395538171419695,0.19697760133736925,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+145,Thal PuM L,broad,0.5317578706636388,0.16708537958534983,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+146,Thal PuM R,broad,0.5258686480335911,0.13528086530026998,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+147,Thal PuA L,broad,0.531359877078257,0.15835444220077047,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+148,Thal PuA R,broad,0.5112707166959396,0.029671827610169416,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+153,ACC pre L,broad,0.47538841464782033,-0.24819153466744984,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+154,ACC pre R,broad,0.5341722630339706,0.19567830377770276,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+155,ACC sup L,broad,0.4868926404980335,-0.14966064049249508,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+156,ACC sup R,broad,0.5121914833963584,0.028098985091937312,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+157,N Acc L,broad,0.5146252791058787,0.058776091937396,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+158,N Acc R,broad,0.5221471174722748,0.10940076266638099,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+161,SN pc L,broad,0.5333927649823768,0.2150461404425351,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+163,SN pr L,broad,0.5217205138112694,0.10453960551414487,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+164,SN pr R,broad,0.506596120319559,-0.029329290449779895,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+165,Red N L,broad,0.5057410903334201,-0.01921191125681512,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+166,Red N R,broad,0.5391685492813293,0.23906791098146515,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+167,LC L,broad,0.5028916291899079,-0.04058270528967686,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+168,LC R,broad,0.44578659196042403,-0.49460392631093586,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+169,Raphe D,broad,0.48667570855859754,-0.16015679969270114,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+170,Raphe M,broad,0.4951365355853581,-0.10269770898537768,raw_scale_analysis,gene_standardized_analysis,0.9953337657868796,primary raw-scale plus standardized sensitivity
+1,Precentral L,stringent,0.5030694380856986,-0.05627971098742088,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+2,Precentral R,stringent,0.48359543651986764,-0.20071663537806225,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+3,Frontal Sup 2 L,stringent,0.4996462733010145,-0.08944205662110394,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+4,Frontal Sup 2 R,stringent,0.5225453668714447,0.10480110836286735,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+5,Frontal Mid 2 L,stringent,0.504354455652558,-0.05383908191073005,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+6,Frontal Mid 2 R,stringent,0.501440216479564,-0.06436228469613679,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+7,Frontal Inf Oper L,stringent,0.5106954198594762,0.01920562879949593,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+8,Frontal Inf Oper R,stringent,0.47739130032476473,-0.24757080488522637,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+9,Frontal Inf Tri L,stringent,0.5189628396475071,0.05667604113281533,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+10,Frontal Inf Tri R,stringent,0.5045015055921557,-0.06692503831030534,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+11,Frontal Inf Orb 2 L,stringent,0.5310624687156228,0.14800138477993774,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+12,Frontal Inf Orb 2 R,stringent,0.5015060406500771,-0.0722891703075535,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+13,Rolandic Oper L,stringent,0.5079539802531288,-0.017308503559394294,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+14,Rolandic Oper R,stringent,0.5223310287442271,0.10189536433003521,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+15,Supp Motor Area L,stringent,0.48341689768649054,-0.2036648540354225,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+16,Supp Motor Area R,stringent,0.4941129022297777,-0.12086043950497605,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+17,Olfactory L,stringent,0.5063133604452564,-0.0035683490624732685,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+18,Olfactory R,stringent,0.483284869574119,-0.18387772895236593,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+19,Frontal Sup Medial L,stringent,0.5293170495402265,0.13270606165340126,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+20,Frontal Sup Medial R,stringent,0.5555028770567366,0.33813763339861297,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+21,Frontal Med Orb L,stringent,0.5405938406077917,0.2092266784341892,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+22,Frontal Med Orb R,stringent,0.5242620137846249,0.08862876351849336,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+23,Rectus L,stringent,0.5409130307266145,0.2295805695149858,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+24,Rectus R,stringent,0.5504113076320261,0.3012273031252703,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+25,OFCmed L,stringent,0.5220570993835694,0.06317032701833142,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+26,OFCmed R,stringent,0.528413716579961,0.12476874320883544,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+27,OFCant L,stringent,0.538561252691276,0.21808951698928472,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+28,OFCant R,stringent,0.5608844020404673,0.3813545539509926,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+29,OFCpost L,stringent,0.5065275731576991,-0.05614791452816692,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+30,OFCpost R,stringent,0.5273826329473204,0.15246606678269267,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+31,OFClat L,stringent,0.49030261401320147,-0.1401716299665883,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+32,OFClat R,stringent,0.5310809980025556,0.15836293815424596,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+33,Insula L,stringent,0.516592324061307,0.04053703616496484,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+34,Insula R,stringent,0.5154679614578374,0.02342271266828725,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+37,Cingulate Mid L,stringent,0.5196197365805495,0.07782699788482512,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+38,Cingulate Mid R,stringent,0.5039769800577384,-0.030817080955968076,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+39,Cingulate Post L,stringent,0.4970797445478053,-0.09330684207200604,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+41,Hippocampus L,stringent,0.5079767968269158,0.016502204259601295,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+42,Hippocampus R,stringent,0.4981820731338512,-0.019768788761043044,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+43,ParaHippocampal L,stringent,0.5248540976507485,0.1691848549313666,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+44,ParaHippocampal R,stringent,0.5071804138886602,0.01282161365227286,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+45,Amygdala L,stringent,0.5221942972977809,0.13807365000478325,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+46,Amygdala R,stringent,0.4809150015093703,-0.1571566614757256,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+47,Calcarine L,stringent,0.46731987815594805,-0.26841339720139873,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+48,Calcarine R,stringent,0.4675856224638023,-0.2710238163977986,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+49,Cuneus L,stringent,0.45744589659338775,-0.3668357711678369,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+51,Lingual L,stringent,0.46206852095288753,-0.30946052990752015,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+52,Lingual R,stringent,0.4605502311987073,-0.33877711602203936,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+53,Occipital Sup L,stringent,0.4810044032389963,-0.19879290289226947,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+55,Occipital Mid L,stringent,0.4945436999852951,-0.09102339313600115,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+56,Occipital Mid R,stringent,0.5040312360826681,-0.023469266398509457,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+57,Occipital Inf L,stringent,0.4969862860116823,-0.058683159638034235,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+58,Occipital Inf R,stringent,0.5031873650450988,-0.04415397218317212,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+59,Fusiform L,stringent,0.504198886499407,-0.009155492271716647,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+60,Fusiform R,stringent,0.49421178175538893,-0.07973087673398307,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+61,Postcentral L,stringent,0.5018516506193043,-0.04290458386317622,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+62,Postcentral R,stringent,0.48348256909661724,-0.1652414459216127,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+63,Parietal Sup L,stringent,0.4896079331921829,-0.12493903609823331,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+64,Parietal Sup R,stringent,0.422930469993673,-0.6561768198851635,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+65,Parietal Inf L,stringent,0.5063495948394686,-0.006695139907405865,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+66,Parietal Inf R,stringent,0.48340467002742643,-0.1634282471313572,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+67,SupraMarginal L,stringent,0.4874148737373016,-0.16142096093402794,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+68,SupraMarginal R,stringent,0.46826719767365854,-0.2906762969389941,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+69,Angular L,stringent,0.512080627248074,0.033307505189218316,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+70,Angular R,stringent,0.4773035371099889,-0.2173133593018773,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+71,Precuneus L,stringent,0.4790320370746552,-0.22239159110515266,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+72,Precuneus R,stringent,0.48495281742534274,-0.13694710165724655,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+73,Paracentral Lobule L,stringent,0.4838755674689472,-0.18794590315584092,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+74,Paracentral Lobule R,stringent,0.500189799791479,-0.04458956279296505,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+75,Caudate L,stringent,0.42403468256110527,-0.6125066547850283,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+76,Caudate R,stringent,0.41801611642590436,-0.6483540889399645,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+77,Putamen L,stringent,0.4494733662129226,-0.4158860985104757,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+78,Putamen R,stringent,0.4858166873226811,-0.14969795035201156,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+79,Pallidum L,stringent,0.5007762046882045,-0.030730468968793924,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+80,Pallidum R,stringent,0.5213915463680369,0.15068913992282504,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+83,Heschl L,stringent,0.5230523493214848,0.12123146036576304,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+84,Heschl R,stringent,0.5198797029328239,0.12357982679244009,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+85,Temporal Sup L,stringent,0.5084625212991627,-0.012009760849970788,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+86,Temporal Sup R,stringent,0.5027175608468436,-0.04030607469635946,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+87,Temporal Pole Sup L,stringent,0.49568686956309993,-0.11858539991316576,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+88,Temporal Pole Sup R,stringent,0.5287281131039654,0.1604208023225077,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+89,Temporal Mid L,stringent,0.501549484437007,-0.0416036396421726,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+90,Temporal Mid R,stringent,0.5152055221665219,0.058555016885449944,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+91,Temporal Pole Mid L,stringent,0.5254015904869334,0.14946142039404592,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+93,Temporal Inf L,stringent,0.504282829401801,-0.02987093286495585,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+94,Temporal Inf R,stringent,0.5229318451612299,0.12212997684459787,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+95,Cerebellum Crus1 L,stringent,0.494223228272953,-0.08933086419560386,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+96,Cerebellum Crus1 R,stringent,0.5010434569901221,-0.05194309800961866,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+97,Cerebellum Crus2 L,stringent,0.47115394431180907,-0.25666305460264915,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+98,Cerebellum Crus2 R,stringent,0.49810562882265935,-0.06020555426219286,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+101,Cerebellum 4 5 L,stringent,0.5345505872955645,0.19430204853841096,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+102,Cerebellum 4 5 R,stringent,0.5538036595318659,0.3576326284787891,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+103,Cerebellum 6 L,stringent,0.5105799023113541,0.03821522308233436,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+104,Cerebellum 6 R,stringent,0.48708910890683027,-0.1604116891040404,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+105,Cerebellum 7b L,stringent,0.4582109130637338,-0.34258310227749006,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+106,Cerebellum 7b R,stringent,0.43965821601362476,-0.4908960300511078,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+107,Cerebellum 8 L,stringent,0.47122526896372663,-0.269615722097062,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+108,Cerebellum 8 R,stringent,0.4854037085360568,-0.17038266773254496,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+109,Cerebellum 9 L,stringent,0.478813887575725,-0.19896401302439223,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+110,Cerebellum 9 R,stringent,0.45084508401898876,-0.4023924339063111,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+111,Cerebellum 10 L,stringent,0.5413487633918714,0.20226652334767453,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+118,Vermis 8,stringent,0.5868566681472899,0.5593285987126508,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+119,Vermis 9,stringent,0.5411642507824866,0.19763174089225505,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+121,Thal AV L,stringent,0.5230470932562943,0.07794589112050605,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+122,Thal AV R,stringent,0.5273923416270613,0.11007279765843477,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+125,Thal VA L,stringent,0.5488358448705258,0.30773490221863387,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+127,Thal VL L,stringent,0.527745707814233,0.12231687689274529,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+128,Thal VL R,stringent,0.5422980259981841,0.27206632160615674,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+129,Thal VPL L,stringent,0.526427539384017,0.10854953427738016,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+130,Thal VPL R,stringent,0.5379277802643792,0.16972275608915963,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+131,Thal IL L,stringent,0.5389113840770459,0.23536938295501167,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+135,Thal MDm L,stringent,0.47215150816843776,-0.30123084819439433,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+136,Thal MDm R,stringent,0.5406140576903392,0.2543479539779689,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+137,Thal MDl L,stringent,0.519156996414769,0.0225645366913274,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+139,Thal LGN L,stringent,0.5375261381922602,0.1803176802885673,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+140,Thal LGN R,stringent,0.5626922755937647,0.42630623227223957,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+141,Thal MGN L,stringent,0.5764023667200997,0.491381950014395,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+143,Thal PuI L,stringent,0.5656080088264694,0.3983113268447445,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+144,Thal PuI R,stringent,0.5557093813071374,0.3010760785121724,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+145,Thal PuM L,stringent,0.5542556513344211,0.3134767718834534,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+146,Thal PuM R,stringent,0.5498453396594511,0.30468330330270965,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+147,Thal PuA L,stringent,0.5606488250029142,0.39597512599026835,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+148,Thal PuA R,stringent,0.541371947453908,0.26354466840957147,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+153,ACC pre L,stringent,0.5071831296539171,-0.04536957563914754,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+154,ACC pre R,stringent,0.5332571165323438,0.14970468749686722,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+155,ACC sup L,stringent,0.5142145222359013,0.05813221131675034,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+156,ACC sup R,stringent,0.5147375341298693,0.019318932829772734,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+157,N Acc L,stringent,0.4981384763960006,-0.04671628712924621,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+158,N Acc R,stringent,0.46765980636553284,-0.25522228433302274,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+161,SN pc L,stringent,0.5493771890664433,0.30589789365483044,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+163,SN pr L,stringent,0.5357137751431874,0.20159684895185637,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+164,SN pr R,stringent,0.5447803686733518,0.259167608404947,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+165,Red N L,stringent,0.5318300123352301,0.15438524314039573,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+166,Red N R,stringent,0.5578878417006754,0.37022267132853426,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+167,LC L,stringent,0.5174491766039399,0.056951899002073286,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+168,LC R,stringent,0.46037868069869275,-0.38373648835090796,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+169,Raphe D,stringent,0.5054766700495343,-0.03891903161818337,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+170,Raphe M,stringent,0.49623461051796447,-0.08416461895620901,raw_scale_analysis,gene_standardized_analysis,0.9951146444387624,primary raw-scale plus standardized sensitivity
+1,Precentral L,weighted,0.510264498240624,0.019055788119594633,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+2,Precentral R,weighted,0.4979046609127798,-0.08000599076680993,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+3,Frontal Sup 2 L,weighted,0.5082875544897364,-0.0049125232744328265,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+4,Frontal Sup 2 R,weighted,0.5217156864461605,0.10445218526420508,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+5,Frontal Mid 2 L,weighted,0.5143074834781964,0.04337156903956455,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+6,Frontal Mid 2 R,weighted,0.4998994282871415,-0.06386439673109695,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+7,Frontal Inf Oper L,weighted,0.49124835878278744,-0.11993971126938244,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+8,Frontal Inf Oper R,weighted,0.48153527483049635,-0.21556448007250273,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+9,Frontal Inf Tri L,weighted,0.523117004392592,0.11215987358480028,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+10,Frontal Inf Tri R,weighted,0.5086275828422177,-0.00045877748200494984,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+11,Frontal Inf Orb 2 L,weighted,0.5280134148034401,0.14835325123954732,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+12,Frontal Inf Orb 2 R,weighted,0.5062063571320384,-0.02480208981753292,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+13,Rolandic Oper L,weighted,0.5176292080386723,0.06778211077955318,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+14,Rolandic Oper R,weighted,0.5274127358957064,0.14482643822241265,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+15,Supp Motor Area L,weighted,0.49156522283785475,-0.12624873297681924,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+16,Supp Motor Area R,weighted,0.5025613499510216,-0.04098782460650692,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+17,Olfactory L,weighted,0.4821965563935364,-0.18498952199055788,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+18,Olfactory R,weighted,0.4564085952022688,-0.37098003164596666,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+19,Frontal Sup Medial L,weighted,0.5235653998431317,0.11189620859506282,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+20,Frontal Sup Medial R,weighted,0.5459859669041388,0.27840844756068517,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+21,Frontal Med Orb L,weighted,0.5200376294530821,0.07356971857088082,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+22,Frontal Med Orb R,weighted,0.5428632873303476,0.252657228758442,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+23,Rectus L,weighted,0.5177959071206879,0.06943698384795989,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+24,Rectus R,weighted,0.5381080096216359,0.21836166294591164,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+25,OFCmed L,weighted,0.5090324422465626,-0.007980561631849114,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+26,OFCmed R,weighted,0.5303686770014988,0.15385174883526284,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+27,OFCant L,weighted,0.5242766472659193,0.12452759353762928,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+28,OFCant R,weighted,0.551196725191175,0.3237705806493601,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+29,OFCpost L,weighted,0.4932122637457843,-0.1320020609534692,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+30,OFCpost R,weighted,0.5217597883293427,0.11580927422943857,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+31,OFClat L,weighted,0.48632230344910027,-0.15996390205797148,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+32,OFClat R,weighted,0.5245729715847602,0.11447935900082626,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+33,Insula L,weighted,0.5109023629632566,0.014891799273692953,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+34,Insula R,weighted,0.503614872976474,-0.04372261066146974,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+37,Cingulate Mid L,weighted,0.5144311652212007,0.04847796174690256,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+38,Cingulate Mid R,weighted,0.5023367586975508,-0.03901127679889383,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+39,Cingulate Post L,weighted,0.49876830549245343,-0.08248717903450242,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+41,Hippocampus L,weighted,0.5146276024294286,0.07010472812400098,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+42,Hippocampus R,weighted,0.5039530351736257,0.01691234448647338,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+43,ParaHippocampal L,weighted,0.5036211474289123,0.004571367148474217,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+44,ParaHippocampal R,weighted,0.5179210242342579,0.09614712910050492,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+45,Amygdala L,weighted,0.526754198798641,0.15198428638449885,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+46,Amygdala R,weighted,0.48409738928894036,-0.16376650983554544,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+47,Calcarine L,weighted,0.48501752311188534,-0.13684637985687553,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+48,Calcarine R,weighted,0.4802345907575455,-0.18175595621825172,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+49,Cuneus L,weighted,0.48055117513176515,-0.18548467930063095,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+51,Lingual L,weighted,0.4777776879790196,-0.18961748089600805,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+52,Lingual R,weighted,0.47806527783194436,-0.2009951769614404,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+53,Occipital Sup L,weighted,0.5043159089651654,-0.011425963681449176,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+55,Occipital Mid L,weighted,0.5035786884490719,-0.0197926788516329,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+56,Occipital Mid R,weighted,0.520327036503315,0.10655437330479661,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+57,Occipital Inf L,weighted,0.504607587228048,-0.005753978538250042,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+58,Occipital Inf R,weighted,0.5111437051947447,0.029664890300204926,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+59,Fusiform L,weighted,0.5006485200448341,-0.034448025214112256,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+60,Fusiform R,weighted,0.49188960697341905,-0.09526117131676964,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+61,Postcentral L,weighted,0.5066625940241201,0.0004146067462598925,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+62,Postcentral R,weighted,0.4936612595516457,-0.08187447760548704,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+63,Parietal Sup L,weighted,0.5026394098130921,-0.029641985188349877,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+64,Parietal Sup R,weighted,0.4392928393734095,-0.5306102272181563,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+65,Parietal Inf L,weighted,0.5114722441940167,0.0363520310004885,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+66,Parietal Inf R,weighted,0.49365078935393825,-0.10158039404569962,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+67,SupraMarginal L,weighted,0.4861117183423972,-0.167331136390775,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+68,SupraMarginal R,weighted,0.46466788381953067,-0.3131007742197622,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+69,Angular L,weighted,0.5132726506274339,0.04378795227163015,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+70,Angular R,weighted,0.4860002672794375,-0.15686395237359435,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+71,Precuneus L,weighted,0.48997341096950314,-0.13580459435221562,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+72,Precuneus R,weighted,0.4857367149951781,-0.14756576852413114,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+73,Paracentral Lobule L,weighted,0.5024305976010289,-0.032901172834012685,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+74,Paracentral Lobule R,weighted,0.5133149393405714,0.053768483107103714,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+75,Caudate L,weighted,0.44683225364907675,-0.464262370718188,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+76,Caudate R,weighted,0.44814715754054624,-0.45053126167812274,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+77,Putamen L,weighted,0.4671196940290997,-0.2960220257357429,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+78,Putamen R,weighted,0.4973787721111945,-0.0706420287068251,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+79,Pallidum L,weighted,0.4974800887553992,-0.0688414669040728,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+80,Pallidum R,weighted,0.5000006452586223,-0.027702026574142443,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+83,Heschl L,weighted,0.526301305460568,0.15332425030316968,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+84,Heschl R,weighted,0.5160885290373954,0.0838250746893466,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+85,Temporal Sup L,weighted,0.5024099071610241,-0.04723556816680845,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+86,Temporal Sup R,weighted,0.5022632654960368,-0.04448698646336001,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+87,Temporal Pole Sup L,weighted,0.49486131277003714,-0.10772944050899237,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+88,Temporal Pole Sup R,weighted,0.5292948641931847,0.17302670324700306,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+89,Temporal Mid L,weighted,0.49605302579277927,-0.08369732069748659,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+90,Temporal Mid R,weighted,0.5079267156662716,0.006528825154054148,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+91,Temporal Pole Mid L,weighted,0.5150593922115161,0.0744529736212293,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+93,Temporal Inf L,weighted,0.5011692830585954,-0.047824571375293445,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+94,Temporal Inf R,weighted,0.5112457163612667,0.03370329707087778,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+95,Cerebellum Crus1 L,weighted,0.4919679628886286,-0.11497882289715815,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+96,Cerebellum Crus1 R,weighted,0.5221629538945339,0.11012418339716279,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+97,Cerebellum Crus2 L,weighted,0.4767164612426168,-0.21219357707156125,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+98,Cerebellum Crus2 R,weighted,0.5057922477355145,-0.005761750063680398,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+101,Cerebellum 4 5 L,weighted,0.5352320185483722,0.20607728373074977,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+102,Cerebellum 4 5 R,weighted,0.546460569928335,0.2878787160419337,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+103,Cerebellum 6 L,weighted,0.5098003105003065,0.03318000709206573,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+104,Cerebellum 6 R,weighted,0.48955910772397526,-0.14807995215658287,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+105,Cerebellum 7b L,weighted,0.4723463088976686,-0.2384176741974859,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+106,Cerebellum 7b R,weighted,0.4673181365836995,-0.2920580768597434,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+107,Cerebellum 8 L,weighted,0.4861338506812239,-0.15494841292607753,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+108,Cerebellum 8 R,weighted,0.493224825287667,-0.11177034410436663,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+109,Cerebellum 9 L,weighted,0.4735925573709019,-0.2370870047823464,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+110,Cerebellum 9 R,weighted,0.47425354355847515,-0.23384960206215272,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+111,Cerebellum 10 L,weighted,0.5403654845621307,0.19604629595792572,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+118,Vermis 8,weighted,0.5671194217937651,0.459856311558819,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+119,Vermis 9,weighted,0.5235319063820785,0.1129033339918604,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+121,Thal AV L,weighted,0.5267080462888307,0.12171218332913483,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+122,Thal AV R,weighted,0.5146483670730384,0.02950926957761918,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+125,Thal VA L,weighted,0.5273649483800221,0.15174311262307916,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+127,Thal VL L,weighted,0.5176426990528391,0.0650492697339286,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+128,Thal VL R,weighted,0.5335561285468248,0.21708873143060564,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+129,Thal VPL L,weighted,0.5159505854850184,0.04984298110878804,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+130,Thal VPL R,weighted,0.5371997716820919,0.18961713907575817,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+131,Thal IL L,weighted,0.5460547424570416,0.3077082835775113,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+135,Thal MDm L,weighted,0.4599017176047808,-0.3873647618113929,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+136,Thal MDm R,weighted,0.5197772706245656,0.10001286926378096,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+137,Thal MDl L,weighted,0.5046708617422002,-0.046084845664352524,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+139,Thal LGN L,weighted,0.5388801033099483,0.22018910630290345,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+140,Thal LGN R,weighted,0.5515590325476931,0.35050330468113394,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+141,Thal MGN L,weighted,0.5657313411498393,0.43023825936188087,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+143,Thal PuI L,weighted,0.5663553482550286,0.429833215945604,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+144,Thal PuI R,weighted,0.5455636151710573,0.24661027079783596,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+145,Thal PuM L,weighted,0.540701886255344,0.23626409623360434,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+146,Thal PuM R,weighted,0.5342954222319437,0.1974813297229146,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+147,Thal PuA L,weighted,0.5441006702683586,0.2714270998524303,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+148,Thal PuA R,weighted,0.5212724071707852,0.11578546792004103,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+153,ACC pre L,weighted,0.4883710567005035,-0.15811729632329816,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+154,ACC pre R,weighted,0.5374317381080879,0.20746489271021867,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+155,ACC sup L,weighted,0.49263060996040164,-0.10024728380386136,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+156,ACC sup R,weighted,0.5149994127458175,0.0471283762812338,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+157,N Acc L,weighted,0.5031468898661671,-0.017615709403174522,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+158,N Acc R,weighted,0.4910175942999074,-0.11321021180767345,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+161,SN pc L,weighted,0.5280617165386614,0.15443209206148023,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+163,SN pr L,weighted,0.5179242423186421,0.07673456957956203,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+164,SN pr R,weighted,0.5132594991311997,0.029598901530187356,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+165,Red N L,weighted,0.512219722084708,0.026717422749045514,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+166,Red N R,weighted,0.5382425356206847,0.23778047414831677,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+167,LC L,weighted,0.5094925738833807,0.013378869216215698,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+168,LC R,weighted,0.4488216529507471,-0.4579038583449181,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+169,Raphe D,weighted,0.48906460395931045,-0.14512936290256578,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity
+170,Raphe M,weighted,0.4942156147360091,-0.10104305054082882,raw_scale_analysis,gene_standardized_analysis,0.996650228930503,primary raw-scale plus standardized sensitivity

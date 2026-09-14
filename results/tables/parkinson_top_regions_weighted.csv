@@ -1,0 +1,26 @@
+rank,region,region_id,score,number_of_genes,interpretation
+1,Vermis 8,118,0.5671194217937651,123,observed Parkinson-associated gene expression
+2,Thal PuI L,143,0.5663553482550286,123,observed Parkinson-associated gene expression
+3,Thal MGN L,141,0.5657313411498393,123,observed Parkinson-associated gene expression
+4,Thal LGN R,140,0.5515590325476931,123,observed Parkinson-associated gene expression
+5,OFCant R,28,0.551196725191175,123,observed Parkinson-associated gene expression
+6,Cerebellum 4 5 R,102,0.546460569928335,123,observed Parkinson-associated gene expression
+7,Thal IL L,131,0.5460547424570416,123,observed Parkinson-associated gene expression
+8,Frontal Sup Medial R,20,0.5459859669041388,123,observed Parkinson-associated gene expression
+9,Thal PuI R,144,0.5455636151710573,123,observed Parkinson-associated gene expression
+10,Thal PuA L,147,0.5441006702683586,123,observed Parkinson-associated gene expression
+11,Frontal Med Orb R,22,0.5428632873303476,123,observed Parkinson-associated gene expression
+12,Thal PuM L,145,0.540701886255344,123,observed Parkinson-associated gene expression
+13,Cerebellum 10 L,111,0.5403654845621307,123,observed Parkinson-associated gene expression
+14,Thal LGN L,139,0.5388801033099483,123,observed Parkinson-associated gene expression
+15,Red N R,166,0.5382425356206847,123,observed Parkinson-associated gene expression
+16,Rectus R,24,0.5381080096216359,123,observed Parkinson-associated gene expression
+17,ACC pre R,154,0.5374317381080879,123,observed Parkinson-associated gene expression
+18,Thal VPL R,130,0.5371997716820919,123,observed Parkinson-associated gene expression
+19,Cerebellum 4 5 L,101,0.5352320185483722,123,observed Parkinson-associated gene expression
+20,Thal PuM R,146,0.5342954222319437,123,observed Parkinson-associated gene expression
+21,Thal VL R,128,0.5335561285468248,123,observed Parkinson-associated gene expression
+22,OFCmed R,26,0.5303686770014988,123,observed Parkinson-associated gene expression
+23,Temporal Pole Sup R,88,0.5292948641931847,123,observed Parkinson-associated gene expression
+24,SN pc L,161,0.5280617165386614,123,observed Parkinson-associated gene expression
+25,Frontal Inf Orb 2 L,11,0.5280134148034401,123,observed Parkinson-associated gene expression

@@ -1,0 +1,26 @@
+rank,region,region_id,score,number_of_genes,interpretation
+1,Vermis 8,118,0.5868566681472899,34,observed Parkinson-associated gene expression
+2,Thal MGN L,141,0.5764023667200997,34,observed Parkinson-associated gene expression
+3,Thal PuI L,143,0.5656080088264694,34,observed Parkinson-associated gene expression
+4,Thal LGN R,140,0.5626922755937647,34,observed Parkinson-associated gene expression
+5,OFCant R,28,0.5608844020404673,34,observed Parkinson-associated gene expression
+6,Thal PuA L,147,0.5606488250029142,34,observed Parkinson-associated gene expression
+7,Red N R,166,0.5578878417006754,34,observed Parkinson-associated gene expression
+8,Thal PuI R,144,0.5557093813071374,34,observed Parkinson-associated gene expression
+9,Frontal Sup Medial R,20,0.5555028770567366,34,observed Parkinson-associated gene expression
+10,Thal PuM L,145,0.5542556513344211,34,observed Parkinson-associated gene expression
+11,Cerebellum 4 5 R,102,0.5538036595318659,34,observed Parkinson-associated gene expression
+12,Rectus R,24,0.5504113076320261,34,observed Parkinson-associated gene expression
+13,Thal PuM R,146,0.5498453396594511,34,observed Parkinson-associated gene expression
+14,SN pc L,161,0.5493771890664433,34,observed Parkinson-associated gene expression
+15,Thal VA L,125,0.5488358448705258,34,observed Parkinson-associated gene expression
+16,SN pr R,164,0.5447803686733518,34,observed Parkinson-associated gene expression
+17,Thal VL R,128,0.5422980259981841,34,observed Parkinson-associated gene expression
+18,Thal PuA R,148,0.541371947453908,34,observed Parkinson-associated gene expression
+19,Cerebellum 10 L,111,0.5413487633918714,34,observed Parkinson-associated gene expression
+20,Vermis 9,119,0.5411642507824866,34,observed Parkinson-associated gene expression
+21,Rectus L,23,0.5409130307266145,34,observed Parkinson-associated gene expression
+22,Thal MDm R,136,0.5406140576903392,34,observed Parkinson-associated gene expression
+23,Frontal Med Orb L,21,0.5405938406077917,34,observed Parkinson-associated gene expression
+24,Thal IL L,131,0.5389113840770459,34,observed Parkinson-associated gene expression
+25,OFCant L,27,0.538561252691276,34,observed Parkinson-associated gene expression

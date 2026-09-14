@@ -247,5 +247,104 @@ class ParkinsonLocusToGeneArtifactTests(unittest.TestCase):
         self.assertTrue(coverage["coverage_percentage"].between(0, 100).all())
 
 
+class ParkinsonSpatialSignalArtifactTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.result_data = ROOT / "data" / "results"
+        cls.tables = ROOT / "results" / "tables"
+        cls.brain_maps = ROOT / "results" / "brain_maps"
+        cls.raw = pd.read_csv(cls.result_data / "parkinson_regional_raw_scores.csv")
+        cls.expression = pd.read_csv(PROCESSED / "brain_region_gene_expression.csv", index_col="region_id")
+        cls.weighted_genes = pd.read_csv(ROOT / "data" / "genes" / "parkinson_genes_weighted.csv")
+
+    def test_required_stage_05_outputs_exist(self) -> None:
+        required = [
+            self.result_data / "parkinson_regional_raw_scores.csv",
+            self.result_data / "parkinson_gene_match_audit.csv",
+            self.result_data / "parkinson_top_region_gene_contributions.csv",
+            self.result_data / "parkinson_donor_regional_scores.csv",
+            self.result_data / "parkinson_donor_pattern_correlations.csv",
+            self.result_data / "parkinson_score_method_correlations.csv",
+            self.result_data / "parkinson_expression_scale_sensitivity.csv",
+            ROOT / "reports" / "stage_05_methods.md",
+            self.tables / "parkinson_top_regions_broad.csv",
+            self.tables / "parkinson_top_regions_stringent.csv",
+            self.tables / "parkinson_top_regions_weighted.csv",
+            self.brain_maps / "stage_05_parkinson_broad_expression.png",
+            self.brain_maps / "stage_05_parkinson_stringent_expression.png",
+            self.brain_maps / "stage_05_parkinson_weighted_expression.png",
+            FIGURES / "stage_05_parkinson_top_regions.png",
+            FIGURES / "stage_05_parkinson_donor_concordance.png",
+            FIGURES / "stage_05_parkinson_gene_contributions.png",
+            FIGURES / "stage_05_parkinson_method_comparison.png",
+        ]
+        missing = [str(path.relative_to(ROOT)) for path in required if not path.is_file()]
+        self.assertEqual(missing, [], f"Missing Stage 5 files: {missing}")
+
+    def test_primary_scores_have_expected_dimensions_and_scale(self) -> None:
+        self.assertEqual(len(self.raw), 138)
+        self.assertTrue(self.raw["region_id"].is_unique)
+        self.assertEqual(set(self.raw["analysis_scale"]), {"raw_scale_analysis"})
+        score_columns = [
+            "broad_mean_expression", "stringent_mean_expression", "weighted_mean_expression"
+        ]
+        self.assertTrue(np.isfinite(self.raw[score_columns].to_numpy()).all())
+        self.assertTrue(self.raw[score_columns].apply(lambda x: x.between(0, 1).all()).all())
+        self.assertEqual(set(self.raw["n_broad_genes_present"]), {123})
+        self.assertEqual(set(self.raw["n_stringent_genes_present"]), {34})
+        self.assertEqual(set(self.raw["n_weighted_genes_present"]), {123})
+
+    def test_weighted_formula_is_reproducible(self) -> None:
+        weights = self.weighted_genes.set_index("gene")["gene_weight"]
+        genes = [gene for gene in weights.index if gene in self.expression.columns]
+        expected = self.expression[genes].mul(weights.loc[genes], axis=1).sum(axis=1) / weights.loc[genes].sum()
+        observed = self.raw.set_index("region_id")["weighted_mean_expression"]
+        self.assertTrue(np.allclose(expected.sort_index(), observed.sort_index()))
+
+    def test_rankings_are_descending_and_match_primary_scores(self) -> None:
+        mapping = {
+            "broad": "broad_mean_expression",
+            "stringent": "stringent_mean_expression",
+            "weighted": "weighted_mean_expression",
+        }
+        raw = self.raw.set_index("region_id")
+        for method, column in mapping.items():
+            ranking = pd.read_csv(self.tables / f"parkinson_top_regions_{method}.csv")
+            self.assertEqual(len(ranking), 25)
+            self.assertEqual(ranking["rank"].tolist(), list(range(1, 26)))
+            self.assertTrue(ranking["score"].is_monotonic_decreasing)
+            self.assertTrue(np.allclose(ranking["score"], raw.loc[ranking["region_id"], column]))
+
+    def test_contributions_sum_to_weighted_scores(self) -> None:
+        contributions = pd.read_csv(
+            self.result_data / "parkinson_top_region_gene_contributions.csv"
+        )
+        grouped = contributions.groupby("region_id")
+        self.assertEqual(grouped.ngroups, 10)
+        self.assertTrue(np.allclose(grouped["weighted_contribution"].sum(), grouped["regional_weighted_score"].first()))
+        self.assertTrue(np.allclose(grouped["normalized_contribution"].sum(), 1.0))
+
+    def test_donor_and_sensitivity_outputs_are_complete(self) -> None:
+        donor = pd.read_csv(self.result_data / "parkinson_donor_regional_scores.csv")
+        correlations = pd.read_csv(self.result_data / "parkinson_donor_pattern_correlations.csv")
+        self.assertEqual(donor["donor"].nunique(), 6)
+        self.assertEqual(len(donor), 6 * 138)
+        self.assertEqual(len(correlations), 3 * 15)
+        self.assertTrue(correlations["pearson_r"].between(-1, 1).all())
+        sensitivity = pd.read_csv(self.result_data / "parkinson_expression_scale_sensitivity.csv")
+        self.assertEqual(len(sensitivity), 3 * 138)
+        self.assertEqual(set(sensitivity["method"]), {"broad", "stringent", "weighted"})
+        self.assertEqual(set(sensitivity["raw_scale_label"]), {"raw_scale_analysis"})
+        self.assertEqual(set(sensitivity["standardized_scale_label"]), {"gene_standardized_analysis"})
+
+    def test_method_correlations_are_symmetric(self) -> None:
+        correlations = pd.read_csv(
+            self.result_data / "parkinson_score_method_correlations.csv", index_col="method"
+        )
+        self.assertEqual(correlations.shape, (3, 3))
+        self.assertTrue(np.allclose(correlations, correlations.T))
+        self.assertTrue(np.allclose(np.diag(correlations), 1.0))
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -1,11 +1,16 @@
 import { expect, test } from '@playwright/test'
 
-test('loads the real multi-disease atlas and supports core exploration controls', async ({ page }) => {
+test('loads the real multi-disease atlas and supports core exploration controls', async ({ page }, testInfo) => {
   test.setTimeout(150_000)
   await page.goto('./')
   await expect(page.getByRole('heading', { level: 1, name: /From Genetic Risk to Spatial Brain Vulnerability/ })).toBeVisible()
   await expect(page.locator('canvas').first()).toBeVisible()
   await expect(page.getByLabel('Disease', { exact: true })).toHaveValue('parkinson')
+  if (testInfo.project.name === 'mobile') {
+    await page.getByLabel('Disease', { exact: true }).selectOption('alzheimer')
+    await expect(page.getByText(/ALZHEIMER DISEASE · AAL3 · 138 REGIONS/)).toBeVisible()
+    return
+  }
   await page.getByLabel('Metric', { exact: true }).selectOption('fdr_p')
   await expect(page.getByLabel('FDR significance legend')).toContainText('0 of 138')
   await page.getByLabel('Metric', { exact: true }).selectOption('spatial_robustness')

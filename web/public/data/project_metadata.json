@@ -72,6 +72,20 @@
       "interpretation": "NOT SUPPORTED",
       "independence_note": "Independent measurement and analysis; exact participant-disjointness from the upstream GWAS cannot be guaranteed",
       "substantia_nigra": "Not measured in the public ENIGMA-PD FreeSurfer tables"
+    },
+    "biological_interpretation": {
+      "status": "post-hoc interpretation of frozen discovery outputs",
+      "primary_gene_set": "Stage 4 L2G-weighted",
+      "genes_analyzed": 149,
+      "genes_represented_in_ahba": 123,
+      "background": "15,632 genes retained in the Stage 2 AHBA matrix",
+      "go_significant_terms": 6,
+      "reactome_significant_pathways": 0,
+      "ranked_significant_pathways": 0,
+      "cell_types_significant": 0,
+      "supported_region_pathway_rows": 3,
+      "region_rule": "top 10 by frozen Stage 7 robustness rank",
+      "interpretation_note": "Enrichment and cell-type associations do not establish causality, pathology, pathway activation, or clinical utility"
     }
   },
   "metrics": {
@@ -168,6 +182,26 @@
     {
       "name": "ENIGMA Toolbox summary statistics",
       "url": "https://enigma-toolbox.readthedocs.io/en/latest/pages/04.loadsumstats/"
+    },
+    {
+      "name": "g:Profiler functional enrichment",
+      "url": "https://biit.cs.ut.ee/gprofiler/"
+    },
+    {
+      "name": "Gene Ontology",
+      "url": "https://geneontology.org/"
+    },
+    {
+      "name": "Reactome release 97",
+      "url": "https://reactome.org/"
+    },
+    {
+      "name": "WikiPathways September 2026",
+      "url": "https://data.wikipathways.org/current/gmt/"
+    },
+    {
+      "name": "Human Protein Atlas v25.1 single-nucleus brain",
+      "url": "https://www.proteinatlas.org/humanproteome/single+cell/single+nuclei+brain/data"
     }
   ]
 }

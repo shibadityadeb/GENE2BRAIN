@@ -21,7 +21,9 @@ function NullSummary({ region }: { region: RegionRecord }) {
 
 export function RegionPanel({ region, threshold, onClose }: { region: RegionRecord; threshold: number; onClose: () => void }) {
   const [showNull, setShowNull] = useState(false)
+  const [showWhy, setShowWhy] = useState(false)
   const direction = region.z_score > 0 ? 'above' : region.z_score < 0 ? 'below' : 'at'
+  const biology = region.biology
   return (
     <aside className="region-panel" aria-live="polite" aria-label={`Details for ${region.region_name}`}>
       <button className="close-panel" onClick={onClose} aria-label="Close region details">×</button>
@@ -56,8 +58,50 @@ export function RegionPanel({ region, threshold, onClose }: { region: RegionReco
         <div><span>Mapping confidence</span><strong>{region.validation_mapping_confidence ?? 'N/A'}</strong></div>
       </div>
       <p className="caution">The ENIGMA-PD score is external to the discovery model. Higher values mean thinner cortex or smaller subcortical volume in PD; N/A means the phenotype did not measure this AAL3 parcel.</p>
+      <h3 className="panel-section-title">Stage 9 · Biological interpretation</h3>
+      {biology?.top_genes.length ? (
+        <>
+          <p className="biology-rule">Top weighted contributors</p>
+          <ol className="biology-list">
+            {biology.top_genes.map((item) => (
+              <li key={item.gene}><strong>{item.gene}</strong><span>contribution {formatValue(item.weighted_contribution, 4)}</span></li>
+            ))}
+          </ol>
+          <p className="biology-rule">Associated biological programs</p>
+          {biology.pathways.length ? (
+            <ul className="biology-list plain">
+              {biology.pathways.map((pathway) => <li key={pathway.id}><strong>{pathway.name}</strong><span>regional FDR {formatValue(pathway.fdr, 4)}</span></li>)}
+            </ul>
+          ) : <p className="caution">No region-specific Reactome pathway survived the prespecified regional FDR analysis{biology.selected_for_regional_interpretation ? '.' : '; this parcel was not in the frozen top-10 interpretation set.'}</p>}
+          <p className="biology-rule">Cell-type enrichment</p>
+          {biology.cell_types.length ? (
+            <ul className="biology-list plain">
+              {biology.cell_types.map((cell) => <li key={cell.name}><strong>{cell.name}</strong><span>FDR {formatValue(cell.fdr, 4)}</span></li>)}
+            </ul>
+          ) : <p className="caution">No human-brain cell-type enrichment survived correction for the primary weighted gene set.</p>}
+        </>
+      ) : <p className="caution">Biological interpretation is unavailable for this parcel.</p>}
       <p className="interpretation">The observed Parkinson-associated gene-expression score is {formatValue(Math.abs(region.z_score))} standard deviations {direction} the matched gene-set expectation. It {region.fdr_p < threshold ? 'meets' : 'does not meet'} the project’s FDR threshold.</p>
       <p className="caution">This does not indicate where Parkinson disease occurs or establish a causal brain region.</p>
+      <button className="why-button" onClick={() => setShowWhy((visible) => !visible)} aria-expanded={showWhy}>
+        {showWhy ? 'Hide explanation' : 'Why is this region highlighted?'}
+      </button>
+      {showWhy && (
+        <section className="why-panel" aria-label="Why this region is highlighted">
+          <h3>Why is this region highlighted?</h3>
+          <ol>
+            <li><span>Parkinson genes represented</span><strong>{region.number_of_genes}</strong></li>
+            <li><span>Regional expression</span><strong>{formatValue(region.observed_score, 4)}</strong></li>
+            <li><span>Random-set expectation</span><strong>{formatValue(region.random_mean, 4)}</strong></li>
+            <li><span>Enrichment Z</span><strong>{formatValue(region.z_score)}</strong></li>
+            <li><span>FDR q-value</span><strong>{formatValue(region.fdr_p, 4)}</strong></li>
+          </ol>
+          <p><strong>Top contributing genes:</strong> {biology?.top_genes.map((item) => item.gene).join(', ') || 'not available'}</p>
+          <p><strong>Biological programs:</strong> {biology?.pathways.map((item) => item.name).join('; ') || 'no robust region-specific enrichment detected'}</p>
+          <p><strong>Independent validation:</strong> {region.validation_score === null ? 'not measured for this parcel' : `ENIGMA score ${formatValue(region.validation_score)}; overall Stage 8 result NOT SUPPORTED`}</p>
+          <p className="caution"><strong>Evidence:</strong> expression, null statistics, L2G weights and validation values. <strong>Interpretation:</strong> pathway and cell-type annotations. Neither establishes causality.</p>
+        </section>
+      )}
       <button className="outline-button" onClick={() => setShowNull((visible) => !visible)} aria-expanded={showNull}>
         {showNull ? 'Hide null summary' : 'Show null distribution'}
       </button>

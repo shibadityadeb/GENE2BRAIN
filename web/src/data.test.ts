@@ -11,6 +11,7 @@ const region: RegionRecord = {
   spatial_robustness_label: 'not_robust', robustness_rank: 4, spatial_isolate: false,
   validation_score: 0.136, validation_region: 'Lput', validation_mapping_confidence: 'high',
   agreement_status: 'high_prediction_high_validation',
+  biology: null,
 }
 const enrichment = { regions: [region] } as EnrichmentData
 const geometry = { regions: [{ region_id: 77, positions: [0, 0, 0], indices: [0], voxel_count: 1 }] } as AtlasGeometry

@@ -1,4 +1,4 @@
-import type { AtlasGeometry, EnrichmentData, ProjectMetadata, RegionRecord } from './types'
+import type { AtlasGeometry, BiologicalInterpretationData, EnrichmentData, ProjectMetadata, RegionRecord } from './types'
 
 const DATA_ROOT = './data'
 
@@ -9,12 +9,18 @@ async function fetchJson<T>(name: string): Promise<T> {
 }
 
 export async function loadResearchData() {
-  const [enrichment, metadata, geometry] = await Promise.all([
+  const [enrichment, metadata, geometry, biology] = await Promise.all([
     fetchJson<EnrichmentData>('parkinson_brain_enrichment.json'),
     fetchJson<ProjectMetadata>('project_metadata.json'),
     fetchJson<AtlasGeometry>('aal3_regions.json'),
+    fetchJson<BiologicalInterpretationData>('parkinson_biological_interpretation.json'),
   ])
-  validateClientData(enrichment, metadata, geometry)
+  const biologyByRegion = new Map(biology.regions.map((record) => [record.region_id, record]))
+  enrichment.regions = enrichment.regions.map((region) => ({
+    ...region,
+    biology: biologyByRegion.get(region.region_id) ?? null,
+  }))
+  validateClientData(enrichment, metadata, geometry, biology)
   return { enrichment, metadata, geometry }
 }
 
@@ -22,6 +28,7 @@ export function validateClientData(
   enrichment: EnrichmentData,
   metadata: ProjectMetadata,
   geometry: AtlasGeometry,
+  biology?: BiologicalInterpretationData,
 ) {
   const recordIds = enrichment.regions.map((region) => region.region_id)
   const geometryIds = geometry.regions.map((region) => region.region_id)
@@ -50,6 +57,18 @@ export function validateClientData(
   })
   if (!(metadata.analysis.fdr_threshold > 0 && metadata.analysis.fdr_threshold < 1)) {
     throw new Error('Invalid configured FDR threshold')
+  }
+  if (biology) {
+    const biologyIds = biology.regions.map((record) => record.region_id)
+    if (new Set(biologyIds).size !== biologyIds.length) throw new Error('Duplicate biological interpretation region IDs')
+    if (biologyIds.some((id) => !recordIds.includes(id))) throw new Error('Biological interpretation includes an unknown region')
+    biology.regions.forEach((record) => {
+      record.top_genes.forEach((gene) => {
+        if (![gene.expression, gene.l2g_score, gene.weighted_contribution].every(Number.isFinite)) {
+          throw new Error(`Invalid biological gene value for region ${record.region_id}`)
+        }
+      })
+    })
   }
 }
 

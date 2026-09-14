@@ -1,0 +1,103 @@
+gene_set,cell_type,marker_source,overlap,gene_count,background_count,effect_size,p_value,genes,fdr
+broad,upper rhombic lip,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,5,123,200,3.177235772357723,0.020942679052686854,PRSS3;RIMS1;RIT2;SH3GL2;TMEM163,0.49795976270070497
+broad,LAMP5-LHX6 and Chandelier,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,4,123,200,2.541788617886179,0.07322937686775073,ITGA8;PKP2;SV2C;TOX3,0.49795976270070497
+broad,committed oligodendrocyte precursor,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,4,123,200,2.541788617886179,0.07322937686775073,FYN;GPNMB;SLC45A3;TMEM163,0.49795976270070497
+broad,pericyte,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,4,123,200,2.541788617886179,0.07322937686775073,CD38;COX4I2;FOXS1;PDLIM2,0.49795976270070497
+broad,thalamic excitatory,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,4,123,200,2.541788617886179,0.07322937686775073,SV2C;TMEM163;TOX3;WNT3,0.49795976270070497
+broad,CGE interneuron,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,3,123,200,1.906341463414634,0.20870589186640964,B3GALT1;PKP2;TOX3,0.6450909384961753
+broad,astrocyte,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,3,123,200,1.906341463414634,0.20870589186640964,ACBD7;CD38;ITPKB,0.6450909384961753
+broad,endothelial cell,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,3,123,200,1.906341463414634,0.20870589186640964,ELOVL7;MYLK2;PARP9,0.6450909384961753
+broad,mammillary body,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,3,123,200,1.906341463414634,0.20870589186640964,RIT2;SNCA;STBD1,0.6450909384961753
+broad,midbrain-derived inhibitory,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,3,123,200,1.906341463414634,0.20870589186640964,SIPA1L2;SV2C;TOX3,0.6450909384961753
+broad,vascular associated smooth muscle cell,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,3,123,200,1.906341463414634,0.20870589186640964,COX4I2;FOXS1;ITGA8,0.6450909384961753
+broad,Bergmann glia,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,2,123,200,1.2708943089430895,0.4684625156654904,ACBD7;WNT3,0.6925098057663771
+broad,amygdala excitatory,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,2,123,200,1.2708943089430895,0.4684625156654904,ASXL3;TOX3,0.6925098057663771
+broad,central nervous system macrophage,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,2,123,200,1.2708943089430895,0.4684625156654904,FCGR2A;P2RY12,0.6925098057663771
+broad,cerebellar inhibitory,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,2,123,200,1.2708943089430895,0.4684625156654904,FASN;RORA,0.6925098057663771
+broad,choroid plexus epithelial cell,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,2,123,200,1.2708943089430895,0.4684625156654904,ITPKB;STK39,0.6925098057663771
+broad,deep-layer corticothalamic and 6b,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,2,123,200,1.2708943089430895,0.4684625156654904,ASXL3;SH3GL2,0.6925098057663771
+broad,deep-layer intratelencephalic,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,2,123,200,1.2708943089430895,0.4684625156654904,PRSS3;SH3GL2,0.6925098057663771
+broad,deep-layer near-projecting,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,2,123,200,1.2708943089430895,0.4684625156654904,ASXL3;ITGA8,0.6925098057663771
+broad,eccentric medium spiny neuron,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,2,123,200,1.2708943089430895,0.4684625156654904,B3GALT1;SV2C,0.6925098057663771
+broad,fibroblast,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,2,123,200,1.2708943089430895,0.4684625156654904,GPNMB;PKP2,0.6925098057663771
+broad,hippocampal CA1-3,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,2,123,200,1.2708943089430895,0.4684625156654904,CCSER1;ITGA8,0.6925098057663771
+broad,oligodendrocyte precursor cell,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,2,123,200,1.2708943089430895,0.4684625156654904,HIP1R;LRRK2,0.6925098057663771
+broad,MGE interneuron,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,1,123,200,0.6354471544715448,0.79609524216584,TOX3,0.9022412744546188
+broad,hippocampal CA4,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,1,123,200,0.6354471544715448,0.79609524216584,RIMS1,0.9022412744546188
+broad,leukocyte,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,1,123,200,0.6354471544715448,0.79609524216584,SNX20,0.9022412744546188
+broad,medium spiny neuron,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,1,123,200,0.6354471544715448,0.79609524216584,SV2C,0.9022412744546188
+broad,miscellaneous,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,1,123,200,0.6354471544715448,0.79609524216584,RIT2,0.9022412744546188
+broad,oligodendrocyte,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,1,123,200,0.6354471544715448,0.79609524216584,SLC45A3,0.9022412744546188
+broad,upper-layer intratelencephalic,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,1,123,200,0.6354471544715448,0.79609524216584,ASXL3,0.9022412744546188
+broad,ependymal cell,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,0,123,200,0.0,1.0,,1.0
+broad,hippocampal dentate gyrus,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,0,123,200,0.0,1.0,,1.0
+broad,lower rhombic lip,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,0,123,200,0.0,1.0,,1.0
+broad,splatter,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,0,123,186,0.0,1.0,,1.0
+stringent,upper rhombic lip,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,4,34,200,9.195294117647059,0.0008928107458844675,RIMS1;RIT2;SH3GL2;TMEM163,0.030355565360071897
+stringent,committed oligodendrocyte precursor,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,3,34,200,6.896470588235294,0.00922264042744695,FYN;GPNMB;TMEM163,0.15678488726659814
+stringent,CGE interneuron,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,2,34,200,4.597647058823529,0.06996492590365143,PKP2;TOX3,0.23788074807241485
+stringent,LAMP5-LHX6 and Chandelier,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,2,34,200,4.597647058823529,0.06996492590365143,PKP2;TOX3,0.23788074807241485
+stringent,amygdala excitatory,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,2,34,200,4.597647058823529,0.06996492590365143,ASXL3;TOX3,0.23788074807241485
+stringent,choroid plexus epithelial cell,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,2,34,200,4.597647058823529,0.06996492590365143,ITPKB;STK39,0.23788074807241485
+stringent,deep-layer corticothalamic and 6b,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,2,34,200,4.597647058823529,0.06996492590365143,ASXL3;SH3GL2,0.23788074807241485
+stringent,fibroblast,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,2,34,200,4.597647058823529,0.06996492590365143,GPNMB;PKP2,0.23788074807241485
+stringent,midbrain-derived inhibitory,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,2,34,200,4.597647058823529,0.06996492590365143,SIPA1L2;TOX3,0.23788074807241485
+stringent,thalamic excitatory,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,2,34,200,4.597647058823529,0.06996492590365143,TMEM163;TOX3,0.23788074807241485
+stringent,MGE interneuron,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,1,34,200,2.2988235294117647,0.3548533669980777,TOX3,0.5484097489970291
+stringent,astrocyte,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,1,34,200,2.2988235294117647,0.3548533669980777,ITPKB,0.5484097489970291
+stringent,central nervous system macrophage,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,1,34,200,2.2988235294117647,0.3548533669980777,FCGR2A,0.5484097489970291
+stringent,deep-layer intratelencephalic,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,1,34,200,2.2988235294117647,0.3548533669980777,SH3GL2,0.5484097489970291
+stringent,deep-layer near-projecting,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,1,34,200,2.2988235294117647,0.3548533669980777,ASXL3,0.5484097489970291
+stringent,endothelial cell,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,1,34,200,2.2988235294117647,0.3548533669980777,ELOVL7,0.5484097489970291
+stringent,hippocampal CA1-3,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,1,34,200,2.2988235294117647,0.3548533669980777,CCSER1,0.5484097489970291
+stringent,hippocampal CA4,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,1,34,200,2.2988235294117647,0.3548533669980777,RIMS1,0.5484097489970291
+stringent,mammillary body,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,1,34,200,2.2988235294117647,0.3548533669980777,RIT2,0.5484097489970291
+stringent,miscellaneous,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,1,34,200,2.2988235294117647,0.3548533669980777,RIT2,0.5484097489970291
+stringent,oligodendrocyte precursor cell,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,1,34,200,2.2988235294117647,0.3548533669980777,HIP1R,0.5484097489970291
+stringent,upper-layer intratelencephalic,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,1,34,200,2.2988235294117647,0.3548533669980777,ASXL3,0.5484097489970291
+stringent,Bergmann glia,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,0,34,200,0.0,1.0,,1.0
+stringent,cerebellar inhibitory,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,0,34,200,0.0,1.0,,1.0
+stringent,eccentric medium spiny neuron,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,0,34,200,0.0,1.0,,1.0
+stringent,ependymal cell,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,0,34,200,0.0,1.0,,1.0
+stringent,hippocampal dentate gyrus,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,0,34,200,0.0,1.0,,1.0
+stringent,leukocyte,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,0,34,200,0.0,1.0,,1.0
+stringent,lower rhombic lip,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,0,34,200,0.0,1.0,,1.0
+stringent,medium spiny neuron,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,0,34,200,0.0,1.0,,1.0
+stringent,oligodendrocyte,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,0,34,200,0.0,1.0,,1.0
+stringent,pericyte,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,0,34,200,0.0,1.0,,1.0
+stringent,splatter,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,0,34,186,0.0,1.0,,1.0
+stringent,vascular associated smooth muscle cell,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,0,34,200,0.0,1.0,,1.0
+weighted,upper rhombic lip,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,5,123,200,3.177235772357723,0.020942679052686854,PRSS3;RIMS1;RIT2;SH3GL2;TMEM163,0.49795976270070497
+weighted,LAMP5-LHX6 and Chandelier,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,4,123,200,2.541788617886179,0.07322937686775073,ITGA8;PKP2;SV2C;TOX3,0.49795976270070497
+weighted,committed oligodendrocyte precursor,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,4,123,200,2.541788617886179,0.07322937686775073,FYN;GPNMB;SLC45A3;TMEM163,0.49795976270070497
+weighted,pericyte,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,4,123,200,2.541788617886179,0.07322937686775073,CD38;COX4I2;FOXS1;PDLIM2,0.49795976270070497
+weighted,thalamic excitatory,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,4,123,200,2.541788617886179,0.07322937686775073,SV2C;TMEM163;TOX3;WNT3,0.49795976270070497
+weighted,CGE interneuron,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,3,123,200,1.906341463414634,0.20870589186640964,B3GALT1;PKP2;TOX3,0.6450909384961753
+weighted,astrocyte,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,3,123,200,1.906341463414634,0.20870589186640964,ACBD7;CD38;ITPKB,0.6450909384961753
+weighted,endothelial cell,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,3,123,200,1.906341463414634,0.20870589186640964,ELOVL7;MYLK2;PARP9,0.6450909384961753
+weighted,mammillary body,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,3,123,200,1.906341463414634,0.20870589186640964,RIT2;SNCA;STBD1,0.6450909384961753
+weighted,midbrain-derived inhibitory,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,3,123,200,1.906341463414634,0.20870589186640964,SIPA1L2;SV2C;TOX3,0.6450909384961753
+weighted,vascular associated smooth muscle cell,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,3,123,200,1.906341463414634,0.20870589186640964,COX4I2;FOXS1;ITGA8,0.6450909384961753
+weighted,Bergmann glia,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,2,123,200,1.2708943089430895,0.4684625156654904,ACBD7;WNT3,0.6925098057663771
+weighted,amygdala excitatory,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,2,123,200,1.2708943089430895,0.4684625156654904,ASXL3;TOX3,0.6925098057663771
+weighted,central nervous system macrophage,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,2,123,200,1.2708943089430895,0.4684625156654904,FCGR2A;P2RY12,0.6925098057663771
+weighted,cerebellar inhibitory,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,2,123,200,1.2708943089430895,0.4684625156654904,FASN;RORA,0.6925098057663771
+weighted,choroid plexus epithelial cell,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,2,123,200,1.2708943089430895,0.4684625156654904,ITPKB;STK39,0.6925098057663771
+weighted,deep-layer corticothalamic and 6b,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,2,123,200,1.2708943089430895,0.4684625156654904,ASXL3;SH3GL2,0.6925098057663771
+weighted,deep-layer intratelencephalic,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,2,123,200,1.2708943089430895,0.4684625156654904,PRSS3;SH3GL2,0.6925098057663771
+weighted,deep-layer near-projecting,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,2,123,200,1.2708943089430895,0.4684625156654904,ASXL3;ITGA8,0.6925098057663771
+weighted,eccentric medium spiny neuron,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,2,123,200,1.2708943089430895,0.4684625156654904,B3GALT1;SV2C,0.6925098057663771
+weighted,fibroblast,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,2,123,200,1.2708943089430895,0.4684625156654904,GPNMB;PKP2,0.6925098057663771
+weighted,hippocampal CA1-3,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,2,123,200,1.2708943089430895,0.4684625156654904,CCSER1;ITGA8,0.6925098057663771
+weighted,oligodendrocyte precursor cell,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,2,123,200,1.2708943089430895,0.4684625156654904,HIP1R;LRRK2,0.6925098057663771
+weighted,MGE interneuron,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,1,123,200,0.6354471544715448,0.79609524216584,TOX3,0.9022412744546188
+weighted,hippocampal CA4,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,1,123,200,0.6354471544715448,0.79609524216584,RIMS1,0.9022412744546188
+weighted,leukocyte,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,1,123,200,0.6354471544715448,0.79609524216584,SNX20,0.9022412744546188
+weighted,medium spiny neuron,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,1,123,200,0.6354471544715448,0.79609524216584,SV2C,0.9022412744546188
+weighted,miscellaneous,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,1,123,200,0.6354471544715448,0.79609524216584,RIT2,0.9022412744546188
+weighted,oligodendrocyte,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,1,123,200,0.6354471544715448,0.79609524216584,SLC45A3,0.9022412744546188
+weighted,upper-layer intratelencephalic,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,1,123,200,0.6354471544715448,0.79609524216584,ASXL3,0.9022412744546188
+weighted,ependymal cell,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,0,123,200,0.0,1.0,,1.0
+weighted,hippocampal dentate gyrus,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,0,123,200,0.0,1.0,,1.0
+weighted,lower rhombic lip,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,0,123,200,0.0,1.0,,1.0
+weighted,splatter,Human Protein Atlas v25.1 single-nucleus brain; top 200 specificity-ranked AHBA genes,0,123,186,0.0,1.0,,1.0

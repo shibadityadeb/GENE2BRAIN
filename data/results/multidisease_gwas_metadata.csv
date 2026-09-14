@@ -1,0 +1,16 @@
+disease,study,trait,sample_size,replication_sample_size,ancestry,genome_build,number_of_significant_associations,number_of_loci,summary_statistics_available,publication_year,source,status
+Parkinson disease,GCST90308590,Parkinson's disease,2525730.0,0,African unspecified; East Asian; European; Hispanic or Latin American,GRCh38,121.0,67,False,2023,https://api.platform.opentargets.org/api/v4/graphql study=GCST90308590,ready
+Alzheimer disease,GCST90027158,Alzheimer's disease,487511.0,301478,European,GRCh38,89.0,83,True,2022,https://api.platform.opentargets.org/api/v4/graphql study=GCST90027158,ready
+Huntington disease,,Huntington disease,,,,,,0,,,https://www.ebi.ac.uk/gwas/rest/api,excluded
+Amyotrophic lateral sclerosis,GCST90027163,Amyotrophic lateral sclerosis,152268.0,0,East Asian; European,GRCh38,12.0,17,True,2021,https://api.platform.opentargets.org/api/v4/graphql study=GCST90027163,ready
+Multiple system atrophy,GCST90406924,Multiple system atrophy,8016.0,,European,GRCh38,2.0,0,,,https://www.ebi.ac.uk/gwas/rest/api,excluded
+Progressive supranuclear palsy,GCST006418,Progressive supranuclear palsy,12308.0,0,European,GRCh38,13.0,2,False,2018,https://api.platform.opentargets.org/api/v4/graphql study=GCST006418,needs_review
+Schizophrenia,GCST90128471,Schizophrenia,175799.0,144605,African American or Afro-Caribbean; East Asian; European; Hispanic or Latin American,GRCh38,1117.0,222,False,2022,https://api.platform.opentargets.org/api/v4/graphql study=GCST90128471,ready
+Bipolar disorder,GCST012465,Bipolar disorder,413466.0,0,European,GRCh38,64.0,37,False,2021,https://api.platform.opentargets.org/api/v4/graphql study=GCST012465,ready
+Major depressive disorder,GCST90020227,Major depressive disorder,1154267.0,1342778,European,GRCh38,117.0,94,False,2021,https://api.platform.opentargets.org/api/v4/graphql study=GCST90020227,ready
+Autism spectrum disorder,GCST007556,Autism spectrum disorder,46350.0,144498,European,GRCh38,46.0,1,False,2019,https://api.platform.opentargets.org/api/v4/graphql study=GCST007556,needs_review
+Attention deficit-hyperactivity disorder,GCST90269774,Attention deficit hyperactivity disorder,225534.0,0,European,GRCh38,34.0,22,False,2023,https://api.platform.opentargets.org/api/v4/graphql study=GCST90269774,ready
+Epilepsy,GCST90271608,Epilepsy,82482.0,0,African unspecified; Asian unspecified; European,GRCh38,6.0,4,False,2023,https://api.platform.opentargets.org/api/v4/graphql study=GCST90271608,ready
+Migraine,GCST90102553,Migraine,873341.0,0,European,GRCh38,123.0,98,False,2022,https://api.platform.opentargets.org/api/v4/graphql study=GCST90102553,ready
+Multiple sclerosis,GCST009597,Multiple sclerosis,41505.0,74299,European; NR,GRCh38,333.0,140,False,2019,https://api.platform.opentargets.org/api/v4/graphql study=GCST009597,ready
+Tourette syndrome,GCST90295972,Tourette syndrome,19698.0,,European,GRCh38,4.0,0,,,https://www.ebi.ac.uk/gwas/rest/api,excluded

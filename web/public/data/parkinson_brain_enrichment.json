@@ -32,7 +32,11 @@
       "spatial_robustness": 0.9906009399060094,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 1,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": null,
+      "validation_region": null,
+      "validation_mapping_confidence": null,
+      "agreement_status": "not_measured"
     },
     {
       "region_id": 20,
@@ -59,7 +63,11 @@
       "spatial_robustness": 0.9886011398860114,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 2,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.11,
+      "validation_region": "R_superiorfrontal",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "high_prediction_high_validation"
     },
     {
       "region_id": 141,
@@ -86,7 +94,11 @@
       "spatial_robustness": 0.9803019698030196,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 3,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": -0.131,
+      "validation_region": "Lthal",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "high_prediction_low_validation"
     },
     {
       "region_id": 146,
@@ -113,7 +125,11 @@
       "spatial_robustness": 0.9779022097790221,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 4,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": -0.078,
+      "validation_region": "Rthal",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "high_prediction_low_validation"
     },
     {
       "region_id": 4,
@@ -140,7 +156,11 @@
       "spatial_robustness": 0.9508049195080492,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 5,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.11,
+      "validation_region": "R_superiorfrontal",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "high_prediction_high_validation"
     },
     {
       "region_id": 128,
@@ -167,7 +187,11 @@
       "spatial_robustness": 0.9197080291970803,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 8,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": -0.078,
+      "validation_region": "Rthal",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "high_prediction_low_validation"
     },
     {
       "region_id": 94,
@@ -194,7 +218,11 @@
       "spatial_robustness": 0.903009699030097,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 11,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.141,
+      "validation_region": "R_inferiortemporal",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "high_prediction_high_validation"
     },
     {
       "region_id": 41,
@@ -221,7 +249,11 @@
       "spatial_robustness": 0.9145085491450855,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 9,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.02,
+      "validation_region": "Lhippo",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "high_prediction_low_validation"
     },
     {
       "region_id": 37,
@@ -248,7 +280,11 @@
       "spatial_robustness": 0.9507049295070493,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 6,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": null,
+      "validation_region": null,
+      "validation_mapping_confidence": null,
+      "agreement_status": "not_measured"
     },
     {
       "region_id": 111,
@@ -275,7 +311,11 @@
       "spatial_robustness": 0.8664133586641336,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 17,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": null,
+      "validation_region": null,
+      "validation_mapping_confidence": null,
+      "agreement_status": "not_measured"
     },
     {
       "region_id": 45,
@@ -302,7 +342,11 @@
       "spatial_robustness": 0.9211078892110789,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 7,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.13,
+      "validation_region": "Lamyg",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "high_prediction_high_validation"
     },
     {
       "region_id": 3,
@@ -329,7 +373,11 @@
       "spatial_robustness": 0.8488151184881512,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 19,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.104,
+      "validation_region": "L_superiorfrontal",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "high_prediction_high_validation"
     },
     {
       "region_id": 67,
@@ -356,7 +404,11 @@
       "spatial_robustness": 0.8735126487351265,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 15,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.131,
+      "validation_region": "L_supramarginal",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "high_prediction_high_validation"
     },
     {
       "region_id": 11,
@@ -383,7 +435,11 @@
       "spatial_robustness": 0.9034096590340965,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 10,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.11,
+      "validation_region": "L_parsorbitalis",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "high_prediction_high_validation"
     },
     {
       "region_id": 23,
@@ -410,7 +466,11 @@
       "spatial_robustness": 0.7962203779622038,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 29,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.098,
+      "validation_region": "L_medialorbitofrontal",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "high_prediction_high_validation"
     },
     {
       "region_id": 145,
@@ -437,7 +497,11 @@
       "spatial_robustness": 0.9013098690130987,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 12,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": -0.131,
+      "validation_region": "Lthal",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "high_prediction_low_validation"
     },
     {
       "region_id": 139,
@@ -464,7 +528,11 @@
       "spatial_robustness": 0.873012698730127,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 16,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": -0.131,
+      "validation_region": "Lthal",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "high_prediction_low_validation"
     },
     {
       "region_id": 118,
@@ -491,7 +559,11 @@
       "spatial_robustness": 0.6863313668633136,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 50,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": null,
+      "validation_region": null,
+      "validation_mapping_confidence": null,
+      "agreement_status": "not_measured"
     },
     {
       "region_id": 38,
@@ -518,7 +590,11 @@
       "spatial_robustness": 0.8740125987401259,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 14,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": null,
+      "validation_region": null,
+      "validation_mapping_confidence": null,
+      "agreement_status": "not_measured"
     },
     {
       "region_id": 136,
@@ -545,7 +621,11 @@
       "spatial_robustness": 0.8268173182681732,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 23,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": -0.078,
+      "validation_region": "Rthal",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "high_prediction_low_validation"
     },
     {
       "region_id": 46,
@@ -572,7 +652,11 @@
       "spatial_robustness": 0.8078192180781922,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 27,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.077,
+      "validation_region": "Ramyg",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "high_prediction_low_validation"
     },
     {
       "region_id": 137,
@@ -599,7 +683,11 @@
       "spatial_robustness": 0.8786121387861214,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 13,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": -0.131,
+      "validation_region": "Lthal",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "high_prediction_low_validation"
     },
     {
       "region_id": 22,
@@ -626,7 +714,11 @@
       "spatial_robustness": 0.8573142685731427,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 18,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.067,
+      "validation_region": "R_medialorbitofrontal",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "high_prediction_low_validation"
     },
     {
       "region_id": 102,
@@ -653,7 +745,11 @@
       "spatial_robustness": 0.815018498150185,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 26,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": null,
+      "validation_region": null,
+      "validation_mapping_confidence": null,
+      "agreement_status": "not_measured"
     },
     {
       "region_id": 101,
@@ -680,7 +776,11 @@
       "spatial_robustness": 0.8003199680031997,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 28,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": null,
+      "validation_region": null,
+      "validation_mapping_confidence": null,
+      "agreement_status": "not_measured"
     },
     {
       "region_id": 86,
@@ -707,7 +807,11 @@
       "spatial_robustness": 0.8327167283271673,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 22,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.077,
+      "validation_region": "R_superiortemporal",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "high_prediction_low_validation"
     },
     {
       "region_id": 161,
@@ -734,7 +838,11 @@
       "spatial_robustness": 0.823017698230177,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 24,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": null,
+      "validation_region": null,
+      "validation_mapping_confidence": null,
+      "agreement_status": "not_measured"
     },
     {
       "region_id": 24,
@@ -761,7 +869,11 @@
       "spatial_robustness": 0.8345165483451655,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 21,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.067,
+      "validation_region": "R_medialorbitofrontal",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "high_prediction_low_validation"
     },
     {
       "region_id": 13,
@@ -788,7 +900,11 @@
       "spatial_robustness": 0.7755224477552245,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 31,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": null,
+      "validation_region": null,
+      "validation_mapping_confidence": null,
+      "agreement_status": "not_measured"
     },
     {
       "region_id": 153,
@@ -815,7 +931,11 @@
       "spatial_robustness": 0.7897210278972102,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 30,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": -0.007,
+      "validation_region": "L_rostralanteriorcingulate",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "high_prediction_low_validation"
     },
     {
       "region_id": 56,
@@ -842,7 +962,11 @@
       "spatial_robustness": 0.7478252174782523,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 39,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.167,
+      "validation_region": "R_lateraloccipital",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "high_prediction_high_validation"
     },
     {
       "region_id": 15,
@@ -869,7 +993,11 @@
       "spatial_robustness": 0.8198180181981802,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 25,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": null,
+      "validation_region": null,
+      "validation_mapping_confidence": null,
+      "agreement_status": "not_measured"
     },
     {
       "region_id": 19,
@@ -896,7 +1024,11 @@
       "spatial_robustness": 0.7609239076092391,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 36,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.104,
+      "validation_region": "L_superiorfrontal",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "high_prediction_high_validation"
     },
     {
       "region_id": 69,
@@ -923,7 +1055,11 @@
       "spatial_robustness": 0.761023897610239,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 35,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.188,
+      "validation_region": "L_inferiorparietal",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "high_prediction_high_validation"
     },
     {
       "region_id": 154,
@@ -950,7 +1086,11 @@
       "spatial_robustness": 0.7244275572442755,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 44,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.01,
+      "validation_region": "R_rostralanteriorcingulate",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "high_prediction_low_validation"
     },
     {
       "region_id": 135,
@@ -977,7 +1117,11 @@
       "spatial_robustness": 0.7536246375362463,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 37,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": -0.131,
+      "validation_region": "Lthal",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "high_prediction_low_validation"
     },
     {
       "region_id": 26,
@@ -1004,7 +1148,11 @@
       "spatial_robustness": 0.7734226577342266,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 32,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.067,
+      "validation_region": "R_medialorbitofrontal",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "high_prediction_low_validation"
     },
     {
       "region_id": 143,
@@ -1031,7 +1179,11 @@
       "spatial_robustness": 0.7446255374462554,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 40,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": -0.131,
+      "validation_region": "Lthal",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "high_prediction_low_validation"
     },
     {
       "region_id": 21,
@@ -1058,7 +1210,11 @@
       "spatial_robustness": 0.7416258374162583,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 41,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.098,
+      "validation_region": "L_medialorbitofrontal",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "high_prediction_high_validation"
     },
     {
       "region_id": 119,
@@ -1085,7 +1241,11 @@
       "spatial_robustness": 0.7712228777122287,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 33,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": null,
+      "validation_region": null,
+      "validation_mapping_confidence": null,
+      "agreement_status": "not_measured"
     },
     {
       "region_id": 42,
@@ -1112,7 +1272,11 @@
       "spatial_robustness": 0.7105289471052895,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 46,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.031,
+      "validation_region": "Rhippo",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "high_prediction_low_validation"
     },
     {
       "region_id": 59,
@@ -1139,7 +1303,11 @@
       "spatial_robustness": 0.7233276672332767,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 45,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.198,
+      "validation_region": "L_fusiform",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "high_prediction_high_validation"
     },
     {
       "region_id": 83,
@@ -1166,7 +1334,11 @@
       "spatial_robustness": 0.7519248075192481,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 38,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.072,
+      "validation_region": "L_transversetemporal",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "high_prediction_low_validation"
     },
     {
       "region_id": 89,
@@ -1193,7 +1365,11 @@
       "spatial_robustness": 0.6882311768823117,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 49,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.156,
+      "validation_region": "L_middletemporal",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "high_prediction_high_validation"
     },
     {
       "region_id": 140,
@@ -1220,7 +1396,11 @@
       "spatial_robustness": 0.7299270072992701,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 43,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": -0.078,
+      "validation_region": "Rthal",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "high_prediction_low_validation"
     },
     {
       "region_id": 166,
@@ -1247,7 +1427,11 @@
       "spatial_robustness": 0.7693230676932307,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 34,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": null,
+      "validation_region": null,
+      "validation_mapping_confidence": null,
+      "agreement_status": "not_measured"
     },
     {
       "region_id": 167,
@@ -1274,7 +1458,11 @@
       "spatial_robustness": 0.7367263273672633,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 42,
-      "spatial_isolate": true
+      "spatial_isolate": true,
+      "validation_score": null,
+      "validation_region": null,
+      "validation_mapping_confidence": null,
+      "agreement_status": "not_measured"
     },
     {
       "region_id": 93,
@@ -1301,7 +1489,11 @@
       "spatial_robustness": 0.690930906909309,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 48,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.193,
+      "validation_region": "L_inferiortemporal",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "high_prediction_high_validation"
     },
     {
       "region_id": 7,
@@ -1328,7 +1520,11 @@
       "spatial_robustness": 0.7034296570342966,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 47,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.02,
+      "validation_region": "L_parsopercularis",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "high_prediction_low_validation"
     },
     {
       "region_id": 164,
@@ -1355,7 +1551,11 @@
       "spatial_robustness": 0.8408159184081592,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 20,
-      "spatial_isolate": true
+      "spatial_isolate": true,
+      "validation_score": null,
+      "validation_region": null,
+      "validation_mapping_confidence": null,
+      "agreement_status": "not_measured"
     },
     {
       "region_id": 27,
@@ -1382,7 +1582,11 @@
       "spatial_robustness": 0.6391360863913609,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 51,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": null,
+      "validation_region": null,
+      "validation_mapping_confidence": null,
+      "agreement_status": "not_measured"
     },
     {
       "region_id": 91,
@@ -1409,7 +1613,11 @@
       "spatial_robustness": 0.6348365163483651,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 53,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.102,
+      "validation_region": "L_temporalpole",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "high_prediction_high_validation"
     },
     {
       "region_id": 103,
@@ -1436,7 +1644,11 @@
       "spatial_robustness": 0.6121387861213878,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 54,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": null,
+      "validation_region": null,
+      "validation_mapping_confidence": null,
+      "agreement_status": "not_measured"
     },
     {
       "region_id": 155,
@@ -1463,7 +1675,11 @@
       "spatial_robustness": 0.6081391860813918,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 55,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": -0.043,
+      "validation_region": "L_caudalanteriorcingulate",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "high_prediction_low_validation"
     },
     {
       "region_id": 90,
@@ -1490,7 +1706,11 @@
       "spatial_robustness": 0.587941205879412,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 58,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.134,
+      "validation_region": "R_middletemporal",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "high_prediction_high_validation"
     },
     {
       "region_id": 121,
@@ -1517,7 +1737,11 @@
       "spatial_robustness": 0.605039496050395,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 56,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": -0.131,
+      "validation_region": "Lthal",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "high_prediction_low_validation"
     },
     {
       "region_id": 95,
@@ -1544,7 +1768,11 @@
       "spatial_robustness": 0.5593440655934406,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 63,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": null,
+      "validation_region": null,
+      "validation_mapping_confidence": null,
+      "agreement_status": "not_measured"
     },
     {
       "region_id": 9,
@@ -1571,7 +1799,11 @@
       "spatial_robustness": 0.5909409059094091,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 57,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.051,
+      "validation_region": "L_parstriangularis",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "high_prediction_low_validation"
     },
     {
       "region_id": 5,
@@ -1598,7 +1830,11 @@
       "spatial_robustness": 0.5736426357364264,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 59,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.088,
+      "validation_region": "L_rostralmiddlefrontal",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "high_prediction_low_validation"
     },
     {
       "region_id": 29,
@@ -1625,7 +1861,11 @@
       "spatial_robustness": 0.5686431356864314,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 61,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": null,
+      "validation_region": null,
+      "validation_mapping_confidence": null,
+      "agreement_status": "not_measured"
     },
     {
       "region_id": 85,
@@ -1652,7 +1892,11 @@
       "spatial_robustness": 0.5602439756024398,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 62,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.096,
+      "validation_region": "L_superiortemporal",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "high_prediction_high_validation"
     },
     {
       "region_id": 44,
@@ -1679,7 +1923,11 @@
       "spatial_robustness": 0.5454454554544546,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 67,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.108,
+      "validation_region": "R_parahippocampal",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "high_prediction_high_validation"
     },
     {
       "region_id": 170,
@@ -1706,7 +1954,11 @@
       "spatial_robustness": 0.6383361663833617,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 52,
-      "spatial_isolate": true
+      "spatial_isolate": true,
+      "validation_score": null,
+      "validation_region": null,
+      "validation_mapping_confidence": null,
+      "agreement_status": "not_measured"
     },
     {
       "region_id": 72,
@@ -1733,7 +1985,11 @@
       "spatial_robustness": 0.5572442755724427,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 64,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.193,
+      "validation_region": "R_precuneus",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "high_prediction_high_validation"
     },
     {
       "region_id": 84,
@@ -1760,7 +2016,11 @@
       "spatial_robustness": 0.5728427157284272,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 60,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.068,
+      "validation_region": "R_transversetemporal",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "high_prediction_low_validation"
     },
     {
       "region_id": 169,
@@ -1787,7 +2047,11 @@
       "spatial_robustness": 0.5516448355164483,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 65,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": null,
+      "validation_region": null,
+      "validation_mapping_confidence": null,
+      "agreement_status": "not_measured"
     },
     {
       "region_id": 58,
@@ -1814,7 +2078,11 @@
       "spatial_robustness": 0.5488451154884512,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 66,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.167,
+      "validation_region": "R_lateraloccipital",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "high_prediction_high_validation"
     },
     {
       "region_id": 25,
@@ -1841,7 +2109,11 @@
       "spatial_robustness": 0.5245475452454755,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 69,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.098,
+      "validation_region": "L_medialorbitofrontal",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "high_prediction_high_validation"
     },
     {
       "region_id": 43,
@@ -1868,7 +2140,11 @@
       "spatial_robustness": 0.5288471152884712,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 68,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.122,
+      "validation_region": "L_parahippocampal",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "high_prediction_high_validation"
     },
     {
       "region_id": 87,
@@ -1895,7 +2171,11 @@
       "spatial_robustness": 0.5081491850814919,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 71,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.102,
+      "validation_region": "L_temporalpole",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "high_prediction_high_validation"
     },
     {
       "region_id": 88,
@@ -1922,7 +2202,11 @@
       "spatial_robustness": 0.5142485751424857,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 70,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.096,
+      "validation_region": "R_temporalpole",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "high_prediction_high_validation"
     },
     {
       "region_id": 30,
@@ -1949,7 +2233,11 @@
       "spatial_robustness": 0.4771522847715228,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 74,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": null,
+      "validation_region": null,
+      "validation_mapping_confidence": null,
+      "agreement_status": "not_measured"
     },
     {
       "region_id": 32,
@@ -1976,7 +2264,11 @@
       "spatial_robustness": 0.48065193480651935,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 73,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.141,
+      "validation_region": "R_lateralorbitofrontal",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "high_prediction_high_validation"
     },
     {
       "region_id": 33,
@@ -2003,7 +2295,11 @@
       "spatial_robustness": 0.48275172482751727,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 72,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.036,
+      "validation_region": "L_insula",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "low_prediction_low_validation"
     },
     {
       "region_id": 1,
@@ -2030,7 +2326,11 @@
       "spatial_robustness": 0.47065293470652936,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 76,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.104,
+      "validation_region": "L_precentral",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "low_prediction_high_validation"
     },
     {
       "region_id": 48,
@@ -2057,7 +2357,11 @@
       "spatial_robustness": 0.4714528547145286,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 75,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.058,
+      "validation_region": "R_pericalcarine",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "low_prediction_low_validation"
     },
     {
       "region_id": 148,
@@ -2084,7 +2388,11 @@
       "spatial_robustness": 0.46405359464053597,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 77,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": -0.078,
+      "validation_region": "Rthal",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "high_prediction_low_validation"
     },
     {
       "region_id": 70,
@@ -2111,7 +2419,11 @@
       "spatial_robustness": 0.4481551844815519,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 80,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.194,
+      "validation_region": "R_inferiorparietal",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "low_prediction_high_validation"
     },
     {
       "region_id": 17,
@@ -2138,7 +2450,11 @@
       "spatial_robustness": 0.4582541745825417,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 78,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": null,
+      "validation_region": null,
+      "validation_mapping_confidence": null,
+      "agreement_status": "not_measured"
     },
     {
       "region_id": 130,
@@ -2165,7 +2481,11 @@
       "spatial_robustness": 0.4581541845815419,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 79,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": -0.078,
+      "validation_region": "Rthal",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "high_prediction_low_validation"
     },
     {
       "region_id": 131,
@@ -2192,7 +2512,11 @@
       "spatial_robustness": 0.4301569843015698,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 81,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": -0.131,
+      "validation_region": "Lthal",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "high_prediction_low_validation"
     },
     {
       "region_id": 122,
@@ -2219,7 +2543,11 @@
       "spatial_robustness": 0.41985801419858015,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 82,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": -0.078,
+      "validation_region": "Rthal",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "high_prediction_low_validation"
     },
     {
       "region_id": 63,
@@ -2246,7 +2574,11 @@
       "spatial_robustness": 0.3988601139886011,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 85,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.145,
+      "validation_region": "L_superiorparietal",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "low_prediction_high_validation"
     },
     {
       "region_id": 16,
@@ -2273,7 +2605,11 @@
       "spatial_robustness": 0.398960103989601,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 84,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": null,
+      "validation_region": null,
+      "validation_mapping_confidence": null,
+      "agreement_status": "not_measured"
     },
     {
       "region_id": 165,
@@ -2300,7 +2636,11 @@
       "spatial_robustness": 0.4167583241675833,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 83,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": null,
+      "validation_region": null,
+      "validation_mapping_confidence": null,
+      "agreement_status": "not_measured"
     },
     {
       "region_id": 65,
@@ -2327,7 +2667,11 @@
       "spatial_robustness": 0.3846615338466154,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 89,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.188,
+      "validation_region": "L_inferiorparietal",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "high_prediction_high_validation"
     },
     {
       "region_id": 34,
@@ -2354,7 +2698,11 @@
       "spatial_robustness": 0.37446255374462556,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 91,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.077,
+      "validation_region": "R_insula",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "low_prediction_low_validation"
     },
     {
       "region_id": 157,
@@ -2381,7 +2729,11 @@
       "spatial_robustness": 0.39636036396360363,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 87,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.028,
+      "validation_region": "Laccumb",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "low_prediction_low_validation"
     },
     {
       "region_id": 66,
@@ -2408,7 +2760,11 @@
       "spatial_robustness": 0.39376062393760625,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 88,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.194,
+      "validation_region": "R_inferiorparietal",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "low_prediction_high_validation"
     },
     {
       "region_id": 144,
@@ -2435,7 +2791,11 @@
       "spatial_robustness": 0.37696230376962303,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 90,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": -0.078,
+      "validation_region": "Rthal",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "high_prediction_low_validation"
     },
     {
       "region_id": 104,
@@ -2462,7 +2822,11 @@
       "spatial_robustness": 0.39766023397660233,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 86,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": null,
+      "validation_region": null,
+      "validation_mapping_confidence": null,
+      "agreement_status": "not_measured"
     },
     {
       "region_id": 73,
@@ -2489,7 +2853,11 @@
       "spatial_robustness": 0.37446255374462556,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 91,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.109,
+      "validation_region": "L_paracentral",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "low_prediction_high_validation"
     },
     {
       "region_id": 55,
@@ -2516,7 +2884,11 @@
       "spatial_robustness": 0.3478652134786522,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 93,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.166,
+      "validation_region": "L_lateraloccipital",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "low_prediction_high_validation"
     },
     {
       "region_id": 127,
@@ -2543,7 +2915,11 @@
       "spatial_robustness": 0.321967803219678,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 98,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": -0.131,
+      "validation_region": "Lthal",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "high_prediction_low_validation"
     },
     {
       "region_id": 147,
@@ -2570,7 +2946,11 @@
       "spatial_robustness": 0.31286871312868714,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 100,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": -0.131,
+      "validation_region": "Lthal",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "high_prediction_low_validation"
     },
     {
       "region_id": 31,
@@ -2597,7 +2977,11 @@
       "spatial_robustness": 0.33776622337766227,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 94,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.125,
+      "validation_region": "L_lateralorbitofrontal",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "low_prediction_high_validation"
     },
     {
       "region_id": 61,
@@ -2624,7 +3008,11 @@
       "spatial_robustness": 0.3212678732126787,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 99,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.11,
+      "validation_region": "L_postcentral",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "low_prediction_high_validation"
     },
     {
       "region_id": 8,
@@ -2651,7 +3039,11 @@
       "spatial_robustness": 0.27477252274772523,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 102,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.026,
+      "validation_region": "R_parsopercularis",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "low_prediction_low_validation"
     },
     {
       "region_id": 60,
@@ -2678,7 +3070,11 @@
       "spatial_robustness": 0.3285671432856714,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 96,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.117,
+      "validation_region": "R_fusiform",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "low_prediction_high_validation"
     },
     {
       "region_id": 163,
@@ -2705,7 +3101,11 @@
       "spatial_robustness": 0.25207479252074794,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 105,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": null,
+      "validation_region": null,
+      "validation_mapping_confidence": null,
+      "agreement_status": "not_measured"
     },
     {
       "region_id": 74,
@@ -2732,7 +3132,11 @@
       "spatial_robustness": 0.3274672532746725,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 97,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.052,
+      "validation_region": "R_paracentral",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "low_prediction_low_validation"
     },
     {
       "region_id": 96,
@@ -2759,7 +3163,11 @@
       "spatial_robustness": 0.33156684331566844,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 95,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": null,
+      "validation_region": null,
+      "validation_mapping_confidence": null,
+      "agreement_status": "not_measured"
     },
     {
       "region_id": 168,
@@ -2786,7 +3194,11 @@
       "spatial_robustness": 0.20547945205479456,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 109,
-      "spatial_isolate": true
+      "spatial_isolate": true,
+      "validation_score": null,
+      "validation_region": null,
+      "validation_mapping_confidence": null,
+      "agreement_status": "not_measured"
     },
     {
       "region_id": 129,
@@ -2813,7 +3225,11 @@
       "spatial_robustness": 0.2803719628037197,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 101,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": -0.131,
+      "validation_region": "Lthal",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "high_prediction_low_validation"
     },
     {
       "region_id": 2,
@@ -2840,7 +3256,11 @@
       "spatial_robustness": 0.2566743325667433,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 104,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.052,
+      "validation_region": "R_precentral",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "low_prediction_low_validation"
     },
     {
       "region_id": 10,
@@ -2867,7 +3287,11 @@
       "spatial_robustness": 0.2664733526647335,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 103,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.027,
+      "validation_region": "R_parstriangularis",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "low_prediction_low_validation"
     },
     {
       "region_id": 6,
@@ -2894,7 +3318,11 @@
       "spatial_robustness": 0.22967703229677028,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 106,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.047,
+      "validation_region": "R_rostralmiddlefrontal",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "low_prediction_low_validation"
     },
     {
       "region_id": 57,
@@ -2921,7 +3349,11 @@
       "spatial_robustness": 0.2264773522647735,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 107,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.166,
+      "validation_region": "L_lateraloccipital",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "low_prediction_high_validation"
     },
     {
       "region_id": 14,
@@ -2948,7 +3380,11 @@
       "spatial_robustness": 0.21367863213678628,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 108,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": null,
+      "validation_region": null,
+      "validation_mapping_confidence": null,
+      "agreement_status": "not_measured"
     },
     {
       "region_id": 125,
@@ -2975,7 +3411,11 @@
       "spatial_robustness": 0.16988301169883013,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 117,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": -0.131,
+      "validation_region": "Lthal",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "high_prediction_low_validation"
     },
     {
       "region_id": 12,
@@ -3002,7 +3442,11 @@
       "spatial_robustness": 0.19348065193480657,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 112,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.086,
+      "validation_region": "R_parsorbitalis",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "low_prediction_low_validation"
     },
     {
       "region_id": 53,
@@ -3029,7 +3473,11 @@
       "spatial_robustness": 0.15078492150784917,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 119,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.166,
+      "validation_region": "L_lateraloccipital",
+      "validation_mapping_confidence": "medium",
+      "agreement_status": "low_prediction_high_validation"
     },
     {
       "region_id": 156,
@@ -3056,7 +3504,11 @@
       "spatial_robustness": 0.17818218178182177,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 116,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.027,
+      "validation_region": "R_caudalanteriorcingulate",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "low_prediction_low_validation"
     },
     {
       "region_id": 47,
@@ -3083,7 +3535,11 @@
       "spatial_robustness": 0.16988301169883013,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 117,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.055,
+      "validation_region": "L_pericalcarine",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "low_prediction_low_validation"
     },
     {
       "region_id": 110,
@@ -3110,7 +3566,11 @@
       "spatial_robustness": 0.14058594140585945,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 121,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": null,
+      "validation_region": null,
+      "validation_mapping_confidence": null,
+      "agreement_status": "not_measured"
     },
     {
       "region_id": 49,
@@ -3137,7 +3597,11 @@
       "spatial_robustness": 0.2024797520247975,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 111,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.112,
+      "validation_region": "L_cuneus",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "low_prediction_high_validation"
     },
     {
       "region_id": 109,
@@ -3164,7 +3628,11 @@
       "spatial_robustness": 0.18018198180181977,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 115,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": null,
+      "validation_region": null,
+      "validation_mapping_confidence": null,
+      "agreement_status": "not_measured"
     },
     {
       "region_id": 78,
@@ -3191,7 +3659,11 @@
       "spatial_robustness": 0.18678132186781327,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 114,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.135,
+      "validation_region": "Rput",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "low_prediction_high_validation"
     },
     {
       "region_id": 62,
@@ -3218,7 +3690,11 @@
       "spatial_robustness": 0.20427957204279568,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 110,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.104,
+      "validation_region": "R_postcentral",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "low_prediction_high_validation"
     },
     {
       "region_id": 39,
@@ -3245,7 +3721,11 @@
       "spatial_robustness": 0.13718628137186284,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 122,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.082,
+      "validation_region": "L_posteriorcingulate",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "low_prediction_low_validation"
     },
     {
       "region_id": 158,
@@ -3272,7 +3752,11 @@
       "spatial_robustness": 0.19288071192880707,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 113,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.052,
+      "validation_region": "Raccumb",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "low_prediction_low_validation"
     },
     {
       "region_id": 18,
@@ -3299,7 +3783,11 @@
       "spatial_robustness": 0.0687931206879312,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 127,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": null,
+      "validation_region": null,
+      "validation_mapping_confidence": null,
+      "agreement_status": "not_measured"
     },
     {
       "region_id": 97,
@@ -3326,7 +3814,11 @@
       "spatial_robustness": 0.14778522147785222,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 120,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": null,
+      "validation_region": null,
+      "validation_mapping_confidence": null,
+      "agreement_status": "not_measured"
     },
     {
       "region_id": 106,
@@ -3353,7 +3845,11 @@
       "spatial_robustness": 0.10038996100389963,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 123,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": null,
+      "validation_region": null,
+      "validation_mapping_confidence": null,
+      "agreement_status": "not_measured"
     },
     {
       "region_id": 108,
@@ -3380,7 +3876,11 @@
       "spatial_robustness": 0.06029397060293973,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 131,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": null,
+      "validation_region": null,
+      "validation_mapping_confidence": null,
+      "agreement_status": "not_measured"
     },
     {
       "region_id": 51,
@@ -3407,7 +3907,11 @@
       "spatial_robustness": 0.07059294070592936,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 125,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.111,
+      "validation_region": "L_lingual",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "low_prediction_high_validation"
     },
     {
       "region_id": 71,
@@ -3434,7 +3938,11 @@
       "spatial_robustness": 0.08859114088591136,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 124,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.156,
+      "validation_region": "L_precuneus",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "low_prediction_high_validation"
     },
     {
       "region_id": 52,
@@ -3461,7 +3969,11 @@
       "spatial_robustness": 0.0687931206879312,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 127,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.094,
+      "validation_region": "R_lingual",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "low_prediction_low_validation"
     },
     {
       "region_id": 98,
@@ -3488,7 +4000,11 @@
       "spatial_robustness": 0.04599540045995398,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 133,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": null,
+      "validation_region": null,
+      "validation_mapping_confidence": null,
+      "agreement_status": "not_measured"
     },
     {
       "region_id": 68,
@@ -3515,7 +4031,11 @@
       "spatial_robustness": 0.06229377062293773,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 130,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.153,
+      "validation_region": "R_supramarginal",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "low_prediction_high_validation"
     },
     {
       "region_id": 79,
@@ -3542,7 +4062,11 @@
       "spatial_robustness": 0.06609339066093389,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 129,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.066,
+      "validation_region": "Lpal",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "low_prediction_low_validation"
     },
     {
       "region_id": 64,
@@ -3569,7 +4093,11 @@
       "spatial_robustness": 0.05989401059894006,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 132,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.174,
+      "validation_region": "R_superiorparietal",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "low_prediction_high_validation"
     },
     {
       "region_id": 105,
@@ -3596,7 +4124,11 @@
       "spatial_robustness": 0.0333966603339666,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 135,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": null,
+      "validation_region": null,
+      "validation_mapping_confidence": null,
+      "agreement_status": "not_measured"
     },
     {
       "region_id": 80,
@@ -3623,7 +4155,11 @@
       "spatial_robustness": 0.07039296070392964,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 126,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.053,
+      "validation_region": "Rpal",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "low_prediction_low_validation"
     },
     {
       "region_id": 107,
@@ -3650,7 +4186,11 @@
       "spatial_robustness": 0.03989601039896007,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 134,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": null,
+      "validation_region": null,
+      "validation_mapping_confidence": null,
+      "agreement_status": "not_measured"
     },
     {
       "region_id": 77,
@@ -3677,7 +4217,11 @@
       "spatial_robustness": 0.010598940105989385,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 136,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.136,
+      "validation_region": "Lput",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "low_prediction_high_validation"
     },
     {
       "region_id": 75,
@@ -3704,7 +4248,11 @@
       "spatial_robustness": 0.0016998300169982494,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 137,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.071,
+      "validation_region": "Lcaud",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "low_prediction_low_validation"
     },
     {
       "region_id": 76,
@@ -3731,7 +4279,11 @@
       "spatial_robustness": 0.0015998400159984438,
       "spatial_robustness_label": "not_robust",
       "robustness_rank": 138,
-      "spatial_isolate": false
+      "spatial_isolate": false,
+      "validation_score": 0.033,
+      "validation_region": "Rcaud",
+      "validation_mapping_confidence": "high",
+      "agreement_status": "low_prediction_low_validation"
     }
   ]
 }

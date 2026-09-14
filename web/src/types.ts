@@ -1,4 +1,4 @@
-export type Metric = 'z_score' | 'observed_score' | 'fdr_p' | 'spatial_robustness'
+export type Metric = 'z_score' | 'observed_score' | 'fdr_p' | 'spatial_robustness' | 'validation_score' | 'agreement'
 export type Hemisphere = 'whole' | 'L' | 'R'
 export type ViewPreset = 'reset' | 'anterior' | 'posterior' | 'superior' | 'inferior'
 
@@ -24,6 +24,49 @@ export interface RegionRecord {
   spatial_robustness_label: 'robust' | 'not_robust'
   robustness_rank: number
   spatial_isolate: boolean
+  validation_score: number | null
+  validation_region: string | null
+  validation_mapping_confidence: 'high' | 'medium' | null
+  agreement_status: 'high_prediction_high_validation' | 'high_prediction_low_validation' | 'low_prediction_high_validation' | 'low_prediction_low_validation' | 'not_measured'
+  biology: RegionBiology | null
+}
+
+export interface BiologicalGene {
+  gene: string
+  expression: number
+  l2g_score: number
+  weighted_contribution: number
+  regional_rank: number
+}
+
+export interface BiologicalPathway {
+  id: string
+  name: string
+  fdr: number
+  genes: string[]
+}
+
+export interface BiologicalCellType {
+  name: string
+  fdr: number
+  genes: string[]
+}
+
+export interface RegionBiology {
+  region_id: number
+  selected_for_regional_interpretation: boolean
+  selection_rule: string
+  robustness_rank: number | null
+  top_genes: BiologicalGene[]
+  pathways: BiologicalPathway[]
+  cell_types: BiologicalCellType[]
+}
+
+export interface BiologicalInterpretationData {
+  schema_version: string
+  generated_on: string
+  evidence_note: string
+  regions: RegionBiology[]
 }
 
 export interface EnrichmentData {
@@ -34,6 +77,23 @@ export interface EnrichmentData {
   source_file: string
   generated_on: string
   regions: RegionRecord[]
+}
+
+export interface ExcludedDisease {
+  disease_id: string
+  disease_name: string
+  status: 'needs_review' | 'excluded'
+  reason: string
+}
+
+export interface MultidiseaseAtlas {
+  schema_version: string
+  generated_on: string
+  primary_metric: string
+  comparison_note: string
+  z_domain: [number, number]
+  diseases: EnrichmentData[]
+  excluded_or_needs_review: ExcludedDisease[]
 }
 
 export interface GeometryRegion {
@@ -76,6 +136,35 @@ export interface ProjectMetadata {
       robust_rule: string
       robust_regions: number
       isolated_regions: number
+    }
+    independent_validation: {
+      dataset: string
+      phenotype: string
+      matched_validation_units: number
+      mapped_aal3_regions: number
+      pearson_r: number
+      pearson_p: number
+      pearson_ci: [number, number]
+      spearman_rho: number
+      spearman_p: number
+      spatial_null_p: number
+      interpretation: 'SUPPORTED' | 'PARTIALLY SUPPORTED' | 'NOT SUPPORTED'
+      independence_note: string
+      substantia_nigra: string
+    }
+    biological_interpretation: {
+      status: string
+      primary_gene_set: string
+      genes_analyzed: number
+      genes_represented_in_ahba: number
+      background: string
+      go_significant_terms: number
+      reactome_significant_pathways: number
+      ranked_significant_pathways: number
+      cell_types_significant: number
+      supported_region_pathway_rows: number
+      region_rule: string
+      interpretation_note: string
     }
   }
   metrics: Record<string, { label: string; domain?: number[]; threshold?: number; scale: string }>

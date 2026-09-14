@@ -41,4 +41,7 @@ results/figures/*.png
 !results/figures/stage_05_*.png
 !results/figures/stage_06_*.png
 !results/figures/stage_07_*.png
+!results/figures/stage_08_*.png
+!results/figures/stage_09_*.png
+!results/figures/stage_10_*.png
 !results/figures/web_atlas_region_validation.png

@@ -1,0 +1,3 @@
+gene,ensembl_id,gene_weight,max_l2g_score,mean_l2g_score,n_credible_sets,study,score_interpretation,selection_rule
+SCN1A,ENSG00000144285,0.7731314301490784,0.7731314301490784,0.7731314301490784,1,GCST90271608,Open Targets L2G prioritization score; not proof of causality,maximum L2G score >= eligible prediction Q3 (0.459272)
+VRK2,ENSG00000028116,0.6913330554962158,0.6913330554962158,0.6913330554962158,1,GCST90271608,Open Targets L2G prioritization score; not proof of causality,maximum L2G score >= eligible prediction Q3 (0.459272)

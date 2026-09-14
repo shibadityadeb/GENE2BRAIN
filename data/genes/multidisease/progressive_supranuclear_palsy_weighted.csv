@@ -1,0 +1,5 @@
+gene,ensembl_id,gene_weight,max_l2g_score,mean_l2g_score,n_credible_sets,study,score_interpretation,selection_rule
+MOBP,ENSG00000168314,0.7044744491577148,0.7044744491577148,0.7044744491577148,1,GCST006418,Open Targets L2G prioritization score; not proof of causality,eligible under broad rule; gene_weight=max L2G score
+STX6,ENSG00000135823,0.6850759983062744,0.6850759983062744,0.6850759983062744,1,GCST006418,Open Targets L2G prioritization score; not proof of causality,eligible under broad rule; gene_weight=max L2G score
+MR1,ENSG00000153029,0.1045573428273201,0.1045573428273201,0.1045573428273201,1,GCST006418,Open Targets L2G prioritization score; not proof of causality,eligible under broad rule; gene_weight=max L2G score
+KIAA1614,ENSG00000135835,0.08076166361570358,0.08076166361570358,0.08076166361570358,1,GCST006418,Open Targets L2G prioritization score; not proof of causality,eligible under broad rule; gene_weight=max L2G score

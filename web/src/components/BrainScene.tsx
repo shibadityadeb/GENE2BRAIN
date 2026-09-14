@@ -29,31 +29,29 @@ interface CombinedGeometry {
   geometry: BufferGeometry
   faceRegions: number[]
   regionGeometry: Map<number, BufferGeometry>
+  regionVertexRanges: Map<number, [number, number]>
   center: Vector3
 }
 
 function combineGeometry(
   source: AtlasGeometry,
   allowed: Set<number>,
-  records: Map<number, RegionRecord>,
-  metric: Metric,
-  config: { zDomain: [number, number]; observedDomain: [number, number]; fdrThreshold: number },
-  validationMode: boolean,
 ): CombinedGeometry {
   const positions: number[] = []
   const colors: number[] = []
   const indices: number[] = []
   const faceRegions: number[] = []
   const regionGeometry = new Map<number, BufferGeometry>()
+  const regionVertexRanges = new Map<number, [number, number]>()
   const boundsGeometry = new BufferGeometry()
 
   source.regions.forEach((parcel) => {
     if (!allowed.has(parcel.region_id)) return
-    const record = records.get(parcel.region_id)!
-    const color = colorForRegion(record, metric, config, validationMode)
     const offset = positions.length / 3
     positions.push(...parcel.positions)
-    for (let index = 0; index < parcel.positions.length / 3; index += 1) colors.push(color.r, color.g, color.b)
+    const vertexCount = parcel.positions.length / 3
+    regionVertexRanges.set(parcel.region_id, [offset, vertexCount])
+    for (let index = 0; index < vertexCount; index += 1) colors.push(1, 1, 1)
     indices.push(...parcel.indices.map((index) => index + offset))
     for (let index = 0; index < parcel.indices.length / 3; index += 1) faceRegions.push(parcel.region_id)
   })
@@ -88,7 +86,7 @@ function combineGeometry(
     regionGeometry.set(parcel.region_id, parcelGeometry)
   })
   boundsGeometry.dispose()
-  return { geometry, faceRegions, regionGeometry, center }
+  return { geometry, faceRegions, regionGeometry, regionVertexRanges, center }
 }
 
 const PRESET_POSITIONS: Record<ViewPreset, Vector3> = {
@@ -153,11 +151,7 @@ function AtlasMesh(props: Props) {
   const allowed = useMemo(() => new Set(props.regions
     .filter((region) => props.hemisphere === 'whole' || region.hemisphere === props.hemisphere || region.hemisphere === 'B')
     .map((region) => region.region_id)), [props.hemisphere, props.regions])
-  const combined = useMemo(() => combineGeometry(
-    props.geometryData, allowed, records, props.metric,
-    { zDomain: props.zDomain, observedDomain: props.observedDomain, fdrThreshold: props.fdrThreshold },
-    props.validationMode,
-  ), [allowed, props.fdrThreshold, props.geometryData, props.metric, props.observedDomain, props.validationMode, props.zDomain, records])
+  const combined = useMemo(() => combineGeometry(props.geometryData, allowed), [allowed, props.geometryData])
   const material = useMemo(() => new MeshStandardMaterial({
     vertexColors: true, roughness: 0.72, metalness: 0.04, side: DoubleSide,
     transparent: props.validationMode, opacity: props.validationMode ? 0.9 : 1,
@@ -176,6 +170,18 @@ function AtlasMesh(props: Props) {
     combined.geometry.dispose()
     combined.regionGeometry.forEach((geometry) => geometry.dispose())
   }, [combined])
+  useEffect(() => {
+    const colorAttribute = combined.geometry.getAttribute('color') as BufferAttribute
+    combined.regionVertexRanges.forEach(([offset, count], regionId) => {
+      const color = colorForRegion(
+        records.get(regionId)!, props.metric,
+        { zDomain: props.zDomain, observedDomain: props.observedDomain, fdrThreshold: props.fdrThreshold },
+        props.validationMode,
+      )
+      for (let index = offset; index < offset + count; index += 1) colorAttribute.setXYZ(index, color.r, color.g, color.b)
+    })
+    colorAttribute.needsUpdate = true
+  }, [combined, props.fdrThreshold, props.metric, props.observedDomain, props.validationMode, props.zDomain, records])
   useEffect(() => () => { material.dispose(); highlightMaterial.dispose(); selectedMaterial.dispose() }, [highlightMaterial, material, selectedMaterial])
 
   const setHoverGeometry = (regionId: number | null) => {

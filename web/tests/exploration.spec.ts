@@ -13,7 +13,7 @@ test('loads the real Parkinson atlas and supports core exploration controls', as
   await expect(page.getByLabel('Details for Putamen L')).toContainText('AAL3v1:77')
   await page.getByRole('button', { name: 'Show null distribution' }).click()
   await expect(page.getByText(/individual permutation draws were not retained/i)).toBeVisible()
-  await page.getByRole('button', { name: 'Reset camera' }).click()
+  await page.getByRole('button', { name: 'Reset camera' }).click({ force: true })
   await expect(page.getByRole('link', { name: 'Download regional results' })).toHaveAttribute('download', '')
 })
 

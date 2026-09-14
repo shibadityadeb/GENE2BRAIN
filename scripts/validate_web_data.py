@@ -45,6 +45,7 @@ def validate(data_dir: Path) -> list[str]:
     required_numbers = (
         "observed_score", "random_mean", "random_std", "z_score", "empirical_p",
         "fdr_p", "effect_size", "number_of_genes",
+        "spatial_null_p", "spatial_null_fdr", "spatial_robustness", "robustness_rank",
     )
     for index, row in enumerate(records):
         prefix = f"record[{index}] region_id={row.get('region_id')}:"
@@ -55,7 +56,7 @@ def validate(data_dir: Path) -> list[str]:
             value = row.get(field)
             if not isinstance(value, (int, float)) or isinstance(value, bool) or not math.isfinite(value):
                 errors.append(f"{prefix} missing/non-finite {field}")
-        for field in ("empirical_p", "fdr_p"):
+        for field in ("empirical_p", "fdr_p", "spatial_null_p", "spatial_null_fdr", "spatial_robustness"):
             value = row.get(field)
             if isinstance(value, (int, float)) and not 0 <= value <= 1:
                 errors.append(f"{prefix} {field} is outside [0, 1]")
@@ -63,6 +64,8 @@ def validate(data_dir: Path) -> list[str]:
             errors.append(f"{prefix} random_std is negative")
         if isinstance(row.get("number_of_genes"), int) and row["number_of_genes"] <= 0:
             errors.append(f"{prefix} number_of_genes is not positive")
+        if row.get("spatial_robustness_label") not in {"robust", "not_robust"}:
+            errors.append(f"{prefix} invalid spatial_robustness_label")
 
     for index, mesh in enumerate(meshes):
         positions = mesh.get("positions")

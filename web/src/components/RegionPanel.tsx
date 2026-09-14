@@ -28,6 +28,7 @@ export function RegionPanel({ region, threshold, onClose }: { region: RegionReco
       <span className="eyebrow">AAL3 · {region.atlas_id}</span>
       <h2>{region.region_name}</h2>
       <p className="disease-label">Parkinson disease · weighted gene set</p>
+      <h3 className="panel-section-title">Stage 6 · Gene-set enrichment</h3>
       <div className="stat-grid">
         <div><span>Z-score</span><strong>{formatValue(region.z_score)}</strong></div>
         <div><span>FDR q-value</span><strong>{formatValue(region.fdr_p, 4)}</strong></div>
@@ -37,6 +38,15 @@ export function RegionPanel({ region, threshold, onClose }: { region: RegionReco
         <div><span>Effect size</span><strong>{formatValue(region.effect_size, 4)}</strong></div>
         <div><span>Genes in score</span><strong>{region.number_of_genes}</strong></div>
         <div><span>FDR status</span><strong>{region.fdr_p < threshold ? 'Significant' : 'Not significant'}</strong></div>
+      </div>
+      <h3 className="panel-section-title">Stage 7 · Spatial sensitivity</h3>
+      <div className="stat-grid">
+        <div><span>Spatial percentile</span><strong>{formatValue(region.spatial_robustness, 4)}</strong></div>
+        <div><span>Spatial p-value</span><strong>{formatValue(region.spatial_null_p, 4)}</strong></div>
+        <div><span>Spatial FDR</span><strong>{formatValue(region.spatial_null_fdr, 4)}</strong></div>
+        <div><span>Joint result</span><strong>{region.spatial_robustness_label === 'robust' ? 'Robust' : 'Not robust'}</strong></div>
+        <div><span>Robustness rank</span><strong>{region.robustness_rank}</strong></div>
+        <div><span>Graph status</span><strong>{region.spatial_isolate ? 'Isolated parcel' : 'Connected parcel'}</strong></div>
       </div>
       <p className="interpretation">The observed Parkinson-associated gene-expression score is {formatValue(Math.abs(region.z_score))} standard deviations {direction} the matched gene-set expectation. It {region.fdr_p < threshold ? 'meets' : 'does not meet'} the project’s FDR threshold.</p>
       <p className="caution">This does not indicate where Parkinson disease occurs or establish a causal brain region.</p>

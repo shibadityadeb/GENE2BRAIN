@@ -440,5 +440,87 @@ class ParkinsonEnrichmentArtifactTests(unittest.TestCase):
         self.assertIn("do not remove spatial autocorrelation", text)
 
 
+class ParkinsonSpatialRobustnessArtifactTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.result_data = ROOT / "data" / "results"
+        cls.weights = pd.read_csv(
+            ROOT / "data" / "intermediate" / "brain_region_spatial_weights.csv",
+            index_col="region_id",
+        )
+        cls.robustness = pd.read_csv(cls.result_data / "parkinson_spatial_robustness.csv")
+        cls.sensitivity = pd.read_csv(cls.result_data / "parkinson_spatial_gene_set_sensitivity.csv")
+        cls.autocorrelation = pd.read_csv(cls.result_data / "parkinson_spatial_autocorrelation.csv")
+        cls.global_test = pd.read_csv(cls.result_data / "parkinson_global_spatial_test.csv")
+        with (cls.result_data / "stage_07_spatial_null_parameters.json").open() as stream:
+            cls.parameters = json.load(stream)
+
+    def test_required_stage_07_outputs_exist(self) -> None:
+        required = [
+            ROOT / "src" / "stage_07_spatial_robustness.py",
+            ROOT / "reports" / "stage_07_spatial_representation.md",
+            ROOT / "reports" / "stage_07_robustness_definition.md",
+            ROOT / "reports" / "stage_07_interpretation.md",
+            ROOT / "data" / "intermediate" / "brain_region_spatial_weights.csv",
+            self.result_data / "parkinson_spatial_autocorrelation.csv",
+            self.result_data / "parkinson_spatial_null_summary.csv",
+            self.result_data / "parkinson_spatial_robustness.csv",
+            self.result_data / "parkinson_global_spatial_test.csv",
+            self.result_data / "parkinson_spatial_gene_set_sensitivity.csv",
+            self.result_data / "stage_07_spatial_null_parameters.json",
+            ROOT / "results" / "tables" / "parkinson_robust_regions.csv",
+            FIGURES / "stage_07_parkinson_spatial_autocorrelation.png",
+            FIGURES / "stage_07_stage6_vs_spatial_robustness.png",
+            FIGURES / "stage_07_null_model_comparison.png",
+            FIGURES / "stage_07_gene_set_spatial_sensitivity.png",
+            FIGURES / "stage_07_donor_and_spatial_robustness.png",
+            ROOT / "results" / "brain_maps" / "stage_07_parkinson_spatial_robustness.png",
+        ]
+        missing = [str(path.relative_to(ROOT)) for path in required if not path.is_file()]
+        self.assertEqual(missing, [], f"Missing Stage 7 files: {missing}")
+
+    def test_spatial_weights_are_binary_symmetric_and_explicit(self) -> None:
+        self.assertEqual(self.weights.shape, (138, 138))
+        self.assertEqual(set(np.unique(self.weights)), {0, 1})
+        self.assertTrue(np.array_equal(self.weights, self.weights.T))
+        self.assertTrue(np.all(np.diag(self.weights) == 0))
+        self.assertEqual(int(self.weights.to_numpy().sum() / 2), 512)
+        isolates = self.weights.index[self.weights.sum(axis=1) == 0].astype(int).tolist()
+        self.assertEqual(isolates, self.parameters["isolated_region_ids"])
+        self.assertFalse(self.parameters["row_normalized"])
+
+    def test_spatial_autocorrelation_outputs_are_valid(self) -> None:
+        self.assertEqual(
+            set(self.autocorrelation["metric"]),
+            {"broad_stage5_score", "stringent_stage5_score", "weighted_stage5_score", "weighted_stage6_z"},
+        )
+        self.assertTrue(self.autocorrelation["p_value"].between(1 / 10_001, 1).all())
+        self.assertEqual(set(self.autocorrelation["number_of_permutations"]), {10_000})
+
+    def test_regional_statistics_and_joint_rule_are_reproducible(self) -> None:
+        self.assertEqual(len(self.robustness), 138)
+        self.assertTrue(np.allclose(self.robustness["spatial_robustness"], 1 - self.robustness["spatial_null_p"]))
+        expected_spatial_fdr = multipletests(self.robustness["spatial_null_p"], method="fdr_bh")[1]
+        self.assertTrue(np.allclose(self.robustness["spatial_null_fdr"], expected_spatial_fdr))
+        expected_robust = (
+            (self.robustness["stage6_z"] > 0)
+            & (self.robustness["stage6_fdr"] < 0.05)
+            & (self.robustness["spatial_null_fdr"] < 0.05)
+        )
+        self.assertTrue(np.array_equal(self.robustness["spatial_robustness_label"] == "robust", expected_robust))
+        self.assertEqual(int(expected_robust.sum()), 0)
+
+    def test_gene_set_and_global_spatial_outputs_are_complete(self) -> None:
+        self.assertEqual(len(self.sensitivity), 3 * 138)
+        self.assertEqual(set(self.sensitivity["gene_set_version"]), {"broad", "stringent", "weighted"})
+        for _, frame in self.sensitivity.groupby("gene_set_version"):
+            expected = multipletests(frame["spatial_null_p"], method="fdr_bh")[1]
+            self.assertTrue(np.allclose(frame["spatial_null_fdr"], expected))
+        self.assertEqual(set(self.global_test["gene_set_version"]), {"broad", "stringent", "weighted"})
+        self.assertTrue(self.global_test["spatial_null_p"].between(1 / 10_001, 1).all())
+        self.assertEqual(set(self.global_test["number_of_spatial_permutations"]), {10_000})
+        self.assertEqual(self.parameters["spatial_null"], "Moran spectral randomization, singleton procedure")
+
+
 if __name__ == "__main__":
     unittest.main()

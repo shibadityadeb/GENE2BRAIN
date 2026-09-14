@@ -35,11 +35,13 @@ button:hover, button.active { color: var(--ink); border-color: rgba(114,214,195,
 .legend { position: absolute; bottom: 18px; left: 18px; width: 250px; display: grid; gap: 7px; background: rgba(7,16,19,.84); border: 1px solid var(--line); padding: 13px; backdrop-filter: blur(8px); font-size: 10px; color: var(--muted); }
 .legend strong { color: var(--ink); font: 500 11px 'DM Mono', monospace; text-transform: uppercase; letter-spacing: .1em; }
 .gradient-key { height: 8px; background: linear-gradient(90deg,#2166ac,#f2efe5,#b2182b); }.gradient-key.sequential { background: linear-gradient(90deg,#d9eee9,#006d77); }
+.gradient-key.spatial { background: linear-gradient(90deg,#e8e7ee,#54278f); }
 .legend-values { display: flex; justify-content: space-between; font-family: 'DM Mono', monospace; color: var(--ink); }
 .binary-legend { display: flex; align-items: center; gap: 7px; }.binary-legend i { width: 10px; height: 10px; display: inline-block; }.sig { background: #ffb000; }.nonsig { background: #526068; }
 .region-panel { position: absolute; right: 0; top: 0; bottom: 0; width: min(370px, 42vw); padding: 34px 28px; overflow-y: auto; background: rgba(9,22,25,.96); border-left: 1px solid var(--line); backdrop-filter: blur(14px); z-index: 5; }
 .close-panel { position: absolute; right: 15px; top: 14px; border: 0; background: transparent; font-size: 24px; padding: 0 8px; }
 .region-panel h2 { margin: 8px 0 2px; font-size: 28px; letter-spacing: -.03em; }.disease-label { color: var(--muted); font-size: 12px; margin: 0 0 26px; }
+.panel-section-title { margin: 20px 0 8px; color: var(--aqua); font: 500 10px 'DM Mono', monospace; text-transform: uppercase; letter-spacing: .09em; }
 .stat-grid { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }.stat-grid div { display: grid; gap: 5px; padding: 12px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }.stat-grid span { font-size: 10px; color: var(--muted); }.stat-grid strong { font: 500 15px 'DM Mono', monospace; }
 .interpretation { border-left: 2px solid var(--aqua); padding-left: 13px; line-height: 1.55; font-size: 13px; margin-top: 22px; }.caution { color: var(--muted); font-size: 11px; line-height: 1.55; }
 .outline-button, .download-button { display: inline-flex; align-items: center; justify-content: center; min-height: 40px; padding: 0 14px; border: 1px solid rgba(114,214,195,.5); color: var(--aqua); background: transparent; text-decoration: none; font-size: 12px; border-radius: 2px; }

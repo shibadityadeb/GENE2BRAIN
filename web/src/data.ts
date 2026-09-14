@@ -32,12 +32,13 @@ export function validateClientData(
   }
   const numeric: Array<keyof RegionRecord> = [
     'observed_score', 'random_mean', 'random_std', 'z_score', 'empirical_p', 'fdr_p', 'effect_size',
+    'spatial_null_p', 'spatial_null_fdr', 'spatial_robustness', 'robustness_rank',
   ]
   enrichment.regions.forEach((region) => {
     numeric.forEach((field) => {
       if (!Number.isFinite(region[field] as number)) throw new Error(`Invalid ${field} for region ${region.region_id}`)
     })
-    if (region.fdr_p < 0 || region.fdr_p > 1 || region.empirical_p < 0 || region.empirical_p > 1) {
+    if ([region.fdr_p, region.empirical_p, region.spatial_null_p, region.spatial_null_fdr, region.spatial_robustness].some((value) => value < 0 || value > 1)) {
       throw new Error(`Invalid probability for region ${region.region_id}`)
     }
   })

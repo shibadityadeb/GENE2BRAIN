@@ -27,6 +27,9 @@ ROOT = Path(__file__).resolve().parents[1]
 RESULTS = ROOT / "data" / "results" / "parkinson_regional_enrichment.csv"
 REGIONS = ROOT / "data" / "processed" / "region_metadata.csv"
 PARAMETERS = ROOT / "data" / "results" / "stage_06_permutation_parameters.json"
+SPATIAL_RESULTS = ROOT / "data" / "results" / "parkinson_spatial_robustness.csv"
+SPATIAL_PARAMETERS = ROOT / "data" / "results" / "stage_07_spatial_null_parameters.json"
+GLOBAL_SPATIAL = ROOT / "data" / "results" / "parkinson_global_spatial_test.csv"
 ATLAS = ROOT / "data" / "atlases" / "aal_3v2" / "AAL3" / "AAL3v1.nii.gz"
 ATLAS_XML = ROOT / "data" / "atlases" / "aal_3v2" / "AAL3" / "AAL3v1.xml"
 AHBA_SUMMARY = ROOT / "data" / "processed" / "ahba_metadata_summary.csv"
@@ -170,6 +173,8 @@ def build() -> None:
     results = read_csv(RESULTS)
     metadata = {int(row["region_id"]): row for row in read_csv(REGIONS)}
     parameters = json.loads(PARAMETERS.read_text(encoding="utf-8"))
+    spatial_parameters = json.loads(SPATIAL_PARAMETERS.read_text(encoding="utf-8"))
+    spatial_results = {int(row["region_id"]): row for row in read_csv(SPATIAL_RESULTS)}
     atlas_image = nib.load(ATLAS)
     atlas = np.asarray(atlas_image.dataobj, dtype=np.int16)
 
@@ -192,6 +197,12 @@ def build() -> None:
             ],
             **{field: json_number(result[field]) for field in NUMERIC_FIELDS},
             "number_of_genes": int(parameters["genes_per_set"][result["gene_set_version"]]),
+            "spatial_null_p": json_number(spatial_results[region_id]["spatial_null_p"]),
+            "spatial_null_fdr": json_number(spatial_results[region_id]["spatial_null_fdr"]),
+            "spatial_robustness": json_number(spatial_results[region_id]["spatial_robustness"]),
+            "spatial_robustness_label": spatial_results[region_id]["spatial_robustness_label"],
+            "robustness_rank": int(spatial_results[region_id]["robustness_rank"]),
+            "spatial_isolate": spatial_results[region_id]["spatial_isolate"] == "True",
         }
         records.append(record)
         positions, indices = parcel_mesh(atlas == region_id, atlas_image.affine)
@@ -210,6 +221,7 @@ def build() -> None:
         "disease_name": "Parkinson disease",
         "gene_set_version": parameters["primary_gene_set_version"],
         "source_file": "data/results/parkinson_regional_enrichment.csv",
+        "spatial_source_file": "data/results/parkinson_spatial_robustness.csv",
         "generated_on": date.today().isoformat(),
         "regions": records,
     }
@@ -222,6 +234,9 @@ def build() -> None:
     credible_set_count = len(read_csv(CREDIBLE_SETS))
     z_bound = max(abs(record["z_score"]) for record in records)
     observed_values = [record["observed_score"] for record in records]
+    global_spatial = [row for row in read_csv(GLOBAL_SPATIAL) if row["gene_set_version"] == "weighted"]
+    if len(global_spatial) != 1:
+        raise ValueError("Expected one weighted Stage 7 global result")
     metadata_payload = {
         "schema_version": "1.0.0",
         "project": "GENE2BRAIN",
@@ -255,11 +270,22 @@ def build() -> None:
             "null_draws_available": False,
             "null_summary_available": True,
             "null_summary_note": "Per-region random mean and standard deviation are retained; individual permutation draws were not exported by Stage 6.",
+            "spatial_sensitivity": {
+                "method": spatial_parameters["spatial_null"],
+                "neighbor_definition": spatial_parameters["neighbor_definition"],
+                "permutations": spatial_parameters["n_spatial_permutations"],
+                "global_statistic": spatial_parameters["global_test"],
+                "global_p": json_number(global_spatial[0]["spatial_null_p"]),
+                "robust_rule": spatial_parameters["robust_rule"],
+                "robust_regions": sum(record["spatial_robustness_label"] == "robust" for record in records),
+                "isolated_regions": len(spatial_parameters["isolated_region_ids"]),
+            },
         },
         "metrics": {
             "z_score": {"label": "Z-score", "domain": [-z_bound, z_bound], "scale": "diverging, symmetric about zero"},
             "observed_score": {"label": "Observed expression", "domain": [min(observed_values), max(observed_values)], "scale": "sequential"},
             "fdr_p": {"label": "FDR significance", "threshold": parameters["fdr_threshold"], "scale": "binary significance status"},
+            "spatial_robustness": {"label": "Spatial robustness", "domain": [0, 1], "scale": "sequential spatial-null percentile"},
         },
         "atlas": {
             "name": "Automated Anatomical Labeling atlas 3 (AAL3v1)",
@@ -295,6 +321,7 @@ def build() -> None:
     write_json(PUBLIC_DATA / "project_metadata.json", metadata_payload)
     write_json(PUBLIC_DATA / "aal3_regions.json", geometry, compact=True)
     shutil.copy2(RESULTS, PUBLIC_DATA / "parkinson_regional_enrichment.csv")
+    shutil.copy2(SPATIAL_RESULTS, PUBLIC_DATA / "parkinson_spatial_robustness.csv")
     print(f"Prepared {len(records)} research records and {len(meshes)} atlas meshes")
     print(f"Geometry: {(PUBLIC_DATA / 'aal3_regions.json').stat().st_size / 1024 / 1024:.2f} MiB")
 

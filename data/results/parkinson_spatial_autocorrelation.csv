@@ -1,0 +1,5 @@
+metric,observed_statistic,null_mean,null_std,p_value,number_of_permutations,statistic,null_model
+broad_stage5_score,0.08167475799534801,-0.0063406485335335185,0.04233494486184783,0.0375962403759624,10000,global Moran's I,unrestricted regional label permutation
+stringent_stage5_score,0.2020718062457713,-0.006662150973329635,0.04291632596944832,0.00019998000199980003,10000,global Moran's I,unrestricted regional label permutation
+weighted_stage5_score,0.1347417601406973,-0.00768412282000357,0.042019952567521626,0.0016998300169983002,10000,global Moran's I,unrestricted regional label permutation
+weighted_stage6_z,0.21310268586906458,-0.007339439140883529,0.04193847238480478,9.999000099990002e-05,10000,global Moran's I,unrestricted regional label permutation

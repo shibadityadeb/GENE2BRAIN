@@ -1,0 +1,35 @@
+{
+  "stage": 7,
+  "analysis_role": "spatial sensitivity analysis; does not replace Stage 6",
+  "atlas": "AAL3v1 2 mm MNI, identical to Stage 2 and web geometry",
+  "region_count": 138,
+  "neighbor_definition": "26-connectivity: voxel face, edge, or corner contact",
+  "weight_type": "binary symmetric",
+  "row_normalized": false,
+  "diagonal": 0,
+  "edge_count": 512,
+  "isolated_region_ids": [
+    164,
+    167,
+    168,
+    170
+  ],
+  "isolated_region_handling": "retained with zero-weight rows and explicitly flagged; no edges imputed",
+  "spatial_null": "Moran spectral randomization, singleton procedure",
+  "spatial_null_reference": "Wagner and Dray 2015, doi:10.1111/2041-210X.12407",
+  "n_spatial_permutations": 10000,
+  "moran_autocorrelation_null": "unrestricted regional label permutation, two-sided around null mean",
+  "n_moran_permutations": 10000,
+  "random_seed": 20260914,
+  "regional_test": "one-sided greater-or-equal empirical p with +1 correction",
+  "regional_multiple_testing": "Benjamini-Hochberg across 138 regions, separately by gene-set version",
+  "global_test": "maximum standardized positive regional Stage 6 Z-score",
+  "fdr_threshold": 0.05,
+  "robust_rule": "positive Stage 6 Z AND Stage 6 FDR < 0.05 AND Stage 7 spatial-null FDR < 0.05",
+  "stored_nulls": "summary statistics only; full 10000 x 138 surrogate matrices not saved",
+  "gene_set_versions": [
+    "broad",
+    "stringent",
+    "weighted"
+  ]
+}

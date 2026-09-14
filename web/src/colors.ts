@@ -8,6 +8,8 @@ const OBSERVED_LOW = new Color('#d9eee9')
 const OBSERVED_HIGH = new Color('#006d77')
 const NOT_SIGNIFICANT = new Color('#526068')
 const SIGNIFICANT = new Color('#ffb000')
+const SPATIAL_LOW = new Color('#e8e7ee')
+const SPATIAL_HIGH = new Color('#54278f')
 
 export function colorForRegion(
   region: RegionRecord,
@@ -19,6 +21,7 @@ export function colorForRegion(
     return new Color().setHSL((region.region_id * 0.61803398875) % 1, 0.48, 0.61)
   }
   if (metric === 'fdr_p') return (region.fdr_p < metadata.fdrThreshold ? SIGNIFICANT : NOT_SIGNIFICANT).clone()
+  if (metric === 'spatial_robustness') return SPATIAL_LOW.clone().lerp(SPATIAL_HIGH, region.spatial_robustness)
   if (metric === 'observed_score') {
     const [low, high] = metadata.observedDomain
     const t = Math.max(0, Math.min(1, (region.observed_score - low) / (high - low)))

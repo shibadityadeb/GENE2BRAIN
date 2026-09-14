@@ -7,6 +7,8 @@ const region: RegionRecord = {
   hemisphere: 'L', broad_system: 'subcortex', centroid_mni: [-24, 4, 2], observed_score: 0.5,
   random_mean: 0.49, random_std: 0.01, z_score: 1, empirical_p: 0.1, fdr_p: 0.2,
   effect_size: 0.01, number_of_genes: 123,
+  spatial_null_p: 0.2, spatial_null_fdr: 0.8, spatial_robustness: 0.8,
+  spatial_robustness_label: 'not_robust', robustness_rank: 4, spatial_isolate: false,
 }
 const enrichment = { regions: [region] } as EnrichmentData
 const geometry = { regions: [{ region_id: 77, positions: [0, 0, 0], indices: [0], voxel_count: 1 }] } as AtlasGeometry

@@ -1,13 +1,15 @@
 import type { Metric } from '../types'
 import { formatValue } from '../format'
 
-export function Legend({ metric, zDomain, observedDomain, threshold, significant, spatialRobustRegions, validationMode }: {
+export function Legend({ metric, zDomain, observedDomain, validationDomain, threshold, significant, spatialRobustRegions, mappedValidationRegions, validationMode }: {
   metric: Metric
   zDomain: [number, number]
   observedDomain: [number, number]
+  validationDomain: [number, number]
   threshold: number
   significant: number
   spatialRobustRegions: number
+  mappedValidationRegions: number
   validationMode: boolean
 }) {
   if (validationMode) return (
@@ -28,6 +30,21 @@ export function Legend({ metric, zDomain, observedDomain, threshold, significant
       <div className="gradient-key spatial" />
       <div className="legend-values"><span>0</span><span>Spatial-null percentile</span><span>1</span></div>
       <span>{spatialRobustRegions} regions meet the joint Stage 6 + Stage 7 rule. A high percentile alone is not a robust call.</span>
+    </div>
+  )
+  if (metric === 'validation_score') return (
+    <div className="legend" aria-label="Independent validation legend">
+      <strong>Independent validation data</strong>
+      <div className="gradient-key diverging" />
+      <div className="legend-values"><span>{formatValue(validationDomain[0], 2)}</span><span>0</span><span>{formatValue(validationDomain[1], 2)}</span></div>
+      <span>Higher values mean thinner cortex or smaller subcortical volume in PD. Gray: not measured ({mappedValidationRegions} AAL3 parcels mapped).</span>
+    </div>
+  )
+  if (metric === 'agreement') return (
+    <div className="legend" aria-label="Regional agreement legend">
+      <strong>Agreement · median split</strong>
+      <div className="agreement-legend"><i className="hh" /> high / high <i className="hl" /> high / low <i className="lh" /> low / high <i className="ll" /> low / low</div>
+      <span>Descriptive categories only. Gray parcels were not measured.</span>
     </div>
   )
   const observed = metric === 'observed_score'

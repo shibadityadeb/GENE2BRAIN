@@ -54,6 +54,24 @@
       "robust_rule": "positive Stage 6 Z AND Stage 6 FDR < 0.05 AND Stage 7 spatial-null FDR < 0.05",
       "robust_regions": 0,
       "isolated_regions": 4
+    },
+    "independent_validation": {
+      "dataset": "ENIGMA-Parkinson's 2021 PD-versus-control MRI summary statistics",
+      "phenotype": "Sign-reversed Cohen's d for cortical thickness or subcortical volume; higher means thinner/smaller in PD",
+      "matched_validation_units": 70,
+      "mapped_aal3_regions": 100,
+      "pearson_r": -0.02790831760440003,
+      "pearson_p": 0.8186061484629997,
+      "pearson_ci": [
+        -0.2170365844738854,
+        0.17641088143236852
+      ],
+      "spearman_rho": -0.014839703480876765,
+      "spearman_p": 0.9029552492557126,
+      "spatial_null_p": 0.8313168683131686,
+      "interpretation": "NOT SUPPORTED",
+      "independence_note": "Independent measurement and analysis; exact participant-disjointness from the upstream GWAS cannot be guaranteed",
+      "substantia_nigra": "Not measured in the public ENIGMA-PD FreeSurfer tables"
     }
   },
   "metrics": {
@@ -85,6 +103,18 @@
         1
       ],
       "scale": "sequential spatial-null percentile"
+    },
+    "validation_score": {
+      "label": "Independent validation",
+      "domain": [
+        -0.198,
+        0.198
+      ],
+      "scale": "diverging, symmetric about zero; gray is not measured"
+    },
+    "agreement": {
+      "label": "Agreement",
+      "scale": "four pre-specified median-split categories; gray is not measured"
     }
   },
   "atlas": {
@@ -130,6 +160,14 @@
     {
       "name": "AAL3 atlas publication",
       "url": "https://doi.org/10.1016/j.neuroimage.2019.116189"
+    },
+    {
+      "name": "ENIGMA-Parkinson's structural MRI validation",
+      "url": "https://doi.org/10.1002/mds.28706"
+    },
+    {
+      "name": "ENIGMA Toolbox summary statistics",
+      "url": "https://enigma-toolbox.readthedocs.io/en/latest/pages/04.loadsumstats/"
     }
   ]
 }

@@ -41,6 +41,12 @@ export function validateClientData(
     if ([region.fdr_p, region.empirical_p, region.spatial_null_p, region.spatial_null_fdr, region.spatial_robustness].some((value) => value < 0 || value > 1)) {
       throw new Error(`Invalid probability for region ${region.region_id}`)
     }
+    if (region.validation_score !== null && !Number.isFinite(region.validation_score)) {
+      throw new Error(`Invalid validation_score for region ${region.region_id}`)
+    }
+    if (!['high_prediction_high_validation', 'high_prediction_low_validation', 'low_prediction_high_validation', 'low_prediction_low_validation', 'not_measured'].includes(region.agreement_status)) {
+      throw new Error(`Invalid agreement_status for region ${region.region_id}`)
+    }
   })
   if (!(metadata.analysis.fdr_threshold > 0 && metadata.analysis.fdr_threshold < 1)) {
     throw new Error('Invalid configured FDR threshold')

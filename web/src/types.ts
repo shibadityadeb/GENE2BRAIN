@@ -1,4 +1,4 @@
-export type Metric = 'z_score' | 'observed_score' | 'fdr_p' | 'spatial_robustness'
+export type Metric = 'z_score' | 'observed_score' | 'fdr_p' | 'spatial_robustness' | 'validation_score' | 'agreement'
 export type Hemisphere = 'whole' | 'L' | 'R'
 export type ViewPreset = 'reset' | 'anterior' | 'posterior' | 'superior' | 'inferior'
 
@@ -24,6 +24,10 @@ export interface RegionRecord {
   spatial_robustness_label: 'robust' | 'not_robust'
   robustness_rank: number
   spatial_isolate: boolean
+  validation_score: number | null
+  validation_region: string | null
+  validation_mapping_confidence: 'high' | 'medium' | null
+  agreement_status: 'high_prediction_high_validation' | 'high_prediction_low_validation' | 'low_prediction_high_validation' | 'low_prediction_low_validation' | 'not_measured'
 }
 
 export interface EnrichmentData {
@@ -76,6 +80,21 @@ export interface ProjectMetadata {
       robust_rule: string
       robust_regions: number
       isolated_regions: number
+    }
+    independent_validation: {
+      dataset: string
+      phenotype: string
+      matched_validation_units: number
+      mapped_aal3_regions: number
+      pearson_r: number
+      pearson_p: number
+      pearson_ci: [number, number]
+      spearman_rho: number
+      spearman_p: number
+      spatial_null_p: number
+      interpretation: 'SUPPORTED' | 'PARTIALLY SUPPORTED' | 'NOT SUPPORTED'
+      independence_note: string
+      substantia_nigra: string
     }
   }
   metrics: Record<string, { label: string; domain?: number[]; threshold?: number; scale: string }>

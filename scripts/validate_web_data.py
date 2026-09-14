@@ -66,6 +66,16 @@ def validate(data_dir: Path) -> list[str]:
             errors.append(f"{prefix} number_of_genes is not positive")
         if row.get("spatial_robustness_label") not in {"robust", "not_robust"}:
             errors.append(f"{prefix} invalid spatial_robustness_label")
+        validation_score = row.get("validation_score")
+        if validation_score is not None and (
+            not isinstance(validation_score, (int, float)) or isinstance(validation_score, bool) or not math.isfinite(validation_score)
+        ):
+            errors.append(f"{prefix} invalid validation_score")
+        if row.get("agreement_status") not in {
+            "high_prediction_high_validation", "high_prediction_low_validation",
+            "low_prediction_high_validation", "low_prediction_low_validation", "not_measured",
+        }:
+            errors.append(f"{prefix} invalid agreement_status")
 
     for index, mesh in enumerate(meshes):
         positions = mesh.get("positions")
@@ -87,6 +97,13 @@ def validate(data_dir: Path) -> list[str]:
     expected_significant = sum(row["fdr_p"] < threshold for row in records) if isinstance(threshold, (int, float)) else -1
     if expected_significant != project.get("analysis", {}).get("significant_regions"):
         errors.append("configured significant-region count is inconsistent")
+    validation = project.get("analysis", {}).get("independent_validation", {})
+    mapped = sum(row.get("validation_score") is not None for row in records)
+    if mapped != validation.get("mapped_aal3_regions"):
+        errors.append("mapped validation-region count is inconsistent")
+    for field in ("pearson_r", "pearson_p", "spearman_rho", "spearman_p", "spatial_null_p"):
+        if not isinstance(validation.get(field), (int, float)) or not math.isfinite(validation[field]):
+            errors.append(f"invalid independent-validation {field}")
     return errors
 
 

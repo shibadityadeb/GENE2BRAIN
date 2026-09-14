@@ -8,8 +8,9 @@ const base = {
   random_std: 0.1, empirical_p: 0.5, effect_size: 0, number_of_genes: 123,
   spatial_null_p: 0.2, spatial_null_fdr: 0.8, spatial_robustness: 0.8,
   spatial_robustness_label: 'not_robust', robustness_rank: 4, spatial_isolate: false,
+  validation_score: null, validation_region: null, validation_mapping_confidence: null, agreement_status: 'not_measured',
 } as RegionRecord
-const config = { zDomain: [-4, 4] as [number, number], observedDomain: [0.4, 0.6] as [number, number], fdrThreshold: 0.05 }
+const config = { zDomain: [-4, 4] as [number, number], observedDomain: [0.4, 0.6] as [number, number], validationDomain: [-0.2, 0.2] as [number, number], fdrThreshold: 0.05 }
 
 describe('scientific color mapping', () => {
   it('uses opposite diverging colors for negative and positive Z scores', () => {
@@ -26,5 +27,12 @@ describe('scientific color mapping', () => {
     const low = colorForRegion({ ...base, z_score: 0, fdr_p: 0.5, spatial_robustness: 0 }, 'spatial_robustness', config)
     const high = colorForRegion({ ...base, z_score: 0, fdr_p: 0.5, spatial_robustness: 1 }, 'spatial_robustness', config)
     expect(low.getHexString()).not.toBe(high.getHexString())
+  })
+  it('distinguishes measured validation from missing and agreement categories', () => {
+    const missing = colorForRegion(base, 'validation_score', config)
+    const measured = colorForRegion({ ...base, validation_score: 0.2 }, 'validation_score', config)
+    const agreement = colorForRegion({ ...base, agreement_status: 'high_prediction_high_validation' }, 'agreement', config)
+    expect(missing.getHexString()).not.toBe(measured.getHexString())
+    expect(agreement.getHexString()).not.toBe(missing.getHexString())
   })
 })

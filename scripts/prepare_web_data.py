@@ -30,6 +30,9 @@ PARAMETERS = ROOT / "data" / "results" / "stage_06_permutation_parameters.json"
 SPATIAL_RESULTS = ROOT / "data" / "results" / "parkinson_spatial_robustness.csv"
 SPATIAL_PARAMETERS = ROOT / "data" / "results" / "stage_07_spatial_null_parameters.json"
 GLOBAL_SPATIAL = ROOT / "data" / "results" / "parkinson_global_spatial_test.csv"
+VALIDATION_AAL3 = ROOT / "data" / "validation" / "processed" / "parkinson_validation_aal3_scores.csv"
+VALIDATION_RESULTS = ROOT / "data" / "results" / "parkinson_independent_validation.csv"
+VALIDATION_REGIONAL = ROOT / "data" / "validation" / "processed" / "parkinson_validation_regional_scores.csv"
 ATLAS = ROOT / "data" / "atlases" / "aal_3v2" / "AAL3" / "AAL3v1.nii.gz"
 ATLAS_XML = ROOT / "data" / "atlases" / "aal_3v2" / "AAL3" / "AAL3v1.xml"
 AHBA_SUMMARY = ROOT / "data" / "processed" / "ahba_metadata_summary.csv"
@@ -175,6 +178,7 @@ def build() -> None:
     parameters = json.loads(PARAMETERS.read_text(encoding="utf-8"))
     spatial_parameters = json.loads(SPATIAL_PARAMETERS.read_text(encoding="utf-8"))
     spatial_results = {int(row["region_id"]): row for row in read_csv(SPATIAL_RESULTS)}
+    validation_results = {int(row["region_id"]): row for row in read_csv(VALIDATION_AAL3)}
     atlas_image = nib.load(ATLAS)
     atlas = np.asarray(atlas_image.dataobj, dtype=np.int16)
 
@@ -203,6 +207,10 @@ def build() -> None:
             "spatial_robustness_label": spatial_results[region_id]["spatial_robustness_label"],
             "robustness_rank": int(spatial_results[region_id]["robustness_rank"]),
             "spatial_isolate": spatial_results[region_id]["spatial_isolate"] == "True",
+            "validation_score": json_number(validation_results[region_id]["validation_score"]) if region_id in validation_results else None,
+            "validation_region": validation_results[region_id]["validation_region"] if region_id in validation_results else None,
+            "validation_mapping_confidence": validation_results[region_id]["mapping_confidence"] if region_id in validation_results else None,
+            "agreement_status": validation_results[region_id]["agreement_status"] if region_id in validation_results else "not_measured",
         }
         records.append(record)
         positions, indices = parcel_mesh(atlas == region_id, atlas_image.affine)
@@ -237,6 +245,15 @@ def build() -> None:
     global_spatial = [row for row in read_csv(GLOBAL_SPATIAL) if row["gene_set_version"] == "weighted"]
     if len(global_spatial) != 1:
         raise ValueError("Expected one weighted Stage 7 global result")
+    validation_statistics = read_csv(VALIDATION_RESULTS)
+    primary_validation = [row for row in validation_statistics if row["discovery_metric"] == "weighted_z_primary"]
+    spatial_validation = [row for row in validation_statistics if row["discovery_metric"] == "weighted_z_spatial_moran_null"]
+    if len(primary_validation) != 1 or len(spatial_validation) != 1:
+        raise ValueError("Expected one primary and one spatial Stage 8 validation result")
+    primary_validation = primary_validation[0]
+    spatial_validation = spatial_validation[0]
+    validation_values = [record["validation_score"] for record in records if record["validation_score"] is not None]
+    validation_bound = max(abs(value) for value in validation_values)
     metadata_payload = {
         "schema_version": "1.0.0",
         "project": "GENE2BRAIN",
@@ -280,12 +297,29 @@ def build() -> None:
                 "robust_regions": sum(record["spatial_robustness_label"] == "robust" for record in records),
                 "isolated_regions": len(spatial_parameters["isolated_region_ids"]),
             },
+            "independent_validation": {
+                "dataset": "ENIGMA-Parkinson's 2021 PD-versus-control MRI summary statistics",
+                "phenotype": "Sign-reversed Cohen's d for cortical thickness or subcortical volume; higher means thinner/smaller in PD",
+                "matched_validation_units": int(primary_validation["n_regions"]),
+                "mapped_aal3_regions": len(validation_values),
+                "pearson_r": json_number(primary_validation["pearson_r"]),
+                "pearson_p": json_number(primary_validation["pearson_p"]),
+                "pearson_ci": [json_number(primary_validation["pearson_ci_low"]), json_number(primary_validation["pearson_ci_high"])],
+                "spearman_rho": json_number(primary_validation["spearman_rho"]),
+                "spearman_p": json_number(primary_validation["spearman_p"]),
+                "spatial_null_p": json_number(spatial_validation["pearson_p"]),
+                "interpretation": "NOT SUPPORTED",
+                "independence_note": "Independent measurement and analysis; exact participant-disjointness from the upstream GWAS cannot be guaranteed",
+                "substantia_nigra": "Not measured in the public ENIGMA-PD FreeSurfer tables",
+            },
         },
         "metrics": {
             "z_score": {"label": "Z-score", "domain": [-z_bound, z_bound], "scale": "diverging, symmetric about zero"},
             "observed_score": {"label": "Observed expression", "domain": [min(observed_values), max(observed_values)], "scale": "sequential"},
             "fdr_p": {"label": "FDR significance", "threshold": parameters["fdr_threshold"], "scale": "binary significance status"},
             "spatial_robustness": {"label": "Spatial robustness", "domain": [0, 1], "scale": "sequential spatial-null percentile"},
+            "validation_score": {"label": "Independent validation", "domain": [-validation_bound, validation_bound], "scale": "diverging, symmetric about zero; gray is not measured"},
+            "agreement": {"label": "Agreement", "scale": "four pre-specified median-split categories; gray is not measured"},
         },
         "atlas": {
             "name": "Automated Anatomical Labeling atlas 3 (AAL3v1)",
@@ -305,6 +339,8 @@ def build() -> None:
             {"name": "Selected Parkinson GWAS GCST90308590", "url": "https://www.ebi.ac.uk/gwas/studies/GCST90308590"},
             {"name": "Open Targets Platform", "url": "https://platform.opentargets.org/"},
             {"name": "AAL3 atlas publication", "url": "https://doi.org/10.1016/j.neuroimage.2019.116189"},
+            {"name": "ENIGMA-Parkinson's structural MRI validation", "url": "https://doi.org/10.1002/mds.28706"},
+            {"name": "ENIGMA Toolbox summary statistics", "url": "https://enigma-toolbox.readthedocs.io/en/latest/pages/04.loadsumstats/"},
         ],
     }
     geometry = {
@@ -322,6 +358,8 @@ def build() -> None:
     write_json(PUBLIC_DATA / "aal3_regions.json", geometry, compact=True)
     shutil.copy2(RESULTS, PUBLIC_DATA / "parkinson_regional_enrichment.csv")
     shutil.copy2(SPATIAL_RESULTS, PUBLIC_DATA / "parkinson_spatial_robustness.csv")
+    shutil.copy2(VALIDATION_REGIONAL, PUBLIC_DATA / "parkinson_independent_validation_regional_scores.csv")
+    shutil.copy2(VALIDATION_RESULTS, PUBLIC_DATA / "parkinson_independent_validation_statistics.csv")
     print(f"Prepared {len(records)} research records and {len(meshes)} atlas meshes")
     print(f"Geometry: {(PUBLIC_DATA / 'aal3_regions.json').stat().st_size / 1024 / 1024:.2f} MiB")
 

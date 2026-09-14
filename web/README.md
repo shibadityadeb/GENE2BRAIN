@@ -1,8 +1,10 @@
 # GENE2BRAIN interactive brain
 
 This React + TypeScript application visualizes the validated Stage 6 Parkinson
-regional-enrichment results and Stage 7 spatial sensitivity on the same AAL3v1 parcels used by the scientific
-pipeline. The browser displays authoritative values; it does not calculate scores,
+regional-enrichment results, Stage 7 spatial sensitivity, and Stage 8 external
+phenotype and agreement layers on the same AAL3v1 parcels used by the scientific
+pipeline. The Stage 8 layers are explicitly separate from discovery and unmeasured
+parcels remain missing. The browser displays authoritative values; it does not calculate scores,
 permutations, p-values, FDR values, or Z-scores.
 
 ## Run locally
@@ -41,6 +43,11 @@ FDR q-value, effect size, and gene-set size, plus the separately identified Stag
 spatial-null p-value, FDR, percentile, rank, and joint robustness call. The deployed copy is under
 `web/public/data/`. `project_metadata.json` supplies counts, data sources, scale
 domains, and the pipeline-defined FDR threshold (q < 0.05).
+
+Stage 8 adds nullable ENIGMA-PD validation scores, the source ENIGMA parcel,
+crosswalk confidence, and the pre-specified median-split agreement status. The
+scientific correlation uses 70 unique ENIGMA parcels; visualization-only propagation
+to AAL3 never increases the inferential sample size.
 
 Stage 6 retained per-region null mean and standard deviation but not the 10,000
 individual scores. The detail panel therefore shows a clearly labeled observed vs.

@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0.0",
+  "project": "GENE2BRAIN",
+  "title": "From Genetic Risk to Spatial Brain Vulnerability",
+  "generated_on": "2026-09-14",
+  "available_diseases": [
+    {
+      "id": "parkinson-disease",
+      "name": "Parkinson disease",
+      "status": "available"
+    }
+  ],
+  "future_diseases": [
+    "Alzheimer disease",
+    "Huntington disease",
+    "ALS",
+    "Schizophrenia",
+    "Bipolar disorder"
+  ],
+  "counts": {
+    "ahba_donors": 6,
+    "ahba_samples": 3702,
+    "atlas_parcels": 166,
+    "regions_analyzed": 138,
+    "genes_analyzed": 15632,
+    "parkinson_genes_represented": 123,
+    "random_gene_sets": 10000,
+    "credible_sets": 67,
+    "gwas_sample_size": 2525730
+  },
+  "analysis": {
+    "primary_gene_set": "weighted",
+    "gwas_accession": "GCST90308590",
+    "gwas_title": "Multi-ancestry genome-wide association meta-analysis of Parkinson's disease",
+    "gene_prioritization": "Open Targets Platform Locus-to-Gene (L2G)",
+    "null_model": "Euclidean nearest neighbors after unit-variance standardization",
+    "matching_variables": [
+      "mean_expression",
+      "log10_expression_variance",
+      "log1p_probe_count"
+    ],
+    "multiple_testing": "Benjamini-Hochberg across 138 regions separately for each gene-set version",
+    "fdr_threshold": 0.05,
+    "significant_regions": 0,
+    "null_draws_available": false,
+    "null_summary_available": true,
+    "null_summary_note": "Per-region random mean and standard deviation are retained; individual permutation draws were not exported by Stage 6."
+  },
+  "metrics": {
+    "z_score": {
+      "label": "Z-score",
+      "domain": [
+        -3.740427986118954,
+        3.740427986118954
+      ],
+      "scale": "diverging, symmetric about zero"
+    },
+    "observed_score": {
+      "label": "Observed expression",
+      "domain": [
+        0.4392928393734095,
+        0.5671194217937651
+      ],
+      "scale": "sequential"
+    },
+    "fdr_p": {
+      "label": "FDR significance",
+      "threshold": 0.05,
+      "scale": "binary significance status"
+    }
+  },
+  "atlas": {
+    "name": "Automated Anatomical Labeling atlas 3 (AAL3v1)",
+    "distribution": "AAL3v2 for SPM12, April 2024",
+    "space": "MNI",
+    "resolution_mm": [
+      2,
+      2,
+      2
+    ],
+    "dimensions": [
+      91,
+      109,
+      91
+    ],
+    "source_image": "data/atlases/aal_3v2/AAL3/AAL3v1.nii.gz",
+    "mapping": "region_id equals the nonzero integer voxel label in AAL3v1.nii.gz",
+    "geometry_method": "Exposed voxel faces extracted from retained labels and greedily merged only when coplanar and contiguous",
+    "render_coordinate_mapping": "MNI (x, y, z) is rendered as WebGL (x, z, y) so superior is up"
+  },
+  "sources": [
+    {
+      "name": "Allen Human Brain Atlas",
+      "url": "https://human.brain-map.org/"
+    },
+    {
+      "name": "abagen",
+      "url": "https://abagen.readthedocs.io/"
+    },
+    {
+      "name": "NHGRI-EBI GWAS Catalog",
+      "url": "https://www.ebi.ac.uk/gwas/"
+    },
+    {
+      "name": "Selected Parkinson GWAS GCST90308590",
+      "url": "https://www.ebi.ac.uk/gwas/studies/GCST90308590"
+    },
+    {
+      "name": "Open Targets Platform",
+      "url": "https://platform.opentargets.org/"
+    },
+    {
+      "name": "AAL3 atlas publication",
+      "url": "https://doi.org/10.1016/j.neuroimage.2019.116189"
+    }
+  ]
+}

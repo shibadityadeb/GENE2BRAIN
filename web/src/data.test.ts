@@ -9,6 +9,8 @@ const region: RegionRecord = {
   effect_size: 0.01, number_of_genes: 123,
   spatial_null_p: 0.2, spatial_null_fdr: 0.8, spatial_robustness: 0.8,
   spatial_robustness_label: 'not_robust', robustness_rank: 4, spatial_isolate: false,
+  validation_score: 0.136, validation_region: 'Lput', validation_mapping_confidence: 'high',
+  agreement_status: 'high_prediction_high_validation',
 }
 const enrichment = { regions: [region] } as EnrichmentData
 const geometry = { regions: [{ region_id: 77, positions: [0, 0, 0], indices: [0], voxel_count: 1 }] } as AtlasGeometry

@@ -29,6 +29,8 @@ export function Controls({
             <option value="observed_score">Observed expression</option>
             <option value="fdr_p">FDR significance</option>
             <option value="spatial_robustness">Spatial robustness</option>
+            <option value="validation_score">Independent validation</option>
+            <option value="agreement">Agreement</option>
           </select>
         </label>
         <label className="search-control">Search brain region

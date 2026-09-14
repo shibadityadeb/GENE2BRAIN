@@ -15,6 +15,7 @@ from pathlib import Path
 import nibabel as nib
 import numpy as np
 import pandas as pd
+import scipy
 from statsmodels.stats.multitest import multipletests
 
 
@@ -520,6 +521,81 @@ class ParkinsonSpatialRobustnessArtifactTests(unittest.TestCase):
         self.assertTrue(self.global_test["spatial_null_p"].between(1 / 10_001, 1).all())
         self.assertEqual(set(self.global_test["number_of_spatial_permutations"]), {10_000})
         self.assertEqual(self.parameters["spatial_null"], "Moran spectral randomization, singleton procedure")
+
+
+class ParkinsonIndependentValidationArtifactTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.validation_dir = ROOT / "data" / "validation"
+        cls.result_data = ROOT / "data" / "results"
+        cls.mapping = pd.read_csv(cls.validation_dir / "parkinson_region_mapping.csv")
+        cls.regional = pd.read_csv(
+            cls.validation_dir / "processed" / "parkinson_validation_regional_scores.csv"
+        )
+        cls.results = pd.read_csv(cls.result_data / "parkinson_independent_validation.csv")
+
+    def test_required_stage_08_outputs_exist(self) -> None:
+        required = [
+            ROOT / "src" / "stage_08_independent_validation.py",
+            ROOT / "reports" / "stage_08_discovery_definition.md",
+            ROOT / "reports" / "stage_08_validation_source_review.md",
+            ROOT / "reports" / "stage_08_interpretation.md",
+            self.validation_dir / "parkinson_candidate_validation_datasets.csv",
+            self.validation_dir / "parkinson_selected_validation_dataset.csv",
+            self.validation_dir / "parkinson_region_mapping.csv",
+            self.validation_dir / "raw" / "parkinsons_case-controls_CortThick_PDvsCN.csv",
+            self.validation_dir / "raw" / "parkinsons_case-controls_Subvol_PDvsCN.csv",
+            self.validation_dir / "processed" / "parkinson_validation_regional_scores.csv",
+            self.validation_dir / "processed" / "stage_08_validation_provenance.json",
+            self.result_data / "parkinson_independent_validation.csv",
+            self.result_data / "parkinson_leave_one_region_out.csv",
+            self.result_data / "parkinson_substantia_nigra_sensitivity.csv",
+            FIGURES / "stage_08_gene2brain_vs_independent_validation.png",
+            ROOT / "results" / "brain_maps" / "stage_08_prediction_vs_validation.png",
+            ROOT / "results" / "brain_maps" / "stage_08_regional_agreement.png",
+        ]
+        missing = [str(path.relative_to(ROOT)) for path in required if not path.is_file()]
+        self.assertEqual(missing, [], f"Missing Stage 8 files: {missing}")
+
+    def test_mapping_and_analysis_units_avoid_pseudoreplication(self) -> None:
+        included = self.mapping.loc[self.mapping["included_in_inference"]]
+        self.assertEqual(len(included), 70)
+        self.assertEqual(len(self.regional), 70)
+        self.assertTrue(self.regional["region"].is_unique)
+        ids = [int(value) for token in included["gene2brain_region_ids"] for value in str(token).split("|")]
+        self.assertEqual(len(ids), len(set(ids)))
+        self.assertEqual(set(included["mapping_confidence"]), {"high", "medium"})
+
+    def test_primary_statistics_reproduce_from_frozen_vectors(self) -> None:
+        primary = self.results.loc[self.results["discovery_metric"] == "weighted_z_primary"].iloc[0]
+        observed_pearson = scipy.stats.pearsonr(
+            self.regional["weighted_z"], self.regional["validation_score"]
+        )
+        observed_spearman = scipy.stats.spearmanr(
+            self.regional["weighted_z"], self.regional["validation_score"]
+        )
+        self.assertAlmostEqual(primary["pearson_r"], observed_pearson.statistic)
+        self.assertAlmostEqual(primary["pearson_p"], observed_pearson.pvalue)
+        self.assertAlmostEqual(primary["spearman_rho"], observed_spearman.statistic)
+        self.assertAlmostEqual(primary["spearman_p"], observed_spearman.pvalue)
+        self.assertEqual(primary["n_regions"], 70)
+        self.assertLess(primary["pearson_ci_low"], primary["pearson_r"])
+        self.assertGreater(primary["pearson_ci_high"], primary["pearson_r"])
+
+    def test_leave_one_out_and_sn_absence_are_explicit(self) -> None:
+        loo = pd.read_csv(self.result_data / "parkinson_leave_one_region_out.csv")
+        sn = pd.read_csv(self.result_data / "parkinson_substantia_nigra_sensitivity.csv")
+        self.assertEqual(len(loo), 70)
+        self.assertEqual(set(loo["n_regions"]), {69})
+        self.assertTrue(loo["pearson_r"].between(-1, 1).all())
+        self.assertEqual(sn.loc[sn["analysis"] == "including_substantia_nigra", "status"].item(), "not_estimable")
+        self.assertIn("do not contain substantia nigra", sn["notes"].iloc[0])
+
+    def test_null_result_is_not_overstated(self) -> None:
+        interpretation = (ROOT / "reports" / "stage_08_interpretation.md").read_text()
+        self.assertIn("**NOT SUPPORTED**", interpretation)
+        self.assertIn("participant-disjointness", interpretation)
+        self.assertIn("not estimable", interpretation)
 
 
 if __name__ == "__main__":

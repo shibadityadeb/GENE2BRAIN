@@ -1,0 +1,101 @@
+region_id,region,validation_region,validation_score,weighted_z,mapping_confidence,agreement_status
+155,ACC sup L,L_caudalanteriorcingulate,-0.043,0.3509540425982104,high,high_prediction_low_validation
+49,Cuneus L,L_cuneus,0.112,-1.0603346041994073,high,low_prediction_high_validation
+59,Fusiform L,L_fusiform,0.198,0.7697751437272279,high,high_prediction_high_validation
+65,Parietal Inf L,L_inferiorparietal,0.188,-0.2973858086035343,medium,high_prediction_high_validation
+69,Angular L,L_inferiorparietal,0.188,0.9220156011817656,medium,high_prediction_high_validation
+93,Temporal Inf L,L_inferiortemporal,0.193,0.6229489796876901,high,high_prediction_high_validation
+53,Occipital Sup L,L_lateraloccipital,0.166,-0.9807699465916292,medium,low_prediction_high_validation
+55,Occipital Mid L,L_lateraloccipital,0.166,-0.3847271692252886,medium,low_prediction_high_validation
+57,Occipital Inf L,L_lateraloccipital,0.166,-0.8509940781331572,medium,low_prediction_high_validation
+31,OFClat L,L_lateralorbitofrontal,0.125,-0.4814109006171989,high,low_prediction_high_validation
+51,Lingual L,L_lingual,0.111,-1.5768865408070354,high,low_prediction_high_validation
+21,Frontal Med Orb L,L_medialorbitofrontal,0.098,0.8105699805681063,medium,high_prediction_high_validation
+23,Rectus L,L_medialorbitofrontal,0.098,1.3489755488370208,medium,high_prediction_high_validation
+25,OFCmed L,L_medialorbitofrontal,0.098,0.1234575495148232,medium,high_prediction_high_validation
+89,Temporal Mid L,L_middletemporal,0.156,0.7255168606938017,high,high_prediction_high_validation
+43,ParaHippocampal L,L_parahippocampal,0.122,0.1051558418963293,high,high_prediction_high_validation
+73,Paracentral Lobule L,L_paracentral,0.109,-0.3684877489491572,high,low_prediction_high_validation
+7,Frontal Inf Oper L,L_parsopercularis,0.02,0.6038116609514702,high,high_prediction_low_validation
+11,Frontal Inf Orb 2 L,L_parsorbitalis,0.11,1.3514219379593178,high,high_prediction_high_validation
+9,Frontal Inf Tri L,L_parstriangularis,0.051,0.3011695761828808,high,high_prediction_low_validation
+47,Calcarine L,L_pericalcarine,0.055,-1.0197019693810594,high,low_prediction_low_validation
+61,Postcentral L,L_postcentral,0.11,-0.5157873172162271,high,low_prediction_high_validation
+39,Cingulate Post L,L_posteriorcingulate,0.082,-1.2615418197658592,high,low_prediction_low_validation
+1,Precentral L,L_precentral,0.104,-0.0319463295523617,high,low_prediction_high_validation
+71,Precuneus L,L_precuneus,0.156,-1.6705120010413943,high,low_prediction_high_validation
+153,ACC pre L,L_rostralanteriorcingulate,-0.007,0.972369121807372,high,high_prediction_low_validation
+5,Frontal Mid 2 L,L_rostralmiddlefrontal,0.088,0.244329611009222,medium,high_prediction_low_validation
+3,Frontal Sup 2 L,L_superiorfrontal,0.104,1.465250837550306,medium,high_prediction_high_validation
+19,Frontal Sup Medial L,L_superiorfrontal,0.104,0.9336302932923506,medium,high_prediction_high_validation
+63,Parietal Sup L,L_superiorparietal,0.145,-0.210918831268431,high,low_prediction_high_validation
+85,Temporal Sup L,L_superiortemporal,0.096,0.2431587314685573,high,high_prediction_high_validation
+67,SupraMarginal L,L_supramarginal,0.131,1.36971166545263,high,high_prediction_high_validation
+87,Temporal Pole Sup L,L_temporalpole,0.102,0.0768026927109761,medium,high_prediction_high_validation
+91,Temporal Pole Mid L,L_temporalpole,0.102,0.4397646638255156,medium,high_prediction_high_validation
+83,Heschl L,L_transversetemporal,0.072,0.7524417577429183,high,high_prediction_low_validation
+33,Insula L,L_insula,0.036,-0.0133079907922648,high,low_prediction_low_validation
+156,ACC sup R,R_caudalanteriorcingulate,0.027,-0.9934881037797536,high,low_prediction_low_validation
+60,Fusiform R,R_fusiform,0.117,-0.5380084473944713,high,low_prediction_high_validation
+66,Parietal Inf R,R_inferiorparietal,0.194,-0.3063573908861867,medium,low_prediction_high_validation
+70,Angular R,R_inferiorparietal,0.194,-0.0793874786815318,medium,low_prediction_high_validation
+94,Temporal Inf R,R_inferiortemporal,0.141,1.7434500685328211,high,high_prediction_high_validation
+56,Occipital Mid R,R_lateraloccipital,0.167,0.9667787134330532,medium,high_prediction_high_validation
+58,Occipital Inf R,R_lateraloccipital,0.167,0.2006186733372514,medium,high_prediction_high_validation
+32,OFClat R,R_lateralorbitofrontal,0.141,-0.0063472860040162,high,high_prediction_high_validation
+52,Lingual R,R_lingual,0.094,-1.6926004197715476,high,low_prediction_low_validation
+22,Frontal Med Orb R,R_medialorbitofrontal,0.067,1.1640362429014095,medium,high_prediction_low_validation
+24,Rectus R,R_medialorbitofrontal,0.067,1.027955078492678,medium,high_prediction_low_validation
+26,OFCmed R,R_medialorbitofrontal,0.067,0.819682171372166,medium,high_prediction_low_validation
+90,Temporal Mid R,R_middletemporal,0.134,0.3459558177118313,high,high_prediction_high_validation
+44,ParaHippocampal R,R_parahippocampal,0.108,0.2378136217969074,high,high_prediction_high_validation
+74,Paracentral Lobule R,R_paracentral,0.052,-0.5629137848585595,high,low_prediction_low_validation
+8,Frontal Inf Oper R,R_parsopercularis,0.026,-0.5202226210725178,high,low_prediction_low_validation
+12,Frontal Inf Orb 2 R,R_parsorbitalis,0.086,-0.9427206469962656,high,low_prediction_low_validation
+10,Frontal Inf Tri R,R_parstriangularis,0.027,-0.7830559794154338,high,low_prediction_low_validation
+48,Calcarine R,R_pericalcarine,0.058,-0.0525814972075425,high,low_prediction_low_validation
+62,Postcentral R,R_postcentral,0.104,-1.2185067353887806,high,low_prediction_high_validation
+2,Precentral R,R_precentral,0.052,-0.6985837742051895,high,low_prediction_low_validation
+72,Precuneus R,R_precuneus,0.193,0.2311696854780201,high,high_prediction_high_validation
+154,ACC pre R,R_rostralanteriorcingulate,0.01,0.8576860025824109,high,high_prediction_low_validation
+6,Frontal Mid 2 R,R_rostralmiddlefrontal,0.047,-0.7929875209745681,medium,low_prediction_low_validation
+4,Frontal Sup 2 R,R_superiorfrontal,0.11,2.093181760563216,medium,high_prediction_high_validation
+20,Frontal Sup Medial R,R_superiorfrontal,0.11,2.633686530481111,medium,high_prediction_high_validation
+64,Parietal Sup R,R_superiorparietal,0.174,-2.0039868348761876,high,low_prediction_high_validation
+86,Temporal Sup R,R_superiortemporal,0.077,1.0843470163362237,high,high_prediction_low_validation
+68,SupraMarginal R,R_supramarginal,0.153,-1.8632634152382752,high,low_prediction_high_validation
+88,Temporal Pole Sup R,R_temporalpole,0.096,0.076734121609393,medium,high_prediction_high_validation
+84,Heschl R,R_transversetemporal,0.068,0.2186490969387093,high,high_prediction_low_validation
+34,Insula R,R_insula,0.077,-0.3001987045699881,high,low_prediction_low_validation
+157,N Acc L,Laccumb,0.028,-0.3012789907899406,high,low_prediction_low_validation
+45,Amygdala L,Lamyg,0.13,1.5387176061019034,high,high_prediction_high_validation
+75,Caudate L,Lcaud,0.071,-3.635687163111313,high,low_prediction_low_validation
+41,Hippocampus L,Lhippo,0.02,1.741246693186499,high,high_prediction_low_validation
+79,Pallidum L,Lpal,0.066,-1.906291948323205,high,low_prediction_low_validation
+77,Putamen L,Lput,0.136,-2.687272962155727,high,low_prediction_high_validation
+121,Thal AV L,Lthal,-0.131,0.3354191981829632,medium,high_prediction_low_validation
+125,Thal VA L,Lthal,-0.131,-0.9250368100522688,medium,high_prediction_low_validation
+127,Thal VL L,Lthal,-0.131,-0.4021435235278794,medium,high_prediction_low_validation
+129,Thal VPL L,Lthal,-0.131,-0.5852835096097303,medium,high_prediction_low_validation
+131,Thal IL L,Lthal,-0.131,-0.1573364875884277,medium,high_prediction_low_validation
+135,Thal MDm L,Lthal,-0.131,0.8574349873687472,medium,high_prediction_low_validation
+137,Thal MDl L,Lthal,-0.131,1.1800899794802888,medium,high_prediction_low_validation
+139,Thal LGN L,Lthal,-0.131,1.3348499626745889,medium,high_prediction_low_validation
+141,Thal MGN L,Lthal,-0.131,2.383839881049032,medium,high_prediction_low_validation
+143,Thal PuI L,Lthal,-0.131,0.8126581501498562,medium,high_prediction_low_validation
+145,Thal PuM L,Lthal,-0.131,1.3432026599858418,medium,high_prediction_low_validation
+147,Thal PuA L,Lthal,-0.131,-0.4374721298377393,medium,high_prediction_low_validation
+158,N Acc R,Raccumb,0.052,-1.3598926359791164,high,low_prediction_low_validation
+46,Amygdala R,Ramyg,0.077,1.1991748741546844,high,high_prediction_low_validation
+76,Caudate R,Rcaud,0.033,-3.740427986118954,high,low_prediction_low_validation
+42,Hippocampus R,Rhippo,0.031,0.7832554018287461,high,high_prediction_low_validation
+80,Pallidum R,Rpal,0.053,-2.0829869261569938,high,low_prediction_low_validation
+78,Putamen R,Rput,0.135,-1.1686536592456116,high,low_prediction_high_validation
+122,Thal AV R,Rthal,-0.078,-0.1761723241528632,medium,high_prediction_low_validation
+128,Thal VL R,Rthal,-0.078,1.8210236317945232,medium,high_prediction_low_validation
+130,Thal VPL R,Rthal,-0.078,-0.112162400494646,medium,high_prediction_low_validation
+136,Thal MDm R,Rthal,-0.078,1.2361149000925629,medium,high_prediction_low_validation
+140,Thal LGN R,Rthal,-0.078,0.7194470020124043,medium,high_prediction_low_validation
+144,Thal PuI R,Rthal,-0.078,-0.3203800798691554,medium,high_prediction_low_validation
+146,Thal PuM R,Rthal,-0.078,2.3598755927506923,medium,high_prediction_low_validation
+148,Thal PuA R,Rthal,-0.078,-0.0644425056686291,medium,high_prediction_low_validation

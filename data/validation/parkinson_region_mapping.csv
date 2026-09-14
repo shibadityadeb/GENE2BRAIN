@@ -1,0 +1,85 @@
+validation_region,gene2brain_region,mapping_confidence,mapping_method,notes,gene2brain_region_ids,included_in_inference
+L_bankssts,,excluded,manual anatomical crosswalk,"No non-overlapping, anatomically defensible AAL3 equivalent in the retained discovery matrix",,False
+L_caudalanteriorcingulate,ACC sup L,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,"DK caudal anterior cingulate -> AAL3 superior ACC, left",155,True
+L_caudalmiddlefrontal,,excluded,manual anatomical crosswalk,"No non-overlapping, anatomically defensible AAL3 equivalent in the retained discovery matrix",,False
+L_cuneus,Cuneus L,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,same named cortical structure and hemisphere,49,True
+L_entorhinal,,excluded,manual anatomical crosswalk,"No non-overlapping, anatomically defensible AAL3 equivalent in the retained discovery matrix",,False
+L_fusiform,Fusiform L,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,same named cortical structure and hemisphere,59,True
+L_inferiorparietal,Parietal Inf L | Angular L,medium,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,DK inferior parietal represented by AAL3 inferior parietal plus angular parcels,65|69,True
+L_inferiortemporal,Temporal Inf L,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,same named cortical structure and hemisphere,93,True
+L_isthmuscingulate,,excluded,manual anatomical crosswalk,"No non-overlapping, anatomically defensible AAL3 equivalent in the retained discovery matrix",,False
+L_lateraloccipital,Occipital Sup L | Occipital Mid L | Occipital Inf L,medium,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,DK lateral occipital represented by retained AAL3 lateral occipital gyri,53|55|57,True
+L_lateralorbitofrontal,OFClat L,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,DK lateral orbitofrontal -> AAL3 lateral orbitofrontal,31,True
+L_lingual,Lingual L,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,same named cortical structure and hemisphere,51,True
+L_medialorbitofrontal,Frontal Med Orb L | Rectus L | OFCmed L,medium,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,"DK medial orbitofrontal represented by medial orbital frontal, rectus and medial OFC",21|23|25,True
+L_middletemporal,Temporal Mid L,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,same named cortical structure and hemisphere,89,True
+L_parahippocampal,ParaHippocampal L,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,same named cortical structure and hemisphere,43,True
+L_paracentral,Paracentral Lobule L,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,DK paracentral -> AAL3 paracentral lobule,73,True
+L_parsopercularis,Frontal Inf Oper L,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,DK pars opercularis -> AAL3 inferior frontal opercular,7,True
+L_parsorbitalis,Frontal Inf Orb 2 L,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,DK pars orbitalis -> AAL3 inferior frontal orbital,11,True
+L_parstriangularis,Frontal Inf Tri L,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,DK pars triangularis -> AAL3 inferior frontal triangular,9,True
+L_pericalcarine,Calcarine L,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,DK pericalcarine -> AAL3 calcarine,47,True
+L_postcentral,Postcentral L,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,same named cortical structure and hemisphere,61,True
+L_posteriorcingulate,Cingulate Post L,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,same named cortical structure and hemisphere,39,True
+L_precentral,Precentral L,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,same named cortical structure and hemisphere,1,True
+L_precuneus,Precuneus L,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,same named cortical structure and hemisphere,71,True
+L_rostralanteriorcingulate,ACC pre L,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,DK rostral anterior cingulate -> AAL3 pregenual ACC,153,True
+L_rostralmiddlefrontal,Frontal Mid 2 L,medium,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,DK rostral middle frontal -> AAL3 middle frontal,5,True
+L_superiorfrontal,Frontal Sup 2 L | Frontal Sup Medial L,medium,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,DK superior frontal represented by lateral and medial superior frontal AAL3 parcels,3|19,True
+L_superiorparietal,Parietal Sup L,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,same named cortical structure and hemisphere,63,True
+L_superiortemporal,Temporal Sup L,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,same named cortical structure and hemisphere,85,True
+L_supramarginal,SupraMarginal L,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,same named cortical structure and hemisphere,67,True
+L_frontalpole,,excluded,manual anatomical crosswalk,"No non-overlapping, anatomically defensible AAL3 equivalent in the retained discovery matrix",,False
+L_temporalpole,Temporal Pole Sup L | Temporal Pole Mid L,medium,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,DK temporal pole represented by retained superior and middle temporal-pole AAL3 parcels,87|91,True
+L_transversetemporal,Heschl L,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,DK transverse temporal -> AAL3 Heschl gyrus,83,True
+L_insula,Insula L,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,same named cortical structure and hemisphere,33,True
+R_bankssts,,excluded,manual anatomical crosswalk,"No non-overlapping, anatomically defensible AAL3 equivalent in the retained discovery matrix",,False
+R_caudalanteriorcingulate,ACC sup R,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,"DK caudal anterior cingulate -> AAL3 superior ACC, right",156,True
+R_caudalmiddlefrontal,,excluded,manual anatomical crosswalk,"No non-overlapping, anatomically defensible AAL3 equivalent in the retained discovery matrix",,False
+R_cuneus,,excluded,manual anatomical crosswalk,"No non-overlapping, anatomically defensible AAL3 equivalent in the retained discovery matrix",,False
+R_entorhinal,,excluded,manual anatomical crosswalk,"No non-overlapping, anatomically defensible AAL3 equivalent in the retained discovery matrix",,False
+R_fusiform,Fusiform R,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,same named cortical structure and hemisphere,60,True
+R_inferiorparietal,Parietal Inf R | Angular R,medium,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,DK inferior parietal represented by AAL3 inferior parietal plus angular parcels,66|70,True
+R_inferiortemporal,Temporal Inf R,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,same named cortical structure and hemisphere,94,True
+R_isthmuscingulate,,excluded,manual anatomical crosswalk,"No non-overlapping, anatomically defensible AAL3 equivalent in the retained discovery matrix",,False
+R_lateraloccipital,Occipital Mid R | Occipital Inf R,medium,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,retained AAL3 middle and inferior occipital gyri; superior right was not retained in discovery,56|58,True
+R_lateralorbitofrontal,OFClat R,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,DK lateral orbitofrontal -> AAL3 lateral orbitofrontal,32,True
+R_lingual,Lingual R,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,same named cortical structure and hemisphere,52,True
+R_medialorbitofrontal,Frontal Med Orb R | Rectus R | OFCmed R,medium,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,"DK medial orbitofrontal represented by medial orbital frontal, rectus and medial OFC",22|24|26,True
+R_middletemporal,Temporal Mid R,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,same named cortical structure and hemisphere,90,True
+R_parahippocampal,ParaHippocampal R,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,same named cortical structure and hemisphere,44,True
+R_paracentral,Paracentral Lobule R,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,DK paracentral -> AAL3 paracentral lobule,74,True
+R_parsopercularis,Frontal Inf Oper R,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,DK pars opercularis -> AAL3 inferior frontal opercular,8,True
+R_parsorbitalis,Frontal Inf Orb 2 R,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,DK pars orbitalis -> AAL3 inferior frontal orbital,12,True
+R_parstriangularis,Frontal Inf Tri R,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,DK pars triangularis -> AAL3 inferior frontal triangular,10,True
+R_pericalcarine,Calcarine R,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,DK pericalcarine -> AAL3 calcarine,48,True
+R_postcentral,Postcentral R,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,same named cortical structure and hemisphere,62,True
+R_posteriorcingulate,,excluded,manual anatomical crosswalk,"No non-overlapping, anatomically defensible AAL3 equivalent in the retained discovery matrix",,False
+R_precentral,Precentral R,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,same named cortical structure and hemisphere,2,True
+R_precuneus,Precuneus R,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,same named cortical structure and hemisphere,72,True
+R_rostralanteriorcingulate,ACC pre R,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,DK rostral anterior cingulate -> AAL3 pregenual ACC,154,True
+R_rostralmiddlefrontal,Frontal Mid 2 R,medium,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,DK rostral middle frontal -> AAL3 middle frontal,6,True
+R_superiorfrontal,Frontal Sup 2 R | Frontal Sup Medial R,medium,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,DK superior frontal represented by lateral and medial superior frontal AAL3 parcels,4|20,True
+R_superiorparietal,Parietal Sup R,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,same named cortical structure and hemisphere,64,True
+R_superiortemporal,Temporal Sup R,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,same named cortical structure and hemisphere,86,True
+R_supramarginal,SupraMarginal R,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,same named cortical structure and hemisphere,68,True
+R_frontalpole,,excluded,manual anatomical crosswalk,"No non-overlapping, anatomically defensible AAL3 equivalent in the retained discovery matrix",,False
+R_temporalpole,Temporal Pole Sup R,medium,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,retained superior temporal-pole parcel; middle right was not retained in discovery,88,True
+R_transversetemporal,Heschl R,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,DK transverse temporal -> AAL3 Heschl gyrus,84,True
+R_insula,Insula R,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,same named cortical structure and hemisphere,34,True
+Laccumb,N Acc L,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,FreeSurfer accumbens -> AAL3 nucleus accumbens,157,True
+Lamyg,Amygdala L,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,FreeSurfer amygdala -> AAL3 amygdala,45,True
+Lcaud,Caudate L,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,FreeSurfer caudate -> AAL3 caudate,75,True
+Lhippo,Hippocampus L,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,FreeSurfer hippocampus -> AAL3 hippocampus,41,True
+Lpal,Pallidum L,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,FreeSurfer pallidum -> AAL3 pallidum,79,True
+Lput,Putamen L,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,FreeSurfer putamen -> AAL3 putamen,77,True
+Lthal,Thal AV L | Thal VA L | Thal VL L | Thal VPL L | Thal IL L | Thal MDm L | Thal MDl L | Thal LGN L | Thal MGN L | Thal PuI L | Thal PuM L | Thal PuA L,medium,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,FreeSurfer whole thalamus represented by all retained left AAL3 thalamic nuclei,121|125|127|129|131|135|137|139|141|143|145|147,True
+LLatVent,,excluded,manual anatomical crosswalk,Lateral ventricle is not a tissue parcel and was excluded a priori,,False
+Raccumb,N Acc R,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,FreeSurfer accumbens -> AAL3 nucleus accumbens,158,True
+Ramyg,Amygdala R,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,FreeSurfer amygdala -> AAL3 amygdala,46,True
+Rcaud,Caudate R,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,FreeSurfer caudate -> AAL3 caudate,76,True
+Rhippo,Hippocampus R,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,FreeSurfer hippocampus -> AAL3 hippocampus,42,True
+Rpal,Pallidum R,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,FreeSurfer pallidum -> AAL3 pallidum,80,True
+Rput,Putamen R,high,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,FreeSurfer putamen -> AAL3 putamen,78,True
+Rthal,Thal AV R | Thal VL R | Thal VPL R | Thal MDm R | Thal LGN R | Thal PuI R | Thal PuM R | Thal PuA R,medium,documented Desikan-Killiany/FreeSurfer-to-AAL3 anatomical crosswalk,FreeSurfer whole thalamus represented by all retained right AAL3 thalamic nuclei,122|128|130|136|140|144|146|148,True
+RLatVent,,excluded,manual anatomical crosswalk,Lateral ventricle is not a tissue parcel and was excluded a priori,,False

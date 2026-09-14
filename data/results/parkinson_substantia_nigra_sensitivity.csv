@@ -1,0 +1,3 @@
+analysis,status,pearson_r,spearman_rho,n_regions,notes
+including_substantia_nigra,not_estimable,,,70,ENIGMA-PD 2021 public FreeSurfer summary statistics do not contain substantia nigra; SN was not silently imputed or removed
+primary_dataset_without_substantia_nigra_measure,reported_primary,-0.02790831760440003,-0.014839703480876765,70,All reliably mapped ENIGMA units included; this is not an SN-exclusion analysis because SN is absent from the phenotype

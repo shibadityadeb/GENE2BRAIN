@@ -1,0 +1,32 @@
+{
+  "dataset": "ENIGMA-Parkinson's 2021 PD versus control summary statistics",
+  "citation": "Laansma et al., Movement Disorders 2021, doi:10.1002/mds.28706, PMID:34288137",
+  "official_repository": "https://github.com/MICA-MNI/ENIGMA",
+  "repository_commit": "b08974b55243060cbc1fad12c87048037446e8f7",
+  "access_date": "2026-09-14",
+  "raw_files": {
+    "cortical_thickness": {
+      "filename": "parkinsons_case-controls_CortThick_PDvsCN.csv",
+      "url": "https://raw.githubusercontent.com/MICA-MNI/ENIGMA/b08974b55243060cbc1fad12c87048037446e8f7/enigmatoolbox/datasets/summary_statistics/parkinsons_case-controls_CortThick_PDvsCN.csv",
+      "bytes": 5296,
+      "sha256": "89b4942b6d9b7fdbc40ae4102a3f46aed26d030f2fd3477344ccf8d385b79bd0"
+    },
+    "subcortical_volume": {
+      "filename": "parkinsons_case-controls_Subvol_PDvsCN.csv",
+      "url": "https://raw.githubusercontent.com/MICA-MNI/ENIGMA/b08974b55243060cbc1fad12c87048037446e8f7/enigmatoolbox/datasets/summary_statistics/parkinsons_case-controls_Subvol_PDvsCN.csv",
+      "bytes": 1127,
+      "sha256": "ca39b4eff9a24bee00f0af9b558fe05047d3a80f01d63ab63347cefd7ef9911a"
+    }
+  },
+  "raw_regions": 84,
+  "mapped_validation_units": 70,
+  "orientation": "validation_score = -d_icv; positive indicates PD-related thinning or smaller subcortical volume",
+  "packages": {
+    "python": "3.12.7",
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "scipy": "1.13.1",
+    "nibabel": "5.3.2",
+    "matplotlib": "3.9.4"
+  }
+}

@@ -1,13 +1,16 @@
 import { useEffect, useState } from 'react'
-import type { Hemisphere, Metric, RegionRecord, ViewPreset } from '../types'
+import type { EnrichmentData, Hemisphere, Metric, RegionRecord, ViewPreset } from '../types'
 
 export function Controls({
-  metric, hemisphere, regions, selected, onMetric, onHemisphere, onSelect, onView,
+  metric, hemisphere, regions, diseases, diseaseId, selected, onDisease, onMetric, onHemisphere, onSelect, onView,
 }: {
   metric: Metric
   hemisphere: Hemisphere
   regions: RegionRecord[]
+  diseases: EnrichmentData[]
+  diseaseId: string
   selected: RegionRecord | null
+  onDisease: (diseaseId: string) => void
   onMetric: (metric: Metric) => void
   onHemisphere: (hemisphere: Hemisphere) => void
   onSelect: (region: RegionRecord) => void
@@ -19,8 +22,8 @@ export function Controls({
     <div className="control-stack">
       <div className="control-row primary-controls">
         <label>Disease
-          <select value="parkinson-disease" aria-label="Disease">
-            <option value="parkinson-disease">Parkinson disease</option>
+          <select value={diseaseId} onChange={(event) => onDisease(event.target.value)} aria-label="Disease">
+            {diseases.map((disease) => <option key={disease.disease_id} value={disease.disease_id}>{disease.disease_name}</option>)}
           </select>
         </label>
         <label>Metric

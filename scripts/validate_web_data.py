@@ -25,12 +25,14 @@ def validate(data_dir: Path) -> list[str]:
     project = load(data_dir / "project_metadata.json")
     geometry = load(data_dir / "aal3_regions.json")
     biology = load(data_dir / "parkinson_biological_interpretation.json")
+    multidisease = load(data_dir / "multidisease_atlas.json")
     records = enrichment.get("regions", [])
     meshes = geometry.get("regions", [])
     record_ids = [row.get("region_id") for row in records]
     mesh_ids = [row.get("region_id") for row in meshes]
     biology_records = biology.get("regions", [])
     biology_ids = [row.get("region_id") for row in biology_records]
+    disease_ids = [row.get("disease_id") for row in multidisease.get("diseases", [])]
 
     if len(record_ids) != len(set(record_ids)):
         errors.append("duplicate region_id values in research records")
@@ -45,6 +47,18 @@ def validate(data_dir: Path) -> list[str]:
         errors.append("duplicate region_id values in biological interpretation")
     if set(biology_ids) != set(record_ids):
         errors.append("biological interpretation/research ID mismatch")
+    if len(disease_ids) != len(set(disease_ids)) or len(disease_ids) < 2:
+        errors.append("invalid or duplicate multi-disease registry")
+    for disease in multidisease.get("diseases", []):
+        disease_records = disease.get("regions", [])
+        if {row.get("region_id") for row in disease_records} != set(mesh_ids):
+            errors.append(f"{disease.get('disease_name')} does not map one-to-one to atlas geometry")
+        for row in disease_records:
+            for field in ("observed_score", "random_mean", "random_std", "z_score", "empirical_p", "fdr_p", "spatial_null_p", "spatial_null_fdr", "spatial_robustness"):
+                value = row.get(field)
+                if not isinstance(value, (int, float)) or isinstance(value, bool) or not math.isfinite(value):
+                    errors.append(f"invalid {field} for {disease.get('disease_name')} region {row.get('region_id')}")
+                    break
     if len(records) != project.get("counts", {}).get("regions_analyzed"):
         errors.append("research record count disagrees with project metadata")
 
@@ -149,7 +163,7 @@ def main() -> None:
     if errors:
         raise SystemExit("Web data validation failed:\n- " + "\n- ".join(errors))
     if args.data_dir.resolve() == (ROOT / "web" / "public" / "data").resolve():
-        for filename in ("parkinson_brain_enrichment.json", "project_metadata.json", "parkinson_biological_interpretation.json"):
+        for filename in ("parkinson_brain_enrichment.json", "project_metadata.json", "parkinson_biological_interpretation.json", "multidisease_atlas.json"):
             canonical = ROOT / "data" / "web" / filename
             deployed = args.data_dir / filename
             if canonical.read_bytes() != deployed.read_bytes():

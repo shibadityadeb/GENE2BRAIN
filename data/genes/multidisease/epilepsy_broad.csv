@@ -1,0 +1,9 @@
+gene,ensembl_id,gene_weight,max_l2g_score,mean_l2g_score,n_credible_sets,study,score_interpretation,selection_rule
+SCN1A,ENSG00000144285,0.7731314301490784,0.7731314301490784,0.7731314301490784,1,GCST90271608,Open Targets L2G prioritization score; not proof of causality,maximum L2G score > 0.05
+VRK2,ENSG00000028116,0.6913330554962158,0.6913330554962158,0.6913330554962158,1,GCST90271608,Open Targets L2G prioritization score; not proof of causality,maximum L2G score > 0.05
+KCNIP2,ENSG00000120049,0.3819180727005005,0.3819180727005005,0.3819180727005005,1,GCST90271608,Open Targets L2G prioritization score; not proof of causality,maximum L2G score > 0.05
+OGA,ENSG00000198408,0.20249810814857483,0.20249810814857483,0.20249810814857483,1,GCST90271608,Open Targets L2G prioritization score; not proof of causality,maximum L2G score > 0.05
+TTC21B,ENSG00000123607,0.12861639261245728,0.12861639261245728,0.12861639261245728,1,GCST90271608,Open Targets L2G prioritization score; not proof of causality,maximum L2G score > 0.05
+FANCL,ENSG00000115392,0.11559547483921051,0.11559547483921051,0.11559547483921051,1,GCST90271608,Open Targets L2G prioritization score; not proof of causality,maximum L2G score > 0.05
+SCN7A,ENSG00000136546,0.07524096220731735,0.07524096220731735,0.07524096220731735,1,GCST90271608,Open Targets L2G prioritization score; not proof of causality,maximum L2G score > 0.05
+CSRNP3,ENSG00000178662,0.0641341581940651,0.0641341581940651,0.0641341581940651,1,GCST90271608,Open Targets L2G prioritization score; not proof of causality,maximum L2G score > 0.05

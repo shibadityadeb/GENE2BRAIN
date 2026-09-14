@@ -79,6 +79,23 @@ export interface EnrichmentData {
   regions: RegionRecord[]
 }
 
+export interface ExcludedDisease {
+  disease_id: string
+  disease_name: string
+  status: 'needs_review' | 'excluded'
+  reason: string
+}
+
+export interface MultidiseaseAtlas {
+  schema_version: string
+  generated_on: string
+  primary_metric: string
+  comparison_note: string
+  z_domain: [number, number]
+  diseases: EnrichmentData[]
+  excluded_or_needs_review: ExcludedDisease[]
+}
+
 export interface GeometryRegion {
   region_id: number
   positions: number[]

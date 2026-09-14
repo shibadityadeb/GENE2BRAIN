@@ -1,0 +1,111 @@
+disease_1,disease_2,metric,correlation,p_value,n_regions
+Alzheimer disease,Alzheimer disease,pearson,0.9999999999999998,0.0,138
+Alzheimer disease,Alzheimer disease,spearman,0.9999999999999998,0.0,138
+Alzheimer disease,Amyotrophic lateral sclerosis,pearson,-0.15715989021951046,0.06563993343311185,138
+Alzheimer disease,Amyotrophic lateral sclerosis,spearman,-0.1548326556146387,0.06978885948695766,138
+Alzheimer disease,Attention deficit-hyperactivity disorder,pearson,0.0659613146755776,0.4420955028821324,138
+Alzheimer disease,Attention deficit-hyperactivity disorder,spearman,0.03699864608471902,0.6665921116113831,138
+Alzheimer disease,Bipolar disorder,pearson,-0.19400546675048214,0.022606166364995194,138
+Alzheimer disease,Bipolar disorder,spearman,-0.2263413008089244,0.007597358208716335,138
+Alzheimer disease,Epilepsy,pearson,-0.07423884737830128,0.386835028427516,138
+Alzheimer disease,Epilepsy,spearman,-0.09686316323012677,0.2583943783147282,138
+Alzheimer disease,Major depressive disorder,pearson,-0.0911680633457061,0.28757470947933217,138
+Alzheimer disease,Major depressive disorder,spearman,-0.056889556587037565,0.5074847969351969,138
+Alzheimer disease,Migraine,pearson,0.2671278030156604,0.0015388385419180762,138
+Alzheimer disease,Migraine,spearman,0.2421133864092477,0.004222919663010725,138
+Alzheimer disease,Multiple sclerosis,pearson,0.2816247667339765,0.0008191418221777498,138
+Alzheimer disease,Multiple sclerosis,spearman,0.2904935968711542,0.0005475842715927351,138
+Alzheimer disease,Parkinson disease,pearson,0.26771750457542703,0.0015008656700864328,138
+Alzheimer disease,Parkinson disease,spearman,0.2758037302306679,0.0010594838075106987,138
+Alzheimer disease,Schizophrenia,pearson,-0.5271859227829734,3.077352296196895e-11,138
+Alzheimer disease,Schizophrenia,spearman,-0.5080378730972694,2.010199412288125e-10,138
+Amyotrophic lateral sclerosis,Amyotrophic lateral sclerosis,pearson,0.9999999999999992,0.0,138
+Amyotrophic lateral sclerosis,Amyotrophic lateral sclerosis,spearman,0.9999999999999998,0.0,138
+Amyotrophic lateral sclerosis,Attention deficit-hyperactivity disorder,pearson,-0.03264829489403231,0.7038389527906473,138
+Amyotrophic lateral sclerosis,Attention deficit-hyperactivity disorder,spearman,-0.010532227978328222,0.9024209574263186,138
+Amyotrophic lateral sclerosis,Bipolar disorder,pearson,-0.2458380665170946,0.003655955737668727,138
+Amyotrophic lateral sclerosis,Bipolar disorder,spearman,-0.2370265006655418,0.0051244124936214545,138
+Amyotrophic lateral sclerosis,Epilepsy,pearson,0.5933263566430551,1.741473908269816e-14,138
+Amyotrophic lateral sclerosis,Epilepsy,spearman,0.5764642491021463,1.3757334700384096e-13,138
+Amyotrophic lateral sclerosis,Major depressive disorder,pearson,-0.13352968200719428,0.11844093871230092,138
+Amyotrophic lateral sclerosis,Major depressive disorder,spearman,-0.13816557036820556,0.10607805608440538,138
+Amyotrophic lateral sclerosis,Migraine,pearson,0.15921775151141226,0.06214085008261015,138
+Amyotrophic lateral sclerosis,Migraine,spearman,0.12280902031786185,0.15128859998239194,138
+Amyotrophic lateral sclerosis,Multiple sclerosis,pearson,-0.07524324174715477,0.3804256977217792,138
+Amyotrophic lateral sclerosis,Multiple sclerosis,spearman,-0.052300400238362146,0.5423790968439729,138
+Amyotrophic lateral sclerosis,Parkinson disease,pearson,-0.040165871503628124,0.6399711515390536,138
+Amyotrophic lateral sclerosis,Parkinson disease,spearman,-0.0776161045140403,0.36554209429708795,138
+Amyotrophic lateral sclerosis,Schizophrenia,pearson,0.027251112650042077,0.7510348255445647,138
+Amyotrophic lateral sclerosis,Schizophrenia,spearman,0.030770179159750582,0.7201452117377904,138
+Attention deficit-hyperactivity disorder,Attention deficit-hyperactivity disorder,pearson,0.9999999999999999,0.0,138
+Attention deficit-hyperactivity disorder,Attention deficit-hyperactivity disorder,spearman,0.9999999999999998,0.0,138
+Attention deficit-hyperactivity disorder,Bipolar disorder,pearson,0.20496402062418848,0.015885243427629817,138
+Attention deficit-hyperactivity disorder,Bipolar disorder,spearman,0.2080303386614732,0.014348309450075957,138
+Attention deficit-hyperactivity disorder,Epilepsy,pearson,-0.15055834218555775,0.07796221765244928,138
+Attention deficit-hyperactivity disorder,Epilepsy,spearman,-0.1244711625177801,0.14578890931507255,138
+Attention deficit-hyperactivity disorder,Major depressive disorder,pearson,0.5879035357886607,3.42973887582821e-14,138
+Attention deficit-hyperactivity disorder,Major depressive disorder,spearman,0.5986109240186396,8.88643931503162e-15,138
+Attention deficit-hyperactivity disorder,Migraine,pearson,0.21796687778429294,0.010222912398665818,138
+Attention deficit-hyperactivity disorder,Migraine,spearman,0.17230341401268068,0.04329677643634842,138
+Attention deficit-hyperactivity disorder,Multiple sclerosis,pearson,0.07327785279313444,0.39302800048727643,138
+Attention deficit-hyperactivity disorder,Multiple sclerosis,spearman,0.04293943455200929,0.6170281318529184,138
+Attention deficit-hyperactivity disorder,Parkinson disease,pearson,0.1977915788770795,0.020049897187920992,138
+Attention deficit-hyperactivity disorder,Parkinson disease,spearman,0.22457869946505502,0.00809405787236618,138
+Attention deficit-hyperactivity disorder,Schizophrenia,pearson,0.3532510597241214,2.13907594462688e-05,138
+Attention deficit-hyperactivity disorder,Schizophrenia,spearman,0.3941902650523186,1.7208039743759318e-06,138
+Bipolar disorder,Bipolar disorder,pearson,1.0,0.0,138
+Bipolar disorder,Bipolar disorder,spearman,0.9999999999999998,0.0,138
+Bipolar disorder,Epilepsy,pearson,-0.3071704058957768,0.0002477089692964691,138
+Bipolar disorder,Epilepsy,spearman,-0.27958008077828433,0.0008971843527699752,138
+Bipolar disorder,Major depressive disorder,pearson,0.27134302588116666,0.0012855692916262699,138
+Bipolar disorder,Major depressive disorder,spearman,0.2122176584343442,0.012459782888799264,138
+Bipolar disorder,Migraine,pearson,0.046683249755319504,0.5866394435622024,138
+Bipolar disorder,Migraine,spearman,0.03578400370785567,0.6769148796337103,138
+Bipolar disorder,Multiple sclerosis,pearson,-0.413138422104632,4.7545933849680545e-07,138
+Bipolar disorder,Multiple sclerosis,spearman,-0.3514129350280486,2.376567451496341e-05,138
+Bipolar disorder,Parkinson disease,pearson,-0.1377412095131003,0.10716585116516984,138
+Bipolar disorder,Parkinson disease,spearman,-0.09494074052088065,0.26800843464141133,138
+Bipolar disorder,Schizophrenia,pearson,0.5242620965142324,4.129930413018393e-11,138
+Bipolar disorder,Schizophrenia,spearman,0.5050012671551112,2.678596088126582e-10,138
+Epilepsy,Epilepsy,pearson,0.9999999999999998,0.0,138
+Epilepsy,Epilepsy,spearman,0.9999999999999998,0.0,138
+Epilepsy,Major depressive disorder,pearson,-0.23865614914744043,0.0048184646332301365,138
+Epilepsy,Major depressive disorder,spearman,-0.2389991529467635,0.004756191156974689,138
+Epilepsy,Migraine,pearson,7.312553136656954e-05,0.99932082737858,138
+Epilepsy,Migraine,spearman,0.007276438449367449,0.9324979844574641,138
+Epilepsy,Multiple sclerosis,pearson,0.2619201294382543,0.0019141490100643478,138
+Epilepsy,Multiple sclerosis,spearman,0.2628262353620753,0.0018433955718647015,138
+Epilepsy,Parkinson disease,pearson,-0.0784512235088037,0.36039058920856215,138
+Epilepsy,Parkinson disease,spearman,-0.10421494603745754,0.22382190438290864,138
+Epilepsy,Schizophrenia,pearson,-0.08996793626915686,0.29399387430569296,138
+Epilepsy,Schizophrenia,spearman,-0.09672617348837527,0.2590715384774256,138
+Major depressive disorder,Major depressive disorder,pearson,0.9999999999999999,0.0,138
+Major depressive disorder,Major depressive disorder,spearman,0.9999999999999998,0.0,138
+Major depressive disorder,Migraine,pearson,0.24594362875463563,0.003640935670580169,138
+Major depressive disorder,Migraine,spearman,0.24209968743507257,0.004225142915644421,138
+Major depressive disorder,Multiple sclerosis,pearson,0.07402039815219999,0.3882375929167386,138
+Major depressive disorder,Multiple sclerosis,spearman,0.029998470281217104,0.7268825410183385,138
+Major depressive disorder,Parkinson disease,pearson,0.34663523483848374,3.1151348858762245e-05,138
+Major depressive disorder,Parkinson disease,spearman,0.3940350100116669,1.7384713607056268e-06,138
+Major depressive disorder,Schizophrenia,pearson,0.49895037394299824,4.706607206471265e-10,138
+Major depressive disorder,Schizophrenia,spearman,0.44382621481361395,4.971423604538113e-08,138
+Migraine,Migraine,pearson,0.9999999999999993,0.0,138
+Migraine,Migraine,spearman,0.9999999999999998,0.0,138
+Migraine,Multiple sclerosis,pearson,0.08362069383003776,0.3295133108408211,138
+Migraine,Multiple sclerosis,spearman,0.029190230804883224,0.7339612513502584,138
+Migraine,Parkinson disease,pearson,0.18171738963133682,0.03291885899752262,138
+Migraine,Parkinson disease,spearman,0.20324483034962063,0.016808084270670844,138
+Migraine,Schizophrenia,pearson,-0.04246737642119272,0.6209078105057287,138
+Migraine,Schizophrenia,spearman,-0.04348739351901531,0.6125378789555276,138
+Multiple sclerosis,Multiple sclerosis,pearson,0.9999999999999998,0.0,138
+Multiple sclerosis,Multiple sclerosis,spearman,0.9999999999999998,0.0,138
+Multiple sclerosis,Parkinson disease,pearson,0.1562911850341192,0.06716447475618875,138
+Multiple sclerosis,Parkinson disease,spearman,0.11276310592275147,0.18789842190631728,138
+Multiple sclerosis,Schizophrenia,pearson,-0.2709218741586588,0.001309043739131343,138
+Multiple sclerosis,Schizophrenia,spearman,-0.2794293920623577,0.0009031972725212259,138
+Parkinson disease,Parkinson disease,pearson,1.0,0.0,138
+Parkinson disease,Parkinson disease,spearman,0.9999999999999998,0.0,138
+Parkinson disease,Schizophrenia,pearson,0.1059063562751587,0.21635389933409166,138
+Parkinson disease,Schizophrenia,spearman,0.14334834893113751,0.09348016881205728,138
+Schizophrenia,Schizophrenia,pearson,1.0,0.0,138
+Schizophrenia,Schizophrenia,spearman,0.9999999999999998,0.0,138

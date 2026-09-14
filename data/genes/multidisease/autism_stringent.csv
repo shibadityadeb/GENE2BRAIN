@@ -1,0 +1,2 @@
+gene,ensembl_id,gene_weight,max_l2g_score,mean_l2g_score,n_credible_sets,study,score_interpretation,selection_rule
+SOX7,ENSG00000171056,0.7242001891136169,0.7242001891136169,0.7242001891136169,1,GCST007556,Open Targets L2G prioritization score; not proof of causality,maximum L2G score >= eligible prediction Q3 (0.724200)

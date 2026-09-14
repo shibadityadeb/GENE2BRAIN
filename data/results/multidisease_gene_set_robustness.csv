@@ -1,0 +1,31 @@
+disease,disease_id,method_1,method_2,pearson_r,spearman_rho,n_regions
+Parkinson disease,parkinson,broad,stringent,0.609064249010804,0.5728705515435318,138
+Parkinson disease,parkinson,broad,weighted,0.8209931634777602,0.8033923226382398,138
+Parkinson disease,parkinson,stringent,weighted,0.8958083584189884,0.8669098995636876,138
+Alzheimer disease,alzheimer,broad,stringent,0.638735076525904,0.6100541337796154,138
+Alzheimer disease,alzheimer,broad,weighted,0.8363236102493419,0.8271509101826756,138
+Alzheimer disease,alzheimer,stringent,weighted,0.8950809347664785,0.8842254029210779,138
+Amyotrophic lateral sclerosis,als,broad,stringent,0.581591863684097,0.566418334707036,138
+Amyotrophic lateral sclerosis,als,broad,weighted,0.8907647038849498,0.8632477071341973,138
+Amyotrophic lateral sclerosis,als,stringent,weighted,0.819958848328617,0.8285710371721663,138
+Schizophrenia,schizophrenia,broad,stringent,0.8423021575677239,0.8234567534801102,138
+Schizophrenia,schizophrenia,broad,weighted,0.9379728196187402,0.931390971006121,138
+Schizophrenia,schizophrenia,stringent,weighted,0.952983167591088,0.938756452787627,138
+Bipolar disorder,bipolar,broad,stringent,0.5078578555678315,0.4274422417001339,138
+Bipolar disorder,bipolar,broad,weighted,0.7464522180048395,0.6833390792919456,138
+Bipolar disorder,bipolar,stringent,weighted,0.9321328538648581,0.9145868960179363,138
+Major depressive disorder,major_depression,broad,stringent,0.8416953479865846,0.8304614956083372,138
+Major depressive disorder,major_depression,broad,weighted,0.9085576047305371,0.8966092755754139,138
+Major depressive disorder,major_depression,stringent,weighted,0.9230408700108981,0.9066460573210742,138
+Attention deficit-hyperactivity disorder,adhd,broad,stringent,0.733391209915809,0.7177372034457485,138
+Attention deficit-hyperactivity disorder,adhd,broad,weighted,0.8505455329369253,0.8510784517419387,138
+Attention deficit-hyperactivity disorder,adhd,stringent,weighted,0.9506251831768775,0.9359801273547965,138
+Epilepsy,epilepsy,broad,stringent,0.7120359012489023,0.7191618967599641,138
+Epilepsy,epilepsy,broad,weighted,0.7897681688024755,0.7945245200221923,138
+Epilepsy,epilepsy,stringent,weighted,0.9667444291649057,0.9654009575582947,138
+Migraine,migraine,broad,stringent,0.7330156472675015,0.7386464043617533,138
+Migraine,migraine,broad,weighted,0.9105439423892302,0.9007783300493847,138
+Migraine,migraine,stringent,weighted,0.8763890599697676,0.8768325231912215,138
+Multiple sclerosis,multiple_sclerosis,broad,stringent,0.7220088363576243,0.6925584889118219,138
+Multiple sclerosis,multiple_sclerosis,broad,weighted,0.8135209725034536,0.7874741146467148,138
+Multiple sclerosis,multiple_sclerosis,stringent,weighted,0.8984117466507582,0.8882346360296719,138

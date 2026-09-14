@@ -19,7 +19,7 @@ function NullSummary({ region }: { region: RegionRecord }) {
   )
 }
 
-export function RegionPanel({ region, threshold, onClose }: { region: RegionRecord; threshold: number; onClose: () => void }) {
+export function RegionPanel({ region, diseaseName, threshold, onClose }: { region: RegionRecord; diseaseName: string; threshold: number; onClose: () => void }) {
   const [showNull, setShowNull] = useState(false)
   const [showWhy, setShowWhy] = useState(false)
   const direction = region.z_score > 0 ? 'above' : region.z_score < 0 ? 'below' : 'at'
@@ -29,7 +29,7 @@ export function RegionPanel({ region, threshold, onClose }: { region: RegionReco
       <button className="close-panel" onClick={onClose} aria-label="Close region details">×</button>
       <span className="eyebrow">AAL3 · {region.atlas_id}</span>
       <h2>{region.region_name}</h2>
-      <p className="disease-label">Parkinson disease · weighted gene set</p>
+      <p className="disease-label">{diseaseName} · weighted gene set</p>
       <h3 className="panel-section-title">Stage 6 · Gene-set enrichment</h3>
       <div className="stat-grid">
         <div><span>Z-score</span><strong>{formatValue(region.z_score)}</strong></div>
@@ -50,15 +50,15 @@ export function RegionPanel({ region, threshold, onClose }: { region: RegionReco
         <div><span>Robustness rank</span><strong>{region.robustness_rank}</strong></div>
         <div><span>Graph status</span><strong>{region.spatial_isolate ? 'Isolated parcel' : 'Connected parcel'}</strong></div>
       </div>
-      <h3 className="panel-section-title">Stage 8 · Independent validation data</h3>
+      <h3 className="panel-section-title">Independent validation data</h3>
       <div className="stat-grid">
         <div><span>Validation score</span><strong>{formatValue(region.validation_score)}</strong></div>
         <div><span>Agreement</span><strong>{region.agreement_status === 'not_measured' ? 'Not measured' : region.agreement_status.replaceAll('_', ' ')}</strong></div>
         <div><span>ENIGMA parcel</span><strong>{region.validation_region ?? 'N/A'}</strong></div>
         <div><span>Mapping confidence</span><strong>{region.validation_mapping_confidence ?? 'N/A'}</strong></div>
       </div>
-      <p className="caution">The ENIGMA-PD score is external to the discovery model. Higher values mean thinner cortex or smaller subcortical volume in PD; N/A means the phenotype did not measure this AAL3 parcel.</p>
-      <h3 className="panel-section-title">Stage 9 · Biological interpretation</h3>
+      <p className="caution">{diseaseName === 'Parkinson disease' ? 'The Parkinson validation score is external to the discovery model; the overall Stage 8 result was NOT SUPPORTED.' : 'No completed independent regional validation dataset is currently linked for this disease; N/A is preserved.'}</p>
+      <h3 className="panel-section-title">Biological interpretation</h3>
       {biology?.top_genes.length ? (
         <>
           <p className="biology-rule">Top weighted contributors</p>
@@ -78,11 +78,11 @@ export function RegionPanel({ region, threshold, onClose }: { region: RegionReco
             <ul className="biology-list plain">
               {biology.cell_types.map((cell) => <li key={cell.name}><strong>{cell.name}</strong><span>FDR {formatValue(cell.fdr, 4)}</span></li>)}
             </ul>
-          ) : <p className="caution">No human-brain cell-type enrichment survived correction for the primary weighted gene set.</p>}
+          ) : <p className="caution">Region-level cell-type annotation is not assigned; disease-level results are provided in the downloadable Stage 10 table.</p>}
         </>
       ) : <p className="caution">Biological interpretation is unavailable for this parcel.</p>}
-      <p className="interpretation">The observed Parkinson-associated gene-expression score is {formatValue(Math.abs(region.z_score))} standard deviations {direction} the matched gene-set expectation. It {region.fdr_p < threshold ? 'meets' : 'does not meet'} the project’s FDR threshold.</p>
-      <p className="caution">This does not indicate where Parkinson disease occurs or establish a causal brain region.</p>
+      <p className="interpretation">The observed {diseaseName}-associated gene-expression score is {formatValue(Math.abs(region.z_score))} standard deviations {direction} the matched gene-set expectation. It {region.fdr_p < threshold ? 'meets' : 'does not meet'} the project’s FDR threshold.</p>
+      <p className="caution">This does not indicate where disease occurs or establish a causal brain region.</p>
       <button className="why-button" onClick={() => setShowWhy((visible) => !visible)} aria-expanded={showWhy}>
         {showWhy ? 'Hide explanation' : 'Why is this region highlighted?'}
       </button>
@@ -90,7 +90,7 @@ export function RegionPanel({ region, threshold, onClose }: { region: RegionReco
         <section className="why-panel" aria-label="Why this region is highlighted">
           <h3>Why is this region highlighted?</h3>
           <ol>
-            <li><span>Parkinson genes represented</span><strong>{region.number_of_genes}</strong></li>
+            <li><span>Disease genes represented</span><strong>{region.number_of_genes}</strong></li>
             <li><span>Regional expression</span><strong>{formatValue(region.observed_score, 4)}</strong></li>
             <li><span>Random-set expectation</span><strong>{formatValue(region.random_mean, 4)}</strong></li>
             <li><span>Enrichment Z</span><strong>{formatValue(region.z_score)}</strong></li>

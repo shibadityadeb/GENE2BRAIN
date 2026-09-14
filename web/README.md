@@ -1,11 +1,12 @@
 # GENE2BRAIN interactive brain
 
-This React + TypeScript application visualizes the validated Stage 6 Parkinson
-regional-enrichment results, Stage 7 spatial sensitivity, and Stage 8 external
-phenotype and agreement layers, plus Stage 9 biological interpretations, on the same AAL3v1 parcels used by the scientific
-pipeline. The Stage 8 layers are explicitly separate from discovery and unmeasured
-parcels remain missing. The browser displays authoritative values; it does not calculate scores,
-permutations, p-values, FDR values, or Z-scores.
+This React + TypeScript application visualizes the validated Stage 10 atlas for
+the 10 diseases that passed the frozen eligibility gates. It provides a primary
+disease explorer, shared-scale side-by-side brains, a region-first cross-disease
+ranking, Stage 7 spatial sensitivity, available external validation, and biological
+interpretation on the same AAL3v1 parcels used by the scientific pipeline. Missing
+validation stays missing. The browser displays authoritative values; it does not
+calculate scores, permutations, p-values, FDR values, or Z-scores.
 
 ## Run locally
 
@@ -33,27 +34,27 @@ Regenerate checked-in web artifacts after an authoritative pipeline output chang
 
 ```bash
 python scripts/prepare_web_data.py
+python scripts/build_multidisease_web_data.py
 ```
 
 ## Research data
 
-`data/web/parkinson_brain_enrichment.json` is serialized from
-`data/results/parkinson_regional_enrichment.csv`, joined to
-`data/processed/region_metadata.csv`. Its `regions` array contains the exact stored
-Stage 6 observed score, null mean and standard deviation, Z-score, empirical p-value,
-FDR q-value, effect size, and gene-set size, plus the separately identified Stage 7
-spatial-null p-value, FDR, percentile, rank, and joint robustness call. The deployed copy is under
-`web/public/data/`. `project_metadata.json` supplies counts, data sources, scale
-domains, and the pipeline-defined FDR threshold (q < 0.05).
+`data/web/multidisease_atlas.json` is serialized from the Stage 10 regional,
+spatial, validation, and biological result tables and joined to
+`data/processed/region_metadata.csv`. Each completed disease contains the exact
+stored observed score, null mean and standard deviation, matched-null Z-score,
+empirical p-value, FDR q-value, effect size, gene-set size, and the separately
+identified spatial-null values and joint robustness call. A single global Z domain
+is used for cross-disease visual comparison. Canonical and deployed copies are
+required to be byte-identical.
 
 Stage 8 adds nullable ENIGMA-PD validation scores, the source ENIGMA parcel,
 crosswalk confidence, and the pre-specified median-split agreement status. The
 scientific correlation uses 70 unique ENIGMA parcels; visualization-only propagation
 to AAL3 never increases the inferential sample size.
 
-Stage 9 adds a separate biological-interpretation payload. Every region receives
-its real top weighted contributors. Only the ten parcels selected in advance by
-frozen Stage 7 robustness rank receive region-specific Reactome tests. GO,
+Stage 9–10 add biological-interpretation payloads. Only parcels selected in advance
+by the frozen Stage 7 robustness-rank rule receive detailed regional drivers. GO,
 Reactome, WikiPathways and Human Protein Atlas human-brain cell-type results are
 read from committed analysis outputs; the browser does not perform enrichment.
 The “Why is this region highlighted?” disclosure separates observed evidence
@@ -85,15 +86,10 @@ between geometry and research record IDs.
 
 ## Adding a future disease
 
-Only Parkinson disease is registered because it is the only completed analysis.
-To add a disease after its pipeline outputs are validated:
-
-1. Create a web JSON file using the same region schema without recalculating values.
-2. Validate every record against the atlas geometry.
-3. Add the dataset to `diseaseRegistry` in `src/data.ts`.
-4. Add disease-specific metric domains and analysis metadata.
-
-Never add placeholders or copy Parkinson values to another disease.
+To add a disease after it passes the frozen source, genetic-evidence, and AHBA
+coverage gates, regenerate the Stage 10 tables and run
+`scripts/build_multidisease_web_data.py`. Never add placeholders or copy values
+from another disease.
 
 ## Tests
 

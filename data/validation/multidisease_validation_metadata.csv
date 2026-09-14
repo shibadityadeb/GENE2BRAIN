@@ -1,0 +1,16 @@
+disease,validation_dataset,phenotype,sample_size,region_count,independent,source,validation_type,status,validation_outcome
+Parkinson disease,Stage 8 curated substantia-nigra neuron-loss regional phenotype,independent regional neuron-loss severity proxy,,14,True,Stage 8 independent regional substantia-nigra neuron-loss proxy,regional pathology proxy,partially_validated,NOT SUPPORTED
+Alzheimer disease,not selected,not selected,,0,,pending systematic review,pending systematic source review,pending,not analyzed
+Huntington disease,not available for current analysis,not analyzed,,0,,not assessed because genetic inclusion failed,not assessed after genetic/QC exclusion,not_available,not analyzed
+Amyotrophic lateral sclerosis,not selected,not selected,,0,,pending systematic review,pending systematic source review,pending,not analyzed
+Multiple system atrophy,not available for current analysis,not analyzed,,0,,not assessed because L2G inclusion failed,not assessed after genetic/QC exclusion,not_available,not analyzed
+Progressive supranuclear palsy,not available for current analysis,not analyzed,,0,,pending systematic review,not assessed after genetic/QC exclusion,not_available,not analyzed
+Schizophrenia,not selected,not selected,,0,,pending systematic review,pending systematic source review,pending,not analyzed
+Bipolar disorder,not selected,not selected,,0,,pending systematic review,pending systematic source review,pending,not analyzed
+Major depressive disorder,not selected,not selected,,0,,pending systematic review,pending systematic source review,pending,not analyzed
+Autism spectrum disorder,not available for current analysis,not analyzed,,0,,pending systematic review,not assessed after genetic/QC exclusion,not_available,not analyzed
+Attention deficit-hyperactivity disorder,not selected,not selected,,0,,pending systematic review,pending systematic source review,pending,not analyzed
+Epilepsy,not selected,not selected,,0,,pending systematic review,pending systematic source review,pending,not analyzed
+Migraine,not selected,not selected,,0,,pending systematic review,pending systematic source review,pending,not analyzed
+Multiple sclerosis,not selected,not selected,,0,,pending systematic review,pending systematic source review,pending,not analyzed
+Tourette syndrome,not available for current analysis,not analyzed,,0,,not assessed because L2G inclusion failed,not assessed after genetic/QC exclusion,not_available,not analyzed

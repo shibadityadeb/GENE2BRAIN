@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "reference_pipeline": "Parkinson Stages 3-9",
+  "gwas_p_value_threshold": 5e-8,
+  "l2g_broad_threshold": 0.05,
+  "l2g_stringent_rule": "gene-level maximum eligible L2G score at or above the disease-specific upper quartile",
+  "primary_gene_set": "weighted",
+  "regional_score_scale": "raw AHBA expression",
+  "cross_disease_score": "matched-gene-set permutation Z score",
+  "gene_set_matching_features": [
+    "global_expression_mean",
+    "log10_expression_variance",
+    "log1p_reannotated_probe_count"
+  ],
+  "gene_set_matching_neighbors": 200,
+  "gene_set_permutations": 10000,
+  "spatial_permutations": 10000,
+  "gene_set_random_seed": 20260913,
+  "spatial_random_seed": 20260914,
+  "disease_seed_rule": "base seed plus zero-based order among analyzable diseases; used identically for both null-model families",
+  "fdr_method": "Benjamini-Hochberg",
+  "fdr_threshold": 0.05,
+  "robust_region_rule": "positive gene-set Z score AND gene-set BH-FDR < 0.05 AND spatial-null BH-FDR < 0.05",
+  "similarity_metrics": ["pearson", "spearman"],
+  "clustering_method": "average linkage on correlation distance",
+  "similarity_network_rule": "edges retained when absolute Pearson correlation exceeds the prespecified 90th percentile of off-diagonal pairwise correlations",
+  "minimum_ahba_genes": 5,
+  "minimum_ahba_coverage_percent": 50.0
+}

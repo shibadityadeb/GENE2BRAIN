@@ -73,15 +73,22 @@ microarray data and build a documented healthy-brain region × gene reference.
   negative-result handling, and careful biological interpretation
 - `results/figures/stage_09_*.png`: pathway, cell-type, regional-driver,
   evidence-network, sensitivity, and integrated summary figures
+- `config/disease_panel.yaml`: frozen 15-disease screen and inclusion decisions
+- `src/stage_10_sources.py`: GWAS Catalog/Open Targets source audit and gene sets
+- `src/stage_10_multidisease.py`: frozen Stage 5–7 methods applied to eligible diseases
+- `src/stage_10_biology.py`: common-background pathway and HPA cell-marker analyses
+- `src/stage_10_finalize.py`: cross-disease summaries, manifest, and final report
+- `data/results/disease_region_*_matrix.csv`: comparable 10 disease × 138 AAL3 matrices
+- `results/tables/gene2brain_master_disease_results.csv`: complete disease-level audit
+- `reports/stage_10_final_summary.md`: findings, negative results, and limitations
+- `results/figures/stage_10_*.png`: atlas, similarity, PCA, biology, and QC figures
 
-Work currently stops at the Stage 9 Parkinson biological-interpretation layer. Stage 6
-compares observed regional expression with matched random genes; Stage 7 separately
-tests the anatomical arrangement with a 26-neighbor AAL3 graph and Moran spectral
-randomization. Stage 8 tests the frozen weighted enrichment map against ENIGMA-PD
-structural MRI effects and reports a null association without modifying discovery.
-Stage 9 interprets the frozen genetic signal with an AHBA-eligible background and
-keeps corrected negative pathway/cell-type results visible. No machine-learning
-prediction or cross-disease comparison has been performed.
+Stage 10 screens 15 diseases and analyzes the 10 that pass the frozen genetic and
+AHBA coverage gates. It reuses the Parkinson Stage 5–7 definitions, including
+10,000 matched gene-set permutations and 10,000 spatial permutations, without
+disease-specific tuning. Five diseases remain explicitly excluded or under review;
+no substitute data or fabricated validation values are used. These are descriptive
+research results, not clinical predictions or causal maps.
 
 ## Reproduce from a clean environment
 
@@ -103,6 +110,11 @@ python src/stage_07_spatial_robustness.py
 python src/stage_08_independent_validation.py
 python src/stage_09_biological_interpretation.py
 python scripts/prepare_web_data.py
+python src/stage_10_sources.py
+python src/stage_10_multidisease.py
+python src/stage_10_biology.py
+python scripts/build_multidisease_web_data.py
+python src/stage_10_finalize.py
 python scripts/validate_web_data.py
 python -m unittest discover -s tests -v
 ```
@@ -136,16 +148,17 @@ releases.
 ## Interactive web visualization
 
 The public React + TypeScript/WebGL application is in [`web/`](web/). It displays
-validated Stage 6 Parkinson values, Stage 7 spatial sensitivity, Stage 8
-independent-phenotype/agreement layers, and Stage 9 biological explanations on parcel surfaces extracted directly from the
-same AAL3v1 NIfTI used by Stage 2. The frontend does not recompute scientific
+validated Stage 6–10 values for 10 eligible diseases, shared-scale side-by-side
+comparison, a region-first atlas, spatial sensitivity, available independent
+validation, and biological explanations on parcel surfaces extracted directly from
+the same AAL3v1 NIfTI used by Stage 2. The frontend does not recompute scientific
 statistics. See [`web/README.md`](web/README.md) for setup, provenance, region-ID
 mapping, validation mode, and extension guidance.
 
 ```bash
 cd web
 npm install
-npm run dev
+npm run dev  # http://localhost:8000
 npm test
 npm run build
 ```

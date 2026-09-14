@@ -1,0 +1,451 @@
+disease,disease_id,donor_1,donor_2,score_method,pearson_r,n_common_regions
+Parkinson disease,parkinson,10021,12876,broad,0.23445255258186043,56
+Parkinson disease,parkinson,10021,12876,stringent,0.28599963929142674,56
+Parkinson disease,parkinson,10021,12876,weighted,0.2963762566084693,56
+Parkinson disease,parkinson,10021,14380,broad,0.13892397753670754,59
+Parkinson disease,parkinson,10021,14380,stringent,0.19806322066597962,59
+Parkinson disease,parkinson,10021,14380,weighted,0.12721741512707122,59
+Parkinson disease,parkinson,10021,15496,broad,0.2713106774853957,56
+Parkinson disease,parkinson,10021,15496,stringent,0.367616790076089,56
+Parkinson disease,parkinson,10021,15496,weighted,0.2882107388243804,56
+Parkinson disease,parkinson,10021,15697,broad,0.2534839392125768,57
+Parkinson disease,parkinson,10021,15697,stringent,0.24599969396613375,57
+Parkinson disease,parkinson,10021,15697,weighted,0.24738658231894559,57
+Parkinson disease,parkinson,10021,9861,broad,0.10424570794563423,123
+Parkinson disease,parkinson,10021,9861,stringent,0.33202864065339593,123
+Parkinson disease,parkinson,10021,9861,weighted,0.19836004275865438,123
+Parkinson disease,parkinson,12876,14380,broad,0.20128197774940698,58
+Parkinson disease,parkinson,12876,14380,stringent,0.30042443795828583,58
+Parkinson disease,parkinson,12876,14380,weighted,0.29424347915117216,58
+Parkinson disease,parkinson,12876,15496,broad,0.2571879440456041,55
+Parkinson disease,parkinson,12876,15496,stringent,0.2351817321838348,55
+Parkinson disease,parkinson,12876,15496,weighted,0.3191911907596601,55
+Parkinson disease,parkinson,12876,15697,broad,0.19055044373573163,55
+Parkinson disease,parkinson,12876,15697,stringent,0.31233929517558195,55
+Parkinson disease,parkinson,12876,15697,weighted,0.288610748610262,55
+Parkinson disease,parkinson,12876,9861,broad,0.37728056707518653,56
+Parkinson disease,parkinson,12876,9861,stringent,0.47068503495924036,56
+Parkinson disease,parkinson,12876,9861,weighted,0.4520794686466858,56
+Parkinson disease,parkinson,14380,15496,broad,0.4363222813137545,57
+Parkinson disease,parkinson,14380,15496,stringent,0.5251711515799126,57
+Parkinson disease,parkinson,14380,15496,weighted,0.5585215709619803,57
+Parkinson disease,parkinson,14380,15697,broad,0.04791734348312244,57
+Parkinson disease,parkinson,14380,15697,stringent,0.2590484579917661,57
+Parkinson disease,parkinson,14380,15697,weighted,0.10791625214659231,57
+Parkinson disease,parkinson,14380,9861,broad,-0.12983491069251527,59
+Parkinson disease,parkinson,14380,9861,stringent,0.1656762131583035,59
+Parkinson disease,parkinson,14380,9861,weighted,-0.014650757475480905,59
+Parkinson disease,parkinson,15496,15697,broad,0.04570184478572151,56
+Parkinson disease,parkinson,15496,15697,stringent,0.2880188253721453,56
+Parkinson disease,parkinson,15496,15697,weighted,0.1292601978209996,56
+Parkinson disease,parkinson,15496,9861,broad,-0.07954593036548241,55
+Parkinson disease,parkinson,15496,9861,stringent,0.47888612281946835,55
+Parkinson disease,parkinson,15496,9861,weighted,0.25913577938229915,55
+Parkinson disease,parkinson,15697,9861,broad,0.17482986941874176,59
+Parkinson disease,parkinson,15697,9861,stringent,0.353176335251051,59
+Parkinson disease,parkinson,15697,9861,weighted,0.2204797636164361,59
+Alzheimer disease,alzheimer,10021,12876,broad,0.0270400972592071,56
+Alzheimer disease,alzheimer,10021,12876,stringent,0.18320994308898558,56
+Alzheimer disease,alzheimer,10021,12876,weighted,0.15555641747833215,56
+Alzheimer disease,alzheimer,10021,14380,broad,0.04145461588242584,59
+Alzheimer disease,alzheimer,10021,14380,stringent,-0.06707675488898414,59
+Alzheimer disease,alzheimer,10021,14380,weighted,-0.03915766712286661,59
+Alzheimer disease,alzheimer,10021,15496,broad,0.32222447358209894,56
+Alzheimer disease,alzheimer,10021,15496,stringent,0.2977966131265687,56
+Alzheimer disease,alzheimer,10021,15496,weighted,0.3820738502968305,56
+Alzheimer disease,alzheimer,10021,15697,broad,0.1923178678327954,57
+Alzheimer disease,alzheimer,10021,15697,stringent,0.1592586553354213,57
+Alzheimer disease,alzheimer,10021,15697,weighted,0.14180979593133183,57
+Alzheimer disease,alzheimer,10021,9861,broad,0.1166929243554348,123
+Alzheimer disease,alzheimer,10021,9861,stringent,0.18574706703652602,123
+Alzheimer disease,alzheimer,10021,9861,weighted,0.1534264214616529,123
+Alzheimer disease,alzheimer,12876,14380,broad,-0.16342795727281537,58
+Alzheimer disease,alzheimer,12876,14380,stringent,-0.23865524916485148,58
+Alzheimer disease,alzheimer,12876,14380,weighted,-0.21335205139895816,58
+Alzheimer disease,alzheimer,12876,15496,broad,0.09138594184496886,55
+Alzheimer disease,alzheimer,12876,15496,stringent,0.013926680173527039,55
+Alzheimer disease,alzheimer,12876,15496,weighted,0.04677587185614269,55
+Alzheimer disease,alzheimer,12876,15697,broad,-0.22289827402870668,55
+Alzheimer disease,alzheimer,12876,15697,stringent,-0.2526522821846369,55
+Alzheimer disease,alzheimer,12876,15697,weighted,-0.22144376154222334,55
+Alzheimer disease,alzheimer,12876,9861,broad,0.2493960736057803,56
+Alzheimer disease,alzheimer,12876,9861,stringent,0.3217914465159167,56
+Alzheimer disease,alzheimer,12876,9861,weighted,0.26615826455235914,56
+Alzheimer disease,alzheimer,14380,15496,broad,0.37464547538818516,57
+Alzheimer disease,alzheimer,14380,15496,stringent,0.07996439315680585,57
+Alzheimer disease,alzheimer,14380,15496,weighted,0.23556265411928318,57
+Alzheimer disease,alzheimer,14380,15697,broad,0.0029270088841977216,57
+Alzheimer disease,alzheimer,14380,15697,stringent,0.06515090856213655,57
+Alzheimer disease,alzheimer,14380,15697,weighted,0.07068327313651215,57
+Alzheimer disease,alzheimer,14380,9861,broad,0.007418681558805654,59
+Alzheimer disease,alzheimer,14380,9861,stringent,0.004952764398944994,59
+Alzheimer disease,alzheimer,14380,9861,weighted,-0.015043402633905096,59
+Alzheimer disease,alzheimer,15496,15697,broad,0.17485461444988804,56
+Alzheimer disease,alzheimer,15496,15697,stringent,0.02856958439378418,56
+Alzheimer disease,alzheimer,15496,15697,weighted,0.13516689672906465,56
+Alzheimer disease,alzheimer,15496,9861,broad,0.24651244399790542,55
+Alzheimer disease,alzheimer,15496,9861,stringent,0.13180805019936212,55
+Alzheimer disease,alzheimer,15496,9861,weighted,0.19404110672157004,55
+Alzheimer disease,alzheimer,15697,9861,broad,-0.09551652581473337,59
+Alzheimer disease,alzheimer,15697,9861,stringent,-0.08703126962825936,59
+Alzheimer disease,alzheimer,15697,9861,weighted,-0.1420995008536374,59
+Amyotrophic lateral sclerosis,als,10021,12876,broad,0.49408964167574293,56
+Amyotrophic lateral sclerosis,als,10021,12876,stringent,0.5382409599174518,56
+Amyotrophic lateral sclerosis,als,10021,12876,weighted,0.5464237251923085,56
+Amyotrophic lateral sclerosis,als,10021,14380,broad,0.25805040925649453,59
+Amyotrophic lateral sclerosis,als,10021,14380,stringent,0.5031382841333293,59
+Amyotrophic lateral sclerosis,als,10021,14380,weighted,0.41429904317402766,59
+Amyotrophic lateral sclerosis,als,10021,15496,broad,0.07844314766871434,56
+Amyotrophic lateral sclerosis,als,10021,15496,stringent,0.46185296728199576,56
+Amyotrophic lateral sclerosis,als,10021,15496,weighted,0.3196350780027856,56
+Amyotrophic lateral sclerosis,als,10021,15697,broad,0.46145192652347794,57
+Amyotrophic lateral sclerosis,als,10021,15697,stringent,0.5916919628153989,57
+Amyotrophic lateral sclerosis,als,10021,15697,weighted,0.5559111384840869,57
+Amyotrophic lateral sclerosis,als,10021,9861,broad,0.16494917755520774,123
+Amyotrophic lateral sclerosis,als,10021,9861,stringent,0.5706211576218861,123
+Amyotrophic lateral sclerosis,als,10021,9861,weighted,0.3727422356388799,123
+Amyotrophic lateral sclerosis,als,12876,14380,broad,0.4990554113623541,58
+Amyotrophic lateral sclerosis,als,12876,14380,stringent,0.5850584540610643,58
+Amyotrophic lateral sclerosis,als,12876,14380,weighted,0.6084740449387132,58
+Amyotrophic lateral sclerosis,als,12876,15496,broad,0.2660769939145275,55
+Amyotrophic lateral sclerosis,als,12876,15496,stringent,0.5390342210564144,55
+Amyotrophic lateral sclerosis,als,12876,15496,weighted,0.5098933522451774,55
+Amyotrophic lateral sclerosis,als,12876,15697,broad,0.5027066844675673,55
+Amyotrophic lateral sclerosis,als,12876,15697,stringent,0.7462477034485532,55
+Amyotrophic lateral sclerosis,als,12876,15697,weighted,0.68364181205522,55
+Amyotrophic lateral sclerosis,als,12876,9861,broad,0.5576932543195545,56
+Amyotrophic lateral sclerosis,als,12876,9861,stringent,0.5474082121250481,56
+Amyotrophic lateral sclerosis,als,12876,9861,weighted,0.5905877489571512,56
+Amyotrophic lateral sclerosis,als,14380,15496,broad,0.14547270739486284,57
+Amyotrophic lateral sclerosis,als,14380,15496,stringent,0.4892464961975895,57
+Amyotrophic lateral sclerosis,als,14380,15496,weighted,0.41168168680907496,57
+Amyotrophic lateral sclerosis,als,14380,15697,broad,0.28551516882846295,57
+Amyotrophic lateral sclerosis,als,14380,15697,stringent,0.6097903561233649,57
+Amyotrophic lateral sclerosis,als,14380,15697,weighted,0.4734598202036574,57
+Amyotrophic lateral sclerosis,als,14380,9861,broad,0.1998310296588234,59
+Amyotrophic lateral sclerosis,als,14380,9861,stringent,0.6333213424420682,59
+Amyotrophic lateral sclerosis,als,14380,9861,weighted,0.475209845208596,59
+Amyotrophic lateral sclerosis,als,15496,15697,broad,0.28501863669425476,56
+Amyotrophic lateral sclerosis,als,15496,15697,stringent,0.6047986194416602,56
+Amyotrophic lateral sclerosis,als,15496,15697,weighted,0.4986548772586296,56
+Amyotrophic lateral sclerosis,als,15496,9861,broad,0.3925600687125706,55
+Amyotrophic lateral sclerosis,als,15496,9861,stringent,0.5773681788741544,55
+Amyotrophic lateral sclerosis,als,15496,9861,weighted,0.5559019317081019,55
+Amyotrophic lateral sclerosis,als,15697,9861,broad,0.42205691571585474,59
+Amyotrophic lateral sclerosis,als,15697,9861,stringent,0.52573707696834,59
+Amyotrophic lateral sclerosis,als,15697,9861,weighted,0.5108905366821134,59
+Schizophrenia,schizophrenia,10021,12876,broad,0.2202769655068915,56
+Schizophrenia,schizophrenia,10021,12876,stringent,0.17125264626034165,56
+Schizophrenia,schizophrenia,10021,12876,weighted,0.21760560780934476,56
+Schizophrenia,schizophrenia,10021,14380,broad,0.0748235366261992,59
+Schizophrenia,schizophrenia,10021,14380,stringent,0.17898336188566874,59
+Schizophrenia,schizophrenia,10021,14380,weighted,0.08650524771695313,59
+Schizophrenia,schizophrenia,10021,15496,broad,0.18404668568892135,56
+Schizophrenia,schizophrenia,10021,15496,stringent,0.32702310468223195,56
+Schizophrenia,schizophrenia,10021,15496,weighted,0.2549617004236455,56
+Schizophrenia,schizophrenia,10021,15697,broad,0.15342231052679267,57
+Schizophrenia,schizophrenia,10021,15697,stringent,0.1566463736819885,57
+Schizophrenia,schizophrenia,10021,15697,weighted,0.13591864465340994,57
+Schizophrenia,schizophrenia,10021,9861,broad,0.0617009852942506,123
+Schizophrenia,schizophrenia,10021,9861,stringent,0.16724566024459175,123
+Schizophrenia,schizophrenia,10021,9861,weighted,0.14723755843594138,123
+Schizophrenia,schizophrenia,12876,14380,broad,0.30101352771936407,58
+Schizophrenia,schizophrenia,12876,14380,stringent,0.39923178561595873,58
+Schizophrenia,schizophrenia,12876,14380,weighted,0.3959122824985259,58
+Schizophrenia,schizophrenia,12876,15496,broad,0.12546818351233446,55
+Schizophrenia,schizophrenia,12876,15496,stringent,0.18209072066753534,55
+Schizophrenia,schizophrenia,12876,15496,weighted,0.18019290860376186,55
+Schizophrenia,schizophrenia,12876,15697,broad,0.11376681620168759,55
+Schizophrenia,schizophrenia,12876,15697,stringent,0.4524555469059167,55
+Schizophrenia,schizophrenia,12876,15697,weighted,0.2783834670724477,55
+Schizophrenia,schizophrenia,12876,9861,broad,0.08426684090339118,56
+Schizophrenia,schizophrenia,12876,9861,stringent,0.28418566565548464,56
+Schizophrenia,schizophrenia,12876,9861,weighted,0.1931342082608088,56
+Schizophrenia,schizophrenia,14380,15496,broad,0.1756929812221778,57
+Schizophrenia,schizophrenia,14380,15496,stringent,0.4143494716017649,57
+Schizophrenia,schizophrenia,14380,15496,weighted,0.30057248697369326,57
+Schizophrenia,schizophrenia,14380,15697,broad,-0.22021756513128254,57
+Schizophrenia,schizophrenia,14380,15697,stringent,0.15389804691787157,57
+Schizophrenia,schizophrenia,14380,15697,weighted,-0.06480371542878978,57
+Schizophrenia,schizophrenia,14380,9861,broad,-0.11644594890420755,59
+Schizophrenia,schizophrenia,14380,9861,stringent,0.14699807970618053,59
+Schizophrenia,schizophrenia,14380,9861,weighted,0.010907346104237476,59
+Schizophrenia,schizophrenia,15496,15697,broad,0.21413074408477964,56
+Schizophrenia,schizophrenia,15496,15697,stringent,0.2709102435394958,56
+Schizophrenia,schizophrenia,15496,15697,weighted,0.24559609746740535,56
+Schizophrenia,schizophrenia,15496,9861,broad,0.14540410285035374,55
+Schizophrenia,schizophrenia,15496,9861,stringent,0.24528202769949922,55
+Schizophrenia,schizophrenia,15496,9861,weighted,0.2860892429558673,55
+Schizophrenia,schizophrenia,15697,9861,broad,0.2536262237837436,59
+Schizophrenia,schizophrenia,15697,9861,stringent,0.2716339957927531,59
+Schizophrenia,schizophrenia,15697,9861,weighted,0.27644826769021885,59
+Bipolar disorder,bipolar,10021,12876,broad,0.07517694905109884,56
+Bipolar disorder,bipolar,10021,12876,stringent,0.22022505971030965,56
+Bipolar disorder,bipolar,10021,12876,weighted,0.1394902300551093,56
+Bipolar disorder,bipolar,10021,14380,broad,-0.05788381259401741,59
+Bipolar disorder,bipolar,10021,14380,stringent,0.418929467365669,59
+Bipolar disorder,bipolar,10021,14380,weighted,0.14309623000252694,59
+Bipolar disorder,bipolar,10021,15496,broad,0.16941448871993503,56
+Bipolar disorder,bipolar,10021,15496,stringent,0.5390277855297837,56
+Bipolar disorder,bipolar,10021,15496,weighted,0.3899666309096094,56
+Bipolar disorder,bipolar,10021,15697,broad,0.16716535349823372,57
+Bipolar disorder,bipolar,10021,15697,stringent,0.40009259000063563,57
+Bipolar disorder,bipolar,10021,15697,weighted,0.23828561589280745,57
+Bipolar disorder,bipolar,10021,9861,broad,0.05746721593142907,123
+Bipolar disorder,bipolar,10021,9861,stringent,0.45920345583961364,123
+Bipolar disorder,bipolar,10021,9861,weighted,0.28617007066935923,123
+Bipolar disorder,bipolar,12876,14380,broad,0.20129210539255846,58
+Bipolar disorder,bipolar,12876,14380,stringent,0.33765693852268663,58
+Bipolar disorder,bipolar,12876,14380,weighted,0.26495879739390965,58
+Bipolar disorder,bipolar,12876,15496,broad,0.2897062303445374,55
+Bipolar disorder,bipolar,12876,15496,stringent,0.27986688634081586,55
+Bipolar disorder,bipolar,12876,15496,weighted,0.19710601715470127,55
+Bipolar disorder,bipolar,12876,15697,broad,0.018779444402288223,55
+Bipolar disorder,bipolar,12876,15697,stringent,0.245126119315849,55
+Bipolar disorder,bipolar,12876,15697,weighted,0.10013681624236001,55
+Bipolar disorder,bipolar,12876,9861,broad,0.06888647754004176,56
+Bipolar disorder,bipolar,12876,9861,stringent,0.11159111632222093,56
+Bipolar disorder,bipolar,12876,9861,weighted,-0.008177038890346922,56
+Bipolar disorder,bipolar,14380,15496,broad,0.45687618348798825,57
+Bipolar disorder,bipolar,14380,15496,stringent,0.5218040756026059,57
+Bipolar disorder,bipolar,14380,15496,weighted,0.4029430712269045,57
+Bipolar disorder,bipolar,14380,15697,broad,-0.186164772824469,57
+Bipolar disorder,bipolar,14380,15697,stringent,0.27711738064763264,57
+Bipolar disorder,bipolar,14380,15697,weighted,-0.10315914633447516,57
+Bipolar disorder,bipolar,14380,9861,broad,0.2269922443647274,59
+Bipolar disorder,bipolar,14380,9861,stringent,0.453673520612952,59
+Bipolar disorder,bipolar,14380,9861,weighted,0.3206956915355722,59
+Bipolar disorder,bipolar,15496,15697,broad,0.020990844496842572,56
+Bipolar disorder,bipolar,15496,15697,stringent,0.4071810377209264,56
+Bipolar disorder,bipolar,15496,15697,weighted,0.2257824759951871,56
+Bipolar disorder,bipolar,15496,9861,broad,0.05212059607372464,55
+Bipolar disorder,bipolar,15496,9861,stringent,0.3229587440793574,55
+Bipolar disorder,bipolar,15496,9861,weighted,0.15166999927562202,55
+Bipolar disorder,bipolar,15697,9861,broad,0.12532201313760802,59
+Bipolar disorder,bipolar,15697,9861,stringent,0.29496551861807824,59
+Bipolar disorder,bipolar,15697,9861,weighted,0.18248884856833442,59
+Major depressive disorder,major_depression,10021,12876,broad,0.12426653852645134,56
+Major depressive disorder,major_depression,10021,12876,stringent,0.12341328204955354,56
+Major depressive disorder,major_depression,10021,12876,weighted,0.19771921929900238,56
+Major depressive disorder,major_depression,10021,14380,broad,0.2863292531300111,59
+Major depressive disorder,major_depression,10021,14380,stringent,0.19898116185928302,59
+Major depressive disorder,major_depression,10021,14380,weighted,0.2914294567624124,59
+Major depressive disorder,major_depression,10021,15496,broad,0.27925186814707614,56
+Major depressive disorder,major_depression,10021,15496,stringent,0.41073890780669,56
+Major depressive disorder,major_depression,10021,15496,weighted,0.3953354945527494,56
+Major depressive disorder,major_depression,10021,15697,broad,0.16681647066615632,57
+Major depressive disorder,major_depression,10021,15697,stringent,0.1638718645794917,57
+Major depressive disorder,major_depression,10021,15697,weighted,0.17100209022668592,57
+Major depressive disorder,major_depression,10021,9861,broad,0.16575349137608392,123
+Major depressive disorder,major_depression,10021,9861,stringent,0.06428946512741818,123
+Major depressive disorder,major_depression,10021,9861,weighted,0.13680486060343386,123
+Major depressive disorder,major_depression,12876,14380,broad,0.12234362283015986,58
+Major depressive disorder,major_depression,12876,14380,stringent,0.13657295325479218,58
+Major depressive disorder,major_depression,12876,14380,weighted,0.1124423500254504,58
+Major depressive disorder,major_depression,12876,15496,broad,0.21090893246809622,55
+Major depressive disorder,major_depression,12876,15496,stringent,0.06264674812602923,55
+Major depressive disorder,major_depression,12876,15496,weighted,0.18829714660044855,55
+Major depressive disorder,major_depression,12876,15697,broad,0.17229001902690616,55
+Major depressive disorder,major_depression,12876,15697,stringent,0.19772478854965428,55
+Major depressive disorder,major_depression,12876,15697,weighted,0.2455743541577822,55
+Major depressive disorder,major_depression,12876,9861,broad,0.23115185819932488,56
+Major depressive disorder,major_depression,12876,9861,stringent,0.18595363332985568,56
+Major depressive disorder,major_depression,12876,9861,weighted,0.2542407083888967,56
+Major depressive disorder,major_depression,14380,15496,broad,0.34641343325794133,57
+Major depressive disorder,major_depression,14380,15496,stringent,0.279452467429744,57
+Major depressive disorder,major_depression,14380,15496,weighted,0.2835188936566929,57
+Major depressive disorder,major_depression,14380,15697,broad,-0.004092281369544526,57
+Major depressive disorder,major_depression,14380,15697,stringent,0.19387973029804972,57
+Major depressive disorder,major_depression,14380,15697,weighted,0.08412220352731778,57
+Major depressive disorder,major_depression,14380,9861,broad,-0.04363594879669825,59
+Major depressive disorder,major_depression,14380,9861,stringent,0.07306871053336396,59
+Major depressive disorder,major_depression,14380,9861,weighted,0.027751588084489603,59
+Major depressive disorder,major_depression,15496,15697,broad,0.41342479539516713,56
+Major depressive disorder,major_depression,15496,15697,stringent,0.29695299038882167,56
+Major depressive disorder,major_depression,15496,15697,weighted,0.30461854627630736,56
+Major depressive disorder,major_depression,15496,9861,broad,0.3179316286456745,55
+Major depressive disorder,major_depression,15496,9861,stringent,0.2454818241350596,55
+Major depressive disorder,major_depression,15496,9861,weighted,0.3736682915643175,55
+Major depressive disorder,major_depression,15697,9861,broad,0.22320913662807151,59
+Major depressive disorder,major_depression,15697,9861,stringent,0.3170366734478061,59
+Major depressive disorder,major_depression,15697,9861,weighted,0.29972536937722133,59
+Attention deficit-hyperactivity disorder,adhd,10021,12876,broad,0.2767396733305312,56
+Attention deficit-hyperactivity disorder,adhd,10021,12876,stringent,0.2699401494551917,56
+Attention deficit-hyperactivity disorder,adhd,10021,12876,weighted,0.23593777143639133,56
+Attention deficit-hyperactivity disorder,adhd,10021,14380,broad,0.27000018404248227,59
+Attention deficit-hyperactivity disorder,adhd,10021,14380,stringent,0.448795427332509,59
+Attention deficit-hyperactivity disorder,adhd,10021,14380,weighted,0.3140299173372244,59
+Attention deficit-hyperactivity disorder,adhd,10021,15496,broad,0.22059314560403892,56
+Attention deficit-hyperactivity disorder,adhd,10021,15496,stringent,0.371502835576544,56
+Attention deficit-hyperactivity disorder,adhd,10021,15496,weighted,0.2724720252270876,56
+Attention deficit-hyperactivity disorder,adhd,10021,15697,broad,0.02091703212547091,57
+Attention deficit-hyperactivity disorder,adhd,10021,15697,stringent,0.2693552828356299,57
+Attention deficit-hyperactivity disorder,adhd,10021,15697,weighted,0.1891657270086015,57
+Attention deficit-hyperactivity disorder,adhd,10021,9861,broad,0.23072274684652716,123
+Attention deficit-hyperactivity disorder,adhd,10021,9861,stringent,0.26634043965717663,123
+Attention deficit-hyperactivity disorder,adhd,10021,9861,weighted,0.2815207339114479,123
+Attention deficit-hyperactivity disorder,adhd,12876,14380,broad,0.5321851558095974,58
+Attention deficit-hyperactivity disorder,adhd,12876,14380,stringent,0.41649680966205677,58
+Attention deficit-hyperactivity disorder,adhd,12876,14380,weighted,0.4213558875344026,58
+Attention deficit-hyperactivity disorder,adhd,12876,15496,broad,0.39802092454516197,55
+Attention deficit-hyperactivity disorder,adhd,12876,15496,stringent,0.5499589663094332,55
+Attention deficit-hyperactivity disorder,adhd,12876,15496,weighted,0.4993626257455526,55
+Attention deficit-hyperactivity disorder,adhd,12876,15697,broad,0.30912925978676303,55
+Attention deficit-hyperactivity disorder,adhd,12876,15697,stringent,0.5822874300281616,55
+Attention deficit-hyperactivity disorder,adhd,12876,15697,weighted,0.5328634818393475,55
+Attention deficit-hyperactivity disorder,adhd,12876,9861,broad,0.2664148958033297,56
+Attention deficit-hyperactivity disorder,adhd,12876,9861,stringent,0.5010471514399115,56
+Attention deficit-hyperactivity disorder,adhd,12876,9861,weighted,0.43670266248742945,56
+Attention deficit-hyperactivity disorder,adhd,14380,15496,broad,0.43528032251024484,57
+Attention deficit-hyperactivity disorder,adhd,14380,15496,stringent,0.44497957313322295,57
+Attention deficit-hyperactivity disorder,adhd,14380,15496,weighted,0.441717752840803,57
+Attention deficit-hyperactivity disorder,adhd,14380,15697,broad,0.3509530963656538,57
+Attention deficit-hyperactivity disorder,adhd,14380,15697,stringent,0.3940341395005217,57
+Attention deficit-hyperactivity disorder,adhd,14380,15697,weighted,0.4449885917297462,57
+Attention deficit-hyperactivity disorder,adhd,14380,9861,broad,0.11099660891921286,59
+Attention deficit-hyperactivity disorder,adhd,14380,9861,stringent,0.46025250512283034,59
+Attention deficit-hyperactivity disorder,adhd,14380,9861,weighted,0.3877961641186778,59
+Attention deficit-hyperactivity disorder,adhd,15496,15697,broad,0.2665666659902169,56
+Attention deficit-hyperactivity disorder,adhd,15496,15697,stringent,0.44618786635237007,56
+Attention deficit-hyperactivity disorder,adhd,15496,15697,weighted,0.3981461082146647,56
+Attention deficit-hyperactivity disorder,adhd,15496,9861,broad,0.3932888248274585,55
+Attention deficit-hyperactivity disorder,adhd,15496,9861,stringent,0.3671009455106929,55
+Attention deficit-hyperactivity disorder,adhd,15496,9861,weighted,0.3732525248476053,55
+Attention deficit-hyperactivity disorder,adhd,15697,9861,broad,0.19526948898083243,59
+Attention deficit-hyperactivity disorder,adhd,15697,9861,stringent,0.48058369791880273,59
+Attention deficit-hyperactivity disorder,adhd,15697,9861,weighted,0.39870607976683675,59
+Epilepsy,epilepsy,10021,12876,broad,0.42009601157213333,56
+Epilepsy,epilepsy,10021,12876,stringent,0.7312471645709766,56
+Epilepsy,epilepsy,10021,12876,weighted,0.7517430211017138,56
+Epilepsy,epilepsy,10021,14380,broad,0.5834401001285628,59
+Epilepsy,epilepsy,10021,14380,stringent,0.6945114244291184,59
+Epilepsy,epilepsy,10021,14380,weighted,0.706719130328836,59
+Epilepsy,epilepsy,10021,15496,broad,0.5422707587165284,56
+Epilepsy,epilepsy,10021,15496,stringent,0.7170120116809683,56
+Epilepsy,epilepsy,10021,15496,weighted,0.7004174150258353,56
+Epilepsy,epilepsy,10021,15697,broad,0.5397290763005936,57
+Epilepsy,epilepsy,10021,15697,stringent,0.8240427221747947,57
+Epilepsy,epilepsy,10021,15697,weighted,0.8030867742051059,57
+Epilepsy,epilepsy,10021,9861,broad,0.25845115752833886,123
+Epilepsy,epilepsy,10021,9861,stringent,0.6224499187542528,123
+Epilepsy,epilepsy,10021,9861,weighted,0.6120248452032976,123
+Epilepsy,epilepsy,12876,14380,broad,0.4905815956710655,58
+Epilepsy,epilepsy,12876,14380,stringent,0.7777263704235088,58
+Epilepsy,epilepsy,12876,14380,weighted,0.7810799518686541,58
+Epilepsy,epilepsy,12876,15496,broad,0.5620335691073255,55
+Epilepsy,epilepsy,12876,15496,stringent,0.7076199517147271,55
+Epilepsy,epilepsy,12876,15496,weighted,0.7304072012763682,55
+Epilepsy,epilepsy,12876,15697,broad,0.5758559572456744,55
+Epilepsy,epilepsy,12876,15697,stringent,0.7658432813806347,55
+Epilepsy,epilepsy,12876,15697,weighted,0.8134842842922363,55
+Epilepsy,epilepsy,12876,9861,broad,0.4731004630132464,56
+Epilepsy,epilepsy,12876,9861,stringent,0.6999363737697779,56
+Epilepsy,epilepsy,12876,9861,weighted,0.6642231002788287,56
+Epilepsy,epilepsy,14380,15496,broad,0.61170296641927,57
+Epilepsy,epilepsy,14380,15496,stringent,0.6148218359780191,57
+Epilepsy,epilepsy,14380,15496,weighted,0.6650413693183161,57
+Epilepsy,epilepsy,14380,15697,broad,0.7215740710646626,57
+Epilepsy,epilepsy,14380,15697,stringent,0.7911734770094171,57
+Epilepsy,epilepsy,14380,15697,weighted,0.8396519150004238,57
+Epilepsy,epilepsy,14380,9861,broad,0.40968832216375733,59
+Epilepsy,epilepsy,14380,9861,stringent,0.6184248433271476,59
+Epilepsy,epilepsy,14380,9861,weighted,0.5868007234317596,59
+Epilepsy,epilepsy,15496,15697,broad,0.7782608552766608,56
+Epilepsy,epilepsy,15496,15697,stringent,0.7846725461262885,56
+Epilepsy,epilepsy,15496,15697,weighted,0.835254974523801,56
+Epilepsy,epilepsy,15496,9861,broad,0.42680226725638354,55
+Epilepsy,epilepsy,15496,9861,stringent,0.7153124680490103,55
+Epilepsy,epilepsy,15496,9861,weighted,0.7292862621984494,55
+Epilepsy,epilepsy,15697,9861,broad,0.541518217654038,59
+Epilepsy,epilepsy,15697,9861,stringent,0.731120488707714,59
+Epilepsy,epilepsy,15697,9861,weighted,0.6981274022921391,59
+Migraine,migraine,10021,12876,broad,0.20860219421486287,56
+Migraine,migraine,10021,12876,stringent,0.36123726402388867,56
+Migraine,migraine,10021,12876,weighted,0.26611774584865394,56
+Migraine,migraine,10021,14380,broad,0.11590266742535395,59
+Migraine,migraine,10021,14380,stringent,0.03981067978070987,59
+Migraine,migraine,10021,14380,weighted,0.18833480934825939,59
+Migraine,migraine,10021,15496,broad,0.3491594072198417,56
+Migraine,migraine,10021,15496,stringent,0.303866332070187,56
+Migraine,migraine,10021,15496,weighted,0.3462431310682893,56
+Migraine,migraine,10021,15697,broad,0.2285898385635611,57
+Migraine,migraine,10021,15697,stringent,0.2919972386584622,57
+Migraine,migraine,10021,15697,weighted,0.31121576078885244,57
+Migraine,migraine,10021,9861,broad,0.13321175223389714,123
+Migraine,migraine,10021,9861,stringent,0.22121845746296875,123
+Migraine,migraine,10021,9861,weighted,0.20474152568609139,123
+Migraine,migraine,12876,14380,broad,0.10658506988524044,58
+Migraine,migraine,12876,14380,stringent,0.12827879398354097,58
+Migraine,migraine,12876,14380,weighted,0.15998468376795918,58
+Migraine,migraine,12876,15496,broad,0.2386369663729076,55
+Migraine,migraine,12876,15496,stringent,0.16312821700087368,55
+Migraine,migraine,12876,15496,weighted,0.20447336801273996,55
+Migraine,migraine,12876,15697,broad,-0.06304490658417732,55
+Migraine,migraine,12876,15697,stringent,0.27554871190462943,55
+Migraine,migraine,12876,15697,weighted,0.11199782805495971,55
+Migraine,migraine,12876,9861,broad,0.3047921977086605,56
+Migraine,migraine,12876,9861,stringent,0.4200565416444313,56
+Migraine,migraine,12876,9861,weighted,0.4095588452641242,56
+Migraine,migraine,14380,15496,broad,0.19577099786898294,57
+Migraine,migraine,14380,15496,stringent,-0.11894079212863876,57
+Migraine,migraine,14380,15496,weighted,0.029615439476384918,57
+Migraine,migraine,14380,15697,broad,0.08941092919293724,57
+Migraine,migraine,14380,15697,stringent,0.22017142823466104,57
+Migraine,migraine,14380,15697,weighted,0.19514620038000213,57
+Migraine,migraine,14380,9861,broad,-0.10701665785839157,59
+Migraine,migraine,14380,9861,stringent,0.1962791386383118,59
+Migraine,migraine,14380,9861,weighted,0.10779261334418573,59
+Migraine,migraine,15496,15697,broad,0.03991703653382202,56
+Migraine,migraine,15496,15697,stringent,0.053597733188531255,56
+Migraine,migraine,15496,15697,weighted,0.06666495560106678,56
+Migraine,migraine,15496,9861,broad,0.21043199182851707,55
+Migraine,migraine,15496,9861,stringent,0.09058083711174258,55
+Migraine,migraine,15496,9861,weighted,0.19519274248512128,55
+Migraine,migraine,15697,9861,broad,0.24950922373984985,59
+Migraine,migraine,15697,9861,stringent,0.2597744572872284,59
+Migraine,migraine,15697,9861,weighted,0.31170638822323704,59
+Multiple sclerosis,multiple_sclerosis,10021,12876,broad,0.2592472854354327,56
+Multiple sclerosis,multiple_sclerosis,10021,12876,stringent,0.24739954870463682,56
+Multiple sclerosis,multiple_sclerosis,10021,12876,weighted,0.23936263833463556,56
+Multiple sclerosis,multiple_sclerosis,10021,14380,broad,0.18160100530026516,59
+Multiple sclerosis,multiple_sclerosis,10021,14380,stringent,0.4036558493425407,59
+Multiple sclerosis,multiple_sclerosis,10021,14380,weighted,0.31576659933864354,59
+Multiple sclerosis,multiple_sclerosis,10021,15496,broad,0.40280011105011204,56
+Multiple sclerosis,multiple_sclerosis,10021,15496,stringent,0.39013425580549943,56
+Multiple sclerosis,multiple_sclerosis,10021,15496,weighted,0.435156432567931,56
+Multiple sclerosis,multiple_sclerosis,10021,15697,broad,0.44665167660730537,57
+Multiple sclerosis,multiple_sclerosis,10021,15697,stringent,0.47796655773252744,57
+Multiple sclerosis,multiple_sclerosis,10021,15697,weighted,0.44950735114208523,57
+Multiple sclerosis,multiple_sclerosis,10021,9861,broad,0.10011485125646306,123
+Multiple sclerosis,multiple_sclerosis,10021,9861,stringent,0.22429749324274778,123
+Multiple sclerosis,multiple_sclerosis,10021,9861,weighted,0.18979916378022282,123
+Multiple sclerosis,multiple_sclerosis,12876,14380,broad,-0.04339682271448423,58
+Multiple sclerosis,multiple_sclerosis,12876,14380,stringent,0.07337352898944666,58
+Multiple sclerosis,multiple_sclerosis,12876,14380,weighted,-0.11999013772486115,58
+Multiple sclerosis,multiple_sclerosis,12876,15496,broad,-0.012294341186510344,55
+Multiple sclerosis,multiple_sclerosis,12876,15496,stringent,-0.04784368964367473,55
+Multiple sclerosis,multiple_sclerosis,12876,15496,weighted,-0.0378575570849397,55
+Multiple sclerosis,multiple_sclerosis,12876,15697,broad,0.06761762724333592,55
+Multiple sclerosis,multiple_sclerosis,12876,15697,stringent,0.23824400533654214,55
+Multiple sclerosis,multiple_sclerosis,12876,15697,weighted,0.14316112165388173,55
+Multiple sclerosis,multiple_sclerosis,12876,9861,broad,0.18140517619978813,56
+Multiple sclerosis,multiple_sclerosis,12876,9861,stringent,0.20023632457742024,56
+Multiple sclerosis,multiple_sclerosis,12876,9861,weighted,0.1587653869407812,56
+Multiple sclerosis,multiple_sclerosis,14380,15496,broad,0.2729455015347968,57
+Multiple sclerosis,multiple_sclerosis,14380,15496,stringent,0.495630475371375,57
+Multiple sclerosis,multiple_sclerosis,14380,15496,weighted,0.38960081227078686,57
+Multiple sclerosis,multiple_sclerosis,14380,15697,broad,0.27303529286692824,57
+Multiple sclerosis,multiple_sclerosis,14380,15697,stringent,0.3294938381903779,57
+Multiple sclerosis,multiple_sclerosis,14380,15697,weighted,0.37324361607155665,57
+Multiple sclerosis,multiple_sclerosis,14380,9861,broad,0.19751952271044354,59
+Multiple sclerosis,multiple_sclerosis,14380,9861,stringent,0.2951058189193943,59
+Multiple sclerosis,multiple_sclerosis,14380,9861,weighted,0.25539251582216405,59
+Multiple sclerosis,multiple_sclerosis,15496,15697,broad,0.2801501457023519,56
+Multiple sclerosis,multiple_sclerosis,15496,15697,stringent,0.2256235433721256,56
+Multiple sclerosis,multiple_sclerosis,15496,15697,weighted,0.21331240297700715,56
+Multiple sclerosis,multiple_sclerosis,15496,9861,broad,0.2768187488834533,55
+Multiple sclerosis,multiple_sclerosis,15496,9861,stringent,0.2562742017404513,55
+Multiple sclerosis,multiple_sclerosis,15496,9861,weighted,0.22194150867099222,55
+Multiple sclerosis,multiple_sclerosis,15697,9861,broad,0.2789460680585992,59
+Multiple sclerosis,multiple_sclerosis,15697,9861,stringent,0.4766516623914957,59
+Multiple sclerosis,multiple_sclerosis,15697,9861,weighted,0.3793831115974244,59

@@ -17,7 +17,7 @@ export function ResearchSections({ metadata }: { metadata: ProjectMetadata }) {
         <div className="pipeline" aria-label={pipeline.join(' then ')}>
           {pipeline.map((step, index) => <div key={step}><span>{String(index + 1).padStart(2, '0')}</span>{step}</div>)}
         </div>
-        <p className="lead">The colors represent how strongly Parkinson-associated genes are expressed in each healthy brain region relative to matched random gene sets.</p>
+        <p className="lead">The selected disease map shows how strongly its prioritized genes are expressed in each healthy brain region relative to matched random gene sets. The detailed audit below uses Parkinson disease as the frozen reference analysis.</p>
         <p className="scientific-caution">This is a genetically informed spatial enrichment map, not a direct map of where disease pathology occurs.</p>
       </section>
 
@@ -33,8 +33,8 @@ export function ResearchSections({ metadata }: { metadata: ProjectMetadata }) {
 
       <section id="data" className="data-methods-grid">
         <div>
-          <p className="section-kicker">Data</p>
-          <h2>Research inputs</h2>
+          <p className="section-kicker">Parkinson reference analysis</p>
+          <h2>Worked-example inputs</h2>
           <dl className="data-list">
             <div><dt>AHBA donors</dt><dd>{formatCount(counts.ahba_donors)}</dd></div>
             <div><dt>AHBA tissue samples</dt><dd>{formatCount(counts.ahba_samples)}</dd></div>
@@ -64,8 +64,8 @@ export function ResearchSections({ metadata }: { metadata: ProjectMetadata }) {
           </div>
         </div>
         <div id="methods">
-          <p className="section-kicker">Methods &amp; Sources</p>
-          <h2>Traceable by design</h2>
+          <p className="section-kicker">Reference methods &amp; sources</p>
+          <h2>Parkinson audit trail</h2>
           <h3>Data sources</h3>
           <ul className="source-list">
             {metadata.sources.map((source) => <li key={source.name}><a href={source.url} target="_blank" rel="noreferrer">{source.name}</a></li>)}

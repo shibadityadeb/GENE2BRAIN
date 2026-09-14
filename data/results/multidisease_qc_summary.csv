@@ -1,0 +1,16 @@
+disease,configured_status,analysis_status,broad_genes,stringent_genes,weighted_genes,weighted_genes_in_ahba,weighted_coverage_percent,duplicate_gene_rows,missing_identifiers,l2g_min,l2g_median,l2g_max,gwas_sample_size,ancestry,flag
+Parkinson disease,ready,analyzable,149,38,149,123,82.5503355704698,0,0,0.0517827272415161,0.2877374291419983,0.9014809131622314,2525730.0,European; East Asian; Hispanic or Latin American; African unspecified,none
+Alzheimer disease,ready,analyzable,113,30,113,93,82.30088495575221,0,0,0.0504016876220703,0.2882030606269836,0.9829685091972352,487511.0,European,none
+Huntington disease,excluded,excluded,0,0,0,0,,0,0,,,,,,"Catalog ontology has only GCST004691 for Huntington progression, not common-variant disease risk."
+Amyotrophic lateral sclerosis,ready,analyzable,25,8,25,22,88.0,0,0,0.0629553496837616,0.4249000549316406,0.9120930433273317,152268.0,European; East Asian,none
+Multiple system atrophy,excluded,excluded,0,0,0,0,,0,0,,,,8016.0,European,"Eligible risk GWAS exists, but current Open Targets has zero credible sets; older eligible studies also have zero."
+Progressive supranuclear palsy,needs_review,needs_review_not_analyzed,4,1,4,4,100.0,0,0,0.0807616636157035,0.39481667056679726,0.7044744491577148,12308.0,European,"Largest disease-specific genome-wide array study with Open Targets credible sets, but only four prioritized genes were returned; it fails the frozen minimum-five-gene AHBA analysis gate."
+Schizophrenia,ready,analyzable,451,115,451,381,84.4789356984479,0,0,0.0503158643841743,0.2500176727771759,0.9303026795387268,175799.0,European; East Asian; African American or Afro-Caribbean; Hispanic or Latin American,none
+Bipolar disorder,ready,analyzable,100,25,100,80,80.0,0,0,0.0503660403192043,0.1748448461294174,0.903235673904419,413466.0,European,none
+Major depressive disorder,ready,analyzable,178,45,178,145,81.46067415730337,0,0,0.0502860285341739,0.2152005285024643,0.8990307450294495,1154267.0,European,none
+Autism spectrum disorder,needs_review,needs_review_not_analyzed,1,1,1,1,100.0,0,0,0.7242001891136169,0.7242001891136169,0.7242001891136169,46350.0,European,The larger SPARK record has zero Open Targets credible sets; this disease-specific alternative returns only one prioritized gene and fails the frozen minimum-five-gene AHBA analysis gate.
+Attention deficit-hyperactivity disorder,ready,analyzable,35,9,35,31,88.57142857142857,0,0,0.0509530529379844,0.3365316689014435,0.8835017681121826,225534.0,European,none
+Epilepsy,ready,analyzable,8,2,8,7,87.5,0,0,0.0641341581940651,0.165557250380516,0.7731314301490784,82482.0,European; African unspecified; Asian unspecified,stringent sensitivity set has only 2 AHBA genes; retained without threshold changes and interpreted cautiously
+Migraine,ready,analyzable,205,52,205,167,81.46341463414635,0,0,0.050058513879776,0.2524095475673675,0.984408676624298,873341.0,European,none
+Multiple sclerosis,ready,analyzable,297,75,297,217,73.06397306397307,0,0,0.0502227991819381,0.2660223543643951,0.9751220345497132,41505.0,European,none
+Tourette syndrome,excluded,excluded,0,0,0,0,,0,0,,,,19698.0,European,"Eligible risk GWAS exists, but current Open Targets has zero credible sets; older eligible studies also have zero."

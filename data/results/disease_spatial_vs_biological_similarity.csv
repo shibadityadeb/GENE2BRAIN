@@ -1,0 +1,46 @@
+disease_1,disease_2,spatial_pearson_r,significant_pathway_jaccard,significant_cell_type_jaccard,n_pathways_disease_1,n_pathways_disease_2,n_cell_types_disease_1,n_cell_types_disease_2,interpretation
+Alzheimer disease,Amyotrophic lateral sclerosis,-0.1571598902195104,0.0,0.0,402,3,1,0,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Alzheimer disease,Attention deficit-hyperactivity disorder,0.0659613146755776,0.0,0.0,402,30,1,1,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Alzheimer disease,Bipolar disorder,-0.1940054667504821,0.0,0.0,402,2,1,0,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Alzheimer disease,Epilepsy,-0.0742388473783012,0.0019305019305019305,0.0,402,117,1,0,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Alzheimer disease,Major depressive disorder,-0.0911680633457061,0.0048543689320388345,0.0,402,12,1,2,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Alzheimer disease,Migraine,0.2671278030156604,0.0,0.0,402,1,1,0,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Alzheimer disease,Multiple sclerosis,0.2816247667339765,0.047142857142857146,0.0,402,331,1,1,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Alzheimer disease,Parkinson disease,0.267717504575427,0.0,0.0,402,6,1,0,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Alzheimer disease,Schizophrenia,-0.5271859227829734,0.017475728155339806,0.0,402,122,1,7,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Amyotrophic lateral sclerosis,Attention deficit-hyperactivity disorder,-0.0326482948940323,0.0,0.0,3,30,0,1,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Amyotrophic lateral sclerosis,Bipolar disorder,-0.2458380665170946,0.0,,3,2,0,0,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Amyotrophic lateral sclerosis,Epilepsy,0.5933263566430551,0.0,,3,117,0,0,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Amyotrophic lateral sclerosis,Major depressive disorder,-0.1335296820071942,0.0,0.0,3,12,0,2,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Amyotrophic lateral sclerosis,Migraine,0.1592177515114122,0.0,,3,1,0,0,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Amyotrophic lateral sclerosis,Multiple sclerosis,-0.0752432417471547,0.0,0.0,3,331,0,1,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Amyotrophic lateral sclerosis,Parkinson disease,-0.0401658715036281,0.0,,3,6,0,0,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Amyotrophic lateral sclerosis,Schizophrenia,0.027251112650042,0.0,0.0,3,122,0,7,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Attention deficit-hyperactivity disorder,Bipolar disorder,0.2049640206241884,0.0,0.0,30,2,1,0,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Attention deficit-hyperactivity disorder,Epilepsy,-0.1505583421855577,0.0,0.0,30,117,1,0,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Attention deficit-hyperactivity disorder,Major depressive disorder,0.5879035357886607,0.0,0.0,30,12,1,2,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Attention deficit-hyperactivity disorder,Migraine,0.2179668777842929,0.0,0.0,30,1,1,0,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Attention deficit-hyperactivity disorder,Multiple sclerosis,0.0732778527931344,0.0,0.0,30,331,1,1,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Attention deficit-hyperactivity disorder,Parkinson disease,0.1977915788770795,0.0,0.0,30,6,1,0,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Attention deficit-hyperactivity disorder,Schizophrenia,0.3532510597241214,0.020134228187919462,0.0,30,122,1,7,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Bipolar disorder,Epilepsy,-0.3071704058957768,0.0,,2,117,0,0,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Bipolar disorder,Major depressive disorder,0.2713430258811666,0.0,0.0,2,12,0,2,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Bipolar disorder,Migraine,0.0466832497553195,0.0,,2,1,0,0,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Bipolar disorder,Multiple sclerosis,-0.413138422104632,0.0,0.0,2,331,0,1,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Bipolar disorder,Parkinson disease,-0.1377412095131003,0.0,,2,6,0,0,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Bipolar disorder,Schizophrenia,0.5242620965142324,0.008130081300813009,0.0,2,122,0,7,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Epilepsy,Major depressive disorder,-0.2386561491474404,0.0,0.0,117,12,0,2,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Epilepsy,Migraine,7.312553136656954e-05,0.0,,117,1,0,0,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Epilepsy,Multiple sclerosis,0.2619201294382543,0.0,0.0,117,331,0,1,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Epilepsy,Parkinson disease,-0.0784512235088037,0.0,,117,6,0,0,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Epilepsy,Schizophrenia,-0.0899679362691568,0.08144796380090498,0.0,117,122,0,7,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Major depressive disorder,Migraine,0.2459436287546356,0.0,0.0,12,1,2,0,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Major depressive disorder,Multiple sclerosis,0.0740203981521999,0.0,0.0,12,331,2,1,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Major depressive disorder,Parkinson disease,0.3466352348384837,0.058823529411764705,0.0,12,6,2,0,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Major depressive disorder,Schizophrenia,0.4989503739429982,0.09836065573770492,0.2857142857142857,12,122,2,7,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Migraine,Multiple sclerosis,0.0836206938300377,0.0,0.0,1,331,0,1,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Migraine,Parkinson disease,0.1817173896313368,0.0,,1,6,0,0,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Migraine,Schizophrenia,-0.0424673764211927,0.0,0.0,1,122,0,7,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Multiple sclerosis,Parkinson disease,0.1562911850341192,0.0,0.0,331,6,1,0,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Multiple sclerosis,Schizophrenia,-0.2709218741586588,0.0022123893805309734,0.0,331,122,1,7,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim
+Parkinson disease,Schizophrenia,0.1059063562751587,0.024,0.0,6,122,0,7,pairwise descriptive comparison; NA when both FDR-significant sets are empty; no inferential biological-similarity claim

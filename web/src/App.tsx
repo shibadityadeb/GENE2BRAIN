@@ -1,19 +1,21 @@
 import { lazy, Suspense, useEffect, useMemo, useState } from 'react'
 import { Controls } from './components/Controls'
 import { Legend } from './components/Legend'
+import { MultiDiseaseSections } from './components/MultiDiseaseSections'
 import { RegionPanel } from './components/RegionPanel'
 import { ResearchSections } from './components/ResearchSections'
 import { Tooltip } from './components/Tooltip'
 import { loadResearchData } from './data'
-import type { AtlasGeometry, EnrichmentData, Hemisphere, Metric, ProjectMetadata, RegionRecord, ViewPreset } from './types'
+import type { AtlasGeometry, EnrichmentData, Hemisphere, Metric, MultidiseaseAtlas, ProjectMetadata, RegionRecord, ViewPreset } from './types'
 
-type Loaded = { enrichment: EnrichmentData; metadata: ProjectMetadata; geometry: AtlasGeometry }
+type Loaded = { enrichment: EnrichmentData; metadata: ProjectMetadata; geometry: AtlasGeometry; multidisease: MultidiseaseAtlas }
 const BrainScene = lazy(() => import('./components/BrainScene').then((module) => ({ default: module.BrainScene })))
 
 export default function App() {
   const [loaded, setLoaded] = useState<Loaded | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [metric, setMetric] = useState<Metric>('z_score')
+  const [diseaseId, setDiseaseId] = useState('parkinson')
   const [hemisphere, setHemisphere] = useState<Hemisphere>('whole')
   const [selected, setSelected] = useState<RegionRecord | null>(null)
   const [hovered, setHovered] = useState<RegionRecord | null>(null)
@@ -29,9 +31,11 @@ export default function App() {
   if (error) return <main className="load-state error-state"><h1>Visualization unavailable</h1><p>{error}</p><p>No scientific values have been displayed.</p></main>
   if (!loaded) return <main className="load-state"><div className="loader" /><p>Loading verified AAL3 atlas geometry…</p></main>
 
-  const { enrichment, metadata, geometry } = loaded
-  const zDomain = metadata.metrics.z_score.domain as [number, number]
-  const observedDomain = metadata.metrics.observed_score.domain as [number, number]
+  const { metadata, geometry, multidisease } = loaded
+  const enrichment = multidisease.diseases.find((disease) => disease.disease_id === diseaseId) ?? multidisease.diseases[0]
+  const zDomain = multidisease.z_domain
+  const observedValues = enrichment.regions.map((region) => region.observed_score)
+  const observedDomain: [number, number] = [Math.min(...observedValues), Math.max(...observedValues)]
   const validationDomain = metadata.metrics.validation_score.domain as [number, number]
   const selectRegion = (region: RegionRecord) => {
     setHemisphere('whole')
@@ -48,19 +52,22 @@ export default function App() {
     <div className="app-shell">
       <header className="topbar">
         <a className="brand" href="#top" aria-label="GENE2BRAIN home"><strong>GENE<span>2</span>BRAIN</strong><small>Spatial genetic enrichment</small></a>
-        <nav aria-label="Primary navigation"><a href="#how">How it works</a><a href="#data">Data</a><a href="#methods">Methods</a></nav>
+        <nav aria-label="Primary navigation"><a href="#compare">Compare</a><a href="#atlas">Atlas</a><a href="#story">Research story</a><a href="#methods">Methods</a></nav>
       </header>
 
       <section className="hero" id="top">
         <div className="hero-heading">
-          <div><p className="eyebrow">Interactive research atlas · Parkinson disease</p><h1>From Genetic Risk to<br /><em>Spatial Brain Vulnerability</em></h1></div>
+          <div><p className="eyebrow">Interactive research atlas · {multidisease.diseases.length} completed diseases</p><h1>From Genetic Risk to<br /><em>Spatial Brain Vulnerability</em></h1></div>
           <p>Explore where prioritized disease-associated genes show unusually high or low expression across healthy human brain regions.</p>
         </div>
         <Controls
           metric={metric}
           hemisphere={hemisphere}
           regions={enrichment.regions}
+          diseases={multidisease.diseases}
+          diseaseId={enrichment.disease_id}
           selected={selected}
+          onDisease={(value) => { setDiseaseId(value); setSelected(null); setHovered(null); setMetric('z_score') }}
           onMetric={setMetric}
           onHemisphere={setHemisphere}
           onSelect={selectRegion}
@@ -84,16 +91,16 @@ export default function App() {
             onSelect={selectRegion}
             onReset={() => setView('reset')}
           /></Suspense>
-          <div className="stage-label"><span>{validationMode ? 'ATLAS REGION VALIDATION' : 'AAL3 · 138 ANALYZED REGIONS'}</span><span>Drag to rotate · scroll/pinch to zoom · right-drag to pan</span></div>
+          <div className="stage-label"><span>{validationMode ? 'ATLAS REGION VALIDATION' : `${enrichment.disease_name.toUpperCase()} · AAL3 · 138 REGIONS`}</span><span>Drag to rotate · scroll/pinch to zoom · right-drag to pan</span></div>
           <Legend
             metric={metric}
             zDomain={zDomain}
             observedDomain={observedDomain}
             validationDomain={validationDomain}
             threshold={metadata.analysis.fdr_threshold}
-            significant={metadata.analysis.significant_regions}
-            spatialRobustRegions={metadata.analysis.spatial_sensitivity.robust_regions}
-            mappedValidationRegions={metadata.analysis.independent_validation.mapped_aal3_regions}
+            significant={enrichment.regions.filter((region) => region.fdr_p < metadata.analysis.fdr_threshold).length}
+            spatialRobustRegions={enrichment.regions.filter((region) => region.spatial_robustness_label === 'robust').length}
+            mappedValidationRegions={enrichment.regions.filter((region) => region.validation_score !== null).length}
             validationMode={validationMode}
           />
           {validationMode && (
@@ -101,10 +108,11 @@ export default function App() {
               <button key={region.region_id} onClick={() => selectRegion(region)}><span>{region.region_id}</span>{region.region_name}</button>
             ))}</div>
           )}
-          {selected && <RegionPanel region={selected} threshold={metadata.analysis.fdr_threshold} onClose={() => setSelected(null)} />}
+          {selected && <RegionPanel region={selected} diseaseName={enrichment.disease_name} threshold={metadata.analysis.fdr_threshold} onClose={() => setSelected(null)} />}
         </div>
       </section>
       {hovered && <Tooltip region={hovered} point={tooltipPoint} />}
+      {!validationMode && <MultiDiseaseSections atlas={multidisease} geometry={geometry} />}
       <ResearchSections metadata={metadata} />
       <footer><strong>GENE2BRAIN</strong><span>Research visualization · values generated by the validated scientific pipeline</span></footer>
     </div>

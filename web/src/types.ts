@@ -1,6 +1,6 @@
-export type Metric = 'z_score' | 'observed_score' | 'fdr_p' | 'spatial_robustness' | 'validation_score' | 'agreement'
+export type Metric = 'anatomy' | 'z_score' | 'observed_score' | 'fdr_p' | 'spatial_robustness' | 'validation_score' | 'agreement'
 export type Hemisphere = 'whole' | 'L' | 'R'
-export type ViewPreset = 'reset' | 'anterior' | 'posterior' | 'superior' | 'inferior'
+export type ViewPreset = 'reset' | 'left' | 'right' | 'anterior' | 'posterior' | 'superior' | 'inferior'
 
 export interface RegionRecord {
   region_id: number
@@ -92,6 +92,7 @@ export interface MultidiseaseAtlas {
   primary_metric: string
   comparison_note: string
   z_domain: [number, number]
+  pearson_similarity: Array<{ disease_1: string; disease_2: string; correlation: number; p_value: number; n_regions: number }>
   diseases: EnrichmentData[]
   excluded_or_needs_review: ExcludedDisease[]
 }
@@ -101,6 +102,12 @@ export interface GeometryRegion {
   positions: number[]
   indices: number[]
   voxel_count: number
+  source?: string
+}
+
+export interface GeometryMesh {
+  positions: number[]
+  indices: number[]
 }
 
 export interface AtlasGeometry {
@@ -108,6 +115,9 @@ export interface AtlasGeometry {
   atlas: string
   coordinate_system: string
   region_count: number
+  anatomy?: GeometryMesh
+  geometry_source?: string
+  label_rule?: string
   regions: GeometryRegion[]
 }
 

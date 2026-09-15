@@ -5,7 +5,7 @@
   "gene_set_version": "weighted",
   "source_file": "data/results/parkinson_regional_enrichment.csv",
   "spatial_source_file": "data/results/parkinson_spatial_robustness.csv",
-  "generated_on": "2026-09-14",
+  "generated_on": "2026-09-15",
   "regions": [
     {
       "region_id": 28,

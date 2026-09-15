@@ -21,6 +21,17 @@ export function ResearchSections({ metadata }: { metadata: ProjectMetadata }) {
         <p className="scientific-caution">This is a genetically informed spatial enrichment map, not a direct map of where disease pathology occurs.</p>
       </section>
 
+      <section id="before-after" className="before-after-section">
+        <p className="section-kicker">Visual method redesign</p>
+        <h2>From atlas voxels to folded anatomy</h2>
+        <p>The old diagnostic view displayed the outer faces of 2 mm AAL3 labels as block-like parcels. The new diagnostic view shows the same region IDs projected onto an actual pial cortical surface. Neither image is a patient brain or a disease pathology map.</p>
+        <div className="before-after-grid">
+          <figure><img src="/images/web_brain_before.png" alt="Before: block-like exposed AAL3 voxel-face visualization" loading="lazy" /><figcaption>Before · 2 mm atlas voxel faces</figcaption></figure>
+          <figure><img src="/images/web_brain_after.png" alt="After: folded pial cortical anatomy with diagnostic atlas-ID colors" loading="lazy" /><figcaption>After · fsaverage6 pial cortex with AAL3 ID projection</figcaption></figure>
+        </div>
+        <p>Research values are overlaid separately in the interactive explorer; the pastel diagnostic colors above encode IDs only. Projected borders are approximate at the 2 mm atlas resolution.</p>
+      </section>
+
       <section className="story-section">
         <p className="section-kicker">From Genetic Risk to Brain</p>
         <div className="story-flow">
@@ -52,15 +63,17 @@ export function ResearchSections({ metadata }: { metadata: ProjectMetadata }) {
             <div><dt>Significance threshold</dt><dd>FDR q &lt; {metadata.analysis.fdr_threshold}</dd></div>
           </dl>
           <div className="downloads">
-            <a className="download-button" href="./data/parkinson_regional_enrichment.csv" download>Download regional results</a>
-            <a className="outline-button" href="./data/parkinson_spatial_robustness.csv" download>Download spatial robustness</a>
-            <a className="outline-button" href="./data/parkinson_independent_validation_regional_scores.csv" download>Download validation scores</a>
-            <a className="outline-button" href="./data/parkinson_independent_validation_statistics.csv" download>Download validation statistics</a>
-            <a className="outline-button" href="./data/stage_09_go_enrichment.csv" download>Download GO enrichment</a>
-            <a className="outline-button" href="./data/stage_09_reactome_enrichment.csv" download>Download pathway enrichment</a>
-            <a className="outline-button" href="./data/stage_09_cell_type_enrichment.csv" download>Download cell-type enrichment</a>
-            <a className="outline-button" href="./data/stage_09_biological_evidence_summary.csv" download>Download biological evidence</a>
-            <a className="outline-button" href="./data/project_metadata.json" download>Download analysis metadata</a>
+            <a className="download-button" href="/data/parkinson_regional_enrichment.csv" download>Download regional results</a>
+            <a className="outline-button" href="/data/parkinson_atlas.json" download>Download Parkinson atlas JSON</a>
+            <a className="outline-button" href="/data/parkinson_spatial_robustness.csv" download>Download spatial robustness</a>
+            <a className="outline-button" href="/data/parkinson_independent_validation_regional_scores.csv" download>Download validation scores</a>
+            <a className="outline-button" href="/data/parkinson_independent_validation_statistics.csv" download>Download validation statistics</a>
+            <a className="outline-button" href="/data/stage_09_go_enrichment.csv" download>Download GO enrichment</a>
+            <a className="outline-button" href="/data/stage_09_reactome_enrichment.csv" download>Download pathway enrichment</a>
+            <a className="outline-button" href="/data/stage_09_cell_type_enrichment.csv" download>Download cell-type enrichment</a>
+            <a className="outline-button" href="/data/stage_09_biological_evidence_summary.csv" download>Download biological evidence</a>
+            <a className="outline-button" href="/data/project_metadata.json" download>Download analysis metadata</a>
+            <a className="outline-button" href="/data/release.json" download>Download release manifest</a>
           </div>
         </div>
         <div id="methods">
@@ -90,6 +103,38 @@ export function ResearchSections({ metadata }: { metadata: ProjectMetadata }) {
           <p>GENE2BRAIN selected the GWAS, prioritized genes with {metadata.analysis.gene_prioritization}, processed AHBA expression into AAL3 parcels, and performed the gene-set and spatial sensitivity analyses.</p>
           <p>Source organizations provide data and methods; their inclusion does not imply endorsement of GENE2BRAIN.</p>
         </div>
+      </section>
+      <section id="biology" className="biology-section">
+        <p className="section-kicker">Biological interpretation</p>
+        <h2>Evidence, not a pathology claim</h2>
+        <div className="biology-cards">
+          <article><span>Gene ontology</span><strong>{formatCount(metadata.analysis.biological_interpretation.go_significant_terms)}</strong><p>Terms surviving the ontology-specific false-discovery correction for the frozen Parkinson gene set.</p></article>
+          <article><span>Reactome</span><strong>{formatCount(metadata.analysis.biological_interpretation.reactome_significant_pathways)}</strong><p>Primary pathway results under a custom AHBA-measured gene background.</p></article>
+          <article><span>Brain cell types</span><strong>{formatCount(metadata.analysis.biological_interpretation.cell_types_significant)}</strong><p>Marker-set associations using Human Protein Atlas single-nucleus profiles; not cellular localization of pathology.</p></article>
+        </div>
+        <p className="biology-note">{metadata.analysis.biological_interpretation.interpretation_note} Region-level biology is shown in the brain detail panel only where the predeclared spatial robustness rule supports that interpretation.</p>
+      </section>
+      <section id="about" className="about-section">
+        <p className="section-kicker">About the project</p>
+        <h2>GENE2BRAIN</h2>
+        <p className="lead">From Genetic Risk to Spatial Brain Vulnerability is an open, reproducible research visualization of disease-gene expression patterns in the healthy human brain.</p>
+        <p>The analysis and visual website are developed under the GENE2BRAIN project. Researcher name, affiliation, contact address, and publication status have not been confirmed for this public release; no invented attribution is shown. Source organizations provide data and methods but do not endorse these interpretations.</p>
+        <div id="author" className="author-profile" aria-label="Researcher profile pending confirmation"><h3>Researcher profile</h3><dl><div><dt>Name</dt><dd>Pending confirmation</dd></div><div><dt>Affiliation</dt><dd>Pending confirmation</dd></div><div><dt>Contact</dt><dd>Pending confirmation</dd></div><div><dt>Publication</dt><dd>Not confirmed</dd></div></dl></div>
+        <p className="scientific-caution">These atlas maps are research summaries. They cannot diagnose patients or establish where disease begins.</p>
+      </section>
+      <section id="citations" className="citations-section">
+        <p className="section-kicker">Sources and citation trail</p>
+        <h2>Citations</h2>
+        <p>Follow the source links and downloadable metadata for accessions, provenance, analysis versions, and the exact numerical data displayed. Cite primary data providers alongside any GENE2BRAIN analysis you use.</p>
+        <ol className="bibliography">
+          <li>Hawrylycz et al. (2012). <a href="https://doi.org/10.1038/nature11405" target="_blank" rel="noreferrer">An anatomically comprehensive atlas of the adult human brain transcriptome</a>. <em>Nature</em>. AHBA primary resource.</li>
+          <li>Kim et al. (2023). <a href="https://doi.org/10.1038/s41588-023-01584-8" target="_blank" rel="noreferrer">Multi-ancestry genome-wide association meta-analysis of Parkinson’s disease</a>. <em>Nature Genetics</em>. <a href="https://www.ebi.ac.uk/gwas/studies/GCST90308590" target="_blank" rel="noreferrer">GWAS Catalog GCST90308590</a>.</li>
+          <li>Rolls et al. (2020). <a href="https://doi.org/10.1016/j.neuroimage.2019.116189" target="_blank" rel="noreferrer">Automated Anatomical Labeling atlas 3</a>. <em>NeuroImage</em>. Atlas identity.</li>
+          <li>Laansma et al. (2021). <a href="https://doi.org/10.1002/mds.28706" target="_blank" rel="noreferrer">An international multicenter analysis of brain structure across clinical stages of Parkinson’s disease</a>. <em>Movement Disorders</em>. External phenotype.</li>
+          <li><a href="https://doi.org/10.1038/s41592-022-01625-w" target="_blank" rel="noreferrer">neuromaps surface-transform method</a> and <a href="https://nilearn.github.io/stable/modules/generated/nilearn.datasets.fetch_surf_fsaverage.html" target="_blank" rel="noreferrer">Nilearn fsaverage pial dataset</a>. Visual geometry and label projection.</li>
+        </ol>
+        <p className="asset-credit">3D geometry adapts the Nilearn-distributed fsaverage6 FreeSurfer pial template and projects AAL3 labels with neuromaps registration-fusion coordinates. The registration-fusion distribution is identified as <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noreferrer">CC BY-NC-SA 4.0</a>; changes here comprise nearest-neighbor AAL3 label sampling, indexed regional mesh extraction, axis conversion, and rendering. The fsaverage6 dataset page lists the surface data license as unknown; formal redistribution review is pending.</p>
+        <ul className="source-list">{metadata.sources.map((source) => <li key={source.name}><a href={source.url} target="_blank" rel="noreferrer">{source.name}</a></li>)}</ul>
       </section>
     </main>
   )

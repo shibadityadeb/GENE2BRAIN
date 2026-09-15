@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --port 8000",
+    "prebuild": "python3 ../scripts/validate_brain_region_mapping.py",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "test": "vitest run",

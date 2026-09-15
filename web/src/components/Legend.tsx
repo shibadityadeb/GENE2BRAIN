@@ -17,6 +17,11 @@ export function Legend({ metric, zDomain, observedDomain, validationDomain, thre
       <strong>Atlas Region Validation</strong><span>Deterministic colors distinguish region IDs; they do not encode disease values.</span>
     </div>
   )
+  if (metric === 'anatomy') return (
+    <div className="legend" aria-label="Anatomy only legend">
+      <strong>Anatomy only</strong><span>Folded fsaverage6 pial cortical surface. No research values or region colors are shown.</span>
+    </div>
+  )
   if (metric === 'fdr_p') return (
     <div className="legend" aria-label="FDR significance legend">
       <strong>FDR significance</strong>

@@ -2,21 +2,97 @@
   "schema_version": "1.0.0",
   "project": "GENE2BRAIN",
   "title": "From Genetic Risk to Spatial Brain Vulnerability",
-  "generated_on": "2026-09-14",
+  "generated_on": "2026-09-15",
   "available_diseases": [
     {
-      "id": "parkinson-disease",
+      "id": "parkinson",
       "name": "Parkinson disease",
+      "status": "available"
+    },
+    {
+      "id": "alzheimer",
+      "name": "Alzheimer disease",
+      "status": "available"
+    },
+    {
+      "id": "als",
+      "name": "Amyotrophic lateral sclerosis",
+      "status": "available"
+    },
+    {
+      "id": "schizophrenia",
+      "name": "Schizophrenia",
+      "status": "available"
+    },
+    {
+      "id": "bipolar",
+      "name": "Bipolar disorder",
+      "status": "available"
+    },
+    {
+      "id": "major_depression",
+      "name": "Major depressive disorder",
+      "status": "available"
+    },
+    {
+      "id": "adhd",
+      "name": "Attention deficit-hyperactivity disorder",
+      "status": "available"
+    },
+    {
+      "id": "epilepsy",
+      "name": "Epilepsy",
+      "status": "available"
+    },
+    {
+      "id": "migraine",
+      "name": "Migraine",
+      "status": "available"
+    },
+    {
+      "id": "multiple_sclerosis",
+      "name": "Multiple sclerosis",
       "status": "available"
     }
   ],
-  "future_diseases": [
-    "Alzheimer disease",
-    "Huntington disease",
-    "ALS",
-    "Schizophrenia",
-    "Bipolar disorder"
+  "excluded_or_needs_review": [
+    {
+      "disease_id": "huntington",
+      "disease_name": "Huntington disease",
+      "status": "excluded",
+      "reason": "Catalog ontology has only GCST004691 for Huntington progression, not common-variant disease risk."
+    },
+    {
+      "disease_id": "multiple_system_atrophy",
+      "disease_name": "Multiple system atrophy",
+      "status": "excluded",
+      "reason": "Eligible risk GWAS exists, but current Open Targets has zero credible sets; older eligible studies also have zero."
+    },
+    {
+      "disease_id": "progressive_supranuclear_palsy",
+      "disease_name": "Progressive supranuclear palsy",
+      "status": "needs_review",
+      "reason": "Largest disease-specific genome-wide array study with Open Targets credible sets, but only four prioritized genes were returned; it fails the frozen minimum-five-gene AHBA analysis gate."
+    },
+    {
+      "disease_id": "autism",
+      "disease_name": "Autism spectrum disorder",
+      "status": "needs_review",
+      "reason": "The larger SPARK record has zero Open Targets credible sets; this disease-specific alternative returns only one prioritized gene and fails the frozen minimum-five-gene AHBA analysis gate."
+    },
+    {
+      "disease_id": "tourette",
+      "disease_name": "Tourette syndrome",
+      "status": "excluded",
+      "reason": "Eligible risk GWAS exists, but current Open Targets has zero credible sets; older eligible studies also have zero."
+    }
   ],
+  "researcher": {
+    "name": null,
+    "affiliation": null,
+    "contact": null,
+    "publication_status": "not confirmed"
+  },
   "counts": {
     "ahba_donors": 6,
     "ahba_samples": 3702,
@@ -147,8 +223,8 @@
     ],
     "source_image": "data/atlases/aal_3v2/AAL3/AAL3v1.nii.gz",
     "mapping": "region_id equals the nonzero integer voxel label in AAL3v1.nii.gz",
-    "geometry_method": "Exposed voxel faces extracted from retained labels and greedily merged only when coplanar and contiguous",
-    "render_coordinate_mapping": "MNI (x, y, z) is rendered as WebGL (x, z, y) so superior is up"
+    "geometry_method": "Folded Nilearn fsaverage6 pial surface with neuromaps 41k registration-fusion projection of exact AAL3v1 integer labels; smooth AAL3 isosurfaces for noncortical parcels",
+    "render_coordinate_mapping": "RAS (x, y, z) is rendered as WebGL (x, z, y) so superior is up; fsaverage cortex and MNI subcortical coordinates are not assumed to be perfectly co-registered"
   },
   "sources": [
     {

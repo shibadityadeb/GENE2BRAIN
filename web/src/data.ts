@@ -1,6 +1,6 @@
 import type { AtlasGeometry, BiologicalInterpretationData, EnrichmentData, MultidiseaseAtlas, ProjectMetadata, RegionRecord } from './types'
 
-const DATA_ROOT = './data'
+const DATA_ROOT = '/data'
 
 async function fetchJson<T>(name: string): Promise<T> {
   const response = await fetch(`${DATA_ROOT}/${name}`)
@@ -12,7 +12,7 @@ export async function loadResearchData() {
   const [enrichment, metadata, geometry, biology, multidisease] = await Promise.all([
     fetchJson<EnrichmentData>('parkinson_brain_enrichment.json'),
     fetchJson<ProjectMetadata>('project_metadata.json'),
-    fetchJson<AtlasGeometry>('aal3_regions.json'),
+    fetchJson<AtlasGeometry>('anatomical_brain.json'),
     fetchJson<BiologicalInterpretationData>('parkinson_biological_interpretation.json'),
     fetchJson<MultidiseaseAtlas>('multidisease_atlas.json'),
   ])
@@ -31,6 +31,9 @@ export function validateMultidiseaseData(atlas: MultidiseaseAtlas, geometry: Atl
   const expected = new Set(geometry.regions.map((region) => region.region_id))
   const diseaseIds = atlas.diseases.map((disease) => disease.disease_id)
   if (new Set(diseaseIds).size !== diseaseIds.length) throw new Error('Duplicate disease IDs')
+  if (atlas.pearson_similarity.length !== atlas.diseases.length * (atlas.diseases.length + 1) / 2) {
+    throw new Error('Frozen Pearson similarity table is incomplete')
+  }
   atlas.diseases.forEach((disease) => {
     if (disease.regions.length !== expected.size || disease.regions.some((region) => !expected.has(region.region_id))) {
       throw new Error(`${disease.disease_name} does not cover the common AAL3 geometry`)

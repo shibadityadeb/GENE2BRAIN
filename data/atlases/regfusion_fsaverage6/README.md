@@ -1,0 +1,7 @@
+# MNI152 → fsaverage 41k registration-fusion coordinates
+
+These two `tpl-MNI152_space-fsaverage_den-41k_hemi-{L,R}_regfusion.txt` files are unmodified upstream **neuromaps** registration-fusion coordinates. They were retrieved on 2026-09-15 from the neuromaps 0.0.7 OSF archive through its `mni152_to_fsaverage(..., fsavg_density='41k', method='nearest')` functionality and copied into this stable atlas-assets directory for a clean, reproducible geometry build.
+
+Upstream: [neuromaps transformation documentation](https://neuromaps.readthedocs.io/en/latest/generated/neuromaps.transforms.mni152_to_fsaverage.html), [neuromaps method paper](https://doi.org/10.1038/s41592-022-01625-w), [neuromaps code and license](https://github.com/netneurolab/neuromaps). The neuromaps distribution identifies **CC BY-NC-SA 4.0** terms. This project preserves attribution and does not claim these transformation coordinates as original GENE2BRAIN data. The coordinate files are used to project the original AAL3 integer labels to fsaverage pial vertices; they do not modify any scientific Stage 2–10 result table.
+
+The pial surface itself is fetched separately by Nilearn from its documented [fsaverage6 dataset](https://nilearn.github.io/stable/modules/description/fsaverage6.html); the Nilearn dataset page lists its data license as unknown. Confirm surface-asset redistribution rights before formal or commercial deployment of the derived web geometry.

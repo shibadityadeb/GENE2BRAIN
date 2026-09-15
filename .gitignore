@@ -22,6 +22,9 @@ data/ahba/*
 
 # Reproducible donor-level matrices (about 151 MB total)
 data/intermediate/donor_*_expression.csv
+data/intermediate/neuromaps/
+data/intermediate/nilearn/
+data/atlases/regfusion_fsaverage5/
 
 # Retain only the atlas files required by the pipeline and its documentation
 data/atlases/aal_3v2/*
@@ -45,3 +48,6 @@ results/figures/*.png
 !results/figures/stage_09_*.png
 !results/figures/stage_10_*.png
 !results/figures/web_atlas_region_validation.png
+!results/figures/web_brain_*.png
+!results/figures/web/
+!results/figures/web/*.png

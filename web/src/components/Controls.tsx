@@ -28,6 +28,7 @@ export function Controls({
         </label>
         <label>Metric
           <select value={metric} onChange={(event) => onMetric(event.target.value as Metric)} aria-label="Metric">
+            <option value="anatomy">Anatomy only</option>
             <option value="z_score">Z-score</option>
             <option value="observed_score">Observed expression</option>
             <option value="fdr_p">FDR significance</option>
@@ -60,7 +61,7 @@ export function Controls({
           ))}
         </div>
         <div className="view-buttons">
-          {(['anterior', 'posterior', 'superior', 'inferior'] as ViewPreset[]).map((view) => (
+          {(['left', 'right', 'anterior', 'posterior', 'superior', 'inferior'] as ViewPreset[]).map((view) => (
             <button key={view} onClick={() => onView(view)}>{view[0].toUpperCase() + view.slice(1)}</button>
           ))}
           <button className="reset-button" onClick={() => onView('reset')} aria-label="Reset camera">Reset view</button>

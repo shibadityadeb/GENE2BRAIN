@@ -10,23 +10,54 @@ import type { AtlasGeometry, EnrichmentData, Hemisphere, Metric, MultidiseaseAtl
 
 type Loaded = { enrichment: EnrichmentData; metadata: ProjectMetadata; geometry: AtlasGeometry; multidisease: MultidiseaseAtlas }
 const BrainScene = lazy(() => import('./components/BrainScene').then((module) => ({ default: module.BrainScene })))
+const query = new URLSearchParams(window.location.search)
+const validMetrics: Metric[] = ['anatomy', 'z_score', 'observed_score', 'fdr_p', 'spatial_robustness', 'validation_score', 'agreement']
+const validViews: ViewPreset[] = ['reset', 'left', 'right', 'anterior', 'posterior', 'superior', 'inferior']
 
 export default function App() {
   const [loaded, setLoaded] = useState<Loaded | null>(null)
   const [error, setError] = useState<string | null>(null)
-  const [metric, setMetric] = useState<Metric>('z_score')
-  const [diseaseId, setDiseaseId] = useState('parkinson')
-  const [hemisphere, setHemisphere] = useState<Hemisphere>('whole')
+  const [metric, setMetric] = useState<Metric>(() => validMetrics.includes(query.get('metric') as Metric) ? query.get('metric') as Metric : 'z_score')
+  const [diseaseId, setDiseaseId] = useState(query.get('disease') ?? 'parkinson')
+  const [hemisphere, setHemisphere] = useState<Hemisphere>(() => query.get('hemi') === 'L' || query.get('hemi') === 'R' ? query.get('hemi') as Hemisphere : 'whole')
   const [selected, setSelected] = useState<RegionRecord | null>(null)
   const [hovered, setHovered] = useState<RegionRecord | null>(null)
   const [tooltipPoint, setTooltipPoint] = useState({ x: 0, y: 0 })
   const [focusNonce, setFocusNonce] = useState(0)
-  const [viewPreset, setViewPreset] = useState<ViewPreset>('reset')
-  const validationMode = useMemo(() => new URLSearchParams(window.location.search).get('mode') === 'atlas', [])
+  const [viewPreset, setViewPreset] = useState<ViewPreset>(() => validViews.includes(query.get('view') as ViewPreset) ? query.get('view') as ViewPreset : 'reset')
+  const [shareMessage, setShareMessage] = useState('')
+  const validationMode = useMemo(() => window.location.pathname.endsWith('/dev/atlas-validation') || query.get('mode') === 'atlas', [])
 
   useEffect(() => {
     loadResearchData().then(setLoaded).catch((reason: unknown) => setError(reason instanceof Error ? reason.message : 'Unknown data error'))
   }, [])
+
+  useEffect(() => {
+    if (!loaded) return
+    if (!loaded.multidisease.diseases.some((item) => item.disease_id === diseaseId)) {
+      setDiseaseId(loaded.multidisease.diseases[0].disease_id)
+    }
+    const requested = Number(query.get('region'))
+    const disease = loaded.multidisease.diseases.find((item) => item.disease_id === diseaseId) ?? loaded.multidisease.diseases[0]
+    if (Number.isInteger(requested) && requested > 0) {
+      const match = disease.regions.find((region) => region.region_id === requested) ?? null
+      setSelected(match)
+      if (match && hemisphere !== 'whole' && match.hemisphere !== hemisphere) setHemisphere('whole')
+    }
+  }, [loaded]) // Initial URL hydration only; subsequent selections are controlled by the UI.
+
+  useEffect(() => {
+    if (!loaded) return
+    const next = new URL(window.location.href)
+    next.searchParams.set('disease', diseaseId)
+    next.searchParams.set('metric', metric)
+    next.searchParams.set('hemi', hemisphere)
+    if (selected) next.searchParams.set('region', String(selected.region_id))
+    else next.searchParams.delete('region')
+    if (viewPreset !== 'reset') next.searchParams.set('view', viewPreset)
+    else next.searchParams.delete('view')
+    window.history.replaceState(null, '', next)
+  }, [diseaseId, hemisphere, loaded, metric, selected, viewPreset])
 
   if (error) return <main className="load-state error-state"><h1>Visualization unavailable</h1><p>{error}</p><p>No scientific values have been displayed.</p></main>
   if (!loaded) return <main className="load-state"><div className="loader" /><p>Loading verified AAL3 atlas geometry…</p></main>
@@ -47,18 +78,27 @@ export default function App() {
     setSelected(null)
     setFocusNonce(0)
   }
+  const shareView = async () => {
+    try {
+      await navigator.clipboard.writeText(window.location.href)
+      setShareMessage('Link copied')
+    } catch {
+      setShareMessage('Copy the current address-bar URL to share this view')
+    }
+  }
 
   return (
     <div className="app-shell">
       <header className="topbar">
         <a className="brand" href="#top" aria-label="GENE2BRAIN home"><strong>GENE<span>2</span>BRAIN</strong><small>Spatial genetic enrichment</small></a>
-        <nav aria-label="Primary navigation"><a href="#compare">Compare</a><a href="#atlas">Atlas</a><a href="#story">Research story</a><a href="#methods">Methods</a></nav>
+        <nav aria-label="Primary navigation"><a href="#top">Home</a><a href="#how">Research</a><a href="#top">Explore</a><a href="#methods">Methods</a><a href="#data">Data</a><a href="#results">Results</a><a href="#biology">Biology</a><a href="#about">About</a><a href="#citations">Citations</a></nav>
+        <details className="mobile-nav"><summary>Menu</summary><div><a href="#top">Home / Explore</a><a href="#how">Research</a><a href="#results">Results</a><a href="#methods">Methods</a><a href="#data">Data</a><a href="#biology">Biology</a><a href="#about">About</a><a href="#citations">Citations</a></div></details>
       </header>
 
       <section className="hero" id="top">
         <div className="hero-heading">
           <div><p className="eyebrow">Interactive research atlas · {multidisease.diseases.length} completed diseases</p><h1>From Genetic Risk to<br /><em>Spatial Brain Vulnerability</em></h1></div>
-          <p>Explore where prioritized disease-associated genes show unusually high or low expression across healthy human brain regions.</p>
+          <div><p>Explore where prioritized disease-associated genes show unusually high or low expression across healthy human brain regions.</p><button className="outline-button share-button" onClick={shareView}>Share this view</button>{shareMessage && <span className="share-message" role="status">{shareMessage}</span>}</div>
         </div>
         <Controls
           metric={metric}

@@ -6,7 +6,7 @@ import {
 } from 'three'
 import { OrbitControls as OrbitControlsImpl } from 'three/addons/controls/OrbitControls.js'
 import { colorForRegion } from '../colors'
-import type { AtlasGeometry, Hemisphere, Metric, RegionRecord, ViewPreset } from '../types'
+import type { AtlasGeometry, GeometryMesh, Hemisphere, Metric, RegionRecord, ViewPreset } from '../types'
 
 interface Props {
   geometryData: AtlasGeometry
@@ -56,7 +56,7 @@ function combineGeometry(
     indices.push(...parcel.indices.map((index) => index + offset))
     for (let index = 0; index < parcel.indices.length / 3; index += 1) faceRegions.push(parcel.region_id)
   })
-  boundsGeometry.setAttribute('position', new BufferAttribute(new Float32Array(positions), 3))
+  boundsGeometry.setAttribute('position', new BufferAttribute(new Float32Array(source.anatomy?.positions ?? positions), 3))
   boundsGeometry.computeBoundingBox()
   const center = new Vector3()
   boundsGeometry.boundingBox!.getCenter(center)
@@ -90,17 +90,44 @@ function combineGeometry(
   return { geometry, faceRegions, regionGeometry, regionVertexRanges, center }
 }
 
+function anatomyGeometry(source: GeometryMesh, center: Vector3, hemisphere: Hemisphere): BufferGeometry {
+  const positions = new Float32Array(source.positions)
+  for (let index = 0; index < positions.length; index += 3) {
+    positions[index] -= center.x
+    positions[index + 1] -= center.y
+    positions[index + 2] -= center.z
+  }
+  // For a hemisphere view, retain only triangles completely on that side.
+  const triangleIndices = hemisphere === 'whole' ? source.indices : [] as number[]
+  if (hemisphere !== 'whole') {
+    for (let face = 0; face < source.indices.length; face += 3) {
+      const vertexIds = source.indices.slice(face, face + 3)
+      if (vertexIds.every((id) => hemisphere === 'L' ? positions[id * 3] + center.x <= 0 : positions[id * 3] + center.x >= 0)) {
+        triangleIndices.push(...vertexIds)
+      }
+    }
+  }
+  const geometry = new BufferGeometry()
+  geometry.setAttribute('position', new BufferAttribute(positions, 3))
+  geometry.setIndex(triangleIndices)
+  geometry.computeVertexNormals()
+  geometry.computeBoundingSphere()
+  return geometry
+}
+
 const PRESET_POSITIONS: Record<ViewPreset, Vector3> = {
   reset: new Vector3(150, 80, 180),
+  left: new Vector3(-240, 10, 0),
+  right: new Vector3(240, 10, 0),
   anterior: new Vector3(0, 10, 240),
   posterior: new Vector3(0, 10, -240),
   superior: new Vector3(0, 240, 0.01),
   inferior: new Vector3(0, -240, 0.01),
 }
 
-function CameraRig({ selected, center, focusNonce, viewPreset }: {
+function CameraRig({ selected, focusPoint, focusNonce, viewPreset }: {
   selected: RegionRecord | null
-  center: Vector3
+  focusPoint: Vector3 | null
   focusNonce: number
   viewPreset: ViewPreset
 }) {
@@ -121,9 +148,8 @@ function CameraRig({ selected, center, focusNonce, viewPreset }: {
   const animating = useRef(true)
 
   useEffect(() => {
-    if (selected && focusNonce > 0) {
-      const [x, y, z] = selected.centroid_mni
-      destinationTarget.current.set(x - center.x, z - center.y, y - center.z)
+    if (selected && focusPoint && focusNonce > 0) {
+      destinationTarget.current.copy(focusPoint)
       const direction = camera.position.clone().sub(controls.target).normalize()
       destinationPosition.current.copy(destinationTarget.current).add(direction.multiplyScalar(115))
     } else {
@@ -131,7 +157,7 @@ function CameraRig({ selected, center, focusNonce, viewPreset }: {
       destinationPosition.current.copy(PRESET_POSITIONS[viewPreset])
     }
     animating.current = true
-  }, [camera, center, focusNonce, selected, viewPreset])
+  }, [camera, focusPoint, focusNonce, selected, viewPreset])
 
   useFrame(() => {
     controls.update()
@@ -153,9 +179,26 @@ function AtlasMesh(props: Props) {
     .filter((region) => props.hemisphere === 'whole' || region.hemisphere === props.hemisphere || region.hemisphere === 'B')
     .map((region) => region.region_id)), [props.hemisphere, props.regions])
   const combined = useMemo(() => combineGeometry(props.geometryData, allowed), [allowed, props.geometryData])
+  const focusPoint = useMemo(() => {
+    if (!props.selected) return null
+    const mesh = combined.regionGeometry.get(props.selected.region_id)
+    if (!mesh) return null
+    mesh.computeBoundingBox()
+    return mesh.boundingBox!.getCenter(new Vector3())
+  }, [combined, props.selected])
+  const anatomy = useMemo(() => props.geometryData.anatomy
+    ? anatomyGeometry(props.geometryData.anatomy, combined.center, props.hemisphere)
+    : null, [combined.center, props.geometryData.anatomy, props.hemisphere])
+  const anatomyMaterial = useMemo(() => new MeshStandardMaterial({
+    color: new Color('#d7d6c9'), roughness: 0.94, metalness: 0,
+    side: DoubleSide, transparent: true,
+    opacity: props.metric === 'anatomy' ? 1 : props.validationMode ? 0.27 : 0.46,
+    depthWrite: props.metric === 'anatomy',
+  }), [props.metric, props.validationMode])
   const material = useMemo(() => new MeshStandardMaterial({
     vertexColors: true, roughness: 0.72, metalness: 0.04, side: DoubleSide,
-    transparent: props.validationMode, opacity: props.validationMode ? 0.9 : 1,
+    transparent: true, opacity: props.validationMode ? 0.82 : 0.88,
+    polygonOffset: true, polygonOffsetFactor: -1, polygonOffsetUnits: -1,
   }), [props.validationMode])
   const highlightMaterial = useMemo(() => new MeshBasicMaterial({
     color: new Color('#ffffff'), transparent: true, opacity: 0.32, depthTest: false, side: DoubleSide,
@@ -171,6 +214,7 @@ function AtlasMesh(props: Props) {
     combined.geometry.dispose()
     combined.regionGeometry.forEach((geometry) => geometry.dispose())
   }, [combined])
+  useEffect(() => () => { anatomy?.dispose(); anatomyMaterial.dispose() }, [anatomy, anatomyMaterial])
   useEffect(() => {
     const colorAttribute = combined.geometry.getAttribute('color') as BufferAttribute
     combined.regionVertexRanges.forEach(([offset, count], regionId) => {
@@ -210,9 +254,12 @@ function AtlasMesh(props: Props) {
 
   return (
     <>
+      {anatomy && <mesh geometry={anatomy} material={anatomyMaterial} raycast={() => undefined} />}
       <mesh
         geometry={combined.geometry}
         material={material}
+        renderOrder={2}
+        visible={props.metric !== 'anatomy'}
         onPointerMove={onMove}
         onPointerOut={onOut}
         onClick={onClick}
@@ -223,7 +270,7 @@ function AtlasMesh(props: Props) {
       )}
       <CameraRig
         selected={props.selected}
-        center={combined.center}
+        focusPoint={focusPoint}
         focusNonce={props.focusNonce}
         viewPreset={props.viewPreset}
       />

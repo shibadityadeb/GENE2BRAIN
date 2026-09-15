@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Prepare read-only web artifacts from validated GENE2BRAIN outputs.
 
-This script never recomputes scientific statistics. It serializes Stage 6 values
-and extracts rectilinear parcel surfaces from the exact AAL3v1 NIfTI labels used
-in Stage 2. Adjacent coplanar voxel faces are greedily merged to reduce transfer
-size without changing parcel boundaries or region identifiers.
+This script never recomputes scientific statistics. It serializes the frozen
+Parkinson research records and source metadata. Active folded-surface geometry
+is built separately by `build_anatomical_brain.py`; the historical voxel-face
+helpers below are retained only for reproducibility of the pre-redesign audit.
 """
 
 from __future__ import annotations
@@ -34,6 +34,7 @@ VALIDATION_AAL3 = ROOT / "data" / "validation" / "processed" / "parkinson_valida
 VALIDATION_RESULTS = ROOT / "data" / "results" / "parkinson_independent_validation.csv"
 VALIDATION_REGIONAL = ROOT / "data" / "validation" / "processed" / "parkinson_validation_regional_scores.csv"
 BIOLOGY_JSON = ROOT / "data" / "web" / "parkinson_biological_interpretation.json"
+MULTIDISEASE_ATLAS = ROOT / "data" / "web" / "multidisease_atlas.json"
 STAGE9_GO = ROOT / "data" / "results" / "stage_09_go_enrichment.csv"
 STAGE9_REACTOME = ROOT / "data" / "results" / "stage_09_reactome_enrichment.csv"
 STAGE9_RANKED = ROOT / "data" / "results" / "stage_09_ranked_pathway_analysis.csv"
@@ -189,7 +190,6 @@ def build() -> None:
     atlas = np.asarray(atlas_image.dataobj, dtype=np.int16)
 
     records: list[dict[str, Any]] = []
-    meshes: list[dict[str, Any]] = []
     for result in results:
         region_id = int(result["region_id"])
         region = metadata[region_id]
@@ -219,15 +219,6 @@ def build() -> None:
             "agreement_status": validation_results[region_id]["agreement_status"] if region_id in validation_results else "not_measured",
         }
         records.append(record)
-        positions, indices = parcel_mesh(atlas == region_id, atlas_image.affine)
-        if not indices:
-            raise ValueError(f"Atlas label {region_id} ({result['region_name']}) has no geometry")
-        meshes.append({
-            "region_id": region_id,
-            "positions": positions,
-            "indices": indices,
-            "voxel_count": int(np.count_nonzero(atlas == region_id)),
-        })
 
     enrichment = {
         "schema_version": "1.0.0",
@@ -260,15 +251,19 @@ def build() -> None:
     spatial_validation = spatial_validation[0]
     validation_values = [record["validation_score"] for record in records if record["validation_score"] is not None]
     validation_bound = max(abs(value) for value in validation_values)
+    disease_registry = json.loads(MULTIDISEASE_ATLAS.read_text(encoding="utf-8")) if MULTIDISEASE_ATLAS.is_file() else None
+    available_diseases = ([{"id": disease["disease_id"], "name": disease["disease_name"], "status": "available"}
+                           for disease in disease_registry["diseases"]] if disease_registry else
+                          [{"id": "parkinson", "name": "Parkinson disease", "status": "available"}])
+    unavailable_diseases = disease_registry["excluded_or_needs_review"] if disease_registry else []
     metadata_payload = {
         "schema_version": "1.0.0",
         "project": "GENE2BRAIN",
         "title": "From Genetic Risk to Spatial Brain Vulnerability",
         "generated_on": date.today().isoformat(),
-        "available_diseases": [{"id": "parkinson-disease", "name": "Parkinson disease", "status": "available"}],
-        "future_diseases": [
-            "Alzheimer disease", "Huntington disease", "ALS", "Schizophrenia", "Bipolar disorder",
-        ],
+        "available_diseases": available_diseases,
+        "excluded_or_needs_review": unavailable_diseases,
+        "researcher": {"name": None, "affiliation": None, "contact": None, "publication_status": "not confirmed"},
         "counts": {
             "ahba_donors": donor_count,
             "ahba_samples": sample_count,
@@ -335,8 +330,8 @@ def build() -> None:
             "dimensions": list(atlas.shape),
             "source_image": "data/atlases/aal_3v2/AAL3/AAL3v1.nii.gz",
             "mapping": "region_id equals the nonzero integer voxel label in AAL3v1.nii.gz",
-            "geometry_method": "Exposed voxel faces extracted from retained labels and greedily merged only when coplanar and contiguous",
-            "render_coordinate_mapping": "MNI (x, y, z) is rendered as WebGL (x, z, y) so superior is up",
+            "geometry_method": "Folded Nilearn fsaverage6 pial surface with neuromaps 41k registration-fusion projection of exact AAL3v1 integer labels; smooth AAL3 isosurfaces for noncortical parcels",
+            "render_coordinate_mapping": "RAS (x, y, z) is rendered as WebGL (x, z, y) so superior is up; fsaverage cortex and MNI subcortical coordinates are not assumed to be perfectly co-registered",
         },
         "sources": [
             {"name": "Allen Human Brain Atlas", "url": "https://human.brain-map.org/"},
@@ -377,19 +372,12 @@ def build() -> None:
             {"name": "WikiPathways September 2026", "url": "https://data.wikipathways.org/current/gmt/"},
             {"name": "Human Protein Atlas v25.1 single-nucleus brain", "url": "https://www.proteinatlas.org/humanproteome/single+cell/single+nuclei+brain/data"},
         ])
-    geometry = {
-        "schema_version": "1.0.0",
-        "atlas": "AAL3v1",
-        "coordinate_system": "WebGL (MNI x, MNI z, MNI y), millimetres",
-        "region_count": len(meshes),
-        "regions": meshes,
-    }
-
     write_json(WEB_DATA / "parkinson_brain_enrichment.json", enrichment)
+    write_json(WEB_DATA / "parkinson_atlas.json", enrichment)
     write_json(WEB_DATA / "project_metadata.json", metadata_payload)
     write_json(PUBLIC_DATA / "parkinson_brain_enrichment.json", enrichment)
+    write_json(PUBLIC_DATA / "parkinson_atlas.json", enrichment)
     write_json(PUBLIC_DATA / "project_metadata.json", metadata_payload)
-    write_json(PUBLIC_DATA / "aal3_regions.json", geometry, compact=True)
     shutil.copy2(RESULTS, PUBLIC_DATA / "parkinson_regional_enrichment.csv")
     shutil.copy2(SPATIAL_RESULTS, PUBLIC_DATA / "parkinson_spatial_robustness.csv")
     shutil.copy2(VALIDATION_REGIONAL, PUBLIC_DATA / "parkinson_independent_validation_regional_scores.csv")
@@ -398,8 +386,8 @@ def build() -> None:
         shutil.copy2(BIOLOGY_JSON, PUBLIC_DATA / BIOLOGY_JSON.name)
         for path in (STAGE9_GO, STAGE9_REACTOME, STAGE9_CELLS, STAGE9_EVIDENCE):
             shutil.copy2(path, PUBLIC_DATA / path.name)
-    print(f"Prepared {len(records)} research records and {len(meshes)} atlas meshes")
-    print(f"Geometry: {(PUBLIC_DATA / 'aal3_regions.json').stat().st_size / 1024 / 1024:.2f} MiB")
+    print(f"Prepared {len(records)} read-only Parkinson research records")
+    print("Active folded geometry is built by scripts/build_anatomical_brain.py")
 
 
 if __name__ == "__main__":

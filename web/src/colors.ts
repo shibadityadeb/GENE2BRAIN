@@ -28,6 +28,7 @@ export function colorForRegion(
   if (validationMode) {
     return new Color().setHSL((region.region_id * 0.61803398875) % 1, 0.48, 0.61)
   }
+  if (metric === 'anatomy') return NEUTRAL.clone()
   if (metric === 'agreement') return AGREEMENT_COLORS[region.agreement_status].clone()
   if (metric === 'validation_score') {
     if (region.validation_score === null) return NOT_MEASURED.clone()

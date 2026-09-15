@@ -26,14 +26,15 @@ export function Controls({
             {diseases.map((disease) => <option key={disease.disease_id} value={disease.disease_id}>{disease.disease_name}</option>)}
           </select>
         </label>
-        <label>Metric
+        <label>What to see
           <select value={metric} onChange={(event) => onMetric(event.target.value as Metric)} aria-label="Metric">
-            <option value="z_score">Z-score</option>
-            <option value="observed_score">Observed expression</option>
-            <option value="fdr_p">FDR significance</option>
-            <option value="spatial_robustness">Spatial robustness</option>
-            <option value="validation_score">Independent validation</option>
-            <option value="agreement">Agreement</option>
+            <option value="z_score">Brain signal</option>
+            <option value="anatomy">Anatomy only</option>
+            <option value="observed_score">Gene activity</option>
+            <option value="fdr_p">Statistical evidence</option>
+            <option value="spatial_robustness">Pattern robustness</option>
+            <option value="validation_score">Independent evidence</option>
+            <option value="agreement">Evidence agreement</option>
           </select>
         </label>
         <label className="search-control">Search brain region
@@ -60,7 +61,7 @@ export function Controls({
           ))}
         </div>
         <div className="view-buttons">
-          {(['anterior', 'posterior', 'superior', 'inferior'] as ViewPreset[]).map((view) => (
+          {(['left', 'right', 'anterior', 'posterior', 'superior', 'inferior'] as ViewPreset[]).map((view) => (
             <button key={view} onClick={() => onView(view)}>{view[0].toUpperCase() + view.slice(1)}</button>
           ))}
           <button className="reset-button" onClick={() => onView('reset')} aria-label="Reset camera">Reset view</button>

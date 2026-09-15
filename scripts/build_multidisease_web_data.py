@@ -111,11 +111,19 @@ def main() -> None:
     all_z = enrichment["z_score"].to_numpy(float)
     limit = float(np.quantile(np.abs(all_z), 0.99))
     config = json.loads((ROOT / "config" / "disease_panel.yaml").read_text(encoding="utf-8"))
+    similarity = pd.read_csv(RESULTS / "disease_spatial_similarity.csv")
+    similarity = similarity.loc[similarity["metric"] == "pearson"]
     payload = {
         "schema_version": "2.0", "generated_on": date.today().isoformat(),
         "primary_metric": "matched gene-set permutation Z score",
         "comparison_note": "All diseases share one global color domain and the frozen Parkinson matched-null method. A-B means Z_A minus Z_B at the same AAL3 parcel; it is descriptive, not a test of the difference.",
         "z_domain": [-limit, limit],
+        "pearson_similarity": [
+            {"disease_1": row.disease_1, "disease_2": row.disease_2,
+             "correlation": finite(row.correlation), "p_value": finite(row.p_value),
+             "n_regions": int(row.n_regions)}
+            for row in similarity.itertuples()
+        ],
         "diseases": datasets,
         "excluded_or_needs_review": [
             {"disease_id": item["disease_id"], "disease_name": item["disease_name"], "status": item["status"], "reason": item["selection_note"]}

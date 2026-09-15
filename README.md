@@ -114,8 +114,10 @@ python src/stage_10_sources.py
 python src/stage_10_multidisease.py
 python src/stage_10_biology.py
 python scripts/build_multidisease_web_data.py
+python scripts/build_anatomical_brain.py
 python src/stage_10_finalize.py
 python scripts/validate_web_data.py
+python scripts/validate_brain_region_mapping.py
 python -m unittest discover -s tests -v
 ```
 
@@ -151,8 +153,11 @@ The public React + TypeScript/WebGL application is in [`web/`](web/). It display
 validated Stage 6–10 values for 10 eligible diseases, shared-scale side-by-side
 comparison, a region-first atlas, spatial sensitivity, available independent
 validation, and biological explanations on parcel surfaces extracted directly from
-the same AAL3v1 NIfTI used by Stage 2. The frontend does not recompute scientific
-statistics. See [`web/README.md`](web/README.md) for setup, provenance, region-ID
+the folded fsaverage6 pial cortex with AAL3v1 labels projected through official
+registration-fusion coordinates; noncortical parcels remain separate AAL3-derived
+surfaces. The same integer AAL3 IDs join the Stage 2 matrix and web records. The
+frontend does not recompute scientific statistics. See [`web/README.md`](web/README.md)
+and [`reports/web_brain_geometry_method.md`](reports/web_brain_geometry_method.md) for setup, provenance, region-ID
 mapping, validation mode, and extension guidance.
 
 ```bash

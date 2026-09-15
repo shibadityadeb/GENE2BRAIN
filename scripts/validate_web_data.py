@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import math
 from pathlib import Path
@@ -23,9 +24,12 @@ def validate(data_dir: Path) -> list[str]:
     errors: list[str] = []
     enrichment = load(data_dir / "parkinson_brain_enrichment.json")
     project = load(data_dir / "project_metadata.json")
-    geometry = load(data_dir / "aal3_regions.json")
+    geometry = load(data_dir / "anatomical_brain.json")
     biology = load(data_dir / "parkinson_biological_interpretation.json")
     multidisease = load(data_dir / "multidisease_atlas.json")
+    release = load(data_dir / "release.json")
+    if (data_dir / "parkinson_atlas.json").read_bytes() != (data_dir / "parkinson_brain_enrichment.json").read_bytes():
+        errors.append("Parkinson atlas download is not identical to the displayed research records")
     records = enrichment.get("regions", [])
     meshes = geometry.get("regions", [])
     record_ids = [row.get("region_id") for row in records]
@@ -38,6 +42,8 @@ def validate(data_dir: Path) -> list[str]:
         errors.append("duplicate region_id values in research records")
     if len(mesh_ids) != len(set(mesh_ids)):
         errors.append("duplicate region_id values in atlas geometry")
+    if geometry.get("schema_version") != "2.0.0" or "fsaverage6" not in geometry.get("geometry_source", ""):
+        errors.append("active atlas geometry is not the folded fsaverage6 release")
     if set(record_ids) != set(mesh_ids):
         errors.append(
             f"research/geometry ID mismatch: data-only={sorted(set(record_ids) - set(mesh_ids))}, "
@@ -49,6 +55,18 @@ def validate(data_dir: Path) -> list[str]:
         errors.append("biological interpretation/research ID mismatch")
     if len(disease_ids) != len(set(disease_ids)) or len(disease_ids) < 2:
         errors.append("invalid or duplicate multi-disease registry")
+    disease_names = {row.get("disease_name") for row in multidisease.get("diseases", [])}
+    similarity_rows = multidisease.get("pearson_similarity", [])
+    expected_pairs = len(disease_names) * (len(disease_names) + 1) // 2
+    if len(similarity_rows) != expected_pairs:
+        errors.append("frozen Pearson similarity table does not cover all disease pairs")
+    for row in similarity_rows:
+        if row.get("disease_1") not in disease_names or row.get("disease_2") not in disease_names:
+            errors.append("Pearson similarity names a disease outside the completed registry")
+        if row.get("n_regions") != len(mesh_ids):
+            errors.append("Pearson similarity region count differs from atlas geometry")
+        if not isinstance(row.get("correlation"), (int, float)) or not -1.0000001 <= row["correlation"] <= 1.0000001:
+            errors.append("Pearson similarity correlation is invalid")
     for disease in multidisease.get("diseases", []):
         disease_records = disease.get("regions", [])
         if {row.get("region_id") for row in disease_records} != set(mesh_ids):
@@ -149,6 +167,12 @@ def validate(data_dir: Path) -> list[str]:
                   "reactome_significant_pathways", "cell_types_significant"):
         if not isinstance(biological.get(field), int) or biological[field] < 0:
             errors.append(f"invalid biological-interpretation {field}")
+    for filename, expected in release.get("data_sha256", {}).items():
+        artifact = data_dir / filename
+        if not artifact.is_file() or hashlib.sha256(artifact.read_bytes()).hexdigest() != expected:
+            errors.append(f"release digest mismatch for {filename}")
+    if release.get("completed_diseases") != len(disease_ids) or release.get("regions_per_disease") != len(mesh_ids):
+        errors.append("release disease or region counts disagree with public data")
     return errors
 
 
@@ -163,7 +187,7 @@ def main() -> None:
     if errors:
         raise SystemExit("Web data validation failed:\n- " + "\n- ".join(errors))
     if args.data_dir.resolve() == (ROOT / "web" / "public" / "data").resolve():
-        for filename in ("parkinson_brain_enrichment.json", "project_metadata.json", "parkinson_biological_interpretation.json", "multidisease_atlas.json"):
+        for filename in ("parkinson_brain_enrichment.json", "parkinson_atlas.json", "project_metadata.json", "parkinson_biological_interpretation.json", "multidisease_atlas.json", "anatomical_brain.json", "release.json"):
             canonical = ROOT / "data" / "web" / filename
             deployed = args.data_dir / filename
             if canonical.read_bytes() != deployed.read_bytes():

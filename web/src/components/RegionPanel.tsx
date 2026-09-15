@@ -14,7 +14,7 @@ function NullSummary({ region }: { region: RegionRecord }) {
         <line className="observed-mark" x1={scale(region.observed_score)} x2={scale(region.observed_score)} y1="7" y2="29" />
       </svg>
       <div className="null-key"><span>● Null mean ± 1 SD</span><span>│ Observed</span></div>
-      <p>Individual permutation draws were not retained by Stage 6, so this shows the real stored summary—not a reconstructed distribution.</p>
+      <p>Individual random-group draws are not displayed here; this is the real stored comparison summary, not a reconstructed distribution.</p>
     </div>
   )
 }
@@ -30,35 +30,15 @@ export function RegionPanel({ region, diseaseName, threshold, onClose }: { regio
       <span className="eyebrow">AAL3 · {region.atlas_id}</span>
       <h2>{region.region_name}</h2>
       <p className="disease-label">{diseaseName} · weighted gene set</p>
-      <h3 className="panel-section-title">Stage 6 · Gene-set enrichment</h3>
+      <h3 className="panel-section-title">Why is this region highlighted?</h3>
+      <p className="interpretation">Some genes linked to {diseaseName} are active here. Their combined activity is {region.z_score > 0 ? 'higher' : 'lower'} than expected when compared with matched random gene groups.</p>
       <div className="stat-grid">
-        <div><span>Z-score</span><strong>{formatValue(region.z_score)}</strong></div>
-        <div><span>FDR q-value</span><strong>{formatValue(region.fdr_p, 4)}</strong></div>
-        <div><span>Observed score</span><strong>{formatValue(region.observed_score, 4)}</strong></div>
-        <div><span>Null mean</span><strong>{formatValue(region.random_mean, 4)}</strong></div>
-        <div><span>Null SD</span><strong>{formatValue(region.random_std, 4)}</strong></div>
-        <div><span>Effect size</span><strong>{formatValue(region.effect_size, 4)}</strong></div>
-        <div><span>Genes in score</span><strong>{region.number_of_genes}</strong></div>
-        <div><span>FDR status</span><strong>{region.fdr_p < threshold ? 'Significant' : 'Not significant'}</strong></div>
+        <div><span>Brain signal</span><strong>{region.z_score > 0 ? 'Higher' : region.z_score < 0 ? 'Lower' : 'Expected'}</strong></div>
+        <div><span>Statistical evidence</span><strong>{region.fdr_p < threshold ? 'Strong' : 'Limited'}</strong></div>
+        <div><span>Independent evidence</span><strong>{region.validation_score === null ? 'Not available' : 'Available'}</strong></div>
       </div>
-      <h3 className="panel-section-title">Stage 7 · Spatial sensitivity</h3>
-      <div className="stat-grid">
-        <div><span>Spatial percentile</span><strong>{formatValue(region.spatial_robustness, 4)}</strong></div>
-        <div><span>Spatial p-value</span><strong>{formatValue(region.spatial_null_p, 4)}</strong></div>
-        <div><span>Spatial FDR</span><strong>{formatValue(region.spatial_null_fdr, 4)}</strong></div>
-        <div><span>Joint result</span><strong>{region.spatial_robustness_label === 'robust' ? 'Robust' : 'Not robust'}</strong></div>
-        <div><span>Robustness rank</span><strong>{region.robustness_rank}</strong></div>
-        <div><span>Graph status</span><strong>{region.spatial_isolate ? 'Isolated parcel' : 'Connected parcel'}</strong></div>
-      </div>
-      <h3 className="panel-section-title">Independent validation data</h3>
-      <div className="stat-grid">
-        <div><span>Validation score</span><strong>{formatValue(region.validation_score)}</strong></div>
-        <div><span>Agreement</span><strong>{region.agreement_status === 'not_measured' ? 'Not measured' : region.agreement_status.replaceAll('_', ' ')}</strong></div>
-        <div><span>ENIGMA parcel</span><strong>{region.validation_region ?? 'N/A'}</strong></div>
-        <div><span>Mapping confidence</span><strong>{region.validation_mapping_confidence ?? 'N/A'}</strong></div>
-      </div>
-      <p className="caution">{diseaseName === 'Parkinson disease' ? 'The Parkinson validation score is external to the discovery model; the overall Stage 8 result was NOT SUPPORTED.' : 'No completed independent regional validation dataset is currently linked for this disease; N/A is preserved.'}</p>
-      <h3 className="panel-section-title">Biological interpretation</h3>
+      <p className="technical-reference">Independent validation data: {region.validation_region ?? 'Not available'} · Biological interpretation: {biology?.selected_for_regional_interpretation ? 'available for this region' : 'not assigned to this region'}</p>
+      <h3 className="panel-section-title">What biology may be involved? <span className="technical-label">Biological interpretation</span></h3>
       {biology?.top_genes.length ? (
         <>
           <p className="biology-rule">Top weighted contributors</p>
@@ -70,19 +50,21 @@ export function RegionPanel({ region, diseaseName, threshold, onClose }: { regio
           <p className="biology-rule">Associated biological programs</p>
           {biology.pathways.length ? (
             <ul className="biology-list plain">
-              {biology.pathways.map((pathway) => <li key={pathway.id}><strong>{pathway.name}</strong><span>regional FDR {formatValue(pathway.fdr, 4)}</span></li>)}
+              {biology.pathways.map((pathway) => <li key={pathway.id}><strong>{pathway.name}</strong><span>statistical evidence {formatValue(pathway.fdr, 4)}</span></li>)}
             </ul>
-          ) : <p className="caution">No region-specific Reactome pathway survived the prespecified regional FDR analysis{biology.selected_for_regional_interpretation ? '.' : '; this parcel was not in the frozen top-10 interpretation set.'}</p>}
-          <p className="biology-rule">Cell-type enrichment</p>
+          ) : <p className="caution">No region-specific pathway passed the project’s evidence threshold{biology.selected_for_regional_interpretation ? '.' : '; this parcel was not selected for regional interpretation.'}</p>}
+          <p className="biology-rule">Cell types</p>
           {biology.cell_types.length ? (
             <ul className="biology-list plain">
-              {biology.cell_types.map((cell) => <li key={cell.name}><strong>{cell.name}</strong><span>FDR {formatValue(cell.fdr, 4)}</span></li>)}
+              {biology.cell_types.map((cell) => <li key={cell.name}><strong>{cell.name}</strong><span>evidence {formatValue(cell.fdr, 4)}</span></li>)}
             </ul>
-          ) : <p className="caution">Region-level cell-type annotation is not assigned; disease-level results are provided in the downloadable Stage 10 table.</p>}
+          ) : <p className="caution">Region-level cell-type annotation is not assigned; disease-level results are available in the downloadable project data.</p>}
         </>
       ) : <p className="caution">Biological interpretation is unavailable for this parcel.</p>}
-      <p className="interpretation">The observed {diseaseName}-associated gene-expression score is {formatValue(Math.abs(region.z_score))} standard deviations {direction} the matched gene-set expectation. It {region.fdr_p < threshold ? 'meets' : 'does not meet'} the project’s FDR threshold.</p>
-      <p className="caution">This does not indicate where disease occurs or establish a causal brain region.</p>
+      <details className="technical-details"><summary>Technical details</summary><div className="stat-grid"><span className="technical-label">Stage 7 · Spatial sensitivity</span><span className="technical-label">Independent validation data</span>
+        <div><span>Enrichment Z-score</span><strong>{formatValue(region.z_score)}</strong></div><div><span>Adjusted p-value</span><strong>{formatValue(region.fdr_p, 4)}</strong></div><div><span>Observed score</span><strong>{formatValue(region.observed_score, 4)}</strong></div><div><span>Random expectation</span><strong>{formatValue(region.random_mean, 4)}</strong></div><div><span>Spatial robustness</span><strong>{formatValue(region.spatial_robustness, 4)}</strong></div><div><span>Genes represented</span><strong>{region.number_of_genes}</strong></div>
+      </div></details>
+      <p className="caution">This map does not diagnose disease, predict an individual, or show where disease begins. A highlighted region is a candidate molecular pattern, not proof of causation.</p>
       <button className="why-button" onClick={() => setShowWhy((visible) => !visible)} aria-expanded={showWhy}>
         {showWhy ? 'Hide explanation' : 'Why is this region highlighted?'}
       </button>
@@ -93,17 +75,17 @@ export function RegionPanel({ region, diseaseName, threshold, onClose }: { regio
             <li><span>Disease genes represented</span><strong>{region.number_of_genes}</strong></li>
             <li><span>Regional expression</span><strong>{formatValue(region.observed_score, 4)}</strong></li>
             <li><span>Random-set expectation</span><strong>{formatValue(region.random_mean, 4)}</strong></li>
-            <li><span>Enrichment Z</span><strong>{formatValue(region.z_score)}</strong></li>
-            <li><span>FDR q-value</span><strong>{formatValue(region.fdr_p, 4)}</strong></li>
+            <li><span>How unusual the pattern is</span><strong>{formatValue(region.z_score)} SD</strong></li>
+            <li><span>Statistical evidence</span><strong>{region.fdr_p < threshold ? 'Strong' : 'Limited'}</strong></li>
           </ol>
           <p><strong>Top contributing genes:</strong> {biology?.top_genes.map((item) => item.gene).join(', ') || 'not available'}</p>
           <p><strong>Biological programs:</strong> {biology?.pathways.map((item) => item.name).join('; ') || 'no robust region-specific enrichment detected'}</p>
-          <p><strong>Independent validation:</strong> {region.validation_score === null ? 'not measured for this parcel' : `ENIGMA score ${formatValue(region.validation_score)}; overall Stage 8 result NOT SUPPORTED`}</p>
-          <p className="caution"><strong>Evidence:</strong> expression, null statistics, L2G weights and validation values. <strong>Interpretation:</strong> pathway and cell-type annotations. Neither establishes causality.</p>
+          <p><strong>Independent comparison:</strong> {region.validation_score === null ? 'not measured for this parcel' : `external score ${formatValue(region.validation_score)}; the overall comparison was not supported`}</p>
+          <p className="caution"><strong>Evidence:</strong> gene activity, matched random gene groups, and independent observations where available. <strong>Interpretation:</strong> pathway and cell-type annotations. Neither establishes causality.</p>
         </section>
       )}
-      <button className="outline-button" onClick={() => setShowNull((visible) => !visible)} aria-expanded={showNull}>
-        {showNull ? 'Hide null summary' : 'Show null distribution'}
+      <button className="outline-button" onClick={() => setShowNull((visible) => !visible)} aria-expanded={showNull} aria-label={showNull ? 'Hide null distribution' : 'Show null distribution'}>
+        {showNull ? 'Hide comparison with random genes' : 'Show comparison with random genes'}
       </button>
       {showNull && <NullSummary region={region} />}
     </aside>

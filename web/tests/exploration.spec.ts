@@ -1,5 +1,11 @@
 import { expect, test } from '@playwright/test'
 
+test.beforeEach(async ({ page }) => {
+  // The introductory guide intentionally captures pointer events. It is
+  // exercised separately from these interaction and content checks.
+  await page.addInitScript(() => window.localStorage.setItem('gene2brain-guide-seen', '1'))
+})
+
 test('loads the real multi-disease atlas and supports metric controls', async ({ page }, testInfo) => {
   test.setTimeout(120_000)
   await page.goto('./')
@@ -41,7 +47,7 @@ test('shows regional evidence, null summary, and downloads', async ({ page }, te
   await expect(page.getByLabel('Why this region is highlighted')).toContainText('Evidence:')
   await expect(page.getByLabel('Why this region is highlighted')).toContainText('Interpretation:')
   await page.getByRole('button', { name: 'Show null distribution' }).click()
-  await expect(page.getByText(/individual permutation draws were not retained/i)).toBeVisible()
+  await expect(page.getByText(/individual random-group draws are not displayed/i)).toBeVisible()
   await page.getByRole('button', { name: 'Reset camera' }).click({ force: true })
   await expect(page.getByRole('link', { name: 'Download regional results' })).toHaveAttribute('download', '')
 })

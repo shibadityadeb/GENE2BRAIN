@@ -2,11 +2,9 @@ import { expect, test } from '@playwright/test'
 
 test('WebGL parcel supports direct hover and click hit testing', async ({ page }, testInfo) => {
   test.skip(testInfo.project.name !== 'desktop', 'Mouse hit-testing is covered in desktop mode')
+  await page.addInitScript(() => window.localStorage.setItem('gene2brain-guide-seen', '1'))
   await page.setViewportSize({ width: 1440, height: 1100 })
   await page.goto('./?mode=atlas')
-  // The first-visit guide sits above the canvas and deliberately intercepts
-  // pointer events, so close it before testing the WebGL interaction surface.
-  await page.getByRole('button', { name: 'Got it' }).click()
   const canvas = page.locator('canvas').first()
   await expect(canvas).toBeVisible({ timeout: 30_000 })
   await canvas.scrollIntoViewIfNeeded()

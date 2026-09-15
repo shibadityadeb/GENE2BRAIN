@@ -18,7 +18,7 @@ Anatomy only (no research colors), matched-null Z-score, observed expression, FD
 
 ## Validation status
 
-Local Python project suite: 53 passed. Web unit suite: 7 passed. `scripts/validate_web_data.py` and `scripts/validate_brain_region_mapping.py` pass, including canonical/deployed data identity, release SHA-256 digests, 138-region/ten-disease one-to-one mapping, geometry indices, finite fields, and real weighted Parkinson Stage 6 value equality. Production `npm run build` passes. The full desktop/mobile browser suite passed 13 tests with 7 intentional platform-specific skips, including left/right/superior anatomy validation. Browser checks cover WebGL hover/click, search/detail, disease/metric controls, downloads, responsive mobile gestures, deep-link preservation, and developer atlas route. See [visual/release QC](web_research_release_qc.md) and its screenshot evidence.
+Local Python project suite: 53 passed. Web unit suite: 7 passed. `scripts/validate_web_data.py` and `scripts/validate_brain_region_mapping.py` pass, including canonical/deployed data identity, release SHA-256 digests, 138-region/ten-disease one-to-one mapping, geometry indices, finite fields, and real weighted Parkinson Stage 6 value equality. Production `npm run build` passes. The browser suite passed 14 tests with 8 intentional platform-specific skips after the long exploration test was split and the redundant atlas screenshot test was removed, including left/right/superior anatomy validation. Browser checks cover WebGL hover/click, search/detail, disease/metric controls, downloads, responsive mobile gestures, deep-link preservation, and developer atlas route. See [visual/release QC](web_research_release_qc.md) and its screenshot evidence.
 
 ## Deployment status
 

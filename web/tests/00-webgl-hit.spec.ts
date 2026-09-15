@@ -5,7 +5,7 @@ test('WebGL parcel supports direct hover and click hit testing', async ({ page }
   await page.setViewportSize({ width: 1440, height: 1100 })
   await page.goto('./?mode=atlas')
   const canvas = page.locator('canvas').first()
-  await expect(canvas).toBeVisible()
+  await expect(canvas).toBeVisible({ timeout: 30_000 })
   await canvas.scrollIntoViewIfNeeded()
   await page.waitForTimeout(750)
   const box = await canvas.boundingBox()

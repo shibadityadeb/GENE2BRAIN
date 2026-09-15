@@ -47,34 +47,35 @@ export function MultiDiseaseSections({ atlas, geometry }: { atlas: MultidiseaseA
 
   return <div className="multidisease-content">
     <section id="results" className="compare-section">
-      <p className="section-kicker">Cross-disease analysis</p>
+      <p className="section-kicker">What we found</p><h2>What does the current map show?</h2><p className="lead">Parkinson disease is the default worked example. The map summarizes where Parkinson-linked genes show stronger or lower combined activity across 138 healthy brain regions. Explore a region to see the evidence and its limits.</p>
+      <p className="section-kicker">Compare diseases</p>
       <h2>Compare Diseases</h2>
       <div id="compare" />
       <div className="compare-controls">
         <label>Disease A<select value={firstId} onChange={(event) => setFirstId(event.target.value)}>{atlas.diseases.map((disease) => <option key={disease.disease_id} value={disease.disease_id}>{disease.disease_name}</option>)}</select></label>
         <label>Disease B<select value={secondId} onChange={(event) => setSecondId(event.target.value)}>{atlas.diseases.map((disease) => <option key={disease.disease_id} value={disease.disease_id}>{disease.disease_name}</option>)}</select></label>
-        <div className="correlation-card"><span>Regional Pearson correlation</span><strong>{similarity.correlation.toFixed(3)}</strong><small>{similarity.n_regions} matched-null AAL3 Z scores · frozen Stage 10 table</small></div>
+        <div className="correlation-card"><span>How similar are the brain patterns?</span><strong>{similarity.correlation.toFixed(3)}</strong><small>Correlation across {similarity.n_regions} shared brain regions.</small></div>
       </div>
       <button className="compare-toggle" onClick={() => setShowBrains((value) => !value)}>{showBrains ? 'Hide 3D comparison brains' : 'Load 3D comparison brains'}</button>
       {showBrains ? <div className="brain-comparison">
         <article><h3>{first.disease_name}</h3><MiniBrain disease={first} geometry={geometry} zDomain={atlas.z_domain} /></article>
         <article><h3>{second.disease_name}</h3><MiniBrain disease={second} geometry={geometry} zDomain={atlas.z_domain} /></article>
       </div> : <p className="comparison-note">The paired 3D views load on demand to keep the main atlas responsive. The correlation and ranked differences above are always available from the frozen regional tables.</p>}
-      <p className="comparison-note">Both brains use the same global color scale. The tabulated difference is Z<sub>A</sub> − Z<sub>B</sub> in the same parcel. It is a descriptive difference between standardized matched-null scores, not a formal test that diseases differ.</p>
+      <p className="comparison-note">Both brains use the same color scale. The table shows where the two stored regional patterns differ most. This is a descriptive comparison, not proof that one disease affects a region more than another.</p>
       <div className="difference-table"><strong>Largest absolute standardized differences</strong>{comparison.rows.slice(0, 8).map((row) => <div key={row.region}><span>{row.region}</span><b>{row.difference.toFixed(2)}</b></div>)}</div>
       <div className="regional-highlights">
-        <div><h3>{first.disease_name} · highest Z</h3>{topRegions.map((region) => <p key={region.region_id}><span>{region.region_name}</span><b>{region.z_score.toFixed(2)}</b><small>q {region.fdr_p.toPrecision(3)}</small></p>)}</div>
-        <div><h3>{first.disease_name} · lowest Z</h3>{lowRegions.map((region) => <p key={region.region_id}><span>{region.region_name}</span><b>{region.z_score.toFixed(2)}</b><small>q {region.fdr_p.toPrecision(3)}</small></p>)}</div>
+        <div><h3>{first.disease_name} · strongest signals</h3>{topRegions.map((region) => <p key={region.region_id}><span>{region.region_name}</span><b>Higher</b><small>{region.z_score.toFixed(2)} standardized score</small></p>)}</div>
+        <div><h3>{first.disease_name} · lower signals</h3>{lowRegions.map((region) => <p key={region.region_id}><span>{region.region_name}</span><b>Lower</b><small>{region.z_score.toFixed(2)} standardized score</small></p>)}</div>
       </div>
-      <p className="comparison-note">These are rankings of stored matched-null regional scores, not independent evidence of disease pathology. The FDR q-value beside each region is the original Stage 6/10 corrected result.</p>
+      <p className="comparison-note">These rankings summarize the project’s stored statistical evidence. They are not maps of pathology or individual disease risk.</p>
     </section>
 
     <section id="atlas" className="master-atlas-section">
-      <p className="section-kicker">Region-first view</p>
-      <h2>GENE2BRAIN Atlas</h2>
+      <p className="section-kicker">Explore a region across diseases</p>
+      <h2>Which diseases show a signal here?</h2>
       <label>Brain region<select value={regionId} onChange={(event) => setRegionId(Number(event.target.value))}>{first.regions.map((region) => <option key={region.region_id} value={region.region_id}>{region.region_name}</option>)}</select></label>
       <h3>{regionName}</h3>
-      <div className="region-ranking">{ranked.map((row, index) => <div key={row.disease}><span>{index + 1}</span><strong>{row.disease}</strong><b>Z {row.z.toFixed(2)}</b><small>FDR {row.fdr.toPrecision(3)}</small></div>)}</div>
+      <div className="region-ranking">{ranked.map((row, index) => <div key={row.disease}><span>{index + 1}</span><strong>{row.disease}</strong><b>{row.z > 0 ? 'Higher signal' : 'Lower signal'}</b><small>{row.z.toFixed(2)} standardized score</small></div>)}</div>
       <div className="downloads">
         <a className="download-button" href="/data/disease_region_enrichment_matrix.csv" download>Download enrichment matrix</a>
         <a className="outline-button" href="/data/disease_spatial_similarity.csv" download>Download similarity table</a>
@@ -83,10 +84,6 @@ export function MultiDiseaseSections({ atlas, geometry }: { atlas: MultidiseaseA
       <details className="excluded-list"><summary>Diseases not shown ({atlas.excluded_or_needs_review.length})</summary>{atlas.excluded_or_needs_review.map((item) => <p key={item.disease_id}><strong>{item.disease_name} · {item.status}</strong><br />{item.reason}</p>)}</details>
     </section>
 
-    <section id="story" className="story-stage10">
-      <p className="section-kicker">Research story</p><h2>From Genetic Risk to Brain</h2>
-      <div className="stage10-flow">{['GWAS', 'Loci', 'Genes', 'Healthy brain', 'Regional expression', 'Enrichment', 'Spatial robustness', 'Independent validation', 'Biological interpretation', 'Cross-disease atlas'].map((step, index) => <div key={step}><span>{String(index + 1).padStart(2, '0')}</span><strong>{step}</strong></div>)}</div>
-      <p className="comparison-note">15 diseases were screened; 10 passed all genetic and AHBA gates. Every displayed map contains 138 regions, uses 10,000 matched gene-set permutations and 10,000 spatial permutations, and retains null results. No map is a diagnosis, patient prediction, or causal anatomical claim.</p>
-    </section>
+    <section id="limitations" className="story-stage10"><p className="section-kicker">Important context</p><h2>What this map does not mean</h2><p className="comparison-note">This is not a diagnostic tool, a prediction of an individual’s disease, or proof that a highlighted region causes disease. Gene activity in healthy tissue is not the same as measuring disease damage. Some diseases and regions have stronger evidence than others.</p></section>
   </div>
 }

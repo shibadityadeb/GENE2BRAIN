@@ -75,3 +75,14 @@ footer { padding: 28px clamp(20px,5vw,76px); display: flex; justify-content: spa
 }
 @media (max-width: 480px) { h1 { font-size: 38px; }.primary-controls label:not(.search-control) { width: calc(50% - 6px); }.primary-controls select { width: 100%; min-width: 0; }.pipeline { grid-template-columns: 1fr; }.brain-stage { min-height: 480px; }.tooltip { display: none; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .loader { animation: none; } }
+
+.hero-note { color: var(--aqua) !important; font-size: 12px !important; }
+.technical-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.explore-label { max-width: 1500px; margin: 28px auto 0; display: flex; justify-content: space-between; align-items: baseline; color: var(--muted); font: 11px 'DM Mono', monospace; text-transform: uppercase; letter-spacing: .12em; }
+.explore-label strong { color: var(--ink); font-size: 14px; }
+.concept-flow { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; max-width: 900px; margin-top: 34px; background: #b9c6c1; border: 1px solid #b9c6c1; }
+.concept-flow article { min-height: 110px; display: grid; place-content: center; gap: 13px; background: #f2f3ee; color: #17675e; padding: 18px; text-align: center; }.concept-flow span { color: #7b9d96; font-size: 24px; }
+.public-steps article { min-height: 180px; }.public-steps article h3 { font-size: 18px; line-height: 1.2; }.public-steps article p { color: #526662; }
+.explore-guide { position: absolute; z-index: 4; left: 50%; top: 50%; transform: translate(-50%, -50%); width: min(360px, calc(100% - 32px)); padding: 28px; background: rgba(7,16,19,.96); border: 1px solid rgba(114,214,195,.55); box-shadow: 0 20px 60px #0009; }.explore-guide h2 { margin: 5px 0 10px; }.explore-guide p:not(.eyebrow) { color: var(--muted); line-height: 1.6; font-size: 13px; }
+.legend details { margin-top: 9px; color: var(--muted); }.legend summary { cursor: pointer; color: var(--aqua); font: 10px 'DM Mono', monospace; }.technical-details { margin: 20px 0; border-top: 1px solid var(--line); padding-top: 12px; }.technical-details summary { cursor: pointer; color: var(--aqua); font: 11px 'DM Mono', monospace; text-transform: uppercase; letter-spacing: .1em; }
+@media (max-width: 800px) { .explore-label { display: grid; gap: 6px; }.concept-flow { grid-template-columns: 1fr; }.concept-flow article { min-height: 75px; }.explore-guide { top: 42%; } }

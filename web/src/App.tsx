@@ -26,6 +26,7 @@ export default function App() {
   const [focusNonce, setFocusNonce] = useState(0)
   const [viewPreset, setViewPreset] = useState<ViewPreset>(() => validViews.includes(query.get('view') as ViewPreset) ? query.get('view') as ViewPreset : 'reset')
   const [shareMessage, setShareMessage] = useState('')
+  const [showGuide, setShowGuide] = useState(() => window.localStorage.getItem('gene2brain-guide-seen') !== '1')
   const validationMode = useMemo(() => window.location.pathname.endsWith('/dev/atlas-validation') || query.get('mode') === 'atlas', [])
 
   useEffect(() => {
@@ -90,16 +91,17 @@ export default function App() {
   return (
     <div className="app-shell">
       <header className="topbar">
-        <a className="brand" href="#top" aria-label="GENE2BRAIN home"><strong>GENE<span>2</span>BRAIN</strong><small>Spatial genetic enrichment</small></a>
-        <nav aria-label="Primary navigation"><a href="#top">Home</a><a href="#how">Research</a><a href="#top">Explore</a><a href="#methods">Methods</a><a href="#data">Data</a><a href="#results">Results</a><a href="#biology">Biology</a><a href="#about">About</a><a href="#citations">Citations</a></nav>
-        <details className="mobile-nav"><summary>Menu</summary><div><a href="#top">Home / Explore</a><a href="#how">Research</a><a href="#results">Results</a><a href="#methods">Methods</a><a href="#data">Data</a><a href="#biology">Biology</a><a href="#about">About</a><a href="#citations">Citations</a></div></details>
+        <a className="brand" href="#top" aria-label="GENE2BRAIN home"><strong>GENE<span>2</span>BRAIN</strong><small>Atlas · healthy human brain</small></a>
+        <nav aria-label="Primary navigation"><a href="#top">Home</a><a href="#explore">Explore the brain</a><a href="#how">How it works</a><a href="#results">What we found</a><a href="#compare">Compare diseases</a><a href="#methods">Data &amp; methods</a><a href="#about">About</a></nav>
+        <details className="mobile-nav"><summary>Menu</summary><div><a href="#top">Home</a><a href="#explore">Explore the brain</a><a href="#how">How it works</a><a href="#results">What we found</a><a href="#compare">Compare diseases</a><a href="#methods">Data &amp; methods</a><a href="#about">About</a></div></details>
       </header>
 
       <section className="hero" id="top">
         <div className="hero-heading">
-          <div><p className="eyebrow">Interactive research atlas · {multidisease.diseases.length} completed diseases</p><h1>From Genetic Risk to<br /><em>Spatial Brain Vulnerability</em></h1></div>
-          <div><p>Explore where prioritized disease-associated genes show unusually high or low expression across healthy human brain regions.</p><button className="outline-button share-button" onClick={shareView}>Share this view</button>{shareMessage && <span className="share-message" role="status">{shareMessage}</span>}</div>
+          <div><p className="eyebrow">GENE2BRAIN Atlas · interactive research</p><h1>From Genetic Risk to<br /><em>Spatial Brain Vulnerability</em></h1></div>
+          <div><p>Can genes linked to a disease help us understand which parts of the brain may carry a stronger molecular signal?</p><p className="hero-note">Explore real disease-linked gene activity across the healthy human brain.</p><a className="download-button" href="#explore">Explore the brain</a> <a className="outline-button" href="#how">How it works</a> <button className="outline-button share-button" onClick={shareView}>Share view</button>{shareMessage && <span className="share-message" role="status">{shareMessage}</span>}</div>
         </div>
+        <div id="explore" className="explore-label"><strong>Explore the brain</strong><span>Parkinson disease · Brain signal</span></div>
         <Controls
           metric={metric}
           hemisphere={hemisphere}
@@ -149,6 +151,7 @@ export default function App() {
             ))}</div>
           )}
           {selected && <RegionPanel region={selected} diseaseName={enrichment.disease_name} threshold={metadata.analysis.fdr_threshold} onClose={() => setSelected(null)} />}
+          {showGuide && !selected && <div className="explore-guide" role="dialog" aria-label="Explore the brain"><p className="eyebrow">Explore the brain</p><h2>Find the signal</h2><p>Rotate by dragging. Zoom with your scroll wheel or pinch. Hover over a region, then click it to see the evidence behind its signal.</p><button className="download-button" onClick={() => { window.localStorage.setItem('gene2brain-guide-seen', '1'); setShowGuide(false) }}>Got it</button></div>}
         </div>
       </section>
       {hovered && <Tooltip region={hovered} point={tooltipPoint} />}

@@ -4,17 +4,32 @@ test('WebGL parcel supports direct hover and click hit testing', async ({ page }
   test.skip(testInfo.project.name !== 'desktop', 'Mouse hit-testing is covered in desktop mode')
   await page.setViewportSize({ width: 1440, height: 1100 })
   await page.goto('./?mode=atlas')
+  // The first-visit guide sits above the canvas and deliberately intercepts
+  // pointer events, so close it before testing the WebGL interaction surface.
+  await page.getByRole('button', { name: 'Got it' }).click()
   const canvas = page.locator('canvas').first()
   await expect(canvas).toBeVisible({ timeout: 30_000 })
   await canvas.scrollIntoViewIfNeeded()
   await page.waitForTimeout(750)
   const box = await canvas.boundingBox()
   expect(box).not.toBeNull()
-  // Validation mode has a deterministic camera; the centre point contains
-  // parcel geometry and therefore exercises React Three Fiber ray-casting.
-  await page.mouse.move(box!.x + box!.width * 0.55, box!.y + box!.height * 0.5)
-  await expect(page.locator('.tooltip')).toBeVisible()
-  await page.mouse.down()
-  await page.mouse.up()
+  // Scan the deterministic atlas viewport for a rendered parcel instead of
+  // assuming a single pixel remains covered after geometry refinements.
+  const xFractions = [0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8]
+  const yFractions = [0.25, 0.35, 0.45, 0.55, 0.65, 0.75]
+  let hitPoint: { x: number; y: number } | undefined
+  for (const y of yFractions) {
+    for (const x of xFractions) {
+      const point = { x: box!.x + box!.width * x, y: box!.y + box!.height * y }
+      await page.mouse.move(point.x, point.y)
+      if (await page.locator('.tooltip').isVisible()) {
+        hitPoint = point
+        break
+      }
+    }
+    if (hitPoint) break
+  }
+  expect(hitPoint).toBeDefined()
+  await page.mouse.click(hitPoint!.x, hitPoint!.y)
   await expect(page.locator('.region-panel')).toBeVisible()
 })

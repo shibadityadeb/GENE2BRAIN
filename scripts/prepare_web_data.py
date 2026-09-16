@@ -263,7 +263,7 @@ def build() -> None:
         "generated_on": date.today().isoformat(),
         "available_diseases": available_diseases,
         "excluded_or_needs_review": unavailable_diseases,
-        "researcher": {"name": None, "affiliation": None, "contact": None, "publication_status": "not confirmed"},
+        "researcher": {"name": "Shibaditya Deb", "affiliation": "Student, Independent Research", "contact": "debshibaditya144@gmail.com", "publication_status": "not confirmed"},
         "counts": {
             "ahba_donors": donor_count,
             "ahba_samples": sample_count,

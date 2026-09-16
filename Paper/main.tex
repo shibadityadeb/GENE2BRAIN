@@ -1,0 +1,537 @@
+
+\documentclass[10pt,twocolumn]{article}
+
+% =========================
+% GENE2BRAIN generic two-column paper
+% Portable journal-style draft; replace with a target journal template later.
+% =========================
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=0.72in,columnsep=0.24in]{geometry}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{amsmath,amssymb}
+\usepackage{siunitx}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{placeins}
+\usepackage{balance}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{ragged2e}
+
+\setlength{\parindent}{1em}
+\setlength{\parskip}{0pt}
+\setlist{nosep,leftmargin=*}
+\captionsetup{font=small,labelfont=bf}
+\titleformat{\section}{\large\bfseries}{\thesection}{0.55em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.45em}{}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{GENE2BRAIN}
+\fancyhead[R]{Deb}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.25pt}
+\newcommand{\doi}[1]{\href{https://doi.org/#1}{doi:#1}}
+
+% ---------- Image placeholder helpers ----------
+% If the file exists, it is inserted. Otherwise a visible placeholder is printed.
+\newcommand{\paperfigure}[4][0.96\linewidth]{%
+\begin{figure}[t]
+\centering
+\IfFileExists{#2}{%
+  \includegraphics[width=#1]{#2}%
+}{%
+  \fbox{\parbox[c][0.18\textheight][c]{0.92\linewidth}{\centering
+  \textbf{FIGURE PLACEHOLDER}\\[4pt]
+  Add file:\\ \texttt{\detokenize{#2}}}}
+}
+\caption{#3}
+\label{#4}
+\end{figure}
+}
+
+\newcommand{\paperfigurewide}[4][0.97\textwidth]{%
+\begin{figure*}[t]
+\centering
+\IfFileExists{#2}{%
+  \includegraphics[width=#1]{#2}%
+}{%
+  \fbox{\parbox[c][0.22\textheight][c]{0.94\textwidth}{\centering
+  \textbf{FULL-WIDTH FIGURE PLACEHOLDER}\\[4pt]
+  Add file:\\ \texttt{\detokenize{#2}}}}
+}
+\caption{#3}
+\label{#4}
+\end{figure*}
+}
+
+\newcommand{\placeholdernote}[1]{%
+\begin{center}
+\fbox{\parbox{0.94\linewidth}{\small\textbf{REPORT/IMAGE PLACEHOLDER:} #1}}
+\end{center}
+}
+
+\title{\textbf{GENE2BRAIN: From Genetic Risk to Spatial Brain Vulnerability}}
+\author{Shibaditya Deb\\
+\small Independent Research}
+\date{}
+
+\begin{document}
+\twocolumn[
+\maketitle
+
+\begin{abstract}
+Genome-wide association studies identify genetic loci associated with neurological and psychiatric disease, but they do not directly indicate where in the human brain those genetic signals may be most strongly represented. I developed GENE2BRAIN, a genetically informed spatial transcriptomic framework that connects disease-associated loci to prioritized genes and projects those genes onto regional expression patterns from the healthy adult Allen Human Brain Atlas (AHBA). The workflow was first frozen and audited in Parkinson disease, then scaled without disease-specific retuning to a 15-disease panel. The reference AHBA matrix contained 138 retained AAL3 parcels and 15,632 genes. For Parkinson disease, a multi-ancestry GWAS of 2,525,730 participants was linked to 67 Open Targets credible sets and 149 Locus-to-Gene (L2G) prioritized genes, 123 of which were represented in AHBA. Regional scores were compared with 10,000 matched random gene sets, controlling for expression mean, spatial variance, and probe representation. No Parkinson region survived regional BH-FDR in the primary weighted analysis, and no region survived the joint gene-set plus Moran-spectral spatial-robustness rule. Independent comparison with ENIGMA-Parkinson regional morphometric effects was also not supported (Pearson $r=-0.028$, Spearman $\rho=-0.015$). Scaling the same framework to ten analysis-ready diseases yielded nine weighted-set regional BH-FDR discoveries, driven by schizophrenia and attention-deficit/hyperactivity disorder, but no disease produced a jointly spatially robust parcel. Cross-disease regional correlations ranged from $-0.527$ to $0.593$, indicating heterogeneous spatial signatures. GENE2BRAIN therefore provides a reproducible framework for testing whether genetically prioritized disease genes show unusual spatial expression in the healthy human brain, while preserving negative results and explicitly separating genetic enrichment, spatial sensitivity, external validation, and biological interpretation.
+\end{abstract}
+
+\noindent\textbf{Keywords:} GWAS; Allen Human Brain Atlas; spatial transcriptomics; Parkinson disease; Locus-to-Gene; brain atlas; gene-set permutation; spatial autocorrelation; neurogenetics.
+
+\vspace{0.6em}
+]
+
+% ============================================================
+\section{Introduction}
+% ============================================================
+
+Neurological and psychiatric disorders exhibit strongly nonuniform anatomical patterns, yet the genetic architecture of these disorders is typically defined at the level of variants and loci rather than brain regions. GWAS associations therefore require additional mapping and functional evidence before they can be interpreted at the gene level \cite{mountjoy2021l2g,sollis2023gwascatalog}. A central question is therefore whether disease-associated genetic risk can be connected, through gene prioritization and healthy-brain expression, to reproducible spatial patterns across the human brain. Such a connection would not constitute a pathology map or identify where a disease starts. Rather, it would test whether genes implicated by genetic evidence are unusually represented in specific anatomical regions relative to an explicitly defined null model.
+
+I designed GENE2BRAIN around this distinction. The framework links genome-wide association study (GWAS) loci to candidate genes using evidence-based locus-to-gene prioritization, projects those genes onto regional AHBA expression, compares the observed regional score with matched random gene sets, evaluates sensitivity to spatial autocorrelation, and, where possible, compares the resulting discovery profile with independent disease-related regional measurements. I performed biological interpretation only after freezing the discovery and robustness layers. I then repeated the full analysis across diseases using a common parameter set.
+
+I developed the project first as a Parkinson disease reference pipeline because Parkinson disease offers large-scale GWAS evidence, biologically relevant cortical, subcortical, cerebellar, and brainstem anatomy, and independent imaging resources. Importantly, I did not optimize the reference pipeline to produce positive results. The Parkinson analysis ultimately produced a negative regional FDR result, a negative joint spatial-robustness result, and a null independent ENIGMA comparison. I retained these findings rather than using them to revise the discovery model.
+
+The final multi-disease analysis screened 15 disorders spanning neurodegenerative, psychiatric, neurodevelopmental, and neurological conditions. Ten satisfied the frozen GWAS-to-L2G and AHBA coverage requirements; two failed the minimum prioritized-gene gate and three lacked compatible disease-risk GWAS/L2G evidence. The resulting atlas is therefore a comparative map of genetically informed healthy-brain expression enrichment, not a clinical classifier or disease-location map.
+
+\paperfigurewide{results/figures/stage_10_gene2brain_pipeline.png}{
+\textbf{GENE2BRAIN analysis framework.} Recommended main schematic showing the frozen sequence from disease GWAS to credible sets, L2G gene prioxritization, AHBA regional expression, matched gene-set inference, spatial sensitivity, independent validation, biological interpretation, and cross-disease comparison. If your existing Stage 10 pipeline figure has a different filename, replace the path above.
+}{fig:pipeline}
+
+% ============================================================
+\section{Materials and Methods}
+% ============================================================
+
+\subsection{Healthy-brain expression reference}
+
+I derived the expression reference from the Allen Human Brain Atlas normalized microarray dataset using all six post-mortem donors \cite{hawrylycz2012}. I processed it with \texttt{abagen} 0.1.3 \cite{markello2021abagen} and a 166-parcel AAL3v1 volumetric atlas in MNI space \cite{rolls2020aal3}. I reannotated probes, filtered intensity at a 0.5 threshold, and reduced the data to one probe per gene using differential stability with aggregate donor probe selection, following established imaging-transcriptomic processing recommendations \cite{arnatkeviciute2019,markello2021abagen}. I used corrected MNI coordinates, assigned samples within a 2 mm tolerance without left--right mirroring, and normalized expression using scaled robust sigmoid transforms across genes within sample and then across matched samples within gene. I performed gene normalization separately for cortex, subcortex/brainstem, and cerebellum.
+
+I averaged samples within each region separately for each donor and then equally across donors with available observations. I retained regions only when they contained at least two assigned samples across at least two donors. Of 166 atlas parcels, 138 passed this rule. \texttt{abagen} returned 15,633 genes; I removed one gene with non-finite pooled values, leaving a complete 138 $\times$ 15,632 regional expression matrix with no missing values. I retained missing donor--region combinations in donor-level matrices rather than imputing them.
+
+\paperfigure{results/figures/stage_02_normal_transcriptomic_landscape.png}{
+\textbf{Healthy human transcriptomic reference.} Insert the Stage 2 ``normal transcriptomic landscape'' figure here. The caption in the final version should state that the visualization summarizes the healthy AHBA reference and is not a disease result.
+}{fig:ahba}
+
+\subsection{Parkinson GWAS selection and association processing}
+
+The Parkinson discovery layer used the NHGRI-EBI GWAS Catalog REST API \cite{sollis2023gwascatalog}. The ontology resource for Parkinson disease was resolved to MONDO\_0005180, and all ontology-linked candidate studies were reviewed under explicit phenotype and design eligibility rules. The selected primary study was GCST90308590, a multi-ancestry Parkinson disease meta-analysis with 2,525,730 discovery/meta-analysis participants \cite{kim2024pdgwas}. Its discovery ancestry included European, East Asian, Hispanic or Latin American, and African-unspecified groups.
+
+The GWAS Catalog returned 121 primary-study association records. A fixed genome-wide significance threshold of $p \le 5\times10^{-8}$ retained 109 variants and excluded 12. Coordinates were taken from the Catalog SNP resource on GRCh38.p14. No coordinate liftover was performed. For descriptive Stage 3 consolidation, adjacent significant variants on the same chromosome separated by at most 250 kb were merged using a FUMA-inspired distance heuristic \cite{watanabe2017fuma}, producing 78 provisional loci. These groups were explicitly not treated as LD-independent loci.
+
+Because author-reported genes were absent from the association projection, SNP genomic-context mappings were preserved as positional candidate annotations only. No Stage 3 mapped gene was interpreted as causal. The selected association set contained no missing rsIDs, invalid autosomal chromosomes, invalid coordinates, duplicate variant rows, or missing p-values. Alternate alleles and effect-size estimates were unavailable in the curated association projection and were not imputed.
+
+\paperfigurewide{results/figures/stage_03_parkinson_gwas_manhattan.png}{
+\textbf{Parkinson GWAS genetic landscape.} Insert the Stage 3 Manhattan plot based on the 109 genome-wide significant curated associations for GCST90308590. The plot should be described as association evidence only; it is not a complete summary-statistics Manhattan plot.
+}{fig:gwas}
+
+\subsection{Open Targets credible sets and gene prioritization}
+
+Stage 4 matched GCST90308590 to Open Targets Platform release 26.06 through the GraphQL API \cite{buniello2025opentargets}. The matched platform record reproduced the study accession, phenotype, sample size, and ancestry structure. The platform returned 67 PICS credible sets and 149 displayed L2G gene predictions for 149 unique genes; all 67 credible-set lead variants matched Stage 3 associations by rsID or coordinate. L2G is a machine-learning framework for prioritizing candidate genes at GWAS loci and is not a proof of causality \cite{mountjoy2021l2g}. Because the study did not have in-sample LD fine mapping or harmonized summary statistics available in the platform, these PICS credible sets were treated as lower-confidence fine-mapping objects rather than definitive causal intervals.
+
+Three gene-set definitions were frozen. The broad set comprised all 149 genes with displayed L2G score $>0.05$. The stringent set comprised 38 genes whose maximum score was at least 0.615029, the empirical upper-quartile threshold for eligible predictions in the pinned release. The weighted set retained all 149 broad genes and assigned each gene its maximum L2G score across credible sets. Multiple candidate genes per locus were retained.
+
+Exact approved gene-symbol matching to the AHBA matrix identified 123 of 149 broad/weighted genes and 34 of 38 stringent genes. Missing symbols were preserved in an audit table and were not replaced by aliases. Coverage was therefore 82.6\% for the broad/weighted set and 89.5\% for the stringent set.
+
+\paperfigure{results/figures/stage_04_parkinson_gwas_to_gene.png}{
+\textbf{GWAS-to-gene evidence.} Insert the Stage 4 visualization showing how Parkinson credible sets map to multiple L2G-prioritized candidate genes. Avoid language implying that L2G proves causality.
+}{fig:l2g}
+
+\subsection{Observed regional Parkinson expression}
+
+For each retained AAL3 region $r$, the broad and stringent observed scores were the unweighted mean of the matched disease genes on the preserved Stage 2 expression scale. The primary weighted score was
+\begin{equation}
+S_W(r)=
+\frac{\sum_{g\in G_W} E_{rg}w_g}
+{\sum_{g\in G_W} w_g},
+\end{equation}
+where $E_{rg}$ is normalized AHBA expression and $w_g$ is the frozen Stage 4 maximum L2G score. Missing genes were removed before both numerator and denominator were formed. These scores describe observed expression and do not by themselves constitute statistical enrichment.
+
+A sensitivity analysis standardized each gene across the 138 pooled regions before rescoring. The raw-scale and gene-standardized spatial profiles were highly concordant (Pearson $r=0.995$ for broad, $0.995$ for stringent, and $0.997$ for weighted). Donor-level scoring used the same genes and weights without imputing unobserved donor--region combinations. Mean pairwise donor correlations were 0.168, 0.321, and 0.251 for the broad, stringent, and weighted scores, respectively.
+
+\subsection{Matched gene-set null model}
+
+The primary inference stage tested whether the disease-prioritized gene set produced regional scores larger than expected for genes with comparable measurable properties. Before random sampling, each gene was characterized by its global mean expression, log$_{10}$ regional expression variance, and log$_1p$ candidate-probe count. The three variables were standardized over the AHBA universe and given equal weight in Euclidean matching. Regional coverage was not used because the complete-case matrix contained measurements in all 138 regions for every eligible gene. Gene length was unavailable in the frozen metadata and was not substituted.
+
+The 123 AHBA-represented broad Parkinson genes were removed from the common background, leaving 15,509 genes. For each disease gene, the algorithm identified 200 nearest background neighbors and sampled unused matched replacements within each permutation, expanding only if necessary. Disease-gene processing order was randomized per permutation to avoid systematic allocation bias. The weighted null reused the broad matched replacements and carried the fixed Parkinson L2G weights onto the gene-specific replacement positions.
+
+For each of 10,000 matched random sets, regional scores were recalculated. The observed score was summarized relative to the null using a Z-score, a one-sided empirical $p$-value with the prespecified $+1$ correction, and Benjamini--Hochberg FDR across 138 regions. The primary significance threshold was $q<0.05$. Standardized mean differences in the matching covariates fell close to zero after matching, supporting technical balance on the prespecified variables.
+
+\paperfigurewide{results/brain_maps/stage_06_parkinson_zscore_map.png}{
+\textbf{Parkinson matched-null regional enrichment.} Insert the Stage 6 weighted Z-score map or, if preferred, \texttt{stage\_06\_parkinson\_enrichment\_ranking.png}. The final caption should state that no Parkinson region survives BH-FDR $q<0.05$ in the primary weighted analysis.
+}{fig:stage6}
+
+\subsection{Spatial robustness}
+
+Gene-set permutations do not eliminate spatial autocorrelation among neighboring parcels. Stage 7 therefore used a separate spatial sensitivity analysis based on a binary symmetric AAL3 volumetric adjacency graph. Two retained parcels were connected when any voxels touched by face, edge, or corner under 26-connectivity. The graph contained 138 nodes and 512 undirected edges; four brainstem parcels were isolated and retained with zero spatial weights.
+
+Moran spectral randomization (MSR) was applied to the Stage 6 Z profile using the singleton procedure described for spatially constrained null models \cite{wagner2015msr}. Singleton sign randomization preserved the complete Moran-basis power spectrum and therefore the global Moran's $I$ of the observed map while changing hotspot locations. A region was defined as robust only if its Stage 6 weighted Z-score was positive, its Stage 6 gene-set BH-FDR was below 0.05, and its one-sided Stage 7 regional spatial-null $p$-value also survived BH-FDR across 138 parcels. This joint rule was fixed before Stage 7 results were generated.
+
+\paperfigure{results/figures/stage_07_stage6_vs_spatial_robustness.png}{
+\textbf{Gene-set inference versus spatial robustness.} Insert the Stage 7 comparison figure. A high spatial percentile is descriptive and must not be presented as rescuing a region that failed Stage 6 FDR.
+}{fig:stage7}
+
+\subsection{Independent Parkinson validation}
+
+The frozen primary validation statistic was the Stage 6 weighted regional Z-score. ENIGMA-Parkinson 2021 was selected before calculating any correlation because it provided Parkinson-versus-control standardized effects for cortical thickness and subcortical volume, broad bilateral coverage, documented FreeSurfer anatomy, and large sample size \cite{laansma2021enigma}. Summary-statistic handling and anatomical contextualization followed the ENIGMA Toolbox resource \cite{lariviere2021enigma}. The selected summary data represented 2,357 people with Parkinson disease and 1,182 controls across 19 sites.
+
+AAL3 discovery parcels were mapped to 70 unique ENIGMA units using fixed anatomical rules. The ENIGMA effects were sign-oriented so that larger values represented greater Parkinson-related structural vulnerability. Pearson correlation was the primary effect-size summary, with Spearman correlation as a rank-based co-primary analysis. Confidence intervals used a fixed-seed region bootstrap. Leave-one-region-out, cortex-only, subcortex-only, broad-gene, stringent-gene, and spatial-surrogate analyses were treated as sensitivity tests. Substantia nigra was not available in the selected ENIGMA phenotype and was not imputed.
+
+\paperfigurewide{results/figures/stage_08_gene2brain_vs_independent_validation.png}{
+\textbf{GENE2BRAIN versus independent Parkinson structural phenotype.} Insert the Stage 8 validation scatter/summary figure. The final caption should report the null primary association and explicitly state that the result was classified as NOT SUPPORTED.
+}{fig:validation}
+
+\subsection{Post-discovery biological interpretation}
+
+Stage 9 was performed only after Stages 3--8 were frozen. The primary weighted gene set contained 149 prioritized genes, 123 of which were represented in AHBA. Functional over-representation used g:Profiler with the 15,632-gene AHBA universe and separate BH-FDR families for GO Biological Process, Molecular Function, Cellular Component, Reactome, and WikiPathways \cite{kolberg2023gprofiler}. A ranked pathway analysis tested whether pathway-member genes tended to carry larger L2G scores than other prioritized genes.
+
+Human-brain cell-type enrichment used Human Protein Atlas v25.1 single-nucleus brain cluster data, which are based on the adult human brain single-nucleus transcriptomic resource of Siletti et al. \cite{siletti2023brain,hpa2026brain}. Within the AHBA background, marker sets were defined from expression and specificity thresholds, and a hypergeometric test with BH correction was applied to the 34 cluster types separately for each frozen gene-set definition.
+
+Regional interpretation used the top ten parcels by the already-computed Stage 7 robustness rank, with ties resolved by region ID. Within each selected parcel, genes were ranked by additive contribution $E_{rg}w_g/\sum_gw_g$. These ``spatially contributing prioritized genes'' were descriptive contributors, not causal drivers. Reactome analysis of regional top contributors used a single BH family across all eligible region--term tests.
+
+\paperfigure{results/figures/stage_09_parkinson_biological_summary.png}{
+\textbf{Post-discovery Parkinson biological interpretation.} Insert the Stage 9 biological summary. The figure should visually distinguish robust FDR-supported findings from exploratory regional contributor results.
+}{fig:biology}
+
+\subsection{Multi-disease scaling}
+
+Stage 10 screened 15 diseases under frozen criteria. A disease was analysis-ready only if it had a reproducible disease-risk GWAS, compatible Open Targets credible sets and L2G predictions, broad/stringent/weighted gene sets under the unchanged Stage 4 rules, at least five prioritized genes, and at least 50\% AHBA overlap. Ten diseases passed: Parkinson disease, Alzheimer disease, amyotrophic lateral sclerosis, schizophrenia, bipolar disorder, major depressive disorder, attention-deficit/hyperactivity disorder, epilepsy, migraine, and multiple sclerosis.
+
+Progressive supranuclear palsy and autism spectrum disorder retained real L2G outputs but failed the five-gene gate. Huntington disease lacked an ontology-linked common-variant disease-risk GWAS compatible with the framework; multiple system atrophy and Tourette syndrome had eligible risk GWAS records but no Open Targets credible sets in the pinned release. These exclusions were treated as framework compatibility outcomes, not statements about the biological importance or heritability of the diseases.
+
+All ten analyzed diseases used the same AHBA matrix, exact-symbol matching, raw-scale score equations, matching covariates, 200-nearest-neighbor sampling, 10,000 gene-set permutations, one-sided empirical $p$-values, BH-FDR, 26-neighbor graph, 10,000 MSR surrogates, and joint robustness rule. Cross-disease comparisons used the matched-null regional Z-score rather than raw expression.
+
+% ============================================================
+\section{Results}
+% ============================================================
+
+\subsection{Reference transcriptomic matrix and anatomical coverage}
+
+The final AHBA reference contained 138 AAL3 parcels and 15,632 genes. The pooled matrix contained no missing values. Key retained anatomy included bilateral caudate, putamen, pallidum, nucleus accumbens, hippocampus and amygdala, 20 thalamic parcels, 17 cerebellar parcels, nine retained brainstem parcels, and broad frontal, temporal, parietal, and occipital coverage. Right-hemisphere support was intrinsically weaker because four of the six AHBA donors were predominantly left-sampled; the reference pipeline did not mirror tissue samples to compensate.
+
+The healthy-brain PCA used all 15,632 non-near-zero-variance genes after gene-wise standardization. The first two components explained 19.01\% and 12.49\% of variance, respectively. These patterns characterize the reference transcriptomic organization and are not evidence for disease-specific vulnerability.
+
+\subsection{Parkinson genetic prioritization}
+
+The selected Parkinson GWAS contributed 109 genome-wide significant Catalog associations. Open Targets linked the study to 67 PICS credible sets and 149 displayed L2G genes. Exact-symbol AHBA coverage retained 123 broad/weighted genes and 34 stringent genes. This step substantially changed the interpretation relative to positional GWAS mapping: the working disease gene set was based on L2G evidence across credible sets rather than one nearest or Catalog-mapped gene per locus.
+
+\subsection{Observed expression is spatially structured but not sufficient for inference}
+
+The weighted Parkinson score varied across the 138 retained parcels, and the raw-scale spatial ordering was nearly identical to the gene-standardized sensitivity profile ($r=0.997$). This demonstrates that the observed ranking was not an artifact of preserving the Stage 2 normalization scale. However, donor-level reproducibility was modest, with a mean pairwise weighted correlation of 0.251. The observed map was therefore treated as a descriptive disease-associated expression profile and not as evidence of regional enrichment.
+
+\subsection{Matched-null inference yields no Parkinson FDR-significant region}
+
+After matching on mean expression, regional variance, and candidate-probe representation, the residual standardized mean differences were small, indicating that the random sets reproduced the measured technical characteristics of the Parkinson gene set. Under 10,000 matched permutations, no weighted Parkinson parcel passed BH-FDR $q<0.05$. The top weighted region was OFCant R with $Z=3.057$ and FDR $q=0.1794$. The absence of FDR-significant Parkinson regions is the primary Stage 6 result and remains negative regardless of descriptive rankings.
+
+The weighted regional profile nevertheless exhibited spatial autocorrelation, with global Moran's $I=0.2131$ and an unrestricted-label permutation $p=9.999\times10^{-5}$. The spatially constrained global peak test produced $p=0.5301$. Because Stage 6 had no weighted FDR-significant parcels, the prespecified joint Stage 6 plus Stage 7 rule necessarily yielded zero robust regions. No region was promoted on the basis of a favorable spatial percentile.
+
+\subsection{Independent Parkinson validation is not supported}
+
+Across 70 unique mapped ENIGMA parcels, the primary weighted Stage 6 Z-score showed essentially no association with the independently measured morphometric phenotype. Pearson correlation was $r=-0.028$ (95\% region-bootstrap CI $-0.217$ to $0.176$, two-sided $p=0.8186$), and Spearman correlation was $\rho=-0.015$ (95\% bootstrap CI $-0.247$ to $0.219$, $p=0.903$). A spatially constrained Moran-surrogate test gave $p=0.8313$.
+
+Sensitivity analyses did not produce a stable alternative conclusion. Broad and stringent gene-set Pearson correlations were 0.139 and $-0.094$, respectively. Cortex-only correlation was $-0.022$ ($n=56$), and subcortex-only correlation was $-0.283$ ($n=14$). Leave-one-region-out Pearson estimates ranged from $-0.072$ to 0.003 with median $-0.028$. The complete validation result was therefore classified as \textbf{NOT SUPPORTED}. This null result did not trigger any revision of the upstream gene set, enrichment model, spatial procedure, or regional selection.
+
+\subsection{Biological interpretation remains post hoc}
+
+For Parkinson disease, GO Biological Process analysis identified peptidyl-threonine modification and peptidyl-threonine phosphorylation, while GO Cellular Component highlighted exocytic vesicle membrane, synaptic vesicle membrane, transport vesicle membrane, and postsynapse. No robust Molecular Function, primary Reactome, ranked pathway, or HPA brain cell-type enrichment was detected in the primary weighted analysis.
+
+Repeated spatial contributors included SIPA1L2, CNTN1, FCGR2A, SH3GL2, RIT2, STK39, ITPKB, CLCN3, SLC2A13, TMEM175, RNF141, and CCSER1. Three regional Reactome rows survived the single regional BH family, all involving FCGR activation in Frontal Sup Medial R, Hippocampus L, and Amygdala L and all supported by the same two genes, FYN and FCGR2A. This narrow repeated result was interpreted as exploratory rather than evidence for a broad regional mechanism. The stringent gene set produced an FDR-significant FCGR activation result that was absent in the primary broad/weighted over-representation analysis, arguing against robustness across gene-set definitions.
+
+\subsection{Cross-disease analysis reveals heterogeneity but no spatially robust parcel}
+
+Ten diseases entered the final spatial analysis. Across the full panel, nine weighted-set regional BH-FDR discoveries were detected, but no disease produced a region that also survived the Stage 7 spatial-null FDR rule. Schizophrenia contributed seven FDR-significant regions, and attention-deficit/hyperactivity disorder contributed two; the remaining eight analyzed diseases had none.
+
+\begin{table*}[t]
+\centering
+\caption{\textbf{Final multi-disease summary.} ``Sig.'' denotes weighted Stage 6 regional BH-FDR discoveries; ``Robust'' denotes the pre-specified joint Stage 6 + Stage 7 rule.}
+\label{tab:multidisease}
+\small
+\begin{tabular}{lrrrrrl}
+\toprule
+Disease & GWAS $N$ & L2G genes & AHBA \% & Sig. & Robust & Top Z region \\
+\midrule
+Parkinson disease & 2,525,730 & 149 & 82.55 & 0 & 0 & OFCant R \\
+Alzheimer disease & 487,511 & 113 & 82.30 & 0 & 0 & Thal PuM L \\
+Amyotrophic lateral sclerosis & 152,268 & 25 & 88.00 & 0 & 0 & Occipital Mid R \\
+Schizophrenia & 175,799 & 451 & 84.48 & 7 & 0 & Putamen R \\
+Bipolar disorder & 413,466 & 100 & 80.00 & 0 & 0 & Temporal Mid L \\
+Major depressive disorder & 1,154,267 & 178 & 81.46 & 0 & 0 & Hippocampus L \\
+ADHD & 225,534 & 35 & 88.57 & 2 & 0 & OFCmed R \\
+Epilepsy & 82,482 & 8 & 87.50 & 0 & 0 & Occipital Inf R \\
+Migraine & 873,341 & 205 & 81.46 & 0 & 0 & Cerebellum 8 R \\
+Multiple sclerosis & 41,505 & 297 & 73.06 & 0 & 0 & Vermis 9 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+Pairwise Pearson correlations between disease Z-score maps ranged from $-0.527$ to $0.593$, with median absolute correlation 0.182. The most similar pair was amyotrophic lateral sclerosis and epilepsy ($r=0.593$, nominal $p=1.741\times10^{-14}$), whereas the most anticorrelated pair was Alzheimer disease and schizophrenia ($r=-0.527$, nominal $p=3.077\times10^{-11}$). These values quantify map similarity across the 138 common parcels; they do not establish shared pathogenesis or diagnostic relationships.
+
+\paperfigurewide{results/figures/stage_10_disease_region_atlas.png}{
+\textbf{Disease-by-region enrichment atlas.} Insert the Stage 10 multi-disease signature matrix. Use one common Z-score color scale across diseases. Do not independently rescale each row.
+}{fig:atlas}
+
+\paperfigure{results/figures/stage_10_disease_spatial_similarity.png}{
+\textbf{Disease spatial similarity.} Insert the Stage 10 disease spatial similarity matrix. Report that pairwise correlations range from $-0.527$ to $0.593$ and treat them as descriptive similarities of matched-null regional profiles.
+}{fig:similarity}
+
+An exploratory leave-one-disease-out specificity analysis yielded 11 disease--region cells surviving its global BH-FDR family. The strongest was schizophrenia in Hippocampus R (specificity $Z=5.145$, FDR $=0.000126$). This specificity analysis is secondary and does not override the absence of jointly spatially robust parcels.
+
+Tests for gross dependence on GWAS power were not significant in this ten-disease panel. GWAS sample size correlated with the number of enriched regions at Spearman $\rho=-0.182$ ($p=0.6155$) and with maximum Z-score at $\rho=-0.200$ ($p=0.5796$). Gene-set size correlated with the number of enriched regions at $\rho=0.234$ ($p=0.5161$) and with maximum Z-score at $\rho=0.527$ ($p=0.1173$). Because the number of spatially robust regions was zero for every disease, associations with that outcome were not estimable.
+
+Stage 10 biological tables contained 88,086 ontology/pathway rows and 1,020 HPA brain cell-type rows. In weighted analyses, 1,026 ontology/pathway rows and 12 HPA cell-type rows passed their within-analysis BH-FDR rules. These counts should not be interpreted as independent biological mechanisms because ontology terms are nested and highly correlated. Across 45 disease pairs with at least one significant pathway set, spatial correlation and pathway Jaccard similarity were weakly related (Spearman $\rho=0.145$, $p=0.3417$).
+
+\paperfigurewide{results/figures/stage_10_biological_programs.png}{
+\textbf{Biological programs across diseases.} Insert the Stage 10 biological-programs visualization. The caption should emphasize that ontology terms are correlated and that biological similarity is descriptive rather than evidence of shared causal mechanisms.
+}{fig:crossbio}
+
+% ============================================================
+\section{Interactive Atlas and Anatomical Visualization}
+% ============================================================
+
+The public GENE2BRAIN Atlas is a display layer over frozen numerical outputs. It does not recompute GWAS, gene prioritization, AHBA expression, matched permutations, FDR, spatial statistics, validation, or biological enrichment in the browser. Every research record joins to anatomy using the original integer AAL3 region ID.
+
+The first browser implementation generated surfaces directly from exposed faces of the 2 mm AAL3 label volume, creating visibly block-like geometry. The final visualization separates anatomy from research labels. Cortical anatomy is rendered from FreeSurfer fsaverage6 pial surfaces with 40,962 vertices per hemisphere \cite{fischl2012freesurfer}. AAL3 labels \cite{rolls2020aal3} are projected to the cortical mesh using neuromaps MNI152-to-fsaverage registration-fusion coordinates \cite{markello2022neuromaps} and nearest-neighbor sampling of the original 2 mm atlas. Triangles receive an AAL3 label only when the projected vertex labels agree by majority. Noncortical and fallback parcels are shown as smooth isosurfaces derived from the original label volume, while the original integer region identity remains authoritative for the data join.
+
+The active asset contains 81,924 pial vertices, 163,840 anatomy triangles, and 138 nonempty analytical region meshes. Of the retained region meshes, 78 use projected cortical pial triangles and 60 use noncortical or fallback isosurfaces. Because fsaverage and MNI AAL3 are different representational spaces, parcel boundaries are explicitly described as approximate visualization boundaries rather than exact analytical segmentations.
+
+% ============================================================
+\section{Discussion}
+% ============================================================
+
+GENE2BRAIN was built to answer a deliberately narrow question: whether genes prioritized from disease genetics show regional expression patterns in the healthy human brain that are unusual relative to technically matched gene sets. The project therefore occupies a middle ground between statistical genetics and disease neuroanatomy. It does not infer pathology from expression alone, and it does not treat a high regional score as evidence that disease begins in that region.
+
+The Parkinson reference analysis illustrates why this distinction matters. The observed L2G-weighted expression profile was structured and reproducible across alternative scaling choices, but the matched-null analysis produced no regional BH-FDR discovery. The spatial profile also showed significant global autocorrelation, yet the spatially constrained peak test was null and no parcel passed the joint robustness rule. Independent ENIGMA comparison then showed essentially zero association between the discovery map and regional morphometric differences. A workflow optimized for visual impact could have highlighted OFCant R or another top-ranked parcel and described it as ``vulnerable.'' The frozen GENE2BRAIN workflow instead requires that this remain a negative Parkinson regional-discovery result.
+
+The multi-disease extension reveals a second important point. A common analysis framework can generate clearly different spatial signatures across diseases even when most individual diseases have few or no FDR-significant regions. The low median absolute inter-disease correlation supports heterogeneity of spatial genetic-expression patterns. Schizophrenia and ADHD produced Stage 6 discoveries, whereas the other eight analyzed diseases did not. Yet even these discoveries did not survive the joint spatial-null rule. Thus, the cross-disease atlas is most defensibly interpreted as a quantitative landscape of regional genetic-expression signatures, with inferential strength tracked separately.
+
+The lack of spatially robust parcels across all ten diseases may reflect several nonexclusive factors. First, disease-prioritized genes may genuinely be broadly distributed rather than sharply localized in the healthy adult transcriptome. Second, AAL3 parcels aggregate heterogeneous cell populations and may dilute spatially restricted effects. Third, AHBA contains only six donors with uneven hemispheric sampling. Fourth, L2G is a probabilistic prioritization framework and does not identify a single definitive causal gene per locus. Fifth, the conservative MSR procedure preserves the observed Moran power spectrum exactly and may therefore reduce apparent hotspot extremeness. These explanations should be treated as methodological possibilities rather than post hoc excuses for null findings.
+
+The Stage 9 and Stage 10 biological analyses provide interpretable context but do not repair failed regional discovery. For Parkinson disease, synaptic vesicle and postsynaptic cellular-component signals are biologically plausible, but their existence does not transform the spatial map into a validated vulnerability model. Likewise, the narrow FCGR-related regional result is based on the same two genes across three parcels and is not evidence of a broad anatomical mechanism. The analysis design intentionally prevents downstream biology from changing the statistical status of a region.
+
+The external validation strategy also warrants careful interpretation. ENIGMA-Parkinson measures cross-sectional structural MRI differences rather than neuropathology, neuronal loss, dopamine depletion, or molecular disease activity. A positive association would therefore have represented convergence between genetically informed healthy-brain expression and one independent regional disease phenotype, not proof of causality. The observed null result narrows the interpretation further. It indicates that the present GENE2BRAIN Parkinson profile does not align with this particular regional morphometric phenotype under the prespecified mapping and analysis.
+
+Cross-disease comparisons may nevertheless be scientifically useful. The ALS--epilepsy similarity and Alzheimer--schizophrenia anticorrelation demonstrate that the framework can quantify relationships between disease maps on a common anatomical basis. These relationships may motivate future studies using independent molecular or imaging resources, but nominal pairwise map correlations are not themselves evidence of shared etiology. The same caution applies to the exploratory specificity analysis and spatial-versus-pathway comparisons.
+
+A practical contribution of the project is the separation of scientific computation from public visualization. The website consumes frozen, validated outputs and never recalculates scientific statistics. The redesigned brain further separates anatomical display geometry from the analytical atlas mask. This prevents the common failure mode in which a visually smooth or highly detailed rendering silently changes the mapping between numerical results and regions.
+
+% ============================================================
+\section{Limitations}
+% ============================================================
+
+Several limitations constrain interpretation. The AHBA reference is based on six healthy adult post-mortem donors and is not a patient dataset. Four donors are predominantly left-sampled, and no hemispheric mirroring was used. Expression was measured with microarrays, and exact-symbol matching leaves some prioritized genes unrepresented. Structural-class normalization reduces gross tissue-class differences but also limits interpretation of absolute cortical versus subcortical offsets.
+
+GWAS-to-gene mapping remains uncertain. The Parkinson Open Targets credible sets were PICS-based and lacked in-sample LD fine mapping for the selected study. L2G scores aggregate several evidence sources but are not causal probabilities. Platform releases can change credible sets, evidence features, and scores, meaning that reproducibility requires version pinning.
+
+The matched-null model controls only recorded gene-level properties: global mean expression, regional variance, and candidate-probe representation. It does not match gene length, GC content, cell-type specificity, network degree, or every microarray-design characteristic. The null therefore tests disease-gene enrichment conditional on a specified technical model rather than all possible sources of bias.
+
+The spatial graph is based on volumetric atlas contact rather than biological connectivity. Four isolated brainstem parcels have weaker spatial constraints. Singleton MSR is intentionally conservative and can preserve correlation with the observed map. Alternative spatial null models may produce different sensitivity behavior, particularly for cortex-only analyses.
+
+The Parkinson validation source measures structural MRI, does not include substantia nigra, and cannot guarantee participant-level independence from all upstream GWAS cohorts. Other diseases in the current panel remain pending for independent regional validation. Accordingly, the multi-disease atlas should not be described as clinically or pathologically validated.
+
+Finally, the anatomical website representation is approximate. The cortex is rendered from fsaverage6, whereas AAL3 is a 2 mm MNI volumetric atlas. Registration fusion provides label correspondence, not perfect point-for-point identity, and nearest-neighbor atlas boundaries can appear angular even on folded cortex. These limitations affect visualization fidelity but do not alter the statistical region IDs or frozen numerical results.
+
+% ============================================================
+\section{Conclusion}
+% ============================================================
+
+GENE2BRAIN provides a reproducible framework for connecting disease genetics to spatial gene expression in the healthy human brain while keeping association, spatial dependence, external validation, and biological interpretation as distinct evidence layers. In the Parkinson reference analysis, no region survived matched gene-set FDR, no region survived the joint spatial rule, and independent ENIGMA morphometric validation was not supported. Across ten analysis-ready diseases, nine weighted regional FDR discoveries were observed, but none survived the pre-specified joint spatial-robustness rule. Cross-disease maps nevertheless showed substantial heterogeneity and enabled quantitative comparison of spatial genetic-expression signatures.
+
+The principal contribution is therefore not a claim that genetics has identified where disease occurs. It is a transparent analytical and visualization framework that can test such hypotheses without converting descriptive spatial patterns into causal or clinical claims. Future work should prioritize larger and more spatially resolved transcriptomic references, independent disease-specific validation resources, alternative spatial null models, and prospective replication of cross-disease findings.
+
+% ============================================================
+\section*{Data and Code Availability}
+% ============================================================
+
+The public GENE2BRAIN Atlas is available at \href{https://gene2brain.vercel.app/}{\texttt{https://gene2brain.vercel.app/}}. The analysis code and paper source are available at \href{https://github.com/shibadityadeb/GENE2BRAIN}{\texttt{https://github.com/shibadityadeb/GENE2BRAIN}}.
+
+The analysis pipeline is designed to preserve intermediate audits, frozen configuration files, source metadata snapshots, and web-ready exports. Public release should include software versions, parameter files, figure-generation scripts, and enough provenance to reconstruct the reported tables and figures. Redistribution of third-party anatomical assets should be reviewed against their applicable licenses before formal deployment.
+
+\section*{Ethics Statement}
+
+The study is a secondary computational analysis of publicly released or officially distributed summary-level genetic, transcriptomic, and imaging resources. No new human participants were recruited and no individual-level clinical prediction was performed.
+
+
+% ============================================================
+% References: keep as one-file draft now; migrate to BibTeX/BibLaTeX for submission.
+% ============================================================
+\begin{thebibliography}{99}
+
+\bibitem{hawrylycz2012}
+\textbf{Author:} Hawrylycz, Michael J. and Lein, Ed S. and Guillozet-Bongaarts, Angela L. and others.
+
+\textbf{Title:} An anatomically comprehensive atlas of the adult human brain transcriptome.
+
+\textbf{Journal:} Nature, 2012, vol. 489, no. 7416, pp. 391--399.
+
+\textbf{DOI:} \href{https://doi.org/10.1038/nature11405}{10.1038/nature11405}.
+
+\bibitem{arnatkeviciute2019}
+\textbf{Author:} Arnatkevi{\v c}i{\=u}t{\.e}, Aurina and Fulcher, Ben D. and Fornito, Alex.
+
+\textbf{Title:} A practical guide to linking brain-wide gene expression and neuroimaging data.
+
+\textbf{Journal:} NeuroImage, 2019, vol. 189, pp. 353--367.
+
+\textbf{DOI:} \href{https://doi.org/10.1016/j.neuroimage.2019.01.011}{10.1016/j.neuroimage.2019.01.011}.
+
+\bibitem{markello2021abagen}
+\textbf{Author:} Markello, Ross D. and Arnatkevi{\v c}i{\=u}t{\.e}, Aurina and Poline, Jean-Baptiste and Fulcher, Ben D. and Fornito, Alex and Misic, Bratislav.
+
+\textbf{Title:} Standardizing workflows in imaging transcriptomics with the abagen toolbox.
+
+\textbf{Journal:} eLife, 2021, vol. 10, pp. e72129.
+
+\textbf{DOI:} \href{https://doi.org/10.7554/eLife.72129}{10.7554/eLife.72129}.
+
+\bibitem{rolls2020aal3}
+\textbf{Author:} Rolls, Edmund T. and Huang, Chu-Chung and Lin, Ching-Po and Feng, Jianfeng and Joliot, Marc.
+
+\textbf{Title:} Automated anatomical labelling atlas 3.
+
+\textbf{Journal:} NeuroImage, 2020, vol. 206, pp. 116189.
+
+\textbf{DOI:} \href{https://doi.org/10.1016/j.neuroimage.2019.116189}{10.1016/j.neuroimage.2019.116189}.
+
+\bibitem{sollis2023gwascatalog}
+\textbf{Author:} Sollis, Elliot and Mosaku, Abayomi and Abid, Ala and others.
+
+\textbf{Title:} The NHGRI-EBI GWAS Catalog: knowledgebase and deposition resource.
+
+\textbf{Journal:} Nucleic Acids Research, 2023, vol. 51, no. D1, pp. D977--D985.
+
+\textbf{DOI:} \href{https://doi.org/10.1093/nar/gkac1010}{10.1093/nar/gkac1010}.
+
+\bibitem{kim2024pdgwas}
+\textbf{Author:} Kim, Jonggeol Jeffrey and Vitale, Dan and V{\'e}liz Otani, Diego and others.
+
+\textbf{Title:} Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.
+
+\textbf{Journal:} Nature Genetics, 2024, vol. 56, no. 1, pp. 27--36.
+
+\textbf{DOI:} \href{https://doi.org/10.1038/s41588-023-01584-8}{10.1038/s41588-023-01584-8}.
+
+\bibitem{watanabe2017fuma}
+\textbf{Author:} Watanabe, Kyoko and Taskesen, Erdogan and van Bochoven, Arjen and Posthuma, Danielle.
+
+\textbf{Title:} Functional mapping and annotation of genetic associations with FUMA.
+
+\textbf{Journal:} Nature Communications, 2017, vol. 8, pp. 1826.
+
+\textbf{DOI:} \href{https://doi.org/10.1038/s41467-017-01261-5}{10.1038/s41467-017-01261-5}.
+
+\bibitem{mountjoy2021l2g}
+\textbf{Author:} Mountjoy, Edward and Schmidt, Ellen M. and Carmona, Miguel and others.
+
+\textbf{Title:} An open approach to systematically prioritize causal variants and genes at all published human GWAS trait-associated loci.
+
+\textbf{Journal:} Nature Genetics, 2021, vol. 53, no. 11, pp. 1527--1533.
+
+\textbf{DOI:} \href{https://doi.org/10.1038/s41588-021-00945-5}{10.1038/s41588-021-00945-5}.
+
+\bibitem{buniello2025opentargets}
+\textbf{Author:} Buniello, Annalisa and Suveges, Daniel and Cruz-Castillo, Carlos and others.
+
+\textbf{Title:} Open Targets Platform: facilitating therapeutic hypotheses building in drug discovery.
+
+\textbf{Journal:} Nucleic Acids Research, 2025, vol. 53, no. D1, pp. D1467--D1475.
+
+\textbf{DOI:} \href{https://doi.org/10.1093/nar/gkae1128}{10.1093/nar/gkae1128}.
+
+\bibitem{wagner2015msr}
+\textbf{Author:} Wagner, Helene H. and Dray, St{\'e}phane.
+
+\textbf{Title:} Generating spatially constrained null models for irregularly spaced data using Moran spectral randomization methods.
+
+\textbf{Journal:} Methods in Ecology and Evolution, 2015, vol. 6, pp. 1169--1178.
+
+\textbf{DOI:} \href{https://doi.org/10.1111/2041-210X.12407}{10.1111/2041-210X.12407}.
+
+\bibitem{laansma2021enigma}
+\textbf{Author:} Laansma, Max A. and Bright, Joanna K. and Al-Bachari, Sarah and others.
+
+\textbf{Title:} International Multicenter Analysis of Brain Structure Across Clinical Stages of Parkinson's Disease.
+
+\textbf{Journal:} Movement Disorders, 2021, vol. 36, no. 11, pp. 2583--2594.
+
+\textbf{DOI:} \href{https://doi.org/10.1002/mds.28706}{10.1002/mds.28706}.
+
+\bibitem{lariviere2021enigma}
+\textbf{Author:} Larivi{\`e}re, Sara and Paquola, Casey and Park, Bo-yong and others.
+
+\textbf{Title:} The ENIGMA Toolbox: multiscale neural contextualization of multisite neuroimaging datasets.
+
+\textbf{Journal:} Nature Methods, 2021, vol. 18, pp. 698--700.
+
+\textbf{DOI:} \href{https://doi.org/10.1038/s41592-021-01186-4}{10.1038/s41592-021-01186-4}.
+
+\bibitem{kolberg2023gprofiler}
+\textbf{Author:} Kolberg, Liis and Raudvere, Uku and Kuzmin, Ivan and Adler, Priit and Vilo, Jaak and Peterson, Hedi.
+
+\textbf{Title:} g\textsuperscript{:}Profiler---interoperable web service for functional enrichment analysis and gene identifier mapping (2023 update).
+
+\textbf{Journal:} Nucleic Acids Research, 2023, vol. 51, no. W1, pp. W207--W212.
+
+\textbf{DOI:} \href{https://doi.org/10.1093/nar/gkad347}{10.1093/nar/gkad347}.
+
+\bibitem{siletti2023brain}
+\textbf{Author:} Siletti, Kimberly and Hodge, Rebecca and Mossi Albiach, Alejandro and others.
+
+\textbf{Title:} Transcriptomic diversity of cell types across the adult human brain.
+
+\textbf{Journal:} Science, 2023, vol. 382, no. 6667, pp. eadd7046.
+
+\textbf{DOI:} \href{https://doi.org/10.1126/science.add7046}{10.1126/science.add7046}.
+
+\bibitem{hpa2026brain}
+\textbf{Author:} Human Protein Atlas.
+
+\textbf{Title:} Single nuclei brain data.
+
+\textbf{Year:} 2026.
+
+\textbf{How published:} \url{https://www.proteinatlas.org/humanproteome/single+cell/single+nuclei+brain/data}.
+
+\textbf{Note:} Accessed 2026-09-14.
+
+\bibitem{fischl2012freesurfer}
+\textbf{Author:} Fischl, Bruce.
+
+\textbf{Title:} FreeSurfer.
+
+\textbf{Journal:} NeuroImage, 2012, vol. 62, no. 2, pp. 774--781.
+
+\textbf{DOI:} \href{https://doi.org/10.1016/j.neuroimage.2012.01.021}{10.1016/j.neuroimage.2012.01.021}.
+
+\bibitem{markello2022neuromaps}
+\textbf{Author:} Markello, Ross D. and Hansen, Justine Y. and Liu, Zhen-Qi and others.
+
+\textbf{Title:} neuromaps: structural and functional interpretation of brain maps.
+
+\textbf{Journal:} Nature Methods, 2022, vol. 19, pp. 1472--1479.
+
+\textbf{DOI:} \href{https://doi.org/10.1038/s41592-022-01625-w}{10.1038/s41592-022-01625-w}.
+
+\end{thebibliography}
+
+
+
+\balance
+
+\end{document}
